@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import FirstHeader from "./FirstHeader";
-// import API from "../utils/API";
+import API from "../utils/API";
 
 export default function ContactForm() {
-  const logged = () => {
-    console.log("completed");
-  };
+  // const logged = () => {
+  //   console.log("completed");
+  // };
 
   // const handleSubmission = (event) => {
   //   event.preventDefault();
@@ -43,7 +43,49 @@ export default function ContactForm() {
 
   const handleNodeMailerSubmit = (event) => {
     event.preventDefault();
-    console.log("Should go to node mailer");
+    let contactMethodCheck = Object.values(contactMethodState);
+    if (contactMethodCheck.includes(true)) {
+      let { call, email, text } = contactMethodState;
+      let {
+        firstName,
+        lastName,
+        emailAddress,
+        phNum,
+        subject,
+        message,
+      } = formState;
+      let contactFormFilled = {
+        firstName,
+        lastName,
+        emailAddress,
+        phNum,
+        subject,
+        message,
+        call,
+        email,
+        text,
+      };
+      API.submitEmail(contactFormFilled).then(
+        (res) => console.log(res)
+        // .catch((err) => console.log(err))
+      );
+      // console.log(contactFormFilled);
+      setFormState({
+        firstName: "",
+        lastName: "",
+        emailAddress: "",
+        phNum: "",
+        subject: "Networking",
+        message: "",
+      });
+      setContactMethodState({
+        email: true,
+        call: false,
+        text: false,
+      });
+    } else {
+      alert("Please select a method for me to reach you");
+    }
   };
 
   const [formState, setFormState] = useState({
