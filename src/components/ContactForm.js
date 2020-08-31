@@ -3,43 +3,24 @@ import FirstHeader from "./FirstHeader";
 import API from "../utils/API";
 
 export default function ContactForm() {
-  // const logged = () => {
-  //   console.log("completed");
-  // };
+  const [formState, setFormState] = useState({
+    firstName: "",
+    lastName: "",
+    emailAddress: "",
+    phNum: "",
+    subject: "Networking",
+    message: "",
+  });
 
-  // const handleSubmission = (event) => {
-  //   event.preventDefault();
-  //   let contactMethodCheck = Object.values(contactMethodState);
-  //   if (contactMethodCheck.includes(true)) {
-  //     let { call, email, text } = contactMethodState;
-  //     let {
-  //       firstName,
-  //       lastName,
-  //       emailAddress,
-  //       phNum,
-  //       subject,
-  //       message,
-  //     } = formState;
-  //     let contactFormFilled = {
-  //       firstName,
-  //       lastName,
-  //       emailAddress,
-  //       phNum,
-  //       subject,
-  //       message,
-  //       call,
-  //       email,
-  //       text,
-  //     };
-  //     API.submitMessage(contactFormFilled).then(
-  //       (res) => logged()
-  //       // .catch((err) => console.log(err))
-  //     );
-  //     console.log(contactFormFilled);
-  //   } else {
-  //     alert("Please select a method for me to reach you");
-  //   }
-  // };
+  const [contactMethodState, setContactMethodState] = useState({
+    email: true,
+    call: false,
+    text: false,
+  });
+
+  const [formSuccessState, setFormSuccessState] = useState({
+    formSuccess: false,
+  });
 
   const handleNodeMailerSubmit = (event) => {
     event.preventDefault();
@@ -65,37 +46,35 @@ export default function ContactForm() {
         email,
         text,
       };
-      API.submitEmail(contactFormFilled).then(
-        (res) => console.log(res)
-        // .catch((err) => console.log(err))
-      );
+      API.submitEmail(contactFormFilled).then((res) => {
+        if (res.status === 200) {
+          setFormState({
+            firstName: "",
+            lastName: "",
+            emailAddress: "",
+            phNum: "",
+            subject: "Networking",
+            message: "",
+          });
+          setContactMethodState({
+            email: true,
+            call: false,
+            text: false,
+          });
+          setFormSuccessState({
+            formSuccess: true,
+          });
+        } else {
+          console.log("failure");
+        }
+      });
+      // .catch((err) => console.log(err))
+      // );
       // console.log(contactFormFilled);
-      setFormState({
-        firstName: "",
-        lastName: "",
-        emailAddress: "",
-        phNum: "",
-        subject: "Networking",
-        message: "",
-      });
-      setContactMethodState({
-        email: true,
-        call: false,
-        text: false,
-      });
     } else {
       alert("Please select a method for me to reach you");
     }
   };
-
-  const [formState, setFormState] = useState({
-    firstName: "",
-    lastName: "",
-    emailAddress: "",
-    phNum: "",
-    subject: "Networking",
-    message: "",
-  });
 
   const handleInput = (event) => {
     event.preventDefault();
@@ -104,12 +83,6 @@ export default function ContactForm() {
       [event.target.name]: event.target.value,
     });
   };
-
-  const [contactMethodState, setContactMethodState] = useState({
-    email: true,
-    call: false,
-    text: false,
-  });
 
   const contactMethodStr = (string) => {
     let firstLet = string.slice(0, 1);
@@ -246,11 +219,10 @@ export default function ContactForm() {
             <h1>How would you like me to respond? Check all that apply</h1>
             <div>
               {Object.keys(contactMethodState).map((key) => (
-                <div className="open">
+                <div className="checkbox-options" key={key}>
                   <input
                     type="checkbox"
                     onChange={handleToggle}
-                    key={key}
                     name={key}
                     checked={contactMethodState[key]}
                   />
