@@ -3,7 +3,10 @@ import FirstHeader from "./FirstHeader.js";
 
 export default function Portfolio() {
   return (
-    <div className="w-8/12 mx-auto border border-black border-2 px-4">
+    <div
+      className="w-8/12 mx-auto border border-black border-2 px-4"
+      id="portfolio"
+    >
       <FirstHeader text="Portfolio, selected works" />
       <br />
       <h1>Text for portfolio here?</h1>

@@ -4,7 +4,10 @@ import placeholder from "./photos/linkedin-Seattle.jpg";
 
 export default function Meet() {
   return (
-    <div className="w-8/12 mx-auto border border-black border-2 px-4">
+    <div
+      className="w-8/12 mx-auto border border-black border-2 px-4"
+      id="meet-me"
+    >
       <FirstHeader text="Meet me" />
       <div className="flex">
         <div className="text-center top-0 py-8 px-20 w-3/6">

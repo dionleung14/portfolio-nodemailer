@@ -102,7 +102,10 @@ export default function ContactForm() {
     setContactMethodState((s) => ({ ...s, [target.name]: !s[target.name] }));
 
   return (
-    <div className="w-8/12 mx-auto border border-black border-2 px-4">
+    <div
+      className="w-8/12 mx-auto border border-black border-2 px-4"
+      id="contact"
+    >
       <FirstHeader text="Contact me!" />
       <div className="testclass">
         <h3 className="w-4/5 mt-8 mb-2 pl-6 ">
