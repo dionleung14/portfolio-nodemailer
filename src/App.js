@@ -8,7 +8,7 @@ import Quals from "./components/Quals";
 import Portfolio from "./components/Portfolio";
 import Testimonials from "./components/Testimonials";
 import ContactForm from "./components/ContactForm";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (

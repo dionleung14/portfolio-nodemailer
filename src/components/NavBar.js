@@ -5,12 +5,10 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export default function Navbar() {
   return (
-    <div className="flex justify-around border-solid border-2 border-black w-full py-8 fixed top-0 mb-10 bg-opacity-50 bg-yellow-700 z-20">
-      <div>
-        <AnchorLink href="#top" className="text-4xl">
-          Welcome
-        </AnchorLink>
-      </div>
+    <div className="flex justify-around border-solid border-2 border-black w-full pt-8 pb-4 fixed top-0 mb-10 bg-opacity-50 bg-yellow-700 z-20">
+      <AnchorLink href="#top" className="text-4xl">
+        Welcome
+      </AnchorLink>
       <AnchorLink href="#about-me" className="text-lg">
         about me
       </AnchorLink>

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 // import Header from "./Header.js";
 import FirstHeader from "./FirstHeader";
+import headshot from "./photos/headshot1.jpg";
+import Emoji from "./Emoji";
 
 export default class About extends Component {
   render() {
@@ -10,33 +12,69 @@ export default class About extends Component {
         id="about-me"
       >
         <FirstHeader text="About Me" />
-        <div className="flex items-center justify-around border-white border-2 px-6 py-12">
-          <div className="w-1/2 mx-4 my-8">
+        <div className="flex items-center justify-around border-white border-2 px-6">
+          <div className="w-1/2 mx-4 my-6">
             <img
               className="border border-red-700 border-2"
-              src="https://placekitten.com/800/1200"
+              src={headshot}
               alt="headshot"
             />
-            <p className="text-xs">Caption</p>
+            <p className="text-xs text-center">
+              Photo taken by{" "}
+              <a
+                href="https://www.dalenanguyen.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Dalena Nguyen
+              </a>
+            </p>
           </div>
           <div className="w-1/2 border border-black border-2">
-            <p>Full-Stack Web Developer</p>
-            <br />
-            <p>React</p>
-            <br />
-            <p>Express</p>
-            <br />
-            <p>MySQL</p>
-            <br />
-            <p>MySQL</p>
+            <p>
+              <Emoji emoji="✅" label="checkmark" />
+              Full-Stack Web Developer
+            </p>
             <br />
             <p>
+              <Emoji emoji="✅" label="checkmark" />
+              React
+            </p>
+            <br />
+            <p>
+              <Emoji emoji="✅" label="checkmark" />
+              Express
+            </p>
+            <br />
+            <p>
+              <Emoji emoji="✅" label="checkmark" />
+              Node.js
+            </p>
+            <br />
+            <p>
+              <Emoji emoji="✅" label="checkmark" />
+              MongoDB
+            </p>
+            <br />
+            <p>
+              <Emoji emoji="✅" label="checkmark" />
+              MySQL
+            </p>
+            <br />
+            <p>
+              <Emoji emoji="✅" label="checkmark" />
               B.S. Civil and Environmental Engineering, University of Washington
             </p>
             <br />
-            <p>Seattle native</p>
+            <p>
+              <Emoji emoji="✅" label="checkmark" />
+              Civil and Environmental Engineer-In-Training (EIT)
+            </p>
             <br />
-            <p>Civil and Environmental Engineer-In-Training</p>
+            <p>
+              <Emoji emoji="✅" label="checkmark" />
+              Seattle native
+            </p>
             <br />
           </div>
         </div>
