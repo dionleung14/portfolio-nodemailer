@@ -3,7 +3,10 @@ import FirstHeader from "./FirstHeader.js";
 
 export default function Quals() {
   return (
-    <div className="w-8/12 mx-auto border border-black border-2 px-4">
+    <div
+      className="w-8/12 mx-auto border border-black border-2 px-4"
+      id="qualifications"
+    >
       <FirstHeader text="Qualifications" />
       <div className="flex items-center justify-around px-6 py-12">
         <div className="w-1/2 mx-4 my-8">

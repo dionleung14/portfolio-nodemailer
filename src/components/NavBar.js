@@ -7,12 +7,24 @@ export default function Navbar() {
   return (
     <div className="flex justify-around border-solid border-2 border-black w-full py-8 fixed top-0 mb-10 bg-opacity-50 bg-yellow-700 z-20">
       <div>
-        {/* <Link to="/" className="text-4xl"> */}
-        Welcome
-        {/* </Link> */}
+        <AnchorLink href="#top" className="text-4xl">
+          Welcome
+        </AnchorLink>
       </div>
       <AnchorLink href="#about-me" className="text-lg">
         about me
+      </AnchorLink>
+      <AnchorLink href="#meet-me" className="text-lg">
+        meet me
+      </AnchorLink>
+      <AnchorLink href="#qualifications" className="text-lg">
+        qualifications
+      </AnchorLink>
+      <AnchorLink href="#portfolio" className="text-lg">
+        portfolio
+      </AnchorLink>
+      <AnchorLink href="#testimonials" className="text-lg">
+        testimonials
       </AnchorLink>
       <AnchorLink href="#contact" className="text-lg">
         contact
