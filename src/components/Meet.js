@@ -31,7 +31,7 @@ export default function Meet() {
           </p>
         </div>
         <div className="text-center border border-black border-2 bg-blue-200 h-10 w-3/6 self-center">
-          <img src={placeholder} alt="photo of dion" />
+          <img src={placeholder} alt="headshot of dion" />
         </div>
       </div>
       <br />

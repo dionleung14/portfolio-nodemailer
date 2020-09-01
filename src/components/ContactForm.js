@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FirstHeader from "./FirstHeader";
 import API from "../utils/API";
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default function ContactForm() {
   const [formState, setFormState] = useState({
@@ -13,7 +14,7 @@ export default function ContactForm() {
   });
 
   const [contactMethodState, setContactMethodState] = useState({
-    email: true,
+    email: false,
     call: false,
     text: false,
   });
@@ -25,7 +26,11 @@ export default function ContactForm() {
   const handleNodeMailerSubmit = (event) => {
     event.preventDefault();
     let contactMethodCheck = Object.values(contactMethodState);
-    if (contactMethodCheck.includes(true)) {
+    if (!contactMethodCheck.includes(true)) {
+      alert("Please select a method for me to reach you");
+    } else if (!(formState.emailAddress || formState.phNum)) {
+      alert("Please enter either an email or phone number");
+    } else {
       let { call, email, text } = contactMethodState;
       let {
         firstName,
@@ -57,7 +62,7 @@ export default function ContactForm() {
             message: "",
           });
           setContactMethodState({
-            email: true,
+            email: false,
             call: false,
             text: false,
           });
@@ -71,9 +76,10 @@ export default function ContactForm() {
       // .catch((err) => console.log(err))
       // );
       // console.log(contactFormFilled);
-    } else {
-      alert("Please select a method for me to reach you");
     }
+    // else {
+    //   alert("Please select a method for me to reach you");
+    // }
   };
 
   const handleInput = (event) => {
@@ -99,128 +105,165 @@ export default function ContactForm() {
     <div className="w-8/12 mx-auto border border-black border-2 px-4">
       <FirstHeader text="Contact me!" />
       <div className="testclass">
-        <h3 className="w-3/4 my-8">
+        <h3 className="w-4/5 mt-8 mb-2 pl-6 ">
           Hit me up! Have any questions? Want to collaborate together? Secretly
-          dying to know my favorite song? Send me an email and I'll get back to
-          you as soon as I can!
+          dying to know my favorite song? Send me an email (or use the nifty
+          little form below!) and I'll get back to you as soon as I can!
+        </h3>
+        <h3 className="w-3/4 mb-2 pl-6 ">
+          You can find also find me on LinkedIn{" "}
+          <a
+            className="hover:underline"
+            href="https://www.linkedin.com/in/leungdion/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            here
+          </a>
+          , and my email is{" "}
+          <span className="hover:underline">dioncleung@gmail.com</span>.
         </h3>
         <form
-          className="text-center"
+          className="w-3/5 mx-auto border border-gray-300"
           id="contact-form"
-          // onSubmit={handleSubmission}
           onSubmit={handleNodeMailerSubmit}
         >
           {/* <!-- First and Last Name --> */}
-          <div className="flex items-center justify-around border-white border-2 px-6 py-12">
+          <div className="pl-6">
             {/* <!-- First Name --> */}
-            <div className="w-1/4 mx-4 border-blue-600 border-2">
-              <label htmlFor="firstName">First Name</label>
-              <input
-                className="form-control"
-                type="text"
-                value={formState.firstName}
-                onChange={handleInput}
-                placeholder="First Name"
-                name="firstName"
-                // id="first-name"
-                required
-              />
-            </div>
-            {/* <!-- Last Name --> */}
-            <div className="w-1/4 mx-4 border-blue-600 border-2">
-              <label htmlFor="viewerName">Last Name</label>
-              <input
-                type="name"
-                className=""
-                id="last-name"
-                onChange={handleInput}
-                value={formState.lastName}
-                name="lastName"
-              />
+            <div className="flex flex-col items-start w-1/2">
+              <label className="mb-1 mt-4" htmlFor="Name">
+                Your name:
+              </label>
+              <div className="flex flex-row">
+                <input
+                  className="w-1/2 px-2 mr-2"
+                  type="text"
+                  value={formState.firstName}
+                  onChange={handleInput}
+                  placeholder="First name"
+                  name="firstName"
+                  // id="first-name"
+                  required
+                />
+                {/* <!-- Last Name --> */}
+                {/* <div className="w-1/2 border-blue-600 "> */}
+                <input
+                  type="name"
+                  className="w-1/2 px-2"
+                  id="last-name"
+                  onChange={handleInput}
+                  placeholder="Last name"
+                  value={formState.lastName}
+                  name="lastName"
+                />
+                {/* </div> */}
+              </div>
             </div>
           </div>
 
           {/* <!-- Email and phone number --> */}
-          <div className="flex items-center justify-around border-white border-2 px-6 py-12">
-            <div className="w-1/4 mx-4 border border-red-200 border-2">
-              <label htmlFor="inputEmail">Email address</label>
-              <input
-                type="email"
-                className=""
-                id="inputEmail"
-                value={formState.emailAddress}
-                aria-describedby="emailHelp"
-                onChange={handleInput}
-                name="emailAddress"
-                required
-              />
-              <br />
-              <small id="emailHelp" className="form-text text-muted">
-                I'll never share your email with anyone else.
-              </small>
+          <div className=" pl-6">
+            <div className="flex flex-col">
+              <label className="mb-1 mt-4" htmlFor="inputEmail">
+                Email address:
+              </label>
+              <div className="flex flex-row">
+                <input
+                  type="email"
+                  className="px-2 mr-2"
+                  id="inputEmail"
+                  value={formState.emailAddress}
+                  placeholder="jbond007@mi6.com"
+                  aria-describedby="emailHelp"
+                  onChange={handleInput}
+                  name="emailAddress"
+                />
+                <small id="emailHelp" className="form-text text-muted">
+                  I'll never share your email with anyone else.
+                </small>
+              </div>
             </div>
             {/* <!-- Phone number --> */}
-            <div className="w-1/4 mx-4 border border-red-200 border-2">
-              <label htmlFor="phoneNumber">Phone Number</label>
-              <input
-                type="phonenumber"
-                className=""
-                id="phoneNumber"
-                value={formState.phNum}
-                onChange={handleInput}
-                name="phNum"
-              />
-              <br />
-              <small id="emailHelp" className="form-text text-muted">
-                I'll never share your phone number with anyone else either.
-              </small>
+            <div className="flex flex-col">
+              <label className="mb-1 mt-4" htmlFor="phoneNumber">
+                Phone number:
+              </label>
+              <div className="flex flex-row">
+                <input
+                  type="phonenumber"
+                  className="px-2 mr-2"
+                  id="phoneNumber"
+                  placeholder="206-867-5309"
+                  value={formState.phNum}
+                  onChange={handleInput}
+                  name="phNum"
+                />
+                <small id="emailHelp" className="form-text">
+                  I'll never share your phone number with anyone else either.
+                </small>
+              </div>
             </div>
           </div>
 
-          {/* Subject */}
-          <div className="w-1/4 mx-4">
-            <div className="">
-              <label htmlFor="viewerName">Subject</label>
-              <select
-                type="name"
-                className=""
-                id="subject"
-                value={formState.subject}
-                name="subject"
-                onChange={handleInput}
-                required
-              >
-                <option value="Networking">Networking</option>
-                <option value="Inquiry">Inquiry</option>
-                <option value="Collaboration">Collaboration</option>
-                <option value="Other">Other (specify in message)</option>
-              </select>
+          {/* Subject and actual message */}
+          <div className="flex flex-col items-start px-6">
+            {/* Subject */}
+            <div className="mb-1 mt-4">
+              <div className="flex flex-col">
+                <label htmlFor="subject" className="">
+                  Subject:
+                </label>
+                <select
+                  type="name"
+                  className="px-2 py-1"
+                  id="subject"
+                  value={formState.subject}
+                  name="subject"
+                  onChange={handleInput}
+                  required
+                >
+                  <option value="Networking">Networking</option>
+                  <option value="Inquiry">Inquiry</option>
+                  <option value="Collaboration">Collaboration</option>
+                  <option value="Other">Other (specify in message)</option>
+                </select>
+              </div>
             </div>
-          </div>
 
-          {/* <!-- Message --> */}
-          <div className="test">
-            <div className="w-full">
-              <label htmlFor="message">Message</label>
-              <input
-                type="message"
-                className=" w-full"
-                id="message"
-                value={formState.message}
-                name="message"
-                onChange={handleInput}
-                required
-              />
+            {/* <!-- Message --> */}
+            <div className="w-auto">
+              <div className="flex flex-col">
+                <label htmlFor="message" className="">
+                  Message:
+                </label>
+                <textarea
+                  type="message"
+                  className="p-2 w-64 resize"
+                  id="message"
+                  maxLength="500"
+                  value={formState.message}
+                  name="message"
+                  onChange={handleInput}
+                  required
+                />
+                <small>
+                  Characters remaining: {500 - formState.message.length}
+                </small>
+              </div>
             </div>
           </div>
 
           {/* <!-- Preferred method of contact checkboxes --> */}
-          <div className="">
-            <h1>How would you like me to respond? Check all that apply</h1>
+          <div className="pl-6">
+            <h1 className="mb-1 mt-4">
+              How would you like me to respond? Check all that apply:
+            </h1>
             <div>
               {Object.keys(contactMethodState).map((key) => (
                 <div className="checkbox-options" key={key}>
                   <input
+                    className="mr-2"
                     type="checkbox"
                     onChange={handleToggle}
                     name={key}
@@ -233,15 +276,16 @@ export default function ContactForm() {
           </div>
 
           {/* <!-- Submit button --> */}
-          <div className="row">
+          <div className="pl-6">
             <button
               type="submit"
-              className="border border-green-400 py-2 px-4 bg-green-400"
+              className="rounded py-2 px-6 bg-green-400 hover:bg-green-500 text-xl hover:text-white"
             >
-              Submit
+              Send!
             </button>
+            <br />
+            <br />
           </div>
-          {/* <h1>This form should be at the bottom of the page</h1> */}
         </form>
       </div>
 
