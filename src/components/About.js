@@ -5,7 +5,10 @@ import FirstHeader from "./FirstHeader";
 export default class About extends Component {
   render() {
     return (
-      <div className="w-8/12 mx-auto border border-black border-2 px-4">
+      <div
+        className="w-8/12 mx-auto border border-black border-2 px-4"
+        id="about-me"
+      >
         <FirstHeader text="About Me" />
         <div className="flex items-center justify-around border-white border-2 px-6 py-12">
           <div className="w-1/2 mx-4 my-8">
