@@ -1,16 +1,47 @@
 import React from "react";
 import FirstHeader from "./FirstHeader.js";
 import placeholder from "./photos/linkedin-Seattle.jpg";
+import dubs from "./photos/dubs.JPG";
+import flowtest from "./photos/flowtest.JPG";
+import NiehausStatue from "./photos/NiehausStatue.JPG";
+import softball from "./photos/softball.JPG";
+import Carousel from "./Carousel";
 
 export default function Meet() {
+  const photosArr = [dubs, flowtest, NiehausStatue, softball];
+
+  const photosObj = {
+    photo1: {
+      photoImage: dubs,
+      alt: "OP with husky mascot at UW",
+      caption: "Hanging out with Dubs, the UW husky mascot!",
+    },
+    photo2: {
+      photoImage: flowtest,
+      alt: "OP performing civil engineering tests",
+      caption:
+        "Performing high pressure flowtests on fire hydrants... on Halloween",
+    },
+    photo3: {
+      photoImage: NiehausStatue,
+      alt: "OP posing with statue",
+      caption: "Celebrating a rare Seattle Mariners win!",
+    },
+    photo4: {
+      photoImage: softball,
+      alt: "OP swinging baseball bat",
+      caption: "Defending our championship trophy with a leadoff single",
+    },
+  };
+
   return (
     <div
       className="w-8/12 mx-auto border border-black border-2 px-4"
       id="meet-me"
     >
       <FirstHeader text="Meet me" />
-      <div className="flex">
-        <div className="text-center top-0 py-8 px-20 w-3/6">
+      <div className="flex items-center mt-4">
+        <div className="text-left py-8 pl-6 pr-4 w-1/2">
           <p>
             Hi! My name is Dion Leung, and I've been a Seattle area native my
             whole life. I grew up and lived in Kent for the first 18 years of my
@@ -24,18 +55,31 @@ export default function Meet() {
           <br />
           <p>
             In my time as a junior web developer, I have been able to learn a
-            lot of both back-end and front-end development. I still feel drawn
-            towards back-end systems, in particular database management, but am
-            also exploring data-science and other analytical professions. In my
-            spare time I enjoy spending time outdoors (only if I take my allergy
-            medicine!), playing sports like basketball, soccer, volleyball, and
-            baseball, and making progress on my seemingly neverending list of
-            shows to watch.
+            lot of both back-end and front-end development. Despite going into
+            my coding bootcamp drawn towards back-end systems, in particular
+            database management, I really enjoy front-end technologies like
+            React! Still, I am also exploring data-science and other analytical
+            aspects. In my spare time I enjoy spending time outdoors (only if I
+            take my allergy medicine!), playing sports like basketball, soccer,
+            volleyball, and baseball, and making progress on my seemingly
+            neverending list of shows to watch.
           </p>
         </div>
-        <div className="text-center border border-black border-2 bg-blue-200 h-10 w-3/6 self-center">
-          <img src={placeholder} alt="headshot of dion" />
+        <div className="flex flex-col w-1/2 pr-4">
+          <img
+            className="text-center border border-black border-2 bg-blue-200"
+            src={flowtest}
+            alt="OP performing civil engineering tests"
+          />
+          <small className="text-center">
+            Performing high pressure flowtests on fire hydrants... on Halloween
+          </small>
         </div>
+        {/* {photosArr.map((photo) => {
+          return (
+            <Carousel photoImage={photo} alt="temporary" caption="Filler" />
+          );
+        })} */}
       </div>
       <br />
     </div>
