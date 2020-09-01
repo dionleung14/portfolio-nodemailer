@@ -9,24 +9,37 @@ import Portfolio from "./components/Portfolio";
 import Testimonials from "./components/Testimonials";
 import ContactForm from "./components/ContactForm";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ScrollableAnchor from "react-scrollable-anchor";
 
 function App() {
   return (
-    <Router>
+    <div>
       <NavBar />
       {/* <Switch> */}
       {/* <Route exact path="/about-me"> */}
       <Welcome />
-      <About />
+      <ScrollableAnchor id={"about-me"}>
+        <About />
+      </ScrollableAnchor>
       {/* </Route> */}
       {/* <About /> */}
-      <Meet />
-      <Quals />
-      <Portfolio />
-      <Testimonials />
-      <ContactForm />
+      <ScrollableAnchor id={"meet-me"}>
+        <Meet />
+      </ScrollableAnchor>
+      <ScrollableAnchor id={"qualifications"}>
+        <Quals />
+      </ScrollableAnchor>
+      <ScrollableAnchor id={"portfolio"}>
+        <Portfolio />
+      </ScrollableAnchor>
+      <ScrollableAnchor id={"testimonials"}>
+        <Testimonials />
+      </ScrollableAnchor>
+      <ScrollableAnchor id={"contact"}>
+        <ContactForm />
+      </ScrollableAnchor>
       {/* </Switch> */}
-    </Router>
+    </div>
   );
 }
 
