@@ -116,7 +116,7 @@ export default function ContactForm() {
         <h3 className="w-3/4 mb-2 pl-6 ">
           You can find also find me on LinkedIn{" "}
           <a
-            className="hover:underline"
+            className="hover:underline text-blue-700"
             href="https://www.linkedin.com/in/leungdion/"
             target="_blank"
             rel="noopener noreferrer"
