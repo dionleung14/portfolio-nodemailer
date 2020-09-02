@@ -4,7 +4,10 @@ import FirstHeader from "./FirstHeader";
 
 export default function Welcome() {
   return (
-    <div className="w-8/12 mx-auto border border-black border-2 px-4" id="top">
+    <div
+      className="lg:w-8/12 w-full mx-auto border border-black border-2 lg:px-4"
+      id="top"
+    >
       <FirstHeader text="Dion Leung, E.I.T, Fullstack Web Developer" />
       <div className="border border-red-500 bg-green-400 bg-opacity-50 top-0 pt-4 pb-20 z-10">
         {/* <h1 className="text-center text-4xl top-0 pt-10">Text with photo</h1> */}
