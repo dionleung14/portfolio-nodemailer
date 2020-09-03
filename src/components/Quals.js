@@ -23,7 +23,7 @@ export default function Quals() {
             my civil/environmental engineering roles.
           </small>
         </div>
-        <div className="w-1/2 ml-4">
+        <div className="w-1/2 ml-4 pr-4">
           <p className="text-left">
             My unique skillset combines a civil and environmental engineering
             training with a new-found passion for coding, which brings an
