@@ -6,7 +6,7 @@ import hamburger from "./photos/hamburger.png";
 
 export default function Navbar() {
   const [burger, setBurger] = useState({
-    display: true,
+    display: false,
   });
 
   const handleToggle = ({ target }) =>
