@@ -49,8 +49,9 @@ export default function Meet() {
             Washington, earning a degree in Civil and Environmental Engineering.
             A couple of years into my career, I was feeling stuck and
             pigeon-holed, unable to advance further without an advanced degree.
-            I decided to switch things up completely and pursue a career in
-            web-development and here I am!
+            I had used AutoCAD daily, and I had tried out coding in AutoLISP and
+            loved it. I decided to switch things up completely and pursue a
+            career in web-development and here I am!
           </p>
           <br />
           <p>
