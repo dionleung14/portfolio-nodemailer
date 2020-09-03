@@ -5,7 +5,7 @@ import FirstHeader from "./FirstHeader";
 export default function Welcome() {
   return (
     <div
-      className="lg:w-8/12 w-full mx-auto border border-black border-2 lg:px-4"
+      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4"
       id="top"
     >
       <FirstHeader text="Dion Leung, E.I.T, Fullstack Web Developer" />
@@ -15,7 +15,6 @@ export default function Welcome() {
           src={photograph}
           // className="object-center ml-2 h-40"
           // className="z-10"
-          id="photographhhhhhh"
           alt="Seattle-skyline"
         />
       </div>

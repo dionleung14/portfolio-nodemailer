@@ -9,10 +9,10 @@ export default class About extends Component {
     return (
       <div className="lg:w-8/12 w-full lg:mx-auto lg:px-4" id="about-me">
         <FirstHeader text="About Me" />
-        <div className="flex items-center justify-around border-white border-2 px-6">
-          <div className="lg:w-1/2 w-full lg:mx-4 lg:my-6">
+        <div className="flex flex-row items-center justify-around border-white border-2 px-6">
+          <div className="lg:w-1/2 w-full lg:mx-4 my-2 lg:my-6">
             <img
-              className="border border-red-700 border-2"
+              className="md:w-auto md:h-auto w-1/2 mx-auto"
               src={headshot}
               alt="headshot"
             />
