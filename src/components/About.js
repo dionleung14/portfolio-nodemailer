@@ -9,10 +9,10 @@ export default class About extends Component {
     return (
       <div className="lg:w-8/12 w-full lg:mx-auto lg:px-4" id="about-me">
         <FirstHeader text="About Me" />
-        <div className="flex flex-row items-center justify-around border-white border-2 px-6">
+        <div className="flex md:flex-row flex-col items-center justify-around border-white border-2 px-6">
           <div className="lg:w-1/2 w-full lg:mx-4 my-2 lg:my-6">
             <img
-              className="md:w-auto md:h-auto w-1/2 mx-auto"
+              className="md:w-auto md:h-auto w-3/4 mx-auto"
               src={headshot}
               alt="headshot"
             />
@@ -27,48 +27,48 @@ export default class About extends Component {
               </a>
             </p>
           </div>
-          <div className="w-1/2">
-            <p>
+          <div className="flex flex-wrap md:flex-col md:w-1/2 w-full">
+            <p className="mx-4 my-2">
               <Emoji emoji="✅" label="checkmark" />
               Full-Stack Web Developer
             </p>
             <br />
-            <p>
+            <p className="mx-4 my-2">
               <Emoji emoji="✅" label="checkmark" />
               React
             </p>
             <br />
-            <p>
+            <p className="mx-4 my-2">
               <Emoji emoji="✅" label="checkmark" />
               Express
             </p>
             <br />
-            <p>
+            <p className="mx-4 my-2">
               <Emoji emoji="✅" label="checkmark" />
               Node.js
             </p>
             <br />
-            <p>
+            <p className="mx-4 my-2">
               <Emoji emoji="✅" label="checkmark" />
               MongoDB
             </p>
             <br />
-            <p>
+            <p className="mx-4 my-2">
               <Emoji emoji="✅" label="checkmark" />
               MySQL
             </p>
             <br />
-            <p>
+            <p className="mx-4 my-2">
               <Emoji emoji="✅" label="checkmark" />
               B.S. Civil and Environmental Engineering, University of Washington
             </p>
             <br />
-            <p>
+            <p className="mx-4 my-2">
               <Emoji emoji="✅" label="checkmark" />
               Civil and Environmental Engineer-In-Training (EIT)
             </p>
             <br />
-            <p>
+            <p className="mx-4 my-2">
               <Emoji emoji="✅" label="checkmark" />
               Seattle native
             </p>
