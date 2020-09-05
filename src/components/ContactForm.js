@@ -69,6 +69,11 @@ export default function ContactForm() {
           setFormSuccessState({
             formSuccess: true,
           });
+          setTimeout(() => {
+            setFormSuccessState({
+              formSuccess: false,
+            });
+          }, 2000);
         } else {
           console.log("failure");
         }
@@ -126,6 +131,7 @@ export default function ContactForm() {
           , and my email is{" "}
           <span className="hover:underline">dioncleung@gmail.com</span>.
         </h3>
+        {formSuccessState.formSuccess ? <span>hello</span> : " "}
         <form
           className="w-3/5 mx-auto border border-gray-300"
           id="contact-form"
