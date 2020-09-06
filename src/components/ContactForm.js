@@ -31,6 +31,9 @@ export default function ContactForm() {
       ...formSuccessState,
       sendingState: true,
     });
+    let failureCountdown = setTimeout(() => {
+      console.log("failure");
+    }, 12000);
     let contactMethodCheck = Object.values(contactMethodState);
     if (!contactMethodCheck.includes(true)) {
       alert("Please select a method for me to reach you");
@@ -59,6 +62,7 @@ export default function ContactForm() {
       };
       API.submitEmail(contactFormFilled).then((res) => {
         if (res.status === 200) {
+          clearTimeout(failureCountdown);
           setFormState({
             firstName: "",
             lastName: "",
