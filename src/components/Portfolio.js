@@ -27,7 +27,7 @@ export default function Portfolio() {
       id="portfolio"
     >
       <FirstHeader text="Portfolio, selected works" />
-      <div className="flex items-center justify-around mt-6 px-6 border border-black border-2 relative z-10">
+      <div className="flex items-center justify-around mt-6 px-6 relative z-10">
         <div
           className="flex flex-col items-center w-1/3 mx-2"
           data-project="rocketlist"
@@ -39,10 +39,7 @@ export default function Portfolio() {
             alt="rocketlist"
             data-project="rocketlist"
           />
-          <small
-            className="border border-black border-2"
-            data-project="rocketlist"
-          >
+          <small className="" data-project="rocketlist">
             RocketList
           </small>
         </div>
@@ -58,10 +55,7 @@ export default function Portfolio() {
             alt="to-gather"
           />
 
-          <small
-            className="border border-black border-2 absolute bottom-0"
-            data-project="togather"
-          >
+          <small className="absolute bottom-0" data-project="togather">
             ToGather
           </small>
         </div>
@@ -76,10 +70,7 @@ export default function Portfolio() {
             alt="pokegodex"
             data-project="pokegodex"
           />
-          <small
-            className="border border-black border-2 absolute bottom-0"
-            data-project="pokegodex"
-          >
+          <small className="absolute bottom-0" data-project="pokegodex">
             Pok&eacute;GoDex
           </small>
         </div>
