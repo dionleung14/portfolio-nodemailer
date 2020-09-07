@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import FirstHeader from "./FirstHeader";
 
 export default function Testimonials() {
-  let [tracker, setTracker] = useState(0);
+  let [tracker, setTracker] = useState({
+    track: 0,
+  });
 
   const decrement = () => {
-    setTracker(tracker--);
+    setTracker(tracker.track--);
   };
 
   const increment = () => {
-    setTracker(tracker++);
+    setTracker(tracker.track++);
   };
 
   const testimonials = [
@@ -23,14 +25,14 @@ export default function Testimonials() {
       projects.`,
       relationship: "co-collaborator",
     },
-    // {
-    //   from: "Louis Coleman",
-    //   message: `lorem ipsum dolor set`,
-    //   relationship: "co-collaborator",
-    // },
+    {
+      from: "Louis Coleman",
+      message: `lorem ipsum dolor set`,
+      relationship: "co-collaborator",
+    },
   ];
 
-  let currentTest = testimonials[tracker % testimonials.length];
+  let currentTest = testimonials[Math.abs(tracker.track) % testimonials.length];
 
   // console.log(testimonials[tracker % testimonials.length]);
 
@@ -63,6 +65,7 @@ export default function Testimonials() {
           next
         </button>
       </div>
+      <div>{tracker.track}</div>
     </div>
   );
 }
