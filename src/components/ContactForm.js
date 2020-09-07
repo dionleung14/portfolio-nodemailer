@@ -21,10 +21,19 @@ export default function ContactForm() {
 
   const [formSuccessState, setFormSuccessState] = useState({
     formSuccess: false,
+    sendingState: false,
+    failure: false,
   });
 
   const handleNodeMailerSubmit = (event) => {
     event.preventDefault();
+    setFormSuccessState({
+      ...formSuccessState,
+      sendingState: true,
+    });
+    let failureCountdown = setTimeout(() => {
+      console.log("failure");
+    }, 12000);
     let contactMethodCheck = Object.values(contactMethodState);
     if (!contactMethodCheck.includes(true)) {
       alert("Please select a method for me to reach you");
@@ -53,6 +62,7 @@ export default function ContactForm() {
       };
       API.submitEmail(contactFormFilled).then((res) => {
         if (res.status === 200) {
+          clearTimeout(failureCountdown);
           setFormState({
             firstName: "",
             lastName: "",
@@ -68,9 +78,20 @@ export default function ContactForm() {
           });
           setFormSuccessState({
             formSuccess: true,
+            sendingState: false,
           });
+          setTimeout(() => {
+            setFormSuccessState({
+              ...formSuccessState,
+              formSuccess: false,
+            });
+          }, 2000);
         } else {
-          console.log("failure");
+          setFormSuccessState({
+            ...formSuccessState,
+            sendingState: false,
+            failure: true,
+          });
         }
       });
       // .catch((err) => console.log(err))
@@ -126,6 +147,7 @@ export default function ContactForm() {
           , and my email is{" "}
           <span className="hover:underline">dioncleung@gmail.com</span>.
         </h3>
+
         <form
           className="w-3/5 mx-auto border border-gray-300"
           id="contact-form"
@@ -286,6 +308,25 @@ export default function ContactForm() {
             >
               Send!
             </button>
+            {formSuccessState.formSuccess ? (
+              <span className="ml-2">
+                Your message has been sent successfully!
+              </span>
+            ) : (
+              " "
+            )}
+            {formSuccessState.sendingState ? (
+              <span className="ml-2">Sending... please wait</span>
+            ) : (
+              " "
+            )}
+            {formSuccessState.failure ? (
+              <span className="ml-2">
+                Something went wrong, please refresh and try again
+              </span>
+            ) : (
+              " "
+            )}
             <br />
             <br />
           </div>
