@@ -23,16 +23,14 @@ export default function Testimonials() {
       projects.`,
       relationship: "co-collaborator",
     },
-    // {
-    //   from: "Louis Coleman",
-    //   message: `lorem ipsum dolor set`,
-    //   relationship: "co-collaborator",
-    // },
+    {
+      from: "Louis Coleman",
+      message: `lorem ipsum dolor set`,
+      relationship: "co-collaborator",
+    },
   ];
 
-  let currentTest = testimonials[tracker % testimonials.length];
-
-  // console.log(testimonials[tracker % testimonials.length]);
+  let currentTest = testimonials[Math.abs(tracker) % testimonials.length];
 
   return (
     <div
@@ -63,6 +61,7 @@ export default function Testimonials() {
           next
         </button>
       </div>
+      <div>{tracker.track}</div>
     </div>
   );
 }
