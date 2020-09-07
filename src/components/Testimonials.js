@@ -14,11 +14,6 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      from: "Louis Coleman",
-      message: `lorem ipsum dolor set`,
-      relationship: "co-collaborator",
-    },
-    {
       from: "Rory Kees",
       message: `Dion was a fantastic and skilled teammate to work with on our
       fullstack application. He remained calm and clear-headed through
@@ -28,6 +23,11 @@ export default function Testimonials() {
       projects.`,
       relationship: "co-collaborator",
     },
+    // {
+    //   from: "Louis Coleman",
+    //   message: `lorem ipsum dolor set`,
+    //   relationship: "co-collaborator",
+    // },
   ];
 
   let currentTest = testimonials[tracker % testimonials.length];
@@ -40,16 +40,28 @@ export default function Testimonials() {
       id="testimonials"
     >
       <FirstHeader text="Testimonials" />
-      <div className="flex items-center justify-around px-6 py-12">
-        <button onClick={decrement}>left</button>
-        <div className="w-2/3 h-40 items-center border-white border-2">
-          <h1 className="text-left">{currentTest.message}</h1>
-          <h1 className="text-center">
-            {" "}
-            - {currentTest.from}, {currentTest.relationship}{" "}
-          </h1>
+      <div className="flex items-center justify-around px-6 py-12 border-red-300 border-2">
+        <button
+          className="border-white border-2 p-2 rounded"
+          onClick={decrement}
+        >
+          previous
+        </button>
+        <div className="w-2/3 h-40 flex flex-col">
+          <div className="my-auto">
+            <h1 className="text-justify">{currentTest.message}</h1>
+            <h1 className="text-center">
+              {" "}
+              - {currentTest.from}, {currentTest.relationship}{" "}
+            </h1>
+          </div>
         </div>
-        <button onClick={increment}>right</button>
+        <button
+          className="border-white border-2 p-2 rounded"
+          onClick={increment}
+        >
+          next
+        </button>
       </div>
     </div>
   );
