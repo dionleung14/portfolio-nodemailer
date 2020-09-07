@@ -5,24 +5,34 @@ import ToGather from "./photos/portfolio-photos/ToGather.png";
 import PokeGoDex from "./photos/portfolio-photos/PokeGoDex.png";
 
 export default function Portfolio() {
+  const handlePortfolioClick = () => {
+    console.log("clicked");
+  };
   return (
     <div
       className="w-8/12 mx-auto border border-black border-2 px-4"
       id="portfolio"
     >
       <FirstHeader text="Portfolio, selected works" />
-      <div className="flex items-center justify-around mt-6 px-6 border border-black border-2">
-        <div className="flex flex-col items-center w-1/3 mx-2 border border-black border-2">
+      <div className="flex items-center justify-around mt-6 px-6 border border-black border-2 relative z-10">
+        <div
+          className="flex flex-col items-center w-1/3 mx-2"
+          onClick={handlePortfolioClick}
+        >
           <img className="" src={RocketList} alt="rocketlist" />
-          <small className="">RocketList</small>
+          <small className="border border-black border-2">RocketList</small>
         </div>
-        <div className="flex flex-col items-center w-1/3 mx-2 border border-black border-2">
+        <div className="flex flex-col items-center w-1/3 mx-2">
           <img className="" src={ToGather} alt="to-gather" />
-          <small className="">ToGather</small>
+          <small className="border border-black border-2 absolute bottom-0">
+            ToGather
+          </small>
         </div>
-        <div className="flex flex-col items-center w-1/3 mx-2 border border-black border-2 ">
+        <div className="flex flex-col items-center w-1/3 mx-2">
           <img className="" src={PokeGoDex} alt="pokegodex" />
-          <small className="">PokeGoDex</small>
+          <small className="border border-black border-2 absolute bottom-0">
+            PokeGoDex
+          </small>
         </div>
       </div>
       <h1 className="text-left top-0 my-8 w-3/4 mx-auto">
