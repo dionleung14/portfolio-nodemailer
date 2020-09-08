@@ -81,6 +81,13 @@ export default function Navbar() {
           className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
         >
           meet me
+          <img
+            src={hamburger}
+            alt="menu expand icon"
+            name="display"
+            onClick={handleToggle}
+            className="lg:hidden self-center inline-block w-6 z-50"
+          />
         </AnchorLink>
         <AnchorLink
           href="#qualifications"
