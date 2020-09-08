@@ -124,17 +124,17 @@ export default function ContactForm() {
 
   return (
     <div
-      className="w-8/12 mx-auto border border-black border-2 px-4"
+      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4"
       id="contact"
     >
       <FirstHeader text="Contact me!" />
-      <div className="testclass">
-        <h3 className="w-4/5 mt-8 mb-2 pl-6 ">
+      <div className="flex justify-around flex-col lg:w-4/5 w-full lg:mt-8 lg:mb-2 my-2 lg:pl-6 p-2">
+        <h3 className="my-2">
           Hit me up! Have any questions? Want to collaborate together? Secretly
           dying to know my favorite song? Send me an email (or use the nifty
           little form below!) and I'll get back to you as soon as I can!
         </h3>
-        <h3 className="w-3/4 mb-2 pl-6 ">
+        <h3 className="my-2">
           You can find also find me on LinkedIn{" "}
           <a
             className="hover:underline text-blue-700"
@@ -149,14 +149,14 @@ export default function ContactForm() {
         </h3>
 
         <form
-          className="w-3/5 mx-auto border border-gray-300"
+          className="lg:w-3/5 w-full lg:mx-auto p-2 border border-gray-300"
           id="contact-form"
           onSubmit={handleNodeMailerSubmit}
         >
           {/* <!-- First and Last Name --> */}
-          <div className="pl-6">
+          <div className="lg:pl-6">
             {/* <!-- First Name --> */}
-            <div className="flex flex-col items-start w-1/2">
+            <div className="flex flex-col items-start lg:w-4/5">
               <label className="mb-1 mt-4" htmlFor="Name">
                 Your name:
               </label>
@@ -188,12 +188,12 @@ export default function ContactForm() {
           </div>
 
           {/* <!-- Email and phone number --> */}
-          <div className=" pl-6">
+          <div className="lg:pl-6">
             <div className="flex flex-col">
               <label className="mb-1 mt-4" htmlFor="inputEmail">
                 Email address:
               </label>
-              <div className="flex flex-row">
+              <div className="flex lg:flex-row flex-col">
                 <input
                   type="email"
                   className="px-2 mr-2"
@@ -214,7 +214,7 @@ export default function ContactForm() {
               <label className="mb-1 mt-4" htmlFor="phoneNumber">
                 Phone number:
               </label>
-              <div className="flex flex-row">
+              <div className="flex lg:flex-row flex-col">
                 <input
                   type="phonenumber"
                   className="px-2 mr-2"
@@ -232,7 +232,7 @@ export default function ContactForm() {
           </div>
 
           {/* Subject and actual message */}
-          <div className="flex flex-col items-start px-6">
+          <div className="flex flex-col items-start lg:px-6">
             {/* Subject */}
             <div className="mb-1 mt-4">
               <div className="flex flex-col">
@@ -264,7 +264,7 @@ export default function ContactForm() {
                 </label>
                 <textarea
                   type="message"
-                  className="p-2 w-64 resize"
+                  className="p-2 lg:w-64 w-64 lg:resize"
                   id="message"
                   maxLength="500"
                   value={formState.message}
@@ -280,13 +280,13 @@ export default function ContactForm() {
           </div>
 
           {/* <!-- Preferred method of contact checkboxes --> */}
-          <div className="pl-6">
+          <div className="lg:pl-6 mb-4">
             <h1 className="mb-1 mt-4">
               How would you like me to respond? Check all that apply:
             </h1>
             <div>
               {Object.keys(contactMethodState).map((key) => (
-                <div className="checkbox-options" key={key}>
+                <div className="lg:pl-6 pl-4 checkbox-options" key={key}>
                   <input
                     className="mr-2"
                     type="checkbox"
@@ -301,7 +301,7 @@ export default function ContactForm() {
           </div>
 
           {/* <!-- Submit button --> */}
-          <div className="pl-6">
+          <div className="lg:pl-6">
             <button
               type="submit"
               className="rounded py-2 px-6 bg-green-400 hover:bg-green-500 text-xl hover:text-white"
