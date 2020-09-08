@@ -36,12 +36,12 @@ export default function Meet() {
 
   return (
     <div
-      className="w-8/12 mx-auto border border-black border-2 px-4"
+      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4"
       id="meet-me"
     >
       <FirstHeader text="Meet me" />
-      <div className="flex items-center mt-4">
-        <div className="text-left py-8 pl-6 pr-4 w-1/2">
+      <div className="flex flex-col lg:flex-row items-center mt-4">
+        <div className="text-left lg:py-8 lg:pl-6 lg:pr-4 lg:w-1/2 p-2">
           <p>
             Hi! My name is Dion Leung, and I've been a Seattle area native my
             whole life. I grew up and lived in Kent for the first 18 years of my
@@ -66,9 +66,9 @@ export default function Meet() {
             neverending list of shows to watch.
           </p>
         </div>
-        <div className="flex flex-col w-1/2 pr-4">
+        <div className="flex flex-col lg:w-1/2 lg:pr-4 w-full p-2">
           <img
-            className="text-center border border-black border-2 bg-blue-200"
+            className=""
             src={flowtest}
             alt="OP performing civil engineering tests"
           />

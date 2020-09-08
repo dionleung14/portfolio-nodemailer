@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <div className="flex justify-around border-solid border-2 border-black w-full lg:pt-4 lg:pb-4 fixed top-0 mb-10 bg-teal-300 z-30">
+      <div className="flex justify-around border-solid border-2 border-black w-full lg:pt-4 lg:pb-4 fixed top-0 mb-10 bg-teal-300 z-40">
         <AnchorLink
           href="#top"
           className="lg:text-4xl text-2xl border border-transparent hover:border-blue-600 px-2 rounded"
@@ -68,7 +68,7 @@ export default function Navbar() {
       <div
         className={`${
           burger.display ? "inline-block" : "hidden"
-        } pt-12 fixed right-0 w-auto h-auto bg-red-400 z-10 flex flex-col`}
+        } pt-12 fixed right-0 w-auto h-auto bg-red-400 z-30 flex flex-col pr-2`}
       >
         <AnchorLink
           href="#about-me"

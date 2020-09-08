@@ -34,13 +34,13 @@ export default function Testimonials() {
 
   return (
     <div
-      className="w-8/12 mx-auto border border-black border-2 px-4"
+      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4"
       id="testimonials"
     >
       <FirstHeader text="Testimonials" />
-      <div className="flex items-center justify-around px-6 py-12 border-red-300 border-2">
+      <div className="flex items-center justify-around lg:px-6 lg:py-12 border-red-300 border-2">
         <button
-          className="border-white border-2 p-2 rounded"
+          className="border-white border-2 lg:p-2 px-1 mx-1 rounded"
           onClick={decrement}
         >
           previous
