@@ -45,7 +45,7 @@ export default function Testimonials() {
         >
           previous
         </button>
-        <div className="w-2/3 h-40 flex flex-col">
+        <div className="w-2/3 lg:h-40 flex flex-col">
           <div className="my-auto">
             <h1 className="text-justify">{currentTest.message}</h1>
             <h1 className="text-center">
