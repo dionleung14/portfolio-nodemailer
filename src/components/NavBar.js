@@ -12,6 +12,14 @@ export default function Navbar() {
   const handleToggle = ({ target }) =>
     setBurger((s) => ({ ...s, [target.name]: !s[target.name] }));
 
+  const handleHide = () => {
+    // console.log("clickity");
+    setBurger({
+      ...burger,
+      display: false,
+    });
+  };
+
   return (
     <div>
       <div className="flex justify-around border-solid border-2 border-black w-full lg:pt-4 lg:pb-4 fixed top-0 mb-10 bg-teal-300 z-40">
@@ -70,49 +78,54 @@ export default function Navbar() {
           burger.display ? "inline-block" : "hidden"
         } pt-12 fixed right-0 w-auto h-auto bg-red-400 z-30 flex flex-col pr-2`}
       >
-        <AnchorLink
-          href="#about-me"
-          className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
-        >
-          about me
-        </AnchorLink>
-        <AnchorLink
-          href="#meet-me"
-          className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
-        >
-          meet me
-          <img
-            src={hamburger}
-            alt="menu expand icon"
-            name="display"
-            onClick={handleToggle}
-            className="lg:hidden self-center inline-block w-6 z-50"
-          />
-        </AnchorLink>
-        <AnchorLink
-          href="#qualifications"
-          className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
-        >
-          qualifications
-        </AnchorLink>
-        <AnchorLink
-          href="#portfolio"
-          className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
-        >
-          portfolio
-        </AnchorLink>
-        <AnchorLink
-          href="#testimonials"
-          className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
-        >
-          testimonials
-        </AnchorLink>
-        <AnchorLink
-          href="#contact"
-          className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
-        >
-          contact
-        </AnchorLink>
+        <div onClick={handleHide}>
+          <AnchorLink
+            href="#about-me"
+            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
+          >
+            about me
+          </AnchorLink>
+        </div>
+        <div onClick={handleHide}>
+          <AnchorLink
+            href="#meet-me"
+            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
+          >
+            meet me
+          </AnchorLink>
+        </div>
+        <div onClick={handleHide}>
+          <AnchorLink
+            href="#qualifications"
+            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
+          >
+            qualifications
+          </AnchorLink>
+        </div>
+        <div onClick={handleHide}>
+          <AnchorLink
+            href="#portfolio"
+            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
+          >
+            portfolio
+          </AnchorLink>
+        </div>
+        <div onClick={handleHide}>
+          <AnchorLink
+            href="#testimonials"
+            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
+          >
+            testimonials
+          </AnchorLink>
+        </div>
+        <div onClick={handleHide}>
+          <AnchorLink
+            href="#contact"
+            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
+          >
+            contact
+          </AnchorLink>
+        </div>
       </div>
     </div>
   );
