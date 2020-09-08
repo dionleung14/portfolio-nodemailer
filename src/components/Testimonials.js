@@ -43,7 +43,7 @@ export default function Testimonials() {
           className="border-white border-2 lg:p-2 px-1 mx-1 rounded"
           onClick={decrement}
         >
-          previous
+          {`<`}
         </button>
         <div className="w-2/3 lg:h-40 flex flex-col">
           <div className="my-auto">
@@ -58,7 +58,7 @@ export default function Testimonials() {
           className="border-white border-2 p-2 rounded"
           onClick={increment}
         >
-          next
+          {`>`}
         </button>
       </div>
       <div>{tracker.track}</div>
