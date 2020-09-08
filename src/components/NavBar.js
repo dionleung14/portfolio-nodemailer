@@ -2,10 +2,7 @@ import React, { useState } from "react";
 // import { BrowserRouter as Link } from "react-router-dom";
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import hamburger from "./photos/hamburger.png";
-import burgerIcon from "./photos/burger.png";
 import icon8 from "./photos/icons8-menu-64.png";
-import ToGather from "./photos/portfolio-photos/ToGather.png";
 
 export default function Navbar() {
   const [burger, setBurger] = useState({
@@ -68,13 +65,6 @@ export default function Navbar() {
         >
           contact
         </AnchorLink>
-        <img
-          src={hamburger}
-          alt="menu expand icon"
-          name="display"
-          onClick={handleToggle}
-          className="lg:hidden self-center inline-block w-6 z-50"
-        />
         <img
           src={icon8}
           alt="mand icon"
