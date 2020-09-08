@@ -9,7 +9,7 @@ export default function Welcome() {
       id="top"
     >
       <FirstHeader text="Dion Leung, E.I.T, Fullstack Web Developer" />
-      <div className="top-0 pt-4 pb-20 z-10">
+      <div className="top-0 pt-4 lg:mb-20 mb-6 z-10">
         {/* <h1 className="text-center text-4xl top-0 pt-10">Text with photo</h1> */}
         <img
           src={photograph}
