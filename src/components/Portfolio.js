@@ -23,13 +23,41 @@ export default function Portfolio() {
   });
   return (
     <div
-      className="w-8/12 mx-auto border border-black border-2 px-4"
+      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4"
       id="portfolio"
     >
       <FirstHeader text="Portfolio, selected works" />
-      <div className="flex items-center justify-around mt-6 px-6 relative z-10">
+      <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
+        Equipped with the knowledge from the curriculum of the coding bootcamp,
+        I have highlighted several projects below. Click each one to learn more!
+        I am constantly working on new apps and endeavors, so expect this to
+        update regularly. You can find my github{" "}
+        <a
+          href="https://github.com/dionleung14"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline text-blue-700"
+        >
+          here.
+        </a>
+        {/* , and you can follow me on my coding journey on Twitter here:{" "}
+        <a
+          href="https://twitter.com/DionTheDev?ref_src=twsrc%5Etfw"
+          className="twitter-follow-button border border-2 border-blue-300 px-2 py-1 rounded"
+          data-size="large"
+          data-show-count="false"
+        >
+          Follow @DionTheDev
+        </a>
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script> */}
+      </h1>
+      <div className="flex lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
         <div
-          className="flex flex-col items-center w-1/3 mx-2"
+          className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
           data-project="rocketlist"
           onClick={handlePortfolioClick}
         >
@@ -44,7 +72,7 @@ export default function Portfolio() {
           </small>
         </div>
         <div
-          className="flex flex-col items-center w-1/3 mx-2"
+          className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
           data-project="togather"
           onClick={handlePortfolioClick}
         >
@@ -55,12 +83,12 @@ export default function Portfolio() {
             alt="to-gather"
           />
 
-          <small className="absolute bottom-0" data-project="togather">
+          <small className="lg:absolute bottom-0" data-project="togather">
             ToGather
           </small>
         </div>
         <div
-          className="flex flex-col items-center w-1/3 mx-2"
+          className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
           onClick={handlePortfolioClick}
           data-project="pokegodex"
         >
@@ -70,7 +98,7 @@ export default function Portfolio() {
             alt="pokegodex"
             data-project="pokegodex"
           />
-          <small className="absolute bottom-0" data-project="pokegodex">
+          <small className="lg:absolute bottom-0" data-project="pokegodex">
             Pok&eacute;GoDex
           </small>
         </div>
@@ -375,34 +403,6 @@ export default function Portfolio() {
       ) : (
         " "
       )}
-      <h1 className="text-left top-0 my-8 w-3/4 mx-auto">
-        Equipped with the knowledge from the curriculum of the coding bootcamp,
-        I have highlighted several projects above. Click each one to learn more!
-        I am constantly working on new apps and endeavors, so expect this to
-        update regularly. You can find my github{" "}
-        <a
-          href="https://github.com/dionleung14"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline text-blue-700"
-        >
-          here.
-        </a>
-        {/* , and you can follow me on my coding journey on Twitter here:{" "}
-        <a
-          href="https://twitter.com/DionTheDev?ref_src=twsrc%5Etfw"
-          className="twitter-follow-button border border-2 border-blue-300 px-2 py-1 rounded"
-          data-size="large"
-          data-show-count="false"
-        >
-          Follow @DionTheDev
-        </a>
-        <script
-          async
-          src="https://platform.twitter.com/widgets.js"
-          charset="utf-8"
-        ></script> */}
-      </h1>
     </div>
   );
 }

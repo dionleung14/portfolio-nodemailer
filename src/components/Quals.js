@@ -5,12 +5,12 @@ import alaskaSurvey from "./photos/alaskaSurvey.JPG";
 export default function Quals() {
   return (
     <div
-      className="w-8/12 mx-auto border border-black border-2 px-4"
+      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4"
       id="qualifications"
     >
       <FirstHeader text="Qualifications" />
-      <div className="flex items-start justify-around py-6">
-        <div className="flex flex-col w-1/2 pl-6">
+      <div className="flex lg:flex-row flex-col-reverse items-start justify-around lg:py-6 p-2">
+        <div className="flex flex-col lg:w-1/2 w-full my-2 lg:pl-6">
           <img
             className="border border-red-700 border-2"
             src={alaskaSurvey}
@@ -23,7 +23,7 @@ export default function Quals() {
             my civil/environmental engineering roles.
           </small>
         </div>
-        <div className="w-1/2 ml-4 pr-4">
+        <div className="lg:w-1/2 w-full lg:ml-4 lg:pr-4">
           <p className="text-left">
             My unique skillset combines a civil and environmental engineering
             training with a new-found passion for coding, which brings an
