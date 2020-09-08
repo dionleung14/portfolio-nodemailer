@@ -62,7 +62,7 @@ export default function Navbar() {
           alt="menu expand icon"
           name="display"
           onClick={handleToggle}
-          className="lg:hidden self-center inline-block w-6"
+          className="lg:hidden self-center inline-block w-6 z-50"
         />
       </div>
       <div
