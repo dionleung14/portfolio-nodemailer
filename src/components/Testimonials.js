@@ -25,7 +25,11 @@ export default function Testimonials() {
     },
     {
       from: "Louis Coleman",
-      message: `lorem ipsum dolor set`,
+      message: `Dion and I worked together on a few projects while taking a Full Stack Web Development course through the University of Washington. It was apparent from the start that Dion is extremely passionate and driven about coding. He was always early to class with questions and wanting to learn more and push himself. As a member of two projects he showed many times about how driven he is to put out the best work and often times in my opinion would go above and beyond the goals set, and would drive others to do the same.
+
+      He is also someone that is also compassionate and willing to work with others on their issues and to strengthen their understanding.
+      
+      All in all Dion is someone that I hope to work with in the future and would be a fantastic addition and huge asset to any team that is lucky enough to have him.`,
       relationship: "co-collaborator",
     },
   ];
@@ -45,7 +49,7 @@ export default function Testimonials() {
         >
           {`<`}
         </button>
-        <div className="w-3/4 lg:h-40 flex flex-col">
+        <div className="w-3/4 lg:h-auto flex flex-col">
           <div className="my-auto">
             <h1 className="text-justify">{currentTest.message}</h1>
             <h1 className="text-center">
