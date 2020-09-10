@@ -3,6 +3,7 @@ import FirstHeader from "./FirstHeader.js";
 import RocketList from "./photos/portfolio-photos/RocketList.png";
 import ToGather from "./photos/portfolio-photos/ToGather.png";
 import PokeGoDex from "./photos/portfolio-photos/PokeGoDex.png";
+import CollapseBtn from "./CollapseBtn";
 // import PortfolioItem from "./PortfolioItem";
 
 export default function Portfolio() {
@@ -36,7 +37,7 @@ export default function Portfolio() {
           href="https://github.com/dionleung14"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline text-blue-700"
+          className="hover:underline text-yellow-900"
         >
           here.
         </a>
@@ -415,7 +416,7 @@ export default function Portfolio() {
               href="http://rocketlist.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-yellow-900"
             >
               here
             </a>
@@ -424,7 +425,7 @@ export default function Portfolio() {
               href="https://bit.ly/39S9vL7"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline hover:text-yellow-900"
             >
               here.
             </a>{" "}
@@ -511,12 +512,7 @@ export default function Portfolio() {
             requests and focusing on mobile layout/optimization. I also was
             responsible for the custom rocket animation in the logo.
           </h1>
-          <button
-            className="border border-black border-2 rounded self-start mt-4 p-2"
-            onClick={collapsePortfolioItem}
-          >
-            Collapse
-          </button>
+          <CollapseBtn collapseFunction={collapsePortfolioItem} />
         </div>
       ) : (
         " "
@@ -530,7 +526,7 @@ export default function Portfolio() {
               href="http://awesome-group-planner.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline hover:text-yellow-900"
             >
               here
             </a>
@@ -539,7 +535,7 @@ export default function Portfolio() {
               href="https://bit.ly/2Pnh8A2"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline hover:text-yellow-900"
             >
               here.
             </a>{" "}
@@ -599,12 +595,7 @@ export default function Portfolio() {
             the front-end team, dealing with collecting information in the
             forms, handlebars rendering, and other front-end javascript.
           </h1>
-          <button
-            className="border border-black border-2 rounded self-start mt-4 p-2"
-            onClick={collapsePortfolioItem}
-          >
-            Collapse
-          </button>
+          <CollapseBtn collapseFunction={collapsePortfolioItem} />
         </div>
       ) : (
         " "
@@ -695,12 +686,7 @@ export default function Portfolio() {
             featured heavily in the code was jQuery, and using ajax for our
             requests.
           </h1>
-          <button
-            className="border border-black border-2 rounded self-start mt-4 p-2"
-            onClick={collapsePortfolioItem}
-          >
-            Collapse
-          </button>
+          <CollapseBtn collapseFunction={collapsePortfolioItem} />
         </div>
       ) : (
         " "

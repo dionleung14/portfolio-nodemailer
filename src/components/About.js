@@ -22,6 +22,7 @@ export default class About extends Component {
                 href="https://www.dalenanguyen.net/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="hover:underline text-yellow-900"
               >
                 Dalena Nguyen
               </a>
