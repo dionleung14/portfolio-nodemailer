@@ -124,14 +124,14 @@ export default function ContactForm() {
 
   return (
     <div
-      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4"
+      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4 bg-dclpal1-400 "
       id="contact"
     >
       <FirstHeader text="Contact me!" />
       <div className="flex justify-around flex-col w-full lg:mt-8 lg:mb-2 my-2 lg:pl-6 p-2">
         <h3 className="lg:w-4/5 my-2">
-          Hit me up! Have any questions? Want to collaborate together? Secretly
-          dying to know my favorite song? Send me an email (or use the nifty
+          Have any questions? Want to collaborate together? Secretly dying to
+          know my favorite song? Hit me up! Send me an email (or use the nifty
           little form below!) and I'll get back to you as soon as I can!
         </h3>
         <h3 className="lg:w-4/5 my-2">
@@ -149,7 +149,7 @@ export default function ContactForm() {
         </h3>
 
         <form
-          className="lg:w-5/6 w-full lg:mx-auto p-2 border border-gray-300"
+          className="lg:w-5/6 w-full lg:mx-auto p-2 border border-gray-300 bg-dclpal1-300 text-white"
           id="contact-form"
           onSubmit={handleNodeMailerSubmit}
         >
@@ -162,7 +162,7 @@ export default function ContactForm() {
               </label>
               <div className="flex flex-row">
                 <input
-                  className="w-1/2 px-2 mr-2"
+                  className="w-1/2 px-2 mr-2 text-black"
                   type="text"
                   value={formState.firstName}
                   onChange={handleInput}
@@ -175,7 +175,7 @@ export default function ContactForm() {
                 {/* <div className="w-1/2 border-blue-600 "> */}
                 <input
                   type="name"
-                  className="w-1/2 px-2"
+                  className="w-1/2 px-2 text-black"
                   id="last-name"
                   onChange={handleInput}
                   placeholder="Last name"
@@ -196,10 +196,10 @@ export default function ContactForm() {
               <div className="flex lg:flex-row flex-col">
                 <input
                   type="email"
-                  className="px-2 mr-2"
+                  className="px-2 mr-2 text-black"
                   id="inputEmail"
                   value={formState.emailAddress}
-                  placeholder="jbond007@mi6.com"
+                  placeholder="example@email.com"
                   aria-describedby="emailHelp"
                   onChange={handleInput}
                   name="emailAddress"
@@ -217,9 +217,9 @@ export default function ContactForm() {
               <div className="flex lg:flex-row flex-col">
                 <input
                   type="phonenumber"
-                  className="px-2 mr-2"
+                  className="px-2 mr-2 text-black"
                   id="phoneNumber"
-                  placeholder="206-867-5309"
+                  placeholder="555-123-4567"
                   value={formState.phNum}
                   onChange={handleInput}
                   name="phNum"
@@ -241,14 +241,16 @@ export default function ContactForm() {
                 </label>
                 <select
                   type="name"
-                  className="px-2 py-1"
+                  className="px-2 py-1 text-black"
                   id="subject"
                   value={formState.subject}
                   name="subject"
                   onChange={handleInput}
                   required
                 >
-                  <option value="Networking">Networking</option>
+                  <option className="" value="Networking">
+                    Networking
+                  </option>
                   <option value="Inquiry">Inquiry</option>
                   <option value="Collaboration">Collaboration</option>
                   <option value="Other">Other (specify in message)</option>
@@ -264,17 +266,27 @@ export default function ContactForm() {
                 </label>
                 <textarea
                   type="message"
-                  className="p-2 lg:w-64 w-64 lg:resize"
+                  className="p-2 lg:w-64 w-64 lg:resize text-black"
                   id="message"
                   maxLength="500"
                   value={formState.message}
                   name="message"
+                  placeholder="Your message here, in 500 characters or fewer!"
                   onChange={handleInput}
                   required
                 />
-                <small>
+                {formState.message.length ? (
+                  <small>
+                    Characters remaining: {500 - formState.message.length}
+                  </small>
+                ) : (
+                  <small className="text-dclpal1-300">
+                    I'm a hidden message!
+                  </small>
+                )}
+                {/* <small>
                   Characters remaining: {500 - formState.message.length}
-                </small>
+                </small> */}
               </div>
             </div>
           </div>
@@ -304,7 +316,7 @@ export default function ContactForm() {
           <div className="lg:pl-6">
             <button
               type="submit"
-              className="rounded py-2 px-6 bg-green-400 hover:bg-green-500 text-xl hover:text-white"
+              className="rounded py-2 px-6 bg-dclpal1-400 hover:bg-dclpal1-200 text-xl hover:text-white"
             >
               Send!
             </button>

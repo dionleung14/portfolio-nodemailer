@@ -38,7 +38,7 @@ export default function Testimonials() {
 
   return (
     <div
-      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4"
+      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4 bg-dclpal1-400"
       id="testimonials"
     >
       <FirstHeader text="Testimonials" />

@@ -7,7 +7,10 @@ import Emoji from "./Emoji";
 export default class About extends Component {
   render() {
     return (
-      <div className="lg:w-8/12 w-full lg:mx-auto lg:px-4" id="about-me">
+      <div
+        className="lg:w-8/12 w-full lg:mx-auto lg:px-4 bg-dclpal1-400"
+        id="about-me"
+      >
         <FirstHeader text="About Me" />
         <div className="flex md:flex-row flex-col items-center justify-around border-white border-2 px-6">
           <div className="lg:w-1/2 w-full lg:mx-4 my-2 lg:my-6">

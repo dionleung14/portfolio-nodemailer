@@ -21,10 +21,10 @@ export default function Navbar() {
 
   return (
     <div>
-      <div className="flex justify-around border-solid border-2 border-black w-full lg:pt-4 lg:pb-4 fixed top-0 mb-10 bg-dclevergreen-100 z-40 text-dclbeige-100">
+      <div className="flex justify-around border-solid border-2 border-black w-full lg:pt-4 lg:pb-4 fixed top-0 mb-10 bg-dclpal1-100 z-40 text-white">
         <AnchorLink
           href="#top"
-          className="lg:text-4xl text-2xl border border-transparent hover:border-dclbeige-200 px-2 rounded"
+          className="lg:text-4xl text-2xl border border-transparent hover:border-dclpal1-300 px-2 rounded"
         >
           Welcome
         </AnchorLink>

@@ -5,7 +5,7 @@ import FirstHeader from "./FirstHeader";
 export default function Welcome() {
   return (
     <div
-      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4"
+      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4 bg-dclpal1-400"
       id="top"
     >
       <FirstHeader text="Dion Leung, E.I.T, Fullstack Web Developer" />
