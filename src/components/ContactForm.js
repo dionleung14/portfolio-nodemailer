@@ -130,8 +130,8 @@ export default function ContactForm() {
       <FirstHeader text="Contact me!" />
       <div className="flex justify-around flex-col w-full lg:mt-8 lg:mb-2 my-2 lg:pl-6 p-2">
         <h3 className="lg:w-4/5 my-2">
-          Hit me up! Have any questions? Want to collaborate together? Secretly
-          dying to know my favorite song? Send me an email (or use the nifty
+          Have any questions? Want to collaborate together? Secretly dying to
+          know my favorite song? Hit me up! Send me an email (or use the nifty
           little form below!) and I'll get back to you as soon as I can!
         </h3>
         <h3 className="lg:w-4/5 my-2">
@@ -162,7 +162,7 @@ export default function ContactForm() {
               </label>
               <div className="flex flex-row">
                 <input
-                  className="w-1/2 px-2 mr-2"
+                  className="w-1/2 px-2 mr-2 bg-dclpal1-200"
                   type="text"
                   value={formState.firstName}
                   onChange={handleInput}
