@@ -5,7 +5,7 @@ import alaskaSurvey from "./photos/alaskaSurvey.JPG";
 export default function Quals() {
   return (
     <div
-      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4"
+      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4 bg-dclpal1-400 "
       id="qualifications"
     >
       <FirstHeader text="Qualifications" />

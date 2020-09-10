@@ -36,7 +36,7 @@ export default function Meet() {
 
   return (
     <div
-      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4"
+      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 bg-dclpal1-400 lg:px-4"
       id="meet-me"
     >
       <FirstHeader text="Meet me" />
