@@ -17,6 +17,20 @@ module.exports = {
 
       black: "#000",
       white: "#fff",
+      dclbeige: {
+        100: "#e1c699",
+        200: "#f5f5dc",
+        300: "#f9e4b7",
+      },
+      dclevergreen: {
+        100: "#2c493f",
+        200: "#125B1C",
+      },
+      dclnavy: {
+        100: "#000080",
+        200: "#02075D",
+        300: "#133785",
+      },
 
       gray: {
         100: "#f7fafc",

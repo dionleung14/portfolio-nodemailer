@@ -38,14 +38,14 @@ export default function Testimonials() {
       id="testimonials"
     >
       <FirstHeader text="Testimonials" />
-      <div className="flex items-center justify-around lg:px-6 lg:py-12 border-red-300 border-2">
+      <div className="flex items-center justify-around lg:px-6 lg:py-12 my-4 ">
         <button
           className="border-white border-2 lg:p-2 px-1 mx-1 rounded"
           onClick={decrement}
         >
           {`<`}
         </button>
-        <div className="w-2/3 lg:h-40 flex flex-col">
+        <div className="w-3/4 lg:h-40 flex flex-col">
           <div className="my-auto">
             <h1 className="text-justify">{currentTest.message}</h1>
             <h1 className="text-center">
@@ -55,7 +55,7 @@ export default function Testimonials() {
           </div>
         </div>
         <button
-          className="border-white border-2 p-2 rounded"
+          className="border-white border-2 lg:p-2 px-1 mx-1 rounded"
           onClick={increment}
         >
           {`>`}
