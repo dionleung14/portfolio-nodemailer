@@ -44,7 +44,7 @@ export default function Testimonials() {
       <FirstHeader text="Testimonials" />
       <div className="flex items-center justify-around lg:px-6 lg:py-12 my-4 ">
         <button
-          className="border-white border-2 lg:p-2 px-1 mx-1 rounded"
+          className="lg:p-2 px-1 mx-1 border border-blue-700 border-2 bg-dclpal1-300 text-white hover:bg-yellow-300 hover:text-black rounded"
           onClick={decrement}
         >
           {`<`}
@@ -59,7 +59,7 @@ export default function Testimonials() {
           </div>
         </div>
         <button
-          className="border-white border-2 lg:p-2 px-1 mx-1 rounded"
+          className="lg:p-2 px-1 mx-1 border border-blue-700 border-2 bg-dclpal1-300 text-white hover:bg-yellow-300 hover:text-black rounded"
           onClick={increment}
         >
           {`>`}
