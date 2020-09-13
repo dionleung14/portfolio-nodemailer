@@ -75,7 +75,7 @@ export default function Navbar() {
       <div
         className={`${
           burger.display ? "inline-block" : "hidden"
-        } pt-12 fixed right-0 w-auto h-auto bg-red-400 z-30 flex flex-col pr-2`}
+        } pt-12 fixed right-0 w-auto h-auto bg-dclpal1-500 z-30 flex text-white border border-black flex-col pr-2`}
       >
         <div onClick={handleHide}>
           <AnchorLink
