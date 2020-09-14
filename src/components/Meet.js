@@ -6,8 +6,9 @@ import flowtest from "./photos/flowtest.JPG";
 import NiehausStatue from "./photos/NiehausStatue.JPG";
 import softball from "./photos/softball.JPG";
 import Carousel from "./Carousel";
+import ComponentContainer from "./ComponentContainer.js";
 
-export default function Meet() {
+export default function Meet(props) {
   const photosArr = [dubs, flowtest, NiehausStatue, softball];
 
   const photosObj = {
@@ -35,11 +36,8 @@ export default function Meet() {
   };
 
   return (
-    <div
-      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 bg-dclpal1-400 lg:px-4"
-      id="meet-me"
-    >
-      <FirstHeader text="Meet me" />
+    <ComponentContainer id="meet-me" darkModeCont={props.darkModeApp.darkMode}>
+      <FirstHeader text="Meet me" darkModeHeader={props.darkModeApp.darkMode} />
       <div className="flex flex-col lg:flex-row items-center mt-4">
         <div className="text-left lg:py-8 lg:pl-6 lg:pr-4 lg:w-1/2 p-2">
           <p>
@@ -72,7 +70,7 @@ export default function Meet() {
             src={flowtest}
             alt="OP performing civil engineering tests"
           />
-          <small className="text-center">
+          <small className="text-center italic">
             Performing high pressure flowtests on fire hydrants... on Halloween
           </small>
         </div>
@@ -83,6 +81,6 @@ export default function Meet() {
         })} */}
       </div>
       <br />
-    </div>
+    </ComponentContainer>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import logo from "./logo.svg";
 import NavBar from "./components/NavBar";
 import Welcome from "./components/Welcome";
@@ -11,20 +11,32 @@ import ContactForm from "./components/ContactForm";
 import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
+  const [darkMode, setDarkMode] = useState({ darkMode: false });
+  const handleToggle = () =>
+    setDarkMode((s) => ({ ...s, darkMode: !darkMode.darkMode }));
+
+  const toggleSwitch = () => {
+    return (
+      <button name="darkMode" onClick={handleToggle}>
+        toggle dark mode
+      </button>
+    );
+  };
+
   return (
     <Router>
-      <NavBar />
+      <NavBar darkModeApp={darkMode} toggle={toggleSwitch} />
       {/* <Switch> */}
       {/* <Route exact path="/about-me"> */}
-      <Welcome />
-      <About />
+      <Welcome darkModeApp={darkMode} />
+      <About darkModeApp={darkMode} />
       {/* </Route> */}
       {/* <About /> */}
-      <Meet />
-      <Quals />
-      <Portfolio />
-      <Testimonials />
-      <ContactForm />
+      <Meet darkModeApp={darkMode} />
+      <Quals darkModeApp={darkMode} />
+      <Portfolio darkModeApp={darkMode} />
+      <Testimonials darkModeApp={darkMode} />
+      <ContactForm darkModeApp={darkMode} />
       {/* </Switch> */}
     </Router>
   );
