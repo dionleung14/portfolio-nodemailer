@@ -6,7 +6,7 @@
 
 ### Summary of this documentation
 
-This .md document (README.md) describes features of the custom portfolio deployed to heroku as https://dion-leung-portfolio.herokuapp.com/ and officially at https://www.dionleung.engineer in all supporting files.
+This .md document (README.md) describes features of the custom portfolio deployed to heroku as https://dion-leung-portfolio.herokuapp.com/ and officially at http://www.dionleung.engineer in all supporting files.
 
 - Components
 - Styling
@@ -18,6 +18,8 @@ This .md document (README.md) describes features of the custom portfolio deploye
 ### Styling
 
 ### Planned updates
+
+- Securing an SSL
 
 ### Additional comments and notes
 

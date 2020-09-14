@@ -27,7 +27,11 @@ export default function Welcome(props) {
           rel="noopener noreferrer"
           className="flex flex-col items-center"
         >
-          <img src={github} alt="github" className="w-16 rounded" />
+          <img
+            src={github}
+            alt="github"
+            className="w-16 rounded border border-white"
+          />
           <small className="italic">Github</small>
         </a>
 
@@ -37,7 +41,11 @@ export default function Welcome(props) {
           rel="noopener noreferrer"
           className="flex flex-col items-center"
         >
-          <img src={linkedin} alt="linkedin" className="w-16 rounded" />
+          <img
+            src={linkedin}
+            alt="linkedin"
+            className="w-16 rounded border border-white"
+          />
           <small className="italic">LinkedIn</small>
         </a>
       </div>

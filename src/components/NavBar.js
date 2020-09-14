@@ -30,47 +30,75 @@ export default function Navbar(props) {
       >
         <AnchorLink
           href="#top"
-          className="lg:text-4xl text-2xl border border-transparent hover:border-dclpal1-100 px-2 rounded"
+          className={`lg:text-4xl text-2xl border border-transparent px-2 rounded ${
+            props.darkModeApp.darkMode
+              ? "hover:border-white"
+              : "hover:border-dclpal1-100"
+          }`}
         >
           Welcome
         </AnchorLink>
-        {props.toggle()}
         <AnchorLink
           href="#about-me"
-          className="hidden lg:inline-block self-center border border-transparent hover:border-dclpal1-100 px-2 rounded text-lg"
+          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
+            props.darkModeApp.darkMode
+              ? "hover:border-white"
+              : "hover:border-dclpal1-100"
+          }`}
         >
           about me
         </AnchorLink>
         <AnchorLink
           href="#meet-me"
-          className="hidden lg:inline-block self-center border border-transparent hover:border-dclpal1-100 px-2 rounded text-lg"
+          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
+            props.darkModeApp.darkMode
+              ? "hover:border-white"
+              : "hover:border-dclpal1-100"
+          }`}
         >
           meet me
         </AnchorLink>
         <AnchorLink
           href="#qualifications"
-          className="hidden lg:inline-block self-center border border-transparent hover:border-dclpal1-100 px-2 rounded text-lg"
+          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
+            props.darkModeApp.darkMode
+              ? "hover:border-white"
+              : "hover:border-dclpal1-100"
+          }`}
         >
           qualifications
         </AnchorLink>
         <AnchorLink
           href="#portfolio"
-          className="hidden lg:inline-block self-center border border-transparent hover:border-dclpal1-100 px-2 rounded text-lg"
+          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
+            props.darkModeApp.darkMode
+              ? "hover:border-white"
+              : "hover:border-dclpal1-100"
+          }`}
         >
           portfolio
         </AnchorLink>
         <AnchorLink
           href="#testimonials"
-          className="hidden lg:inline-block self-center border border-transparent hover:border-dclpal1-100 px-2 rounded text-lg"
+          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
+            props.darkModeApp.darkMode
+              ? "hover:border-white"
+              : "hover:border-dclpal1-100"
+          }`}
         >
           testimonials
         </AnchorLink>
         <AnchorLink
           href="#contact"
-          className="hidden lg:inline-block self-center border border-transparent hover:border-dclpal1-100 px-2 rounded text-lg"
+          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
+            props.darkModeApp.darkMode
+              ? "hover:border-white"
+              : "hover:border-dclpal1-100"
+          }`}
         >
           contact
         </AnchorLink>
+        {props.toggle()}
         <img
           src={icon8}
           alt="mand icon"
