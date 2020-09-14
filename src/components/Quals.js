@@ -16,7 +16,7 @@ export default function Quals(props) {
       <div className="flex lg:flex-row flex-col-reverse items-start justify-around lg:py-6 p-2">
         <div className="flex flex-col lg:w-1/2 w-full my-2 lg:pl-6">
           <img
-            className="border border-red-700 border-2"
+            className=""
             src={alaskaSurvey}
             alt="OP calibrating surveying equipment"
           />

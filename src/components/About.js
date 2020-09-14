@@ -15,7 +15,7 @@ export default class About extends Component {
           text="About Me"
           darkModeHeader={this.props.darkModeApp.darkMode}
         />
-        <div className="flex md:flex-row flex-col items-center justify-around border-white border-2 px-6">
+        <div className="flex md:flex-row flex-col items-center justify-around px-6">
           <div className="lg:w-1/2 w-full lg:mx-4 my-2 lg:my-6">
             <img
               className="md:w-auto md:h-auto w-3/4 mx-auto"
