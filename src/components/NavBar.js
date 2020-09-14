@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import icon8 from "./photos/icons8-menu-64.png";
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [burger, setBurger] = useState({
     display: false,
   });
@@ -21,46 +21,53 @@ export default function Navbar() {
 
   return (
     <div>
-      <div className="flex justify-around border-solid border-2 border-black w-full lg:pt-4 lg:pb-4 fixed top-0 mb-10 bg-dclpal1-100 z-40 text-white">
+      <div
+        className={`flex justify-around w-full lg:pt-4 lg:pb-4 fixed top-0 mb-10 z-40 ${
+          props.darkModeApp.darkMode
+            ? `bg-dclpal1-100 text-white`
+            : `bg-white text-dclpal1-100`
+        }`}
+      >
         <AnchorLink
           href="#top"
-          className="lg:text-4xl text-2xl border border-transparent hover:border-dclpal1-300 px-2 rounded"
+          className="lg:text-4xl text-2xl border border-transparent hover:border-dclpal1-100 px-2 rounded"
         >
           Welcome
         </AnchorLink>
+        {props.toggle()}
         <AnchorLink
           href="#about-me"
-          className="hidden lg:inline-block self-center border border-transparent hover:border-dclbeige-200 px-2 rounded text-lg"
+          className="hidden lg:inline-block self-center border border-transparent hover:border-dclpal1-100 px-2 rounded text-lg"
         >
           about me
         </AnchorLink>
         <AnchorLink
           href="#meet-me"
-          className="hidden lg:inline-block self-center border border-transparent hover:border-dclbeige-200 px-2 rounded text-lg"
+          className="hidden lg:inline-block self-center border border-transparent hover:border-dclpal1-100 px-2 rounded text-lg"
         >
           meet me
         </AnchorLink>
         <AnchorLink
           href="#qualifications"
-          className="hidden lg:inline-block self-center border border-transparent hover:border-dclbeige-200 px-2 rounded text-lg"
+          className="hidden lg:inline-block self-center border border-transparent hover:border-dclpal1-100 px-2 rounded text-lg"
         >
           qualifications
         </AnchorLink>
         <AnchorLink
           href="#portfolio"
-          className="hidden lg:inline-block self-center border border-transparent hover:border-dclbeige-200 px-2 rounded text-lg"
+          className="hidden lg:inline-block self-center border border-transparent hover:border-dclpal1-100 px-2 rounded text-lg"
         >
           portfolio
         </AnchorLink>
         <AnchorLink
           href="#testimonials"
-          className="hidden lg:inline-block self-center border border-transparent hover:border-dclbeige-200 px-2 rounded text-lg"
+          className="hidden lg:inline-block self-center border border-transparent hover:border-dclpal1-100 px-2 rounded text-lg"
         >
           testimonials
         </AnchorLink>
         <AnchorLink
           href="#contact"
-          className="hidden lg:inline-block self-center border border-transparent hover:border-dclbeige-200 px-2 rounded text-lg"
+          className="hidden lg:inline-block self-center border border-transparent hover:border-dclpal1-100 px-2 rounded text-lg"
         >
           contact
         </AnchorLink>

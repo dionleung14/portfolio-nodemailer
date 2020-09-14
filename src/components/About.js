@@ -1,17 +1,20 @@
 import React, { Component } from "react";
-// import Header from "./Header.js";
+import ComponentContainer from "./ComponentContainer.js";
 import FirstHeader from "./FirstHeader";
 import headshot from "./photos/headshot1.jpg";
 import Emoji from "./Emoji";
 
 export default class About extends Component {
-  render() {
+  render(props) {
     return (
-      <div
-        className="lg:w-8/12 w-full lg:mx-auto lg:px-4 bg-dclpal1-400"
+      <ComponentContainer
         id="about-me"
+        darkModeCont={this.props.darkModeApp.darkMode}
       >
-        <FirstHeader text="About Me" />
+        <FirstHeader
+          text="About Me"
+          darkModeHeader={this.props.darkModeApp.darkMode}
+        />
         <div className="flex md:flex-row flex-col items-center justify-around border-white border-2 px-6">
           <div className="lg:w-1/2 w-full lg:mx-4 my-2 lg:my-6">
             <img
@@ -19,7 +22,7 @@ export default class About extends Component {
               src={headshot}
               alt="headshot"
             />
-            <p className="text-xs text-center">
+            <p className="text-xs text-center italic">
               Photo taken by{" "}
               <a
                 href="https://www.dalenanguyen.net/"
@@ -79,15 +82,7 @@ export default class About extends Component {
             <br />
           </div>
         </div>
-        {/* <div className="border-white border-2">
-          <img
-            className="border border-red-700 border-2 mx-auto"
-            src="https://placekitten.com/400/400"
-            alt="headshot"
-          />
-          <p className="text-xs text-center">Caption</p>
-        </div> */}
-      </div>
+      </ComponentContainer>
     );
   }
 }

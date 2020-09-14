@@ -1,14 +1,18 @@
 import React from "react";
 import FirstHeader from "./FirstHeader.js";
 import alaskaSurvey from "./photos/alaskaSurvey.JPG";
+import ComponentContainer from "./ComponentContainer.js";
 
-export default function Quals() {
+export default function Quals(props) {
   return (
-    <div
-      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4 bg-dclpal1-400 "
+    <ComponentContainer
       id="qualifications"
+      darkModeCont={props.darkModeApp.darkMode}
     >
-      <FirstHeader text="Qualifications" />
+      <FirstHeader
+        text="Qualifications"
+        darkModeHeader={props.darkModeApp.darkMode}
+      />
       <div className="flex lg:flex-row flex-col-reverse items-start justify-around lg:py-6 p-2">
         <div className="flex flex-col lg:w-1/2 w-full my-2 lg:pl-6">
           <img
@@ -16,7 +20,7 @@ export default function Quals() {
             src={alaskaSurvey}
             alt="OP calibrating surveying equipment"
           />
-          <small className="text-center">
+          <small className="text-center italic">
             Calibrating a three-wire level in remote Alaska, waiting for fog to
             dissipate before helicopters could transport us! Unfortunately I
             don't have many photos of me coding, so please enjoy photos of me in
@@ -55,6 +59,6 @@ export default function Quals() {
           </p>
         </div>
       </div>
-    </div>
+    </ComponentContainer>
   );
 }

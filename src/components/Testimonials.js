@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import FirstHeader from "./FirstHeader";
+import ComponentContainer from "./ComponentContainer";
 
-export default function Testimonials() {
+export default function Testimonials(props) {
   let [tracker, setTracker] = useState(0);
 
   const decrement = () => {
@@ -37,11 +38,14 @@ export default function Testimonials() {
   let currentTest = testimonials[Math.abs(tracker) % testimonials.length];
 
   return (
-    <div
-      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4 bg-dclpal1-400"
+    <ComponentContainer
       id="testimonials"
+      darkModeCont={props.darkModeApp.darkMode}
     >
-      <FirstHeader text="Testimonials" />
+      <FirstHeader
+        text="Testimonials"
+        darkModeHeader={props.darkModeApp.darkMode}
+      />
       <div className="flex items-center justify-around lg:px-6 lg:py-12 my-4 ">
         <button
           className="lg:p-2 px-1 mx-1 border border-blue-700 border-2 bg-dclpal1-300 text-white hover:bg-yellow-300 hover:text-black rounded"
@@ -66,6 +70,6 @@ export default function Testimonials() {
         </button>
       </div>
       <div>{tracker.track}</div>
-    </div>
+    </ComponentContainer>
   );
 }

@@ -4,9 +4,9 @@ import RocketList from "./photos/portfolio-photos/RocketList.png";
 import ToGather from "./photos/portfolio-photos/ToGather.png";
 import PokeGoDex from "./photos/portfolio-photos/PokeGoDex.png";
 import CollapseBtn from "./CollapseBtn";
-// import PortfolioItem from "./PortfolioItem";
+import ComponentContainer from "./ComponentContainer";
 
-export default function Portfolio() {
+export default function Portfolio(props) {
   const handlePortfolioClick = (event) => {
     setPortfolioItem({
       item: event.target.dataset.project,
@@ -23,11 +23,14 @@ export default function Portfolio() {
     item: "",
   });
   return (
-    <div
-      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4 bg-dclpal1-400"
+    <ComponentContainer
       id="portfolio"
+      darkModeCont={props.darkModeApp.darkMode}
     >
-      <FirstHeader text="Portfolio, selected works" />
+      <FirstHeader
+        text="Portfolio, selected works"
+        darkModeHeader={props.darkModeApp.darkMode}
+      />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
         Equipped with the knowledge from the curriculum of the coding bootcamp,
         I have highlighted several projects below. Click each one to learn more!
@@ -63,12 +66,12 @@ export default function Portfolio() {
           onClick={handlePortfolioClick}
         >
           <img
-            className=""
+            className="bg-white"
             src={RocketList}
             alt="rocketlist"
             data-project="rocketlist"
           />
-          <small className="" data-project="rocketlist">
+          <small className="italic" data-project="rocketlist">
             RocketList
           </small>
           {portfolioItem.item === "rocketlist" ? (
@@ -201,7 +204,10 @@ export default function Portfolio() {
             alt="to-gather"
           />
 
-          <small className="lg:absolute bottom-0" data-project="togather">
+          <small
+            className="italic lg:absolute bottom-0"
+            data-project="togather"
+          >
             ToGather
           </small>
           {portfolioItem.item === "togather" ? (
@@ -305,7 +311,10 @@ export default function Portfolio() {
             alt="pokegodex"
             data-project="pokegodex"
           />
-          <small className="lg:absolute bottom-0" data-project="pokegodex">
+          <small
+            className="italic lg:absolute bottom-0"
+            data-project="pokegodex"
+          >
             Pok&eacute;GoDex
           </small>
           {portfolioItem.item === "pokegodex" ? (
@@ -691,6 +700,6 @@ export default function Portfolio() {
       ) : (
         " "
       )}
-    </div>
+    </ComponentContainer>
   );
 }

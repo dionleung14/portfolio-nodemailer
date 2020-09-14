@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import FirstHeader from "./FirstHeader";
 import API from "../utils/API";
+import ComponentContainer from "./ComponentContainer";
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-export default function ContactForm() {
+export default function ContactForm(props) {
   const [formState, setFormState] = useState({
     firstName: "",
     lastName: "",
@@ -123,11 +124,11 @@ export default function ContactForm() {
     setContactMethodState((s) => ({ ...s, [target.name]: !s[target.name] }));
 
   return (
-    <div
-      className="lg:w-8/12 w-full lg:mx-auto border border-black border-2 lg:px-4 bg-dclpal1-400 "
-      id="contact"
-    >
-      <FirstHeader text="Contact me!" />
+    <ComponentContainer id="contact" darkModeCont={props.darkModeApp.darkMode}>
+      <FirstHeader
+        text="Contact me!"
+        darkModeHeader={props.darkModeApp.darkMode}
+      />
       <div className="flex justify-around flex-col w-full lg:mt-8 lg:mb-2 my-2 lg:pl-6 p-2">
         <h3 className="lg:w-4/5 my-2">
           Have any questions? Want to collaborate together? Secretly dying to
@@ -457,6 +458,6 @@ export default function ContactForm() {
           </div>
         </div>
         </form>*/}
-    </div>
+    </ComponentContainer>
   );
 }
