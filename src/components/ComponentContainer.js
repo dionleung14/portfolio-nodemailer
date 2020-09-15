@@ -21,7 +21,7 @@ export default function ComponentContainer(props) {
         {props.children}
       </div>
       <div
-        className={`lg:w-2/12 w-0${
+        className={`lg:w-2/12 w-0 ${
           props.darkModeCont
             ? "bg-dclpal1-100 text-white"
             : "bg-white text-dclpal1-100"
