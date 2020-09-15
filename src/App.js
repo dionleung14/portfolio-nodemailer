@@ -17,8 +17,8 @@ function App() {
 
   const toggleSwitch = () => {
     return (
-      <button name="darkMode" onClick={handleToggle}>
-        toggle dark mode
+      <button name="darkMode" className="px-2 rounded" onClick={handleToggle}>
+        {darkMode.darkMode ? "dark mode on!" : "dark mode?"}
       </button>
     );
   };

@@ -4,7 +4,7 @@ export default function ComponentContainer(props) {
   return (
     <div className="flex flex-row">
       <div
-        className={`w-2/12 ${
+        className={`lg:w-2/12 w-0 ${
           props.darkModeCont
             ? "bg-dclpal1-100 text-white"
             : "bg-white text-dclpal1-100"
@@ -21,7 +21,7 @@ export default function ComponentContainer(props) {
         {props.children}
       </div>
       <div
-        className={`w-2/12 ${
+        className={`lg:w-2/12 w-0${
           props.darkModeCont
             ? "bg-dclpal1-100 text-white"
             : "bg-white text-dclpal1-100"
