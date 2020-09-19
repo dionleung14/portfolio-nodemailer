@@ -17,9 +17,15 @@ function App() {
 
   const toggleSwitch = () => {
     return (
-      <button name="darkMode" className="px-2 rounded" onClick={handleToggle}>
+      <div
+        name="darkMode"
+        className={`px-2 self-center rounded border cursor-pointer ${
+          darkMode.darkMode ? "border-white" : "border-dclpal1-100"
+        }`}
+        onClick={handleToggle}
+      >
         {darkMode.darkMode ? "dark mode on!" : "dark mode?"}
-      </button>
+      </div>
     );
   };
 

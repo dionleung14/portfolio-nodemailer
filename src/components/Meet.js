@@ -45,21 +45,23 @@ export default function Meet(props) {
             whole life. I grew up and lived in Kent for the first 18 years of my
             life, then moved to Seattle where I attended the University of
             Washington, earning a degree in Civil and Environmental Engineering.
-            A couple of years into my career, I was feeling stuck and
-            pigeon-holed, unable to advance further without an advanced degree.
-            I had used AutoCAD daily, and I had tried out coding in AutoLISP and
-            loved it. I decided to switch things up completely and pursue a
-            career in web-development and here I am!
+            A couple of years into my career, I was tasked with overhauling and
+            automating AutoCAD procedures using AutoLISP. I quickly found out
+            how fun programming and coding was, and was excited with the
+            possibilities. One thing led to another and before I knew it I found
+            myself switching things up completely to pursue a career in
+            web-development and here I am!
           </p>
           <br />
           <p>
-            In my time as a junior web developer, I have been able to learn a
+            {/* In my time as a junior web developer, I have been able to learn a
             lot of both back-end and front-end development. Despite going into
             my coding bootcamp drawn towards back-end systems, in particular
             database management, I really enjoy front-end technologies like
             React! Still, I am also exploring data-science and other analytical
-            aspects. In my spare time I enjoy spending time outdoors (only if I
-            take my allergy medicine!), playing sports like basketball, soccer,
+            aspects.  */}
+            In my spare time I enjoy spending time outdoors (only if I take my
+            allergy medicine!), playing sports like basketball, soccer,
             volleyball, and baseball, and making progress on my seemingly
             neverending list of shows to watch.
           </p>

@@ -13,7 +13,7 @@ export default function Quals(props) {
         text="Qualifications"
         darkModeHeader={props.darkModeApp.darkMode}
       />
-      <div className="flex lg:flex-row flex-col-reverse items-start justify-around lg:py-6 p-2">
+      <div className="flex lg:flex-row flex-col-reverse items-center justify-around lg:py-6 p-2">
         <div className="flex flex-col lg:w-1/2 w-full my-2 lg:pl-6">
           <img
             className=""
@@ -31,14 +31,16 @@ export default function Quals(props) {
           <p className="text-left">
             My unique skillset combines a civil and environmental engineering
             training with a new-found passion for coding, which brings an
-            innovative and analytic approach to the table. I had begun to
+            innovative and analytic approach to the table.
+            {/* I had begun to
             explore automation and coding through teaching myself LISP (AutoLISP
             via AutoCAD), trying to circumvent lengthy and repetitive actions
             when designing structures. Unfortunately, I was unable to make
             significant progress before tumultuously finding myself looking for
-            another job. However, dipping my feet into coding inspired me to
-            pursue it further, and I enrolled in and completed a Web
-            Development/Coding Bootcamp through the University of Washington.
+            another job. */}
+            However, dipping my feet into coding inspired me to pursue it
+            further, and I enrolled in and completed a Web Development/Coding
+            Bootcamp through the University of Washington.
             <br />
             <br />
             Problem solving was a skill taught through my formal education, and
