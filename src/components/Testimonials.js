@@ -6,11 +6,11 @@ export default function Testimonials(props) {
   let [tracker, setTracker] = useState(0);
 
   const decrement = () => {
-    setTracker(tracker--);
+    setTracker(tracker - 1);
   };
 
   const increment = () => {
-    setTracker(tracker++);
+    setTracker(tracker + 1);
   };
 
   const testimonials = [
@@ -49,7 +49,9 @@ export default function Testimonials(props) {
       <div className="flex items-center justify-around lg:px-6 lg:py-12 my-4 ">
         <button
           className="lg:p-2 px-1 mx-1 border border-blue-700 border-2 bg-dclpal1-300 text-white hover:bg-yellow-300 hover:text-black rounded"
-          onClick={decrement}
+          onClick={() => {
+            decrement();
+          }}
         >
           {`<`}
         </button>
@@ -64,12 +66,14 @@ export default function Testimonials(props) {
         </div>
         <button
           className="lg:p-2 px-1 mx-1 border border-blue-700 border-2 bg-dclpal1-300 text-white hover:bg-yellow-300 hover:text-black rounded"
-          onClick={increment}
+          onMouseDown={() => {
+            increment();
+          }}
         >
           {`>`}
         </button>
       </div>
-      <div>{tracker.track}</div>
+      {/* <div>{tracker}</div> */}
     </ComponentContainer>
   );
 }
