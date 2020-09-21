@@ -40,7 +40,7 @@ export default function Portfolio(props) {
           href="https://github.com/dionleung14"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline text-yellow-900"
+          className="hover:underline text-dclpal1-300"
         >
           here.
         </a>
@@ -84,7 +84,7 @@ export default function Portfolio(props) {
                   href="http://rocketlist.herokuapp.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   here
                 </a>
@@ -93,7 +93,7 @@ export default function Portfolio(props) {
                   href="https://bit.ly/39S9vL7"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   here.
                 </a>{" "}
@@ -106,7 +106,7 @@ export default function Portfolio(props) {
                   href="https://github.com/coleloui"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   Github
                 </a>
@@ -115,7 +115,7 @@ export default function Portfolio(props) {
                   href="https://www.linkedin.com/in/louis-coleman/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   LinkedIn
                 </a>
@@ -124,7 +124,7 @@ export default function Portfolio(props) {
                   href="https://github.com/meganjacobs97"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   Github
                 </a>
@@ -133,7 +133,7 @@ export default function Portfolio(props) {
                   href="https://www.linkedin.com/in/rory-kees-865342145/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   LinkedIn
                 </a>
@@ -142,7 +142,7 @@ export default function Portfolio(props) {
                   href="https://github.com/vb27"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   Github
                 </a>
@@ -151,7 +151,7 @@ export default function Portfolio(props) {
                   href="https://www.linkedin.com/in/paul-lee-1737821a2/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   LinkedIn
                 </a>
@@ -160,7 +160,7 @@ export default function Portfolio(props) {
                   href="https://github.com/mjones-27"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   Github
                 </a>
@@ -181,12 +181,10 @@ export default function Portfolio(props) {
                 requests and focusing on mobile layout/optimization. I also was
                 responsible for the custom rocket animation in the logo.
               </h1>
-              <button
-                className="border border-black border-2 rounded self-start mt-2 p-2"
-                onClick={collapsePortfolioItem}
-              >
-                Collapse
-              </button>
+              <CollapseBtn
+                darkModeBtn={props.darkModeApp.darkMode}
+                collapseFunction={collapsePortfolioItem}
+              />
             </div>
           ) : (
             " "
@@ -219,7 +217,7 @@ export default function Portfolio(props) {
                   href="http://awesome-group-planner.herokuapp.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   here
                 </a>
@@ -228,7 +226,7 @@ export default function Portfolio(props) {
                   href="https://bit.ly/2Pnh8A2"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   here.
                 </a>{" "}
@@ -239,7 +237,7 @@ export default function Portfolio(props) {
                   href="https://github.com/the-medium-place"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   Github
                 </a>
@@ -248,7 +246,7 @@ export default function Portfolio(props) {
                   href="https://www.linkedin.com/in/zachary-stowell/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   LinkedIn
                 </a>
@@ -257,7 +255,7 @@ export default function Portfolio(props) {
                   href="https://github.com/yuriohliveira"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   Github
                 </a>
@@ -266,7 +264,7 @@ export default function Portfolio(props) {
                   href="https://github.com/mgrinx"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   Github
                 </a>
@@ -289,12 +287,10 @@ export default function Portfolio(props) {
                 with collecting information in the forms, handlebars rendering,
                 and other front-end javascript.
               </h1>
-              <button
-                className="border border-black border-2 rounded self-start mt-2 p-2"
-                onClick={collapsePortfolioItem}
-              >
-                Collapse
-              </button>
+              <CollapseBtn
+                darkModeBtn={props.darkModeApp.darkMode}
+                collapseFunction={collapsePortfolioItem}
+              />
             </div>
           ) : (
             " "
@@ -328,7 +324,7 @@ export default function Portfolio(props) {
                   href="https://dionleung14.github.io/Pokemon-GO-Virtual-Dex/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   here
                 </a>
@@ -337,7 +333,7 @@ export default function Portfolio(props) {
                   href="https://bit.ly/3fn6iUX"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   here.
                 </a>{" "}
@@ -350,7 +346,7 @@ export default function Portfolio(props) {
                   href="https://github.com/coleloui"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   Github
                 </a>
@@ -359,7 +355,7 @@ export default function Portfolio(props) {
                   href="https://www.linkedin.com/in/louis-coleman/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   LinkedIn
                 </a>
@@ -368,7 +364,7 @@ export default function Portfolio(props) {
                   href="https://github.com/vb27"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   Github
                 </a>
@@ -377,7 +373,7 @@ export default function Portfolio(props) {
                   href="https://www.linkedin.com/in/paul-lee-1737821a2/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   LinkedIn
                 </a>
@@ -386,7 +382,7 @@ export default function Portfolio(props) {
                   href="https://github.com/mjones-27"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline hover:text-red-300"
+                  className="hover:underline text-dclpal1-300"
                 >
                   Github
                 </a>
@@ -403,12 +399,10 @@ export default function Portfolio(props) {
                 information. Also featured heavily in the code was jQuery, and
                 using ajax for our requests.
               </h1>
-              <button
-                className="border border-black border-2 rounded self-start mt-2 p-2"
-                onClick={collapsePortfolioItem}
-              >
-                Collapse
-              </button>
+              <CollapseBtn
+                darkModeBtn={props.darkModeApp.darkMode}
+                collapseFunction={collapsePortfolioItem}
+              />
             </div>
           ) : (
             " "
@@ -425,7 +419,7 @@ export default function Portfolio(props) {
               href="http://rocketlist.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-yellow-900"
+              className="hover:underline text-dclpal1-300"
             >
               here
             </a>
@@ -434,7 +428,7 @@ export default function Portfolio(props) {
               href="https://bit.ly/39S9vL7"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-yellow-900"
+              className="hover:underline text-dclpal1-300"
             >
               here.
             </a>{" "}
@@ -447,7 +441,7 @@ export default function Portfolio(props) {
               href="https://github.com/coleloui"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               Github
             </a>
@@ -456,7 +450,7 @@ export default function Portfolio(props) {
               href="https://www.linkedin.com/in/louis-coleman/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               LinkedIn
             </a>
@@ -465,7 +459,7 @@ export default function Portfolio(props) {
               href="https://github.com/meganjacobs97"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               Github
             </a>
@@ -474,7 +468,7 @@ export default function Portfolio(props) {
               href="https://www.linkedin.com/in/rory-kees-865342145/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               LinkedIn
             </a>
@@ -483,7 +477,7 @@ export default function Portfolio(props) {
               href="https://github.com/vb27"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               Github
             </a>
@@ -492,7 +486,7 @@ export default function Portfolio(props) {
               href="https://www.linkedin.com/in/paul-lee-1737821a2/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               LinkedIn
             </a>
@@ -501,7 +495,7 @@ export default function Portfolio(props) {
               href="https://github.com/mjones-27"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               Github
             </a>
@@ -521,7 +515,10 @@ export default function Portfolio(props) {
             requests and focusing on mobile layout/optimization. I also was
             responsible for the custom rocket animation in the logo.
           </h1>
-          <CollapseBtn collapseFunction={collapsePortfolioItem} />
+          <CollapseBtn
+            darkModeBtn={props.darkModeApp.darkMode}
+            collapseFunction={collapsePortfolioItem}
+          />
         </div>
       ) : (
         " "
@@ -535,7 +532,7 @@ export default function Portfolio(props) {
               href="http://awesome-group-planner.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-yellow-900"
+              className="hover:underline text-dclpal1-300"
             >
               here
             </a>
@@ -544,7 +541,7 @@ export default function Portfolio(props) {
               href="https://bit.ly/2Pnh8A2"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-yellow-900"
+              className="hover:underline text-dclpal1-300"
             >
               here.
             </a>{" "}
@@ -555,7 +552,7 @@ export default function Portfolio(props) {
               href="https://github.com/the-medium-place"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               Github
             </a>
@@ -564,7 +561,7 @@ export default function Portfolio(props) {
               href="https://www.linkedin.com/in/zachary-stowell/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               LinkedIn
             </a>
@@ -573,7 +570,7 @@ export default function Portfolio(props) {
               href="https://github.com/yuriohliveira"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               Github
             </a>
@@ -582,7 +579,7 @@ export default function Portfolio(props) {
               href="https://github.com/mgrinx"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               Github
             </a>
@@ -604,7 +601,10 @@ export default function Portfolio(props) {
             the front-end team, dealing with collecting information in the
             forms, handlebars rendering, and other front-end javascript.
           </h1>
-          <CollapseBtn collapseFunction={collapsePortfolioItem} />
+          <CollapseBtn
+            darkModeBtn={props.darkModeApp.darkMode}
+            collapseFunction={collapsePortfolioItem}
+          />
         </div>
       ) : (
         " "
@@ -620,7 +620,7 @@ export default function Portfolio(props) {
               href="https://dionleung14.github.io/Pokemon-GO-Virtual-Dex/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               here
             </a>
@@ -629,7 +629,7 @@ export default function Portfolio(props) {
               href="https://bit.ly/3fn6iUX"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               here.
             </a>{" "}
@@ -642,7 +642,7 @@ export default function Portfolio(props) {
               href="https://github.com/coleloui"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               Github
             </a>
@@ -651,7 +651,7 @@ export default function Portfolio(props) {
               href="https://www.linkedin.com/in/louis-coleman/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               LinkedIn
             </a>
@@ -660,7 +660,7 @@ export default function Portfolio(props) {
               href="https://github.com/vb27"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               Github
             </a>
@@ -669,7 +669,7 @@ export default function Portfolio(props) {
               href="https://www.linkedin.com/in/paul-lee-1737821a2/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               LinkedIn
             </a>
@@ -678,7 +678,7 @@ export default function Portfolio(props) {
               href="https://github.com/mjones-27"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline hover:text-red-300"
+              className="hover:underline text-dclpal1-300"
             >
               Github
             </a>
@@ -695,7 +695,10 @@ export default function Portfolio(props) {
             featured heavily in the code was jQuery, and using ajax for our
             requests.
           </h1>
-          <CollapseBtn collapseFunction={collapsePortfolioItem} />
+          <CollapseBtn
+            darkModeBtn={props.darkModeApp.darkMode}
+            collapseFunction={collapsePortfolioItem}
+          />
         </div>
       ) : (
         " "

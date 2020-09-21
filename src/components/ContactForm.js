@@ -129,13 +129,13 @@ export default function ContactForm(props) {
         text="Contact me!"
         darkModeHeader={props.darkModeApp.darkMode}
       />
-      <div className="flex justify-around flex-col w-full lg:mt-8 lg:mb-2 my-2 lg:pl-6 p-2">
-        <h3 className="lg:w-4/5 my-2">
+      <div className="flex justify-around flex-col w-full lg:mt-8 lg:mb-2 my-2 lg:px-6 p-2">
+        <h3 className="lg:w-4/5 my-2 lg:pl-20">
           Have any questions? Want to collaborate together? Secretly dying to
           know my favorite song? Hit me up! Send me an email (or use the nifty
           little form below!) and I'll get back to you as soon as I can!
         </h3>
-        <h3 className="lg:w-4/5 my-2">
+        <h3 className="lg:w-4/5 my-2 lg:pl-20">
           You can find also find me on LinkedIn{" "}
           <a
             className="hover:underline text-blue-700"
@@ -260,14 +260,14 @@ export default function ContactForm(props) {
             </div>
 
             {/* <!-- Message --> */}
-            <div className="w-auto">
+            <div className="w-full">
               <div className="flex flex-col">
                 <label htmlFor="message" className="">
                   Message:
                 </label>
                 <textarea
                   type="message"
-                  className="p-2 lg:w-64 w-64 lg:resize text-black"
+                  className="p-2 lg:w-64 lg:min-w-full lg:resize text-black"
                   id="message"
                   maxLength="500"
                   value={formState.message}
