@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FirstHeader from "./FirstHeader.js";
 import RocketList from "./photos/portfolio-photos/RocketList.png";
 import ToGather from "./photos/portfolio-photos/ToGather.png";
+import ToGatherHover from "./photos/portfolio-photos/ToGather-hover.png";
 import PokeGoDex from "./photos/portfolio-photos/PokeGoDex.png";
 import CollapseBtn from "./CollapseBtn";
 import ComponentContainer from "./ComponentContainer";

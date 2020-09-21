@@ -138,7 +138,7 @@ export default function ContactForm(props) {
         <h3 className="lg:w-4/5 my-2 lg:pl-20">
           You can find also find me on LinkedIn{" "}
           <a
-            className="hover:underline text-blue-700"
+            className="hover:underline text-dclpal1-300"
             href="https://www.linkedin.com/in/leungdion/"
             target="_blank"
             rel="noopener noreferrer"
@@ -146,7 +146,10 @@ export default function ContactForm(props) {
             here
           </a>
           , and my email is{" "}
-          <span className="hover:underline">dioncleung@gmail.com</span>.
+          <span className="hover:underline text-dclpal1-300">
+            dioncleung@gmail.com
+          </span>
+          .
         </h3>
 
         <form
