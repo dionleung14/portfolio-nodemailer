@@ -36,7 +36,9 @@ export default function Welcome(props) {
             alt="github"
             className="lg:w-16 w-8 rounded border border-white"
           />
-          <small className="italic">Github</small>
+          <small className="italic hover:text-dclpal1-300 hover:underline">
+            Github
+          </small>
         </a>
 
         <a
@@ -50,7 +52,9 @@ export default function Welcome(props) {
             alt="linkedin"
             className="lg:w-16 w-8 rounded border border-white"
           />
-          <small className="italic">LinkedIn</small>
+          <small className="italic hover:text-dclpal1-300 hover:underline">
+            LinkedIn
+          </small>
         </a>
         <a
           href="mailto:dioncleung@gmail.com"
@@ -63,7 +67,9 @@ export default function Welcome(props) {
             alt="linkedin"
             className="lg:w-16 w-8 rounded border border-white"
           />
-          <small className="italic">Email</small>
+          <small className="italic hover:text-dclpal1-300 hover:underline">
+            Email
+          </small>
         </a>
         <a
           href="https://www.twitter.com/DionTheDev"
@@ -76,7 +82,9 @@ export default function Welcome(props) {
             alt="linkedin"
             className="lg:w-16 w-8 rounded border border-white"
           />
-          <small className="italic">Twitter</small>
+          <small className="italic hover:text-dclpal1-300 hover:underline">
+            Twitter
+          </small>
         </a>
       </div>
       {/* </ComponentContainer> */}

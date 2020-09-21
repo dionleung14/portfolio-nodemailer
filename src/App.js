@@ -8,6 +8,7 @@ import Quals from "./components/Quals";
 import Portfolio from "./components/Portfolio";
 import Testimonials from "./components/Testimonials";
 import ContactForm from "./components/ContactForm";
+import Footer from "./components/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
       <Portfolio darkModeApp={darkMode} />
       <Testimonials darkModeApp={darkMode} />
       <ContactForm darkModeApp={darkMode} />
+      <Footer darkModeApp={darkMode} />
       {/* </Switch> */}
     </Router>
   );

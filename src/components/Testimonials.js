@@ -48,25 +48,31 @@ export default function Testimonials(props) {
       />
       <div className="flex items-center justify-around lg:px-6 lg:py-12 my-4 ">
         <button
-          className="lg:p-2 px-1 mx-1 border border-blue-700 border-2 bg-dclpal1-300 text-white hover:bg-yellow-300 hover:text-black rounded"
-          onClick={() => {
-            decrement();
-          }}
+          className={`lg:p-2 px-1 mx-1 rounded border ${
+            props.darkModeApp.darkMode
+              ? "border-white border-2 bg-dclpal1-100 text-white hover:bg-dclpal1-500 hover:text-white"
+              : "border-dclpal1-100 border-2 bg-white text-black hover:bg-dclpal1-400 hover:text-white"
+          }`}
+          onClick={decrement}
         >
           {`<`}
         </button>
         <div className="w-3/4 lg:h-auto flex flex-col">
           <div className="my-auto">
             <h1 className="text-justify">{currentTest.message}</h1>
-            <h1 className="text-center">
+            <h1 className="text-center italic">
               {" "}
               - {currentTest.from}, {currentTest.relationship}{" "}
             </h1>
           </div>
         </div>
         <button
-          className="lg:p-2 px-1 mx-1 border border-blue-700 border-2 bg-dclpal1-300 text-white hover:bg-yellow-300 hover:text-black rounded"
-          onMouseDown={() => {
+          className={`lg:p-2 px-1 mx-1 rounded border ${
+            props.darkModeApp.darkMode
+              ? "border-white border-2 bg-dclpal1-100 text-white hover:bg-dclpal1-500 hover:text-white"
+              : "border-dclpal1-100 border-2 bg-white text-black hover:bg-dclpal1-400 hover:text-white"
+          }`}
+          onClick={() => {
             increment();
           }}
         >
