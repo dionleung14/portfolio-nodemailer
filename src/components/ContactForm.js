@@ -270,7 +270,7 @@ export default function ContactForm(props) {
                 </label>
                 <textarea
                   type="message"
-                  className="p-2 lg:w-64 lg:min-w-full lg:resize text-black"
+                  className="p-2 lg:w-64 lg:min-w-full lg:max-w-full lg:min-h-0 lg:resize text-black"
                   id="message"
                   maxLength="500"
                   value={formState.message}
