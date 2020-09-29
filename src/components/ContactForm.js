@@ -34,6 +34,11 @@ export default function ContactForm(props) {
     });
     let failureCountdown = setTimeout(() => {
       console.log("failure");
+      setFormSuccessState({
+        ...formSuccessState,
+        sendingState: false,
+        failure: true,
+      });
     }, 12000);
     let contactMethodCheck = Object.values(contactMethodState);
     if (!contactMethodCheck.includes(true)) {
@@ -63,7 +68,9 @@ export default function ContactForm(props) {
       };
       API.submitEmail(contactFormFilled).then((res) => {
         if (res.status === 200) {
+          // stop the failure countdown
           clearTimeout(failureCountdown);
+          // reset the form
           setFormState({
             firstName: "",
             lastName: "",
@@ -77,10 +84,12 @@ export default function ContactForm(props) {
             call: false,
             text: false,
           });
+          // alter the success state to show success message
           setFormSuccessState({
             formSuccess: true,
             sendingState: false,
           });
+          // after 2 seconds, erase the success message
           setTimeout(() => {
             setFormSuccessState({
               ...formSuccessState,
@@ -88,6 +97,7 @@ export default function ContactForm(props) {
             });
           }, 2000);
         } else {
+          // change the sending state, erasing progress messsage, and display error message
           setFormSuccessState({
             ...formSuccessState,
             sendingState: false,
