@@ -1,6 +1,7 @@
 import React from "react";
 import ComponentContainer from "./ComponentContainer";
-import photograph from "./photos/linkedin-Seattle.jpg";
+import linkedInSeattle from "./photos/linkedin-Seattle.jpg";
+import seattleDay from "./photos/seattle-day-hi-res.jpg";
 import FirstHeader from "./FirstHeader";
 import github from "./photos/github-icon.png";
 import linkedin from "./photos/linkedin-icon.png";
@@ -18,7 +19,7 @@ export default function Welcome(props) {
       <div>
         {/* <h1 className="text-center text-4xl top-0 pt-10">Text with photo</h1> */}
         <img
-          src={photograph}
+          src={linkedInSeattle}
           className="top-0 pt-4 mb-6 z-10 w-full"
           alt="Seattle-skyline"
         />
