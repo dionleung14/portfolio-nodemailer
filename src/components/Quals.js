@@ -31,16 +31,24 @@ export default function Quals(props) {
           <p className="text-left">
             My unique skillset combines a civil and environmental engineering
             training with a new-found passion for coding, which brings an
-            innovative and analytic approach to the table.
+            innovative and analytic approach to the table. However, dipping my
+            feet into coding inspired me to pursue it further, and I enrolled in
+            and completed a{" "}
+            <a
+              className="hover:underline text-dclpal1-300"
+              href="https://bootcamp.uw.edu/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Web Development/Coding Bootcamp
+            </a>{" "}
+            through the University of Washington.
             {/* I had begun to
             explore automation and coding through teaching myself LISP (AutoLISP
             via AutoCAD), trying to circumvent lengthy and repetitive actions
             when designing structures. Unfortunately, I was unable to make
             significant progress before tumultuously finding myself looking for
             another job. */}
-            However, dipping my feet into coding inspired me to pursue it
-            further, and I enrolled in and completed a Web Development/Coding
-            Bootcamp through the University of Washington.
             <br />
             <br />
             Problem solving was a skill taught through my formal education, and

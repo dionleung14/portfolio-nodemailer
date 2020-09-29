@@ -47,10 +47,10 @@ export default function Meet(props) {
             Washington, earning a degree in Civil and Environmental Engineering.
             A couple of years into my career, I was tasked with overhauling and
             automating AutoCAD procedures using AutoLISP. I quickly found out
-            how fun programming and coding was, and was excited with the
-            possibilities. One thing led to another and before I knew it I found
-            myself switching things up completely to pursue a career in
-            web-development and here I am!
+            how fun programming was, and was excited with the possibilities. One
+            thing led to another and before I knew it I found myself switching
+            things up completely to pursue a career in web-development and here
+            I am!
           </p>
           <br />
           <p>
