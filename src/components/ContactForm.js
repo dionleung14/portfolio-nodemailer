@@ -163,7 +163,7 @@ export default function ContactForm(props) {
         </h3>
 
         <form
-          className="lg:w-5/6 w-full lg:mx-auto p-2 border border-gray-300 bg-dclpal1-300 text-white"
+          className="lg:w-5/6 w-full lg:mx-auto p-2 border border-dclpal1-300"
           id="contact-form"
           onSubmit={handleNodeMailerSubmit}
         >
@@ -176,7 +176,11 @@ export default function ContactForm(props) {
               </label>
               <div className="flex flex-row">
                 <input
-                  className="w-1/2 px-2 mr-2 text-black"
+                  className={`w-1/2 px-2 mr-2 rounded border border-dclpal1-300 ${
+                    props.darkModeApp.darkMode
+                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
+                      : "focus:bg-dclpal1-400 text-black"
+                  }`}
                   type="text"
                   value={formState.firstName}
                   onChange={handleInput}
@@ -189,7 +193,11 @@ export default function ContactForm(props) {
                 {/* <div className="w-1/2 border-blue-600 "> */}
                 <input
                   type="name"
-                  className="w-1/2 px-2 text-black"
+                  className={`w-1/2 px-2 mr-2 rounded border border-dclpal1-300 ${
+                    props.darkModeApp.darkMode
+                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
+                      : "focus:bg-dclpal1-400 text-black"
+                  }`}
                   id="last-name"
                   onChange={handleInput}
                   placeholder="Last name"
@@ -207,10 +215,14 @@ export default function ContactForm(props) {
               <label className="mb-1 mt-4" htmlFor="inputEmail">
                 Email address:
               </label>
-              <div className="flex lg:flex-row flex-col">
+              <div className="flex lg:flex-row flex-col items-center">
                 <input
                   type="email"
-                  className="px-2 mr-2 text-black"
+                  className={`px-2 mr-2 rounded border border-dclpal1-300 ${
+                    props.darkModeApp.darkMode
+                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
+                      : "focus:bg-dclpal1-400 text-black"
+                  }`}
                   id="inputEmail"
                   value={formState.emailAddress}
                   placeholder="example@email.com"
@@ -228,10 +240,14 @@ export default function ContactForm(props) {
               <label className="mb-1 mt-4" htmlFor="phoneNumber">
                 Phone number:
               </label>
-              <div className="flex lg:flex-row flex-col">
+              <div className="flex lg:flex-row flex-col items-center">
                 <input
                   type="phonenumber"
-                  className="px-2 mr-2 text-black"
+                  className={`px-2 mr-2 rounded border border-dclpal1-300 ${
+                    props.darkModeApp.darkMode
+                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
+                      : "focus:bg-dclpal1-400 text-black"
+                  }`}
                   id="phoneNumber"
                   placeholder="555-123-4567"
                   value={formState.phNum}
@@ -255,14 +271,18 @@ export default function ContactForm(props) {
                 </label>
                 <select
                   type="name"
-                  className="px-2 py-1 text-black"
+                  className={`px-2 py-1 rounded border border-dclpal1-300 ${
+                    props.darkModeApp.darkMode
+                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
+                      : "focus:bg-dclpal1-400 text-black"
+                  }`}
                   id="subject"
                   value={formState.subject}
                   name="subject"
                   onChange={handleInput}
                   required
                 >
-                  <option className="" value="Networking">
+                  <option className="focus:bg-white" value="Networking">
                     Networking
                   </option>
                   <option value="Inquiry">Inquiry</option>
@@ -280,7 +300,11 @@ export default function ContactForm(props) {
                 </label>
                 <textarea
                   type="message"
-                  className="p-2 lg:w-64 lg:min-w-full lg:max-w-full lg:min-h-0 lg:resize text-black"
+                  className={`p-2 lg:w-64 lg:min-w-full lg:max-w-full lg:min-h-0 lg:resize rounded border border-dclpal1-300 ${
+                    props.darkModeApp.darkMode
+                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
+                      : "focus:bg-dclpal1-400 text-black"
+                  }`}
                   id="message"
                   maxLength="500"
                   value={formState.message}
@@ -294,7 +318,13 @@ export default function ContactForm(props) {
                     Characters remaining: {500 - formState.message.length}
                   </small>
                 ) : (
-                  <small className="text-dclpal1-300">
+                  <small
+                    className={
+                      props.darkModeApp.darkMode
+                        ? "text-dclpal1-100"
+                        : "text-white"
+                    }
+                  >
                     I'm a hidden message!
                   </small>
                 )}
@@ -330,7 +360,11 @@ export default function ContactForm(props) {
           <div className="lg:pl-6">
             <button
               type="submit"
-              className="rounded py-2 px-6 bg-dclpal1-400 hover:bg-dclpal1-200 text-xl hover:text-white"
+              className={`rounded py-2 px-6 border border-dclpal1-300 text-xl ${
+                props.darkModeApp.darkMode
+                  ? "bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+                  : "text-black hover:bg-dclpal1-400"
+              }`}
             >
               Send!
             </button>
