@@ -163,7 +163,9 @@ export default function ContactForm(props) {
         </h3>
 
         <form
-          className="lg:w-5/6 w-full lg:mx-auto p-2 border border-dclpal1-300"
+          className={`lg:w-5/6 w-full lg:mx-auto p-2 border border-dclpal1-300 ${
+            props.darkModeApp.darkMode ? "shadow-dcl" : "shadow-2xl"
+          }`}
           id="contact-form"
           onSubmit={handleNodeMailerSubmit}
         >
