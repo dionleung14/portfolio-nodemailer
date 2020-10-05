@@ -194,7 +194,7 @@ export default function ContactForm(props) {
                 {/* <!-- Last Name --> */}
                 {/* <div className="w-1/2 border-blue-600 "> */}
                 <input
-                  type="name"
+                  type="text"
                   className={`w-1/2 px-2 mr-2 rounded border border-dclpal1-300 ${
                     props.darkModeApp.darkMode
                       ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
