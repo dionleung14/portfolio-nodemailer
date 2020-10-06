@@ -189,7 +189,7 @@ export default function ContactForm(props) {
                   placeholder="First name"
                   name="firstName"
                   // id="first-name"
-                  // required
+                  required
                 />
                 {/* <!-- Last Name --> */}
                 {/* <div className="w-1/2 border-blue-600 "> */}
