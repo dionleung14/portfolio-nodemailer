@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FirstHeader from "./FirstHeader";
-import ComponentContainer from "./ComponentContainer";
+import TestimonialsContainer from "./TestimonialsContainer";
 
 export default function Testimonials(props) {
   let [tracker, setTracker] = useState(0);
@@ -38,7 +38,7 @@ export default function Testimonials(props) {
   let currentTest = testimonials[Math.abs(tracker) % testimonials.length];
 
   return (
-    <ComponentContainer
+    <TestimonialsContainer
       id="testimonials"
       darkModeCont={props.darkModeApp.darkMode}
     >
@@ -46,40 +46,42 @@ export default function Testimonials(props) {
         text="Testimonials"
         darkModeHeader={props.darkModeApp.darkMode}
       />
-      <div className="flex items-center justify-around lg:px-6 lg:py-12 my-4 ">
-        <button
-          className={`lg:p-2 px-1 mx-1 rounded border ${
-            props.darkModeApp.darkMode
-              ? "border-white border-2 bg-dclpal1-100 text-white hover:bg-dclpal1-500 hover:text-white"
-              : "border-dclpal1-100 border-2 bg-white text-black hover:bg-dclpal1-400 hover:text-white"
-          }`}
-          onClick={decrement}
-        >
-          {`<`}
-        </button>
-        <div className="w-3/4 lg:h-auto flex flex-col">
-          <div className="my-auto">
-            <h1 className="text-justify">{currentTest.message}</h1>
-            <h1 className="text-center italic">
-              {" "}
-              - {currentTest.from}, {currentTest.relationship}{" "}
-            </h1>
+      <div className="h-64">
+        <div className="flex items-center justify-around lg:px-6 lg:py-12 my-4">
+          <button
+            className={`lg:p-2 rounded-full w-8 h-8 flex items-center border ${
+              props.darkModeApp.darkMode
+                ? "border-white border-2 bg-dclpal1-100 text-white hover:bg-dclpal1-500 hover:text-white"
+                : "border-dclpal1-100 border-2 bg-white text-black hover:bg-dclpal1-400 hover:text-white"
+            }`}
+            onClick={decrement}
+          >
+            {`<`}
+          </button>
+          <div className="w-3/4 lg:h-auto flex flex-col">
+            <div className="my-auto">
+              <h1 className="text-justify">{currentTest.message}</h1>
+              <h1 className="text-center italic">
+                {" "}
+                - {currentTest.from}, {currentTest.relationship}{" "}
+              </h1>
+            </div>
           </div>
+          <button
+            className={`lg:p-2 rounded-full w-8 h-8 flex items-center rounded border ${
+              props.darkModeApp.darkMode
+                ? "border-white border-2 bg-dclpal1-100 text-white hover:bg-dclpal1-500 hover:text-white"
+                : "border-dclpal1-100 border-2 bg-white text-black hover:bg-dclpal1-400 hover:text-white"
+            }`}
+            onClick={() => {
+              increment();
+            }}
+          >
+            {`>`}
+          </button>
         </div>
-        <button
-          className={`lg:p-2 px-1 mx-1 rounded border ${
-            props.darkModeApp.darkMode
-              ? "border-white border-2 bg-dclpal1-100 text-white hover:bg-dclpal1-500 hover:text-white"
-              : "border-dclpal1-100 border-2 bg-white text-black hover:bg-dclpal1-400 hover:text-white"
-          }`}
-          onClick={() => {
-            increment();
-          }}
-        >
-          {`>`}
-        </button>
       </div>
       {/* <div>{tracker}</div> */}
-    </ComponentContainer>
+    </TestimonialsContainer>
   );
 }
