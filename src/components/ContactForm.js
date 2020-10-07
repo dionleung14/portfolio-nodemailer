@@ -188,11 +188,9 @@ export default function ContactForm(props) {
                   onChange={handleInput}
                   placeholder="First name"
                   name="firstName"
-                  // id="first-name"
                   required
                 />
                 {/* <!-- Last Name --> */}
-                {/* <div className="w-1/2 border-blue-600 "> */}
                 <input
                   type="text"
                   className={`w-1/2 px-2 mr-2 rounded border border-dclpal1-300 ${
@@ -206,7 +204,6 @@ export default function ContactForm(props) {
                   value={formState.lastName}
                   name="lastName"
                 />
-                {/* </div> */}
               </div>
             </div>
           </div>
