@@ -46,7 +46,7 @@ export default function Testimonials(props) {
         text="Testimonials"
         darkModeHeader={props.darkModeApp.darkMode}
       />
-      <div className="h-64">
+      <div className="h-16">
         <div className="flex items-center justify-around lg:px-6 lg:py-12 my-4">
           <button
             className={`lg:p-2 rounded-full w-8 h-8 flex items-center border ${
