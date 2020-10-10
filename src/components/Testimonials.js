@@ -39,7 +39,7 @@ export default function Testimonials(props) {
 
   return (
     <TestimonialsContainer
-      id=""
+      id="testimonials"
       darkModeCont={props.darkModeApp.darkMode}
     >
       <FirstHeader
