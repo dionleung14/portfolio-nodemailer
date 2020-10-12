@@ -1,18 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FirstHeader from "./FirstHeader";
 import TestimonialsContainer from "./TestimonialsContainer";
 
 export default function Testimonials(props) {
-  let [tracker, setTracker] = useState(0);
-
-  const decrement = () => {
-    setTracker(tracker - 1);
-  };
-
-  const increment = () => {
-    setTracker(tracker + 1);
-  };
-
   const testimonials = [
     {
       from: "Rory Kees",
@@ -40,7 +30,37 @@ export default function Testimonials(props) {
     },
   ];
 
+  let [tracker, setTracker] = useState(
+    Math.floor(Math.random() * testimonials.length)
+  );
+
+  let [display, setDisplay] = useState(0);
+
+  const decrement = () => {
+    setTracker(tracker - 1);
+  };
+
+  const increment = () => {
+    setTracker(tracker + 1);
+  };
+
   let currentTest = testimonials[Math.abs(tracker) % testimonials.length];
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (display === 0) {
+  //       setDisplay((display = 1000));
+  //       console.log("reset");
+  //       console.log(tracker);
+  //       // setTracker(tracker + 1);
+  //     } else {
+  //       setDisplay((display -= 250));
+  //       console.log("changed");
+  //       increment();
+  //     }
+  //   }, 1000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <TestimonialsContainer
@@ -86,6 +106,7 @@ export default function Testimonials(props) {
           </button>
         </div>
       </div>
+      {/* {display} */}
       {/* <div>{tracker}</div> */}
     </TestimonialsContainer>
   );
