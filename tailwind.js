@@ -327,6 +327,8 @@ module.exports = {
       ...theme("spacing"),
       full: "100%",
       screen: "100vh",
+      dionBrowser: "300px",
+      dionMobile: "667px",
     }),
     inset: {
       0: "0",
