@@ -9,7 +9,7 @@ export default function TestimonialsContainer(props) {
         }`}
       ></div>
       <div
-        className={`lg:w-8/12 w-full lg:mx-auto border border-red-600 lg:px-4 ${
+        className={`lg:w-8/12 w-full lg:mx-auto lg:px-4 ${
           props.darkModeCont
             ? "bg-dclpal1-100 text-white"
             : "bg-white text-dclpal1-100"
