@@ -33,6 +33,11 @@ export default function Testimonials(props) {
       All in all Dion is someone that I hope to work with in the future and would be a fantastic addition and huge asset to any team that is lucky enough to have him.`,
       relationship: "co-collaborator",
     },
+    {
+      from: "Clint Brodar",
+      message: `You will be hard-pressed to find a hard worker like Dion. I had the pleasure of mentoring him while he was going through an intense 3-month web development boot camp. He impressed me throughout the course with his insight and how quickly he picked up new concepts and material. Dion was a pleasure to be around and he will be a tremendous asset to any team!`,
+      relationship: "teaching assistant for UW Web Development Certificate",
+    },
   ];
 
   let currentTest = testimonials[Math.abs(tracker) % testimonials.length];
