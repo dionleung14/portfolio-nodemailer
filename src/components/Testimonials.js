@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FirstHeader from "./FirstHeader";
 import TestimonialsContainer from "./TestimonialsContainer";
+require("dotenv").config();
 
 export default function Testimonials(props) {
   let [tracker, setTracker] = useState(0);
@@ -22,7 +23,8 @@ export default function Testimonials(props) {
       needed it. From start to finish, he showed an admirable amount of
       competence and flexibility. I would love to work with him on future
       projects.`,
-      relationship: "co-collaborator",
+      // relationship: "co-collaborator",
+      relationship: process.env.POKEMON,
     },
     {
       from: "Louis Coleman",
