@@ -5,7 +5,7 @@ export default class Footer extends Component {
   render(props) {
     return (
       <div
-        className={`w-full h-auto lg:h-24 flex justify-around items-center border-t ${
+        className={`w-full h-auto lg:h-48 flex justify-around items-center border-t ${
           this.props.darkModeApp.darkMode
             ? "border-white bg-dclpal1-100 text-white"
             : "border-black"
