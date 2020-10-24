@@ -45,6 +45,9 @@ export default function Meet(props) {
             whole life. I grew up and lived in Kent for the first 18 years of my
             life, then moved to Seattle where I attended the University of
             Washington, earning a degree in Civil and Environmental Engineering.
+          </p>
+          <br />
+          <p>
             A couple of years into my career, I was tasked with overhauling and
             automating AutoCAD procedures using AutoLISP. I quickly found out
             how fun programming was, and was excited with the possibilities. One
