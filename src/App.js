@@ -11,6 +11,9 @@ import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
 
+console.log(process.env.REACT_APP_POKEMON);
+console.log(process.env.POKEMON);
+
 function App() {
   const [darkMode, setDarkMode] = useState({ darkMode: false });
   const handleToggle = () =>
