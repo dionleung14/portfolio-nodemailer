@@ -377,9 +377,15 @@ export default function ContactForm(props) {
             )}
             {formSuccessState.sendingState ? (
               props.darkModeApp.darkMode ? (
-                <Loading color="#FFF" />
+                <div>
+                  Sending...
+                  <Loading color="#FFF" />
+                </div>
               ) : (
-                <Loading color="#7ea16b" />
+                <div>
+                  Sending...
+                  <Loading color="#7ea16b" />
+                </div>
               )
             ) : (
               " "
