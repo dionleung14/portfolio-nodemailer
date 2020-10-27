@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FirstHeader from "./FirstHeader";
 import API from "../utils/API";
 import ComponentContainer from "./ComponentContainer";
+import Loading from "./Loading";
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default function ContactForm(props) {
@@ -374,11 +375,7 @@ export default function ContactForm(props) {
             ) : (
               " "
             )}
-            {formSuccessState.sendingState ? (
-              <span className="ml-2">Sending... please wait</span>
-            ) : (
-              " "
-            )}
+            {formSuccessState.sendingState ? <Loading color="#7ea16b" /> : " "}
             {formSuccessState.failure ? (
               <span className="ml-2">
                 Something went wrong, please refresh and try again
