@@ -357,7 +357,7 @@ export default function ContactForm(props) {
           </div>
 
           {/* <!-- Submit button --> */}
-          <div className="lg:pl-6">
+          <div className="lg:pl-6 flex flex-row items-center">
             <button
               type="submit"
               className={`rounded py-2 px-6 border border-dclpal1-300 text-xl ${
@@ -375,7 +375,15 @@ export default function ContactForm(props) {
             ) : (
               " "
             )}
-            {formSuccessState.sendingState ? <Loading color="#7ea16b" /> : " "}
+            {formSuccessState.sendingState ? (
+              props.darkModeApp.darkMode ? (
+                <Loading color="#FFF" />
+              ) : (
+                <Loading color="#7ea16b" />
+              )
+            ) : (
+              " "
+            )}
             {formSuccessState.failure ? (
               <span className="ml-2">
                 Something went wrong, please refresh and try again

@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/core";
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import ClimbingBoxLoader from "react-spinners/ClockLoader";
 
 // Can be a string as well. Need to ensure each key-value pair ends with ;
 const override = css`
@@ -19,7 +19,7 @@ class Loading extends React.Component {
   }
   render() {
     return (
-      <div className="container rounded bg-white shadow-2xl divide-y-2 divide-RocketSteel sweet-loading">
+      <div className="mx-2">
         {/* <ClipLoader
           css={override}
           size={50}
@@ -28,7 +28,7 @@ class Loading extends React.Component {
         /> */}
         <ClimbingBoxLoader
           css={override}
-          size={20}
+          size={45}
           color={this.state.color}
           loading={this.state.loading}
         />
