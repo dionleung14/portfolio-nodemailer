@@ -32,7 +32,7 @@ export default function Testimonials(props) {
 
       He is also someone that is also compassionate and willing to work with others on their issues and to strengthen their understanding.
       
-      All in all Dion is someone that I hope to work with in the future and would be a fantastic addition and huge asset to any team that is lucky enough to have him.`,
+      All in all Dion is that I hope to work with in the future and would be a fantastic addition and huge asset to any team that is lucky enough to have him.`,
       relationship: "co-collaborator",
     },
     {
