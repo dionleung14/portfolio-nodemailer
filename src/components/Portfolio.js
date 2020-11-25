@@ -6,9 +6,10 @@ import ToGatherHover from "./photos/portfolio-photos/ToGather-hover.png";
 import PokeGoDex from "./photos/portfolio-photos/PokeGoDex.png";
 import CollapseBtn from "./CollapseBtn";
 import ComponentContainer from "./ComponentContainer";
+import { Link } from "react-router-dom";
 
 export default function Portfolio(props) {
-  const handlePortfolioClick = (event) => {
+  const handlePortfolioClick = event => {
     setPortfolioItem({
       item: event.target.dataset.project,
     });
@@ -44,7 +45,8 @@ export default function Portfolio(props) {
           className="hover:underline text-dclpal1-300"
         >
           here.
-        </a>
+        </a>{" "}
+        {/* Please find my past projects here: <Link to="/archive"> hahaha</Link> */}
         {/* , and you can follow me on my coding journey on Twitter here:{" "}
         <a
           href="https://twitter.com/DionTheDev?ref_src=twsrc%5Etfw"

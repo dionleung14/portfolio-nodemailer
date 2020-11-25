@@ -30,10 +30,9 @@ export default function Quals(props) {
         <div className="lg:w-1/2 w-full lg:ml-4 lg:pr-4">
           <p className="text-left">
             My unique skillset combines a civil and environmental engineering
-            training with a new-found passion for coding, which brings an
-            innovative and analytic approach to the table. However, dipping my
-            feet into coding inspired me to pursue it further, and I enrolled in
-            and completed a{" "}
+            training with a passion for coding, bringing an innovative and
+            analytic approach to the table. Dipping my feet into coding inspired
+            me to pursue it further, and I enrolled in and completed a{" "}
             <a
               className="hover:underline text-dclpal1-300"
               href="https://bootcamp.uw.edu/"
@@ -51,21 +50,25 @@ export default function Quals(props) {
             another job. */}
             <br />
             <br />
-            Problem solving was a skill taught through my formal education, and
-            applying it to developing apps and feature-rich websites with a
-            focus on mobile-first design and development has been relatively
-            smooth. I look forward to building a more intuitive user experience
-            on the web, much like how I sought to build a more intuitive
-            drafting process using AutoCAD.
+            Problem solving was a skill taught through my formal education -
+            applying it to developing apps and feature-rich websites has been
+            rather simple.
             <br />
+            {/* with a
+            focus on mobile-first design and development  With my engineering background, I can break down
+            large problems into manageable tasks, which has been invaluable in
+            the world of software development. I look forward to building a more
+            intuitive user experience on the web, much like how I sought to
+            build a more intuitive drafting process using AutoCAD.*/}
             <br />
             My strengths include meeting deadlines, effective communication, and
             teamwork. I also manage my time well, can work under pressure, and
             have extensive experience with data analysis (typically for surface
-            water systems, but Microsoft Excel is versatile). I am seen as a
+            water systems, but Microsoft Excel is versatile).
+            {/* I am seen as a
             creative leader, able to learn quickly, capable of independent work,
             with high attention to detail and being able to adapt to adverse
-            circumstances.
+            circumstances. */}
           </p>
         </div>
       </div>

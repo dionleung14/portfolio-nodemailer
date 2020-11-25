@@ -48,12 +48,12 @@ export default function Meet(props) {
           </p>
           <br />
           <p>
-            A couple of years into my career, I was tasked with overhauling and
-            automating AutoCAD procedures using AutoLISP. I quickly found out
-            how fun programming was, and was excited with the possibilities. One
-            thing led to another and before I knew it I found myself switching
-            things up completely to pursue a career in web-development and here
-            I am!
+            I was drawn to programming when I was assigned to work on
+            overhauling and automating AutoCAD procedures using AutoLISP. I
+            quickly found out how fun coding was, and was excited with the
+            possibilities. One thing led to another and before I knew it I found
+            myself switching things up completely to pursue a career in
+            web-development and here I am!
           </p>
           <br />
           <p>
