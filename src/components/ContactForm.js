@@ -175,248 +175,253 @@ export default function ContactForm(props) {
           </span>
           .
         </h3>
-
-        <NetlifyForm
-          formName="Contact form"
-          formValues={completedForm}
+        <div
           className={`lg:w-5/6 w-full lg:mx-auto p-2 py-8 my-2 border border-dclpal1-300 ${
             props.darkModeApp.darkMode ? "shadow-dcl" : "shadow-2xl"
           }`}
-          id="contact-form"
-          // data-netlify="true"
-          // onSubmit={handleNodeMailerSubmit}
         >
-          {/* <!-- First and Last Name --> */}
-          <div className="lg:pl-6">
-            {/* <!-- First Name --> */}
-            <div className="flex flex-col items-start lg:w-4/5">
-              <label className="mb-1 mt-4" htmlFor="Name">
-                Your name:
-              </label>
-              <div className="flex flex-row">
-                <input
-                  className={`w-1/2 px-2 mr-2 rounded border border-dclpal1-300 ${
-                    props.darkModeApp.darkMode
-                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
-                      : "focus:bg-dclpal1-400 text-black"
-                  }`}
-                  type="text"
-                  value={formState.firstName}
-                  onChange={handleInput}
-                  placeholder="First name"
-                  name="firstName"
-                  required
-                />
-                {/* <!-- Last Name --> */}
-                <input
-                  type="text"
-                  className={`w-1/2 px-2 mr-2 rounded border border-dclpal1-300 ${
-                    props.darkModeApp.darkMode
-                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
-                      : "focus:bg-dclpal1-400 text-black"
-                  }`}
-                  id="last-name"
-                  onChange={handleInput}
-                  placeholder="Last name"
-                  value={formState.lastName}
-                  name="lastName"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* <!-- Email and phone number --> */}
-          <div className="lg:pl-6">
-            <div className="flex flex-col">
-              <label className="mb-1 mt-4" htmlFor="inputEmail">
-                Email address:
-              </label>
-              <div className="flex lg:flex-row flex-col items-center">
-                <input
-                  type="email"
-                  className={`px-2 mr-2 rounded border border-dclpal1-300 ${
-                    props.darkModeApp.darkMode
-                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
-                      : "focus:bg-dclpal1-400 text-black"
-                  }`}
-                  id="inputEmail"
-                  value={formState.emailAddress}
-                  placeholder="example@email.com"
-                  aria-describedby="emailHelp"
-                  onChange={handleInput}
-                  name="emailAddress"
-                />
-                <small id="emailHelp" className="form-text text-muted">
-                  I'll never share your email with anyone else.
-                </small>
-              </div>
-            </div>
-            {/* <!-- Phone number --> */}
-            <div className="flex flex-col">
-              <label className="mb-1 mt-4" htmlFor="phoneNumber">
-                Phone number:
-              </label>
-              <div className="flex lg:flex-row flex-col items-center">
-                <input
-                  type="phonenumber"
-                  className={`px-2 mr-2 rounded border border-dclpal1-300 ${
-                    props.darkModeApp.darkMode
-                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
-                      : "focus:bg-dclpal1-400 text-black"
-                  }`}
-                  id="phoneNumber"
-                  placeholder="555-123-4567"
-                  value={formState.phNum}
-                  onChange={handleInput}
-                  name="phNum"
-                />
-                <small id="emailHelp" className="form-text">
-                  I'll never share your phone number with anyone else either.
-                </small>
-              </div>
-            </div>
-          </div>
-
-          {/* Subject and actual message */}
-          <div className="flex flex-col items-start lg:px-6">
-            {/* Subject */}
-            <div className="mb-1 mt-4">
-              <div className="flex flex-col">
-                <label htmlFor="subject" className="">
-                  Subject:
+          <NetlifyForm
+            formName="Contact form"
+            formValues={completedForm}
+            // className={`lg:w-5/6 w-full lg:mx-auto p-2 py-8 my-2 border border-dclpal1-300 ${
+            //   props.darkModeApp.darkMode ? "shadow-dcl" : "shadow-2xl"
+            // }`}
+            id="contact-form"
+            // data-netlify="true"
+            // onSubmit={handleNodeMailerSubmit}
+          >
+            {/* <!-- First and Last Name --> */}
+            <div className="lg:pl-6">
+              {/* <!-- First Name --> */}
+              <div className="flex flex-col items-start lg:w-4/5">
+                <label className="mb-1 mt-4" htmlFor="Name">
+                  Your name:
                 </label>
-                <select
-                  type="name"
-                  className={`px-2 py-1 rounded border border-dclpal1-300 ${
-                    props.darkModeApp.darkMode
-                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
-                      : "focus:bg-dclpal1-400 text-black"
-                  }`}
-                  id="subject"
-                  value={formState.subject}
-                  name="subject"
-                  onChange={handleInput}
-                  required
-                >
-                  <option className="focus:bg-white" value="Networking">
-                    Networking
-                  </option>
-                  <option value="Inquiry">Inquiry</option>
-                  <option value="Collaboration">Collaboration</option>
-                  <option value="Other">Other (specify in message)</option>
-                </select>
-              </div>
-            </div>
-
-            {/* <!-- Message --> */}
-            <div className="w-full">
-              <div className="flex flex-col">
-                <label htmlFor="message" className="">
-                  Message:
-                </label>
-                <textarea
-                  type="message"
-                  className={`p-2 lg:w-64 lg:min-w-full lg:max-w-full lg:min-h-0 lg:resize rounded border border-dclpal1-300 ${
-                    props.darkModeApp.darkMode
-                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
-                      : "focus:bg-dclpal1-400 text-black"
-                  }`}
-                  id="message"
-                  maxLength="500"
-                  value={formState.message}
-                  name="message"
-                  placeholder="Your message here, in 500 characters or fewer!"
-                  onChange={handleInput}
-                  required
-                />
-                {formState.message.length ? (
-                  <small>
-                    Characters remaining: {500 - formState.message.length}
-                  </small>
-                ) : (
-                  <small
-                    className={
+                <div className="flex flex-row">
+                  <input
+                    className={`w-1/2 px-2 mr-2 rounded border border-dclpal1-300 ${
                       props.darkModeApp.darkMode
-                        ? "text-dclpal1-100"
-                        : "text-white"
-                    }
-                  >
-                    I'm a hidden message!
+                        ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
+                        : "focus:bg-dclpal1-400 text-black"
+                    }`}
+                    type="text"
+                    value={formState.firstName}
+                    onChange={handleInput}
+                    placeholder="First name"
+                    name="firstName"
+                    required
+                  />
+                  {/* <!-- Last Name --> */}
+                  <input
+                    type="text"
+                    className={`w-1/2 px-2 mr-2 rounded border border-dclpal1-300 ${
+                      props.darkModeApp.darkMode
+                        ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
+                        : "focus:bg-dclpal1-400 text-black"
+                    }`}
+                    id="last-name"
+                    onChange={handleInput}
+                    placeholder="Last name"
+                    value={formState.lastName}
+                    name="lastName"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* <!-- Email and phone number --> */}
+            <div className="lg:pl-6">
+              <div className="flex flex-col">
+                <label className="mb-1 mt-4" htmlFor="inputEmail">
+                  Email address:
+                </label>
+                <div className="flex lg:flex-row flex-col items-start">
+                  <input
+                    type="email"
+                    className={`px-2 mr-2 rounded border border-dclpal1-300 ${
+                      props.darkModeApp.darkMode
+                        ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
+                        : "focus:bg-dclpal1-400 text-black"
+                    }`}
+                    id="inputEmail"
+                    value={formState.emailAddress}
+                    placeholder="example@email.com"
+                    aria-describedby="emailHelp"
+                    onChange={handleInput}
+                    name="emailAddress"
+                  />
+                  <small id="emailHelp" className="form-text text-muted">
+                    I'll never share your email with anyone else.
                   </small>
-                )}
-                {/* <small>
+                </div>
+              </div>
+              {/* <!-- Phone number --> */}
+              <div className="flex flex-col">
+                <label className="mb-1 mt-4" htmlFor="phoneNumber">
+                  Phone number:
+                </label>
+                <div className="flex lg:flex-row flex-col items-start">
+                  <input
+                    type="phonenumber"
+                    className={`px-2 mr-2 rounded border border-dclpal1-300 ${
+                      props.darkModeApp.darkMode
+                        ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
+                        : "focus:bg-dclpal1-400 text-black"
+                    }`}
+                    id="phoneNumber"
+                    placeholder="555-123-4567"
+                    value={formState.phNum}
+                    onChange={handleInput}
+                    name="phNum"
+                  />
+                  <small id="emailHelp" className="form-text">
+                    I'll never share your phone number with anyone else either.
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            {/* Subject and actual message */}
+            <div className="flex flex-col items-start lg:px-6">
+              {/* Subject */}
+              <div className="mb-1 mt-4">
+                <div className="flex flex-col">
+                  <label htmlFor="subject" className="">
+                    Subject:
+                  </label>
+                  <select
+                    type="name"
+                    className={`px-2 py-1 rounded border border-dclpal1-300 ${
+                      props.darkModeApp.darkMode
+                        ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
+                        : "focus:bg-dclpal1-400 text-black"
+                    }`}
+                    id="subject"
+                    value={formState.subject}
+                    name="subject"
+                    onChange={handleInput}
+                    required
+                  >
+                    <option className="focus:bg-white" value="Networking">
+                      Networking
+                    </option>
+                    <option value="Inquiry">Inquiry</option>
+                    <option value="Collaboration">Collaboration</option>
+                    <option value="Other">Other (specify in message)</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* <!-- Message --> */}
+              <div className="w-full">
+                <div className="flex flex-col">
+                  <label htmlFor="message" className="">
+                    Message:
+                  </label>
+                  <textarea
+                    type="message"
+                    className={`p-2 lg:w-64 lg:min-w-full lg:max-w-full lg:min-h-0 lg:resize rounded border border-dclpal1-300 ${
+                      props.darkModeApp.darkMode
+                        ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
+                        : "focus:bg-dclpal1-400 text-black"
+                    }`}
+                    id="message"
+                    maxLength="500"
+                    value={formState.message}
+                    name="message"
+                    placeholder="Your message here, in 500 characters or fewer!"
+                    onChange={handleInput}
+                    required
+                  />
+                  {formState.message.length ? (
+                    <small>
+                      Characters remaining: {500 - formState.message.length}
+                    </small>
+                  ) : (
+                    <small
+                      className={
+                        props.darkModeApp.darkMode
+                          ? "text-dclpal1-100"
+                          : "text-white"
+                      }
+                    >
+                      I'm a hidden message!
+                    </small>
+                  )}
+                  {/* <small>
                   Characters remaining: {500 - formState.message.length}
                 </small> */}
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* <!-- Preferred method of contact checkboxes --> */}
-          <div className="lg:pl-6 mb-4">
-            <h1 className="mb-1 mt-4">
-              How would you like me to respond? Check all that apply:
-            </h1>
-            <div>
-              {Object.keys(contactMethodState).map(key => (
-                <div className="lg:pl-6 pl-4 checkbox-options" key={key}>
-                  <input
-                    className="mr-2"
-                    type="checkbox"
-                    onChange={handleToggle}
-                    name={key}
-                    checked={contactMethodState[key]}
-                  />
-                  <label>{contactMethodStr(key)}</label>
-                </div>
-              ))}
+            {/* <!-- Preferred method of contact checkboxes --> */}
+            <div className="lg:pl-6 mb-4">
+              <h1 className="mb-1 mt-4">
+                How would you like me to respond? Check all that apply:
+              </h1>
+              <div>
+                {Object.keys(contactMethodState).map(key => (
+                  <div className="lg:pl-6 pl-4 checkbox-options" key={key}>
+                    <input
+                      className="mr-2"
+                      type="checkbox"
+                      onChange={handleToggle}
+                      name={key}
+                      checked={contactMethodState[key]}
+                    />
+                    <label>{contactMethodStr(key)}</label>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* <!-- Submit button --> */}
-          <div className="lg:pl-6 flex flex-row items-center">
-            <button
-              type="submit"
-              className={`rounded py-2 px-6 border border-dclpal1-300 text-xl ${
-                props.darkModeApp.darkMode
-                  ? "bg-dclpal1-100 text-white hover:bg-dclpal1-500"
-                  : "text-black hover:bg-dclpal1-400"
-              }`}
-            >
-              Send!
-            </button>
-            {formSuccessState.formSuccess ? (
-              <span className="ml-2">
-                Your message has been sent successfully!
-              </span>
-            ) : (
-              " "
-            )}
-            {formSuccessState.sendingState ? (
-              props.darkModeApp.darkMode ? (
-                <div>
-                  Sending...
-                  <Loading color="#FFF" />
-                </div>
+            {/* <!-- Submit button --> */}
+            <div className="lg:pl-6 flex flex-row items-center">
+              <button
+                type="submit"
+                className={`rounded py-2 px-6 border border-dclpal1-300 text-xl ${
+                  props.darkModeApp.darkMode
+                    ? "bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+                    : "text-black hover:bg-dclpal1-400"
+                }`}
+              >
+                Send!
+              </button>
+              {formSuccessState.formSuccess ? (
+                <span className="ml-2">
+                  Your message has been sent successfully!
+                </span>
               ) : (
-                <div>
-                  Sending...
-                  <Loading color="#7ea16b" />
-                </div>
-              )
-            ) : (
-              " "
-            )}
-            {formSuccessState.failure ? (
-              <span className="ml-2">
-                Something went wrong, please refresh and try again
-              </span>
-            ) : (
-              " "
-            )}
-            <br />
-            <br />
-          </div>
-        </NetlifyForm>
+                " "
+              )}
+              {formSuccessState.sendingState ? (
+                props.darkModeApp.darkMode ? (
+                  <div>
+                    Sending...
+                    <Loading color="#FFF" />
+                  </div>
+                ) : (
+                  <div>
+                    Sending...
+                    <Loading color="#7ea16b" />
+                  </div>
+                )
+              ) : (
+                " "
+              )}
+              {formSuccessState.failure ? (
+                <span className="ml-2">
+                  Something went wrong, please refresh and try again
+                </span>
+              ) : (
+                " "
+              )}
+              <br />
+              <br />
+            </div>
+          </NetlifyForm>
+        </div>
       </div>
 
       {/* Copied from tailwind docs */}
