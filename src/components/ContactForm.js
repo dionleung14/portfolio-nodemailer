@@ -16,18 +16,6 @@ export default function ContactForm(props) {
     message: "",
   });
 
-  const completedForm = {
-    fName: formState.firstName,
-    lName: formState.lastName,
-    emailAddy: formState.emailAddress,
-    phone: formState.phNum,
-    subj: formState.subject,
-    text: formState.message,
-    contEmail: contactMethodState.email,
-    contCall: contactMethodState.call,
-    contText: contactMethodState.text,
-  };
-
   const [contactMethodState, setContactMethodState] = useState({
     email: false,
     call: false,
@@ -39,6 +27,18 @@ export default function ContactForm(props) {
     sendingState: false,
     failure: false,
   });
+
+  const completedForm = {
+    fName: formState.firstName,
+    lName: formState.lastName,
+    emailAddy: formState.emailAddress,
+    phone: formState.phNum,
+    subj: formState.subject,
+    text: formState.message,
+    contEmail: contactMethodState.email,
+    contCall: contactMethodState.call,
+    contText: contactMethodState.text,
+  };
 
   const handleNodeMailerSubmit = event => {
     event.preventDefault();
