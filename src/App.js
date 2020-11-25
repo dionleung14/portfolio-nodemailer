@@ -17,7 +17,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // console.log(process.env.POKEMON);
 
 function App() {
-  const [darkMode, setDarkMode] = useState({ darkMode: false });
+  const [darkMode, setDarkMode] = useState({ darkMode: true });
   const handleToggle = () =>
     setDarkMode(s => ({ ...s, darkMode: !darkMode.darkMode }));
 

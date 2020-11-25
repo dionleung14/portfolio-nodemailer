@@ -27,7 +27,7 @@ export default function ContactForm(props) {
     failure: false,
   });
 
-  const handleNodeMailerSubmit = (event) => {
+  const handleNodeMailerSubmit = event => {
     event.preventDefault();
     setFormSuccessState({
       ...formSuccessState,
@@ -67,7 +67,7 @@ export default function ContactForm(props) {
         email,
         text,
       };
-      API.submitEmail(contactFormFilled).then((res) => {
+      API.submitEmail(contactFormFilled).then(res => {
         if (res.status === 200) {
           // stop the failure countdown
           clearTimeout(failureCountdown);
@@ -115,7 +115,7 @@ export default function ContactForm(props) {
     // }
   };
 
-  const handleInput = (event) => {
+  const handleInput = event => {
     event.preventDefault();
     setFormState({
       ...formState,
@@ -123,7 +123,7 @@ export default function ContactForm(props) {
     });
   };
 
-  const contactMethodStr = (string) => {
+  const contactMethodStr = string => {
     let firstLet = string.slice(0, 1);
     let rest = string.slice(1);
     let combined = firstLet.toUpperCase().concat(rest);
@@ -132,7 +132,7 @@ export default function ContactForm(props) {
   };
 
   const handleToggle = ({ target }) =>
-    setContactMethodState((s) => ({ ...s, [target.name]: !s[target.name] }));
+    setContactMethodState(s => ({ ...s, [target.name]: !s[target.name] }));
 
   return (
     <ComponentContainer id="contact" darkModeCont={props.darkModeApp.darkMode}>
@@ -164,10 +164,11 @@ export default function ContactForm(props) {
         </h3>
 
         <form
-          className={`lg:w-5/6 w-full lg:mx-auto p-2 border border-dclpal1-300 ${
+          className={`lg:w-5/6 w-full lg:mx-auto p-2 py-8 my-2 border border-dclpal1-300 ${
             props.darkModeApp.darkMode ? "shadow-dcl" : "shadow-2xl"
           }`}
           id="contact-form"
+          data-netlify="true"
           onSubmit={handleNodeMailerSubmit}
         >
           {/* <!-- First and Last Name --> */}
@@ -341,7 +342,7 @@ export default function ContactForm(props) {
               How would you like me to respond? Check all that apply:
             </h1>
             <div>
-              {Object.keys(contactMethodState).map((key) => (
+              {Object.keys(contactMethodState).map(key => (
                 <div className="lg:pl-6 pl-4 checkbox-options" key={key}>
                   <input
                     className="mr-2"
