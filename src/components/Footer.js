@@ -72,9 +72,58 @@ export default class Footer extends Component {
           </a>
           <div>Copyright &copy; 2020</div>
         </div>
-        <div className="flex flex-row justify-around my-8">
-          Powered by React, Axios, NodeMailer, React Anchor Link Smooth Scroll,
-          and React Router Dom. Styled with Tailwind CSS
+        <div className="text-center my-8">
+          Powered by{" "}
+          <a
+            href="https://reactjs.org/"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="hover:underline hover:text-dclpal1-300"
+          >
+            React,
+          </a>{" "}
+          <a
+            href="https://www.npmjs.com/package/axios"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="hover:underline hover:text-dclpal1-300"
+          >
+            Axios,
+          </a>{" "}
+          <a
+            href="https://www.npmjs.com/package/nodemailer"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="hover:underline hover:text-dclpal1-300"
+          >
+            NodeMailer,
+          </a>{" "}
+          <a
+            href="https://www.npmjs.com/package/react-anchor-link-smooth-scroll"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="hover:underline hover:text-dclpal1-300"
+          >
+            React Anchor Link Smooth Scroll,
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://www.npmjs.com/package/react-router-dom"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="hover:underline hover:text-dclpal1-300"
+          >
+            React Router Dom.
+          </a>{" "}
+          Styled with{" "}
+          <a
+            href="https://tailwindcss.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="hover:underline hover:text-dclpal1-300"
+          >
+            Tailwind CSS.
+          </a>
         </div>
       </div>
     );
