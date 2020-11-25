@@ -3,6 +3,7 @@ import FirstHeader from "./FirstHeader";
 import API from "../utils/API";
 import ComponentContainer from "./ComponentContainer";
 import Loading from "./Loading";
+import NetlifyForm from "react-ssg-netlify-forms";
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default function ContactForm(props) {
@@ -14,6 +15,18 @@ export default function ContactForm(props) {
     subject: "Networking",
     message: "",
   });
+
+  const completedForm = {
+    fName: formState.firstName,
+    lName: formState.lastName,
+    emailAddy: formState.emailAddress,
+    phone: formState.phNum,
+    subj: formState.subject,
+    text: formState.message,
+    contEmail: contactMethodState.email,
+    contCall: contactMethodState.call,
+    contText: contactMethodState.text,
+  };
 
   const [contactMethodState, setContactMethodState] = useState({
     email: false,
@@ -163,13 +176,15 @@ export default function ContactForm(props) {
           .
         </h3>
 
-        <form
+        <NetlifyForm
+          formName="Contact form"
+          formValues={completedForm}
           className={`lg:w-5/6 w-full lg:mx-auto p-2 py-8 my-2 border border-dclpal1-300 ${
             props.darkModeApp.darkMode ? "shadow-dcl" : "shadow-2xl"
           }`}
           id="contact-form"
-          data-netlify="true"
-          onSubmit={handleNodeMailerSubmit}
+          // data-netlify="true"
+          // onSubmit={handleNodeMailerSubmit}
         >
           {/* <!-- First and Last Name --> */}
           <div className="lg:pl-6">
@@ -401,7 +416,7 @@ export default function ContactForm(props) {
             <br />
             <br />
           </div>
-        </form>
+        </NetlifyForm>
       </div>
 
       {/* Copied from tailwind docs */}
