@@ -9,10 +9,22 @@ import ComponentContainer from "./ComponentContainer";
 import { Link } from "react-router-dom";
 
 export default function Portfolio(props) {
-  const handlePortfolioClick = event => {
-    setPortfolioItem({
-      item: event.target.dataset.project,
-    });
+  // const handlePortfolioClick = event => {
+  //   setPortfolioItem({
+  //     item: event.target.dataset.project,
+  //   });
+  // };
+
+  const handlePortfolioToggle = event => {
+    if (portfolioItem.item === "") {
+      setPortfolioItem({
+        item: event.target.dataset.project,
+      });
+    } else {
+      setPortfolioItem({
+        item: "",
+      });
+    }
   };
 
   const collapsePortfolioItem = () => {
@@ -66,7 +78,7 @@ export default function Portfolio(props) {
         <div
           className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
           data-project="rocketlist"
-          onClick={handlePortfolioClick}
+          onClick={handlePortfolioToggle}
         >
           <img
             className="bg-white"
@@ -196,7 +208,7 @@ export default function Portfolio(props) {
         <div
           className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
           data-project="togather"
-          onClick={handlePortfolioClick}
+          onClick={handlePortfolioToggle}
         >
           <img
             className="border-white border-2"
@@ -301,7 +313,7 @@ export default function Portfolio(props) {
         </div>
         <div
           className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
-          onClick={handlePortfolioClick}
+          onClick={handlePortfolioToggle}
           data-project="pokegodex"
         >
           <img
