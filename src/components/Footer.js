@@ -16,8 +16,8 @@ export default class Footer extends Component {
             href="#top"
             className={`border border-transparent px-2 rounded ${
               this.props.darkModeApp.darkMode
-                ? "hover:border-white"
-                : "hover:border-dclpal1-100"
+                ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+                : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
             }`}
           >
             Back to top
@@ -28,8 +28,8 @@ export default class Footer extends Component {
             rel="noopener noreferrer"
             className={`border border-transparent px-2 rounded ${
               this.props.darkModeApp.darkMode
-                ? "hover:border-white"
-                : "hover:border-dclpal1-100"
+                ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+                : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
             }`}
           >
             GitHub
@@ -40,8 +40,8 @@ export default class Footer extends Component {
             rel="noopener noreferrer"
             className={`border border-transparent px-2 rounded ${
               this.props.darkModeApp.darkMode
-                ? "hover:border-white"
-                : "hover:border-dclpal1-100"
+                ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+                : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
             }`}
           >
             LinkedIn
@@ -52,8 +52,8 @@ export default class Footer extends Component {
             rel="noopener noreferrer"
             className={`border border-transparent px-2 rounded ${
               this.props.darkModeApp.darkMode
-                ? "hover:border-white"
-                : "hover:border-dclpal1-100"
+                ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+                : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
             }`}
           >
             Email
@@ -64,8 +64,8 @@ export default class Footer extends Component {
             rel="noopener noreferrer"
             className={`border border-transparent px-2 rounded ${
               this.props.darkModeApp.darkMode
-                ? "hover:border-white"
-                : "hover:border-dclpal1-100"
+                ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+                : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
             }`}
           >
             Twitter

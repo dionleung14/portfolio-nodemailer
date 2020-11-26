@@ -14,40 +14,22 @@ import { BrowserRouter as Router } from "react-router-dom";
 // console.log(process.env.REACT_APP_POKEMON);
 // console.log(process.env.POKEMON);
 
-function Main() {
-  const [darkMode, setDarkMode] = useState({ darkMode: false });
-  const handleToggle = () =>
-    setDarkMode(s => ({ ...s, darkMode: !darkMode.darkMode }));
-
-  const toggleSwitch = () => {
-    return (
-      <div
-        name="darkMode"
-        className={`px-2 self-center rounded border cursor-pointer ${
-          darkMode.darkMode ? "border-white" : "border-dclpal1-100"
-        }`}
-        onClick={handleToggle}
-      >
-        {darkMode.darkMode ? "dark mode on!" : "dark mode?"}
-      </div>
-    );
-  };
-
+function Main(props) {
   return (
     <Router>
-      <NavBar darkModeApp={darkMode} toggle={toggleSwitch} />
+      <NavBar darkModeApp={props.darkModeApp} toggle={props.toggle} />
       {/* <Switch> */}
       {/* <Route exact path="/about-me"> */}
-      <Welcome darkModeApp={darkMode} />
-      <About darkModeApp={darkMode} />
+      <Welcome darkModeApp={props.darkModeApp} />
+      <About darkModeApp={props.darkModeApp} />
       {/* </Route> */}
       {/* <About /> */}
-      <Meet darkModeApp={darkMode} />
-      <Quals darkModeApp={darkMode} />
-      <Portfolio darkModeApp={darkMode} />
-      <Testimonials darkModeApp={darkMode} />
-      <ContactForm darkModeApp={darkMode} />
-      <Footer darkModeApp={darkMode} />
+      <Meet darkModeApp={props.darkModeApp} />
+      <Quals darkModeApp={props.darkModeApp} />
+      <Portfolio darkModeApp={props.darkModeApp} />
+      <Testimonials darkModeApp={props.darkModeApp} />
+      <ContactForm darkModeApp={props.darkModeApp} />
+      <Footer darkModeApp={props.darkModeApp} />
       {/* </Switch> */}
     </Router>
   );

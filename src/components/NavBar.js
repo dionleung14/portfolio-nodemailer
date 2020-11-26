@@ -10,7 +10,7 @@ export default function Navbar(props) {
   });
 
   const handleToggle = ({ target }) =>
-    setBurger((s) => ({ ...s, [target.name]: !s[target.name] }));
+    setBurger(s => ({ ...s, [target.name]: !s[target.name] }));
 
   const handleHide = () => {
     setBurger({
@@ -32,8 +32,8 @@ export default function Navbar(props) {
           href="#top"
           className={`lg:text-4xl text-2xl border border-transparent px-2 rounded ${
             props.darkModeApp.darkMode
-              ? "hover:border-white"
-              : "hover:border-dclpal1-100"
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
           Welcome
@@ -42,8 +42,8 @@ export default function Navbar(props) {
           href="#about-me"
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
             props.darkModeApp.darkMode
-              ? "hover:border-white"
-              : "hover:border-dclpal1-100"
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
           about me
@@ -52,8 +52,8 @@ export default function Navbar(props) {
           href="#meet-me"
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
             props.darkModeApp.darkMode
-              ? "hover:border-white"
-              : "hover:border-dclpal1-100"
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
           meet me
@@ -62,8 +62,8 @@ export default function Navbar(props) {
           href="#qualifications"
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
             props.darkModeApp.darkMode
-              ? "hover:border-white"
-              : "hover:border-dclpal1-100"
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
           qualifications
@@ -72,8 +72,8 @@ export default function Navbar(props) {
           href="#portfolio"
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
             props.darkModeApp.darkMode
-              ? "hover:border-white"
-              : "hover:border-dclpal1-100"
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
           portfolio
@@ -82,8 +82,8 @@ export default function Navbar(props) {
           href="#testimonials"
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
             props.darkModeApp.darkMode
-              ? "hover:border-white"
-              : "hover:border-dclpal1-100"
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
           testimonials
@@ -92,8 +92,8 @@ export default function Navbar(props) {
           href="#contact"
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
             props.darkModeApp.darkMode
-              ? "hover:border-white"
-              : "hover:border-dclpal1-100"
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
           contact

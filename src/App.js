@@ -26,7 +26,9 @@ function App() {
       <div
         name="darkMode"
         className={`px-2 self-center rounded border cursor-pointer ${
-          darkMode.darkMode ? "border-white" : "border-dclpal1-100"
+          darkMode.darkMode
+            ? "border-white hover:bg-dclpal1-500"
+            : "border-dclpal1-100 hover:bg-dclpal1-100 hover:text-white"
         }`}
         onClick={handleToggle}
       >
@@ -39,9 +41,9 @@ function App() {
     <Router>
       <NavBar darkModeApp={darkMode} toggle={toggleSwitch} />
       <Switch>
-        {/* <Route exact path="/archive" component={Archive} /> */}
+        <Route exact path="/archive" component={Archive} />
         <Route path="/">
-          <Main />
+          <Main darkModeApp={darkMode} toggle={toggleSwitch} />
         </Route>
 
         {/* <Welcome darkModeApp={darkMode} />
