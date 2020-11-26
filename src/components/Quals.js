@@ -1,5 +1,5 @@
 import React from "react";
-import FirstHeader from "./FirstHeader.js";
+import Header from "./Header.js";
 import alaskaSurvey from "./photos/alaskaSurvey.JPG";
 import ComponentContainer from "./ComponentContainer.js";
 
@@ -9,7 +9,7 @@ export default function Quals(props) {
       id="qualifications"
       darkModeCont={props.darkModeApp.darkMode}
     >
-      <FirstHeader
+      <Header
         text="Qualifications"
         darkModeHeader={props.darkModeApp.darkMode}
       />

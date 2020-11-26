@@ -1,5 +1,5 @@
 import React from "react";
-import FirstHeader from "./FirstHeader.js";
+import Header from "./Header.js";
 import placeholder from "./photos/linkedin-Seattle.jpg";
 import dubs from "./photos/dubs.JPG";
 import flowtest from "./photos/flowtest.JPG";
@@ -37,7 +37,7 @@ export default function Meet(props) {
 
   return (
     <ComponentContainer id="meet-me" darkModeCont={props.darkModeApp.darkMode}>
-      <FirstHeader text="Meet me" darkModeHeader={props.darkModeApp.darkMode} />
+      <Header text="Meet me" darkModeHeader={props.darkModeApp.darkMode} />
       <div className="flex flex-col lg:flex-row items-center mt-4">
         <div className="text-left lg:py-8 lg:pl-6 lg:pr-4 lg:w-1/2 p-2">
           <p>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ComponentContainer from "./ComponentContainer.js";
-import FirstHeader from "./FirstHeader";
+import Header from "./Header";
 import headshot from "./photos/headshot1.jpg";
 // import Emoji from "./Emoji";
 
@@ -11,7 +11,7 @@ export default class About extends Component {
         id="about-me"
         darkModeCont={this.props.darkModeApp.darkMode}
       >
-        <FirstHeader
+        <Header
           text="About Me"
           darkModeHeader={this.props.darkModeApp.darkMode}
         />

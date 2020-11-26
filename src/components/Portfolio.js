@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FirstHeader from "./FirstHeader.js";
+import Header from "./Header.js";
 import RocketList from "./photos/portfolio-photos/RocketList.png";
 import ToGather from "./photos/portfolio-photos/ToGather.png";
 import ToGatherHover from "./photos/portfolio-photos/ToGather-hover.png";
@@ -41,7 +41,7 @@ export default function Portfolio(props) {
       id="portfolio"
       darkModeCont={props.darkModeApp.darkMode}
     >
-      <FirstHeader
+      <Header
         text="Portfolio, selected works"
         darkModeHeader={props.darkModeApp.darkMode}
       />

@@ -13,7 +13,7 @@ export default function Welcome(props) {
     // <div id="top">
     <ComponentContainer id="top" darkModeCont={props.darkModeApp.darkMode}>
       <FirstHeader
-        text="Dion Leung, E.I.T - Fullstack Web Developer"
+        text="Dion Leung, E.I.T"
         subtext="Fullstack Web Developer"
         darkModeHeader={props.darkModeApp.darkMode}
       />

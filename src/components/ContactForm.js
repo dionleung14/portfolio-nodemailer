@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FirstHeader from "./FirstHeader";
+import Header from "./Header";
 import API from "../utils/API";
 import ComponentContainer from "./ComponentContainer";
 import Loading from "./Loading";
@@ -149,10 +149,7 @@ export default function ContactForm(props) {
 
   return (
     <ComponentContainer id="contact" darkModeCont={props.darkModeApp.darkMode}>
-      <FirstHeader
-        text="Contact me!"
-        darkModeHeader={props.darkModeApp.darkMode}
-      />
+      <Header text="Contact me!" darkModeHeader={props.darkModeApp.darkMode} />
       <div className="flex justify-around flex-col w-full lg:mt-8 lg:mb-2 my-2 lg:px-6 p-2">
         <h3 className="lg:w-4/5 my-2 lg:pl-20">
           Have any questions? Want to collaborate together? Secretly dying to
