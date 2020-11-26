@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FirstHeader from "./FirstHeader";
 import TestimonialsContainer from "./TestimonialsContainer";
 require("dotenv").config();
 
 export default function Testimonials(props) {
   let [tracker, setTracker] = useState(0);
+
+  // const  setInterval(() => {
+  //   setTracker(tracker + 1);
+  // }, 1000);
 
   const decrement = () => {
     setTracker(tracker - 1);
@@ -65,6 +69,7 @@ export default function Testimonials(props) {
           >
             {`<`}
           </button>
+          {/* {testimonialAuto} */}
           <div className="w-3/4 flex flex-col">
             <div className="">
               <h1 className="text-justify">{currentTest.message}</h1>
