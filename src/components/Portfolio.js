@@ -16,13 +16,13 @@ export default function Portfolio(props) {
   // };
 
   const handlePortfolioToggle = event => {
-    if (portfolioItem.item === "") {
+    if (portfolioItem.item === event.target.dataset.project) {
       setPortfolioItem({
-        item: event.target.dataset.project,
+        item: "",
       });
     } else {
       setPortfolioItem({
-        item: "",
+        item: event.target.dataset.project,
       });
     }
   };
