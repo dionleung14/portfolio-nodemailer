@@ -16,6 +16,18 @@ export default function ContactForm(props) {
     message: "",
   });
 
+  const [subjectLine, setSubjectLine] = useState({
+    subjectLine: "",
+  });
+
+  const handleSubjectLine = event => {
+    event.preventDefault();
+    setSubjectLine({
+      ...subjectLine,
+      [event.target.name]: event.target.value,
+    });
+  };
+
   const [contactMethodState, setContactMethodState] = useState({
     email: false,
     call: false,
@@ -42,86 +54,91 @@ export default function ContactForm(props) {
 
   const handleNodeMailerSubmit = event => {
     event.preventDefault();
-    setFormSuccessState({
-      ...formSuccessState,
-      sendingState: true,
-    });
-    let failureCountdown = setTimeout(() => {
-      console.log("failure");
+    // if there's input in the "subject line", reload
+    if (subjectLine.subjectLine) {
+      window.location.reload();
+    } else {
       setFormSuccessState({
         ...formSuccessState,
-        sendingState: false,
-        failure: true,
+        sendingState: true,
       });
-    }, 12000);
-    let contactMethodCheck = Object.values(contactMethodState);
-    if (!contactMethodCheck.includes(true)) {
-      alert("Please select a method for me to reach you");
-    } else if (!(formState.emailAddress || formState.phNum)) {
-      alert("Please enter either an email or phone number");
-    } else {
-      let { call, email, text } = contactMethodState;
-      let {
-        firstName,
-        lastName,
-        emailAddress,
-        phNum,
-        subject,
-        message,
-      } = formState;
-      let contactFormFilled = {
-        firstName,
-        lastName,
-        emailAddress,
-        phNum,
-        subject,
-        message,
-        call,
-        email,
-        text,
-      };
-      API.submitEmail(contactFormFilled).then(res => {
-        if (res.status === 200) {
-          // stop the failure countdown
-          clearTimeout(failureCountdown);
-          // reset the form
-          setFormState({
-            firstName: "",
-            lastName: "",
-            emailAddress: "",
-            phNum: "",
-            subject: "Networking",
-            message: "",
-          });
-          setContactMethodState({
-            email: false,
-            call: false,
-            text: false,
-          });
-          // alter the success state to show success message
-          setFormSuccessState({
-            formSuccess: true,
-            sendingState: false,
-          });
-          // after 2 seconds, erase the success message
-          setTimeout(() => {
+      let failureCountdown = setTimeout(() => {
+        console.log("failure");
+        setFormSuccessState({
+          ...formSuccessState,
+          sendingState: false,
+          failure: true,
+        });
+      }, 12000);
+      let contactMethodCheck = Object.values(contactMethodState);
+      if (!contactMethodCheck.includes(true)) {
+        alert("Please select a method for me to reach you");
+      } else if (!(formState.emailAddress || formState.phNum)) {
+        alert("Please enter either an email or phone number");
+      } else {
+        let { call, email, text } = contactMethodState;
+        let {
+          firstName,
+          lastName,
+          emailAddress,
+          phNum,
+          subject,
+          message,
+        } = formState;
+        let contactFormFilled = {
+          firstName,
+          lastName,
+          emailAddress,
+          phNum,
+          subject,
+          message,
+          call,
+          email,
+          text,
+        };
+        API.submitEmail(contactFormFilled).then(res => {
+          if (res.status === 200) {
+            // stop the failure countdown
+            clearTimeout(failureCountdown);
+            // reset the form
+            setFormState({
+              firstName: "",
+              lastName: "",
+              emailAddress: "",
+              phNum: "",
+              subject: "Networking",
+              message: "",
+            });
+            setContactMethodState({
+              email: false,
+              call: false,
+              text: false,
+            });
+            // alter the success state to show success message
+            setFormSuccessState({
+              formSuccess: true,
+              sendingState: false,
+            });
+            // after 2 seconds, erase the success message
+            setTimeout(() => {
+              setFormSuccessState({
+                ...formSuccessState,
+                formSuccess: false,
+              });
+            }, 2000);
+          } else {
+            // change the sending state, erasing progress messsage, and display error message
             setFormSuccessState({
               ...formSuccessState,
-              formSuccess: false,
+              sendingState: false,
+              failure: true,
             });
-          }, 2000);
-        } else {
-          // change the sending state, erasing progress messsage, and display error message
-          setFormSuccessState({
-            ...formSuccessState,
-            sendingState: false,
-            failure: true,
-          });
-        }
-      });
-      // .catch((err) => console.log(err))
-      // );
-      // console.log(contactFormFilled);
+          }
+        });
+        // .catch((err) => console.log(err))
+        // );
+        // console.log(contactFormFilled);
+      }
     }
     // else {
     //   alert("Please select a method for me to reach you");
@@ -189,6 +206,19 @@ export default function ContactForm(props) {
           onSubmit={handleNodeMailerSubmit}
         >
           {/* <!-- First and Last Name --> */}
+          <div className="lg:pl-6">
+            <input
+              type="hidden"
+              // type="text"
+              // name={getRandomString()}
+              name="subjectLine"
+              placeholder="Enter your subject here"
+              // autoComplete={getRandomString()}
+              value={subjectLine.subjectLine}
+              onChange={handleSubjectLine}
+              style={{ display: "none" }}
+            />
+          </div>
           <div className="lg:pl-6">
             {/* <!-- First Name --> */}
             <div className="flex flex-col items-start lg:w-4/5">
