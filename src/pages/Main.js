@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 // import logo from "./logo.svg";
-import NavBar from "../components/NavBar";
-import Welcome from "../components/Welcome";
-import About from "../components/About";
-import Meet from "../components/Meet";
-import Quals from "../components/Quals";
-import Portfolio from "../components/Portfolio";
-import Testimonials from "../components/Testimonials";
+import MainNavBar from "../components/MainNavBar";
+import MainWelcome from "../components/MainWelcome";
+import MainAbout from "../components/MainAbout";
+import MainMeet from "../components/MainMeet";
+import MainQuals from "../components/MainQuals";
+import MainPortfolio from "../components/MainPortfolio";
+import MainTestimonials from "../components/MainTestimonials";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -17,17 +17,17 @@ import { BrowserRouter as Router } from "react-router-dom";
 function Main(props) {
   return (
     <div>
-      <NavBar darkModeApp={props.darkModeApp} toggle={props.toggle} />
+      <MainNavBar darkModeApp={props.darkModeApp} toggle={props.toggle} />
       {/* <Switch> */}
       {/* <Route exact path="/about-me"> */}
-      <Welcome darkModeApp={props.darkModeApp} />
-      <About darkModeApp={props.darkModeApp} />
+      <MainWelcome darkModeApp={props.darkModeApp} />
+      <MainAbout darkModeApp={props.darkModeApp} />
       {/* </Route> */}
       {/* <About /> */}
-      <Meet darkModeApp={props.darkModeApp} />
-      <Quals darkModeApp={props.darkModeApp} />
-      <Portfolio darkModeApp={props.darkModeApp} />
-      <Testimonials darkModeApp={props.darkModeApp} />
+      <MainMeet darkModeApp={props.darkModeApp} />
+      <MainQuals darkModeApp={props.darkModeApp} />
+      <MainPortfolio darkModeApp={props.darkModeApp} />
+      <MainTestimonials darkModeApp={props.darkModeApp} />
       <ContactForm darkModeApp={props.darkModeApp} />
       <Footer darkModeApp={props.darkModeApp} />
       {/* </Switch> */}

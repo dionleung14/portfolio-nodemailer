@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-// import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import icon8 from "./photos/icons8-menu-64.png";
 
-export default function NavbarArchive(props) {
+export default function ArchiveNavBar(props) {
   const [burger, setBurger] = useState({
     display: false,
   });
@@ -38,6 +38,15 @@ export default function NavbarArchive(props) {
         >
           Welcome
         </AnchorLink>
+        <div
+          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
+            props.darkModeApp.darkMode
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
+          }`}
+        >
+          <Link to="/">home</Link>
+        </div>
         <AnchorLink
           href="#portfolio"
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
@@ -73,28 +82,7 @@ export default function NavbarArchive(props) {
         } pt-12 fixed right-0 w-auto h-auto bg-dclpal1-500 z-30 flex text-white border border-black flex-col pr-2`}
       >
         <div onClick={handleHide}>
-          <AnchorLink
-            href="#about-me"
-            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
-          >
-            about me
-          </AnchorLink>
-        </div>
-        <div onClick={handleHide}>
-          <AnchorLink
-            href="#meet-me"
-            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
-          >
-            meet me
-          </AnchorLink>
-        </div>
-        <div onClick={handleHide}>
-          <AnchorLink
-            href="#qualifications"
-            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
-          >
-            qualifications
-          </AnchorLink>
+          <Link to="/">home</Link>
         </div>
         <div onClick={handleHide}>
           <AnchorLink
@@ -102,14 +90,6 @@ export default function NavbarArchive(props) {
             className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
           >
             portfolio
-          </AnchorLink>
-        </div>
-        <div onClick={handleHide}>
-          <AnchorLink
-            href="#testimonials"
-            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
-          >
-            testimonials
           </AnchorLink>
         </div>
         <div onClick={handleHide}>
