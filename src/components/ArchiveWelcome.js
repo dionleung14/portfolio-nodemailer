@@ -17,7 +17,6 @@ export default function ArchiveWelcome(props) {
         subtext="Welcome to my project archive! Here you can find some of my older projects, or projects that I don't believe are relevant to my desired career trajectory right now."
         darkModeHeader={props.darkModeApp.darkMode}
       />
-      <p>I'm looking for freelance work</p>
       {/* </ComponentContainer> */}
       {/* </div> */}
     </ComponentContainer>

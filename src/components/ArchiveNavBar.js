@@ -28,18 +28,8 @@ export default function ArchiveNavBar(props) {
             : `bg-white text-dclpal1-100`
         }`}
       >
-        <AnchorLink
-          href="#top"
-          className={`lg:text-4xl text-2xl border border-transparent px-2 rounded ${
-            props.darkModeApp.darkMode
-              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
-              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
-          }`}
-        >
-          Welcome
-        </AnchorLink>
         <div
-          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
+          className={`lg:text-4xl text-2xl border border-transparent px-2 rounded ${
             props.darkModeApp.darkMode
               ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
@@ -47,15 +37,25 @@ export default function ArchiveNavBar(props) {
         >
           <Link to="/">home</Link>
         </div>
-        <AnchorLink
-          href="#portfolio"
+        <div
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
             props.darkModeApp.darkMode
               ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
-          portfolio
+          <Link to="/portfolio">portfolio</Link>
+        </div>
+
+        <AnchorLink
+          href="#archive"
+          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
+            props.darkModeApp.darkMode
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
+          }`}
+        >
+          archive
         </AnchorLink>
         <AnchorLink
           href="#contact"

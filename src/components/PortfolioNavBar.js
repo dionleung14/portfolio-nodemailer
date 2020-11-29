@@ -77,6 +77,15 @@ export default function PortfolioNavBar(props) {
         >
           bootcamp
         </AnchorLink>
+        <div
+          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
+            props.darkModeApp.darkMode
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
+          }`}
+        >
+          <Link to="/archive">archive</Link>
+        </div>
         <AnchorLink
           href="#contact"
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${

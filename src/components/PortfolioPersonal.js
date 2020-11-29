@@ -9,7 +9,7 @@ import ComponentContainer from "./ComponentContainer";
 import { Link } from "react-router-dom";
 import portfolioArr from "../portfolio-items/portfolio-data";
 
-export default function ArchivePortfolio(props) {
+export default function PortfolioPersonal(props) {
   const handlePortfolioToggle = event => {
     if (portfolioItem.item === event.target.dataset.project) {
       setPortfolioItem({
@@ -32,16 +32,15 @@ export default function ArchivePortfolio(props) {
     item: "",
   });
   return (
-    <ComponentContainer id="archive" darkModeCont={props.darkModeApp.darkMode}>
+    <ComponentContainer id="personal" darkModeCont={props.darkModeApp.darkMode}>
       <Header
-        text="Archive of all projects"
+        text="Personal Projects"
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
-        Equipped with the knowledge from the curriculum of the coding bootcamp,
-        I have highlighted several projects below. Click each one to learn more!
-        I am constantly working on new apps and endeavors, so expect this to
-        update regularly. You can find my github{" "}
+        Here are some personal projects I have created just for fun, click each
+        one to learn more! I am constantly working on new apps and endeavors, so
+        expect this to update regularly. You can find my github{" "}
         <a
           href="https://github.com/dionleung14"
           target="_blank"

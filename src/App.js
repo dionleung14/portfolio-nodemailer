@@ -10,8 +10,27 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [darkMode, setDarkMode] = useState({ darkMode: true });
-  const handleToggle = () =>
-    setDarkMode(s => ({ ...s, darkMode: !darkMode.darkMode }));
+  const handleToggle = () => {
+    setDarkMode(state => ({ ...state, darkMode: !darkMode.darkMode }));
+    faviconToggle();
+  };
+
+  const faviconToggle = () => {
+    console.log("toggling for favicon");
+    let favicon = document.getElementById("favicon");
+    console.log(favicon);
+    console.log(favicon.href);
+    if (darkMode.darkMode) {
+      // favicon.href = "%PUBLIC_URL%/favicon_dcl_light.ico";
+      favicon.href = "../public/favicon_dcl_light.ico";
+      console.log("Should be light");
+    } else {
+      // favicon.href = "%PUBLIC_URL%/favicon_dcl_dark.ico";
+      favicon.href = "../public/favicon_dcl_dark.ico";
+      console.log("Should be dark");
+    }
+    console.log("fin");
+  };
 
   const toggleSwitch = () => {
     return (
