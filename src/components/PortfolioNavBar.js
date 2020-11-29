@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import icon8 from "./photos/icons8-menu-64.png";
 
-export default function ArchiveNavBar(props) {
+export default function PortfolioNavBar(props) {
   const [burger, setBurger] = useState({
     display: false,
   });
@@ -37,6 +37,46 @@ export default function ArchiveNavBar(props) {
         >
           <Link to="/">home</Link>
         </div>
+        <AnchorLink
+          href="#top"
+          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
+            props.darkModeApp.darkMode
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
+          }`}
+        >
+          project collection
+        </AnchorLink>
+        <AnchorLink
+          href="#freelance"
+          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
+            props.darkModeApp.darkMode
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
+          }`}
+        >
+          freelance
+        </AnchorLink>
+        <AnchorLink
+          href="#personal"
+          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
+            props.darkModeApp.darkMode
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
+          }`}
+        >
+          personal
+        </AnchorLink>
+        <AnchorLink
+          href="#bootcamp"
+          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
+            props.darkModeApp.darkMode
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
+          }`}
+        >
+          bootcamp
+        </AnchorLink>
         <div
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
             props.darkModeApp.darkMode
@@ -44,19 +84,8 @@ export default function ArchiveNavBar(props) {
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
-          <Link to="/portfolio">portfolio</Link>
+          <Link to="/archive">archive</Link>
         </div>
-
-        <AnchorLink
-          href="#archive"
-          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
-            props.darkModeApp.darkMode
-              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
-              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
-          }`}
-        >
-          archive
-        </AnchorLink>
         <AnchorLink
           href="#contact"
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${

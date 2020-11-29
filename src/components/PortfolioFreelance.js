@@ -6,15 +6,9 @@ import ToGatherHover from "./photos/portfolio-photos/ToGather-hover.png";
 import PokeGoDex from "./photos/portfolio-photos/PokeGoDex.png";
 import CollapseBtn from "./CollapseBtn";
 import ComponentContainer from "./ComponentContainer";
-import { Link } from "react-router-dom";
+import portfolioArr from "../portfolio-items/portfolio-data";
 
-export default function Portfolio(props) {
-  // const handlePortfolioClick = event => {
-  //   setPortfolioItem({
-  //     item: event.target.dataset.project,
-  //   });
-  // };
-
+export default function PortfolioPortfolio(props) {
   const handlePortfolioToggle = event => {
     if (portfolioItem.item === event.target.dataset.project) {
       setPortfolioItem({
@@ -38,17 +32,18 @@ export default function Portfolio(props) {
   });
   return (
     <ComponentContainer
-      id="portfolio"
+      id="freelance"
       darkModeCont={props.darkModeApp.darkMode}
     >
       <Header
-        text="Portfolio, selected works"
+        text="Freelance Projects"
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
-        I have highlighted several key projects below. Click each one to learn
-        more! I am constantly working on new apps and endeavors, so expect this
-        to update regularly. Code repositories are hosted on github{" "}
+        Below you'll find a series of freelance projects I have been contracted
+        for. Click each one to learn more! I am constantly working on new apps
+        and endeavors, so expect this to update regularly. You can find my
+        github{" "}
         <a
           href="https://github.com/dionleung14"
           target="_blank"
@@ -57,33 +52,6 @@ export default function Portfolio(props) {
         >
           here.
         </a>{" "}
-        If you want to see a more comprehensive overview of my projects, you can
-        find that{" "}
-        <Link to="/portfolio">
-          <span className="hover:underline text-dclpal1-300">here.</span>
-        </Link>{" "}
-        Also, here's a link to my project{" "}
-        <Link to="/archive">
-          <span className="hover:underline text-dclpal1-300">archive.</span>
-        </Link>
-        {/* , which includes past projects which may no longer be relevant to my
-        most recent experience or perhaps I'm no longer proud of them. In any
-        case, they're important to me to keep as a reminder of how I've improved
-        or for future inspiration. */}
-        {/* , and you can follow me on my coding journey on Twitter here:{" "}
-        <a
-          href="https://twitter.com/DionTheDev?ref_src=twsrc%5Etfw"
-          className="twitter-follow-button border border-2 border-blue-300 px-2 py-1 rounded"
-          data-size="large"
-          data-show-count="false"
-        >
-          Follow @DionTheDev
-        </a>
-        <script
-          async
-          src="https://platform.twitter.com/widgets.js"
-          charset="utf-8"
-        ></script> */}
       </h1>
       <div className="flex lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
         <div

@@ -36,7 +36,7 @@ export default function Navbar(props) {
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
-          Welcome
+          Dion
         </AnchorLink>
         <AnchorLink
           href="#about-me"

@@ -7,6 +7,7 @@ import PokeGoDex from "./photos/portfolio-photos/PokeGoDex.png";
 import CollapseBtn from "./CollapseBtn";
 import ComponentContainer from "./ComponentContainer";
 import { Link } from "react-router-dom";
+import portfolioArr from "../portfolio-items/portfolio-data";
 
 export default function ArchivePortfolio(props) {
   const handlePortfolioToggle = event => {
@@ -31,12 +32,9 @@ export default function ArchivePortfolio(props) {
     item: "",
   });
   return (
-    <ComponentContainer
-      id="portfolio"
-      darkModeCont={props.darkModeApp.darkMode}
-    >
+    <ComponentContainer id="archive" darkModeCont={props.darkModeApp.darkMode}>
       <Header
-        text="Freelance Projects"
+        text="Archive of all projects"
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
