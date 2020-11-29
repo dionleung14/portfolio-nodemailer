@@ -46,10 +46,9 @@ export default function Portfolio(props) {
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
-        Equipped with the knowledge from the curriculum of the coding bootcamp,
-        I have highlighted several projects below. Click each one to learn more!
-        I am constantly working on new apps and endeavors, so expect this to
-        update regularly. You can find my github{" "}
+        I have highlighted several key projects below. Click each one to learn
+        more! I am constantly working on new apps and endeavors, so expect this
+        to update regularly. Code repositories are hosted on github{" "}
         <a
           href="https://github.com/dionleung14"
           target="_blank"
@@ -58,14 +57,19 @@ export default function Portfolio(props) {
         >
           here.
         </a>{" "}
+        If you want to see a more comprehensive overview of my projects, you can
+        find that{" "}
+        <Link to="/portfolio">
+          <span className="hover:underline text-dclpal1-300">here.</span>
+        </Link>{" "}
         Also, here's a link to my project{" "}
         <Link to="/archive">
-          <span className="hover:underline text-dclpal1-300">archive</span>
+          <span className="hover:underline text-dclpal1-300">archive.</span>
         </Link>
-        , which includes past projects which may no longer be relevant to my
+        {/* , which includes past projects which may no longer be relevant to my
         most recent experience or perhaps I'm no longer proud of them. In any
         case, they're important to me to keep as a reminder of how I've improved
-        or for future inspiration.
+        or for future inspiration. */}
         {/* , and you can follow me on my coding journey on Twitter here:{" "}
         <a
           href="https://twitter.com/DionTheDev?ref_src=twsrc%5Etfw"

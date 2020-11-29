@@ -7,6 +7,8 @@ import github from "./photos/github-icon.png";
 import linkedin from "./photos/linkedin-icon.png";
 import emailIcon from "./photos/email-icon.png";
 import twitter from "./photos/twitter-icon.png";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link } from "react-router-dom";
 
 export default function Welcome(props) {
   return (
@@ -21,11 +23,29 @@ export default function Welcome(props) {
         {/* <h1 className="text-center text-4xl top-0 pt-10">Text with photo</h1> */}
         <img
           src={linkedInSeattle}
-          className="top-0 pt-4 mb-6 z-10 w-full"
+          className="top-0 pt-4 mb-4 z-10 w-full"
           alt="Seattle-skyline"
         />
       </div>
-      {/* <ComponentContainer> */}
+      <h1 className="text-center mb-4">
+        Quicklinks to{" "}
+        <AnchorLink href="#portfolio">
+          <span className="text-dclpal1-300 hover:underline">
+            selected works,
+          </span>
+        </AnchorLink>{" "}
+        <Link to="/portfolio">
+          <span className="hover:underline text-dclpal1-300">
+            expanded portfolio,
+          </span>
+        </Link>{" "}
+        and{" "}
+        <Link to="/archive">
+          <span className="hover:underline text-dclpal1-300">
+            project archive.
+          </span>
+        </Link>
+      </h1>
       <div className="flex flex-row justify-around pb-4">
         <a
           href="https://github.com/dionleung14"
@@ -89,7 +109,6 @@ export default function Welcome(props) {
           </small>
         </a>
       </div>
-      {/* </ComponentContainer> */}
       {/* </div> */}
     </ComponentContainer>
   );

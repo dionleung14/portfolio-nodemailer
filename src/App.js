@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import logo from "./logo.svg";
 import Main from "./pages/Main";
 import Archive from "./pages/Archive";
+import Portfolio from "./pages/Portfolio";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // console.log(process.env.REACT_APP_POKEMON);
@@ -31,6 +32,9 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route exact path="/portfolio">
+          <Portfolio darkModeApp={darkMode} toggle={toggleSwitch} />
+        </Route>
         <Route exact path="/archive">
           <Archive darkModeApp={darkMode} toggle={toggleSwitch} />
         </Route>

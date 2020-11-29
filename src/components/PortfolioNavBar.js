@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-// import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import icon8 from "./photos/icons8-menu-64.png";
 
-export default function Navbar(props) {
+export default function PortfolioNavBar(props) {
   const [burger, setBurger] = useState({
     display: false,
   });
@@ -28,65 +28,54 @@ export default function Navbar(props) {
             : `bg-white text-dclpal1-100`
         }`}
       >
-        <AnchorLink
-          href="#top"
+        <div
           className={`lg:text-4xl text-2xl border border-transparent px-2 rounded ${
             props.darkModeApp.darkMode
               ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
-          Dion
-        </AnchorLink>
+          <Link to="/">home</Link>
+        </div>
         <AnchorLink
-          href="#about-me"
+          href="#top"
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
             props.darkModeApp.darkMode
               ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
-          about me
+          project collection
         </AnchorLink>
         <AnchorLink
-          href="#meet-me"
+          href="#freelance"
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
             props.darkModeApp.darkMode
               ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
-          meet me
+          freelance
         </AnchorLink>
         <AnchorLink
-          href="#qualifications"
+          href="#personal"
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
             props.darkModeApp.darkMode
               ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
-          qualifications
+          personal
         </AnchorLink>
         <AnchorLink
-          href="#portfolio"
+          href="#bootcamp"
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
             props.darkModeApp.darkMode
               ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
-          portfolio
-        </AnchorLink>
-        <AnchorLink
-          href="#testimonials"
-          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
-            props.darkModeApp.darkMode
-              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
-              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
-          }`}
-        >
-          testimonials
+          bootcamp
         </AnchorLink>
         <AnchorLink
           href="#contact"
@@ -113,28 +102,7 @@ export default function Navbar(props) {
         } pt-12 fixed right-0 w-auto h-auto bg-dclpal1-500 z-30 flex text-white border border-black flex-col pr-2`}
       >
         <div onClick={handleHide}>
-          <AnchorLink
-            href="#about-me"
-            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
-          >
-            about me
-          </AnchorLink>
-        </div>
-        <div onClick={handleHide}>
-          <AnchorLink
-            href="#meet-me"
-            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
-          >
-            meet me
-          </AnchorLink>
-        </div>
-        <div onClick={handleHide}>
-          <AnchorLink
-            href="#qualifications"
-            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
-          >
-            qualifications
-          </AnchorLink>
+          <Link to="/">home</Link>
         </div>
         <div onClick={handleHide}>
           <AnchorLink
@@ -142,14 +110,6 @@ export default function Navbar(props) {
             className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
           >
             portfolio
-          </AnchorLink>
-        </div>
-        <div onClick={handleHide}>
-          <AnchorLink
-            href="#testimonials"
-            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
-          >
-            testimonials
           </AnchorLink>
         </div>
         <div onClick={handleHide}>

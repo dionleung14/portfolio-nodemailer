@@ -7,17 +7,19 @@ import github from "./photos/github-icon.png";
 import linkedin from "./photos/linkedin-icon.png";
 import emailIcon from "./photos/email-icon.png";
 import twitter from "./photos/twitter-icon.png";
+import portfolioArr from "../portfolio-items/portfolio-data";
 
-export default function ArchiveWelcome(props) {
+export default function PortfolioWelcome(props) {
   return (
     // <div id="top">
     <ComponentContainer id="top" darkModeCont={props.darkModeApp.darkMode}>
       <FirstHeader
-        text="Project Archive"
-        subtext="Welcome to my project archive! Here you can find some of my older projects, or projects that I don't believe are relevant to my desired career trajectory right now."
+        text="Project Collection"
+        subtext="Welcome to my expanded portfolio!"
         darkModeHeader={props.darkModeApp.darkMode}
       />
-      <p>I'm looking for freelance work</p>
+      <h1>Here you can find a more in-depth collection of my best works.</h1>
+      name: {portfolioArr[0].headline}
       {/* </ComponentContainer> */}
       {/* </div> */}
     </ComponentContainer>
