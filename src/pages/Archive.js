@@ -1,14 +1,18 @@
 import React from "react";
-import FirstHeader from "../components/FirstHeader";
+import ArchivePortfolio from "../components/ArchivePortfolio";
+import ContactForm from "../components/ContactForm";
+import Footer from "../components/Footer";
+import ArchiveNavBar from "../components/ArchiveNavBar";
+import ArchiveWelcome from "../components/ArchiveWelcome";
 
 export default function Archive(props) {
   return (
     <div>
-      <FirstHeader
-        text="Dion Leung, E.I.T, Fullstack Web Developer"
-        // darkModeHeader={props.darkModeApp.darkMode}
-      />
-      I'm the archive
+      <ArchiveNavBar darkModeApp={props.darkModeApp} toggle={props.toggle} />
+      <ArchiveWelcome darkModeApp={props.darkModeApp} />
+      <ArchivePortfolio darkModeApp={props.darkModeApp} />
+      <ContactForm darkModeApp={props.darkModeApp} />
+      <Footer darkModeApp={props.darkModeApp} />
     </div>
   );
 }
