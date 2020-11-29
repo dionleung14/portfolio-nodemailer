@@ -16,7 +16,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 function Main(props) {
   return (
-    <Router>
+    <div>
       <NavBar darkModeApp={props.darkModeApp} toggle={props.toggle} />
       {/* <Switch> */}
       {/* <Route exact path="/about-me"> */}
@@ -31,7 +31,7 @@ function Main(props) {
       <ContactForm darkModeApp={props.darkModeApp} />
       <Footer darkModeApp={props.darkModeApp} />
       {/* </Switch> */}
-    </Router>
+    </div>
   );
 }
 
