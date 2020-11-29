@@ -15,9 +15,11 @@ This .md document (README.md) describes features of the custom portfolio deploye
 
 ### Components
 
+A reflection coming soon
+
 ### Styling
 
-Styling was done primarily with Tailwind CSS through npm. I spent several hours working on a React-state-based feature for dark mode toggling. I was actually pretty proud of it, but then Tailwind had to come out with their own version of dark mode _shakes fist_ I still have not tried it out though, so the dark mode you see on my portfolio is custom made!
+Styling was done primarily with Tailwind CSS through npm. I spent several hours working on a React-state-based feature for dark mode toggling. I was actually pretty proud of it, but then Tailwind had to come out with their own version of dark mode \*_shakes fist_\* I still have not tried it out though, so the dark mode you see on my portfolio is custom made!
 
 I used a ton of other resources to create my portfolio, including but not limited to https://favicon.io/ for my custom favicons, https://coolors.co/ to help me pick out a custom color palette, and https://www.npmjs.com/package/react-spinners for a nifty animation when you submit a contact form.
 
