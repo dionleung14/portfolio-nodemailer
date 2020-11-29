@@ -27,7 +27,7 @@ export default function Welcome(props) {
           alt="Seattle-skyline"
         />
       </div>
-      <h1 className="text-center mb-4">
+      {/* <h1 className="text-center mb-4">
         Quicklinks to{" "}
         <AnchorLink href="#portfolio">
           <span className="text-dclpal1-300 hover:underline">
@@ -45,7 +45,7 @@ export default function Welcome(props) {
             project archive.
           </span>
         </Link>
-      </h1>
+      </h1> */}
       <div className="flex flex-row justify-around pb-4">
         <a
           href="https://github.com/dionleung14"

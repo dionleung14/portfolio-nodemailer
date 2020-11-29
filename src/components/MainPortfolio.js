@@ -57,7 +57,7 @@ export default function Portfolio(props) {
         >
           here.
         </a>{" "}
-        If you want to see a more comprehensive overview of my projects, you can
+        {/* If you want to see a more comprehensive overview of my projects, you can
         find that{" "}
         <Link to="/portfolio">
           <span className="hover:underline text-dclpal1-300">here.</span>
@@ -65,7 +65,7 @@ export default function Portfolio(props) {
         Also, here's a link to my project{" "}
         <Link to="/archive">
           <span className="hover:underline text-dclpal1-300">archive.</span>
-        </Link>
+        </Link> */}
         {/* , which includes past projects which may no longer be relevant to my
         most recent experience or perhaps I'm no longer proud of them. In any
         case, they're important to me to keep as a reminder of how I've improved
