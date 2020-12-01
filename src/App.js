@@ -16,7 +16,7 @@ function App() {
   };
 
   const faviconToggle = () => {
-    console.log("toggling for favicon");
+    console.log("favicon toggle?");
     let favicon = document.getElementById("favicon");
     console.log(favicon);
     console.log(favicon.href);
