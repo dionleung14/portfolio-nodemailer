@@ -8,6 +8,9 @@ import CollapseBtn from "./CollapseBtn";
 import ComponentContainer from "./ComponentContainer";
 import { Link } from "react-router-dom";
 import portfolioArr from "../portfolio-items/portfolio-data";
+import PortfolioItem from "./PortfolioItem";
+import PortfolioDiv from "./PortfolioDiv";
+import PortfolioPhoto from "./PortfolioPhoto";
 
 export default function PortfolioBootcamp(props) {
   const handlePortfolioToggle = event => {
@@ -65,7 +68,22 @@ export default function PortfolioBootcamp(props) {
           charset="utf-8"
         ></script> */}
       </h1>
-      <div className="flex lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
+      {portfolioArr.map(item => (
+        <PortfolioDiv
+          project={item.headline}
+          portfolioToggle={handlePortfolioToggle}
+          // photoSrc={item.photoSrc}
+          // photoSrc={item.alt}
+        />
+      ))}
+      {portfolioArr.map(item => (
+        <PortfolioItem
+          headline={item.headline}
+          deployed={item.deployed}
+          repo={item.repo}
+        />
+      ))}
+      {/* <div className="flex lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
         <div
           className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
           data-project="rocketlist"
@@ -414,7 +432,7 @@ export default function PortfolioBootcamp(props) {
             " "
           )}
         </div>
-      </div>
+      </div> */}
       {portfolioItem.item === "rocketlist" ? (
         <div className="hidden lg:inline-block lg:flex lg:flex-row">
           <h1 className="text-left my-8 w-3/4 mx-auto">

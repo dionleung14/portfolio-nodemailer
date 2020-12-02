@@ -20,9 +20,9 @@ export default function PortfolioWelcome(props) {
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <h1>
-        Here you can find a more in-depth collection of my best works. They are
-        arranged in a general sense of the circumstances surrounding their
-        creation. If you're really interested in my journey, you can find my
+        Here you can find a more in-depth collection of my best works. Depending
+        on what I'm seeking at the moment, they'll be arranged in a certain
+        manner. If you're really interested in my journey, you can find my
         archive{" "}
         <Link to="/archive">
           <span className="hover:underline text-dclpal1-300">here</span>
