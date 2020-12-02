@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Main from "./pages/Main";
 import Archive from "./pages/Archive";
 import Portfolio from "./pages/Portfolio";
+import NoMatch from "./pages/NoMatch";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // console.log(process.env.REACT_APP_POKEMON);
@@ -57,8 +58,11 @@ function App() {
         <Route exact path="/archive">
           <Archive darkModeApp={darkMode} toggle={toggleSwitch} />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Main darkModeApp={darkMode} toggle={toggleSwitch} />
+        </Route>
+        <Route path="*">
+          <NoMatch darkModeApp={darkMode} toggle={toggleSwitch} />
         </Route>
       </Switch>
     </Router>
