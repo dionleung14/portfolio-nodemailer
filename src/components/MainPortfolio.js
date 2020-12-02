@@ -222,7 +222,7 @@ export default function Portfolio(props) {
           onClick={handlePortfolioToggle}
         >
           <img
-            className="border-white border-2"
+            className="border-white border-2 w-full"
             data-project="togather"
             src={ToGather}
             alt="to-gather"
@@ -328,7 +328,7 @@ export default function Portfolio(props) {
           data-project="pokegodex"
         >
           <img
-            className="border-white border-2"
+            className="border-white border-2 w-full"
             src={PokeGoDex}
             alt="pokegodex"
             data-project="pokegodex"

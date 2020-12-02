@@ -7,27 +7,40 @@ import React from "react";
 export default function PortfolioItem(props) {
   return (
     <h1 className="text-left top-0 my-8 w-3/4 mx-auto">
-      To-Gather, where you can plan events with friends, family, and get
-      together! <br /> <br /> Deployed site{" "}
+      {props.headline} <br /> <br /> Deployed site{" "}
       <a
-        href="http://awesome-group-planner.herokuapp.com/"
+        href={props.deployed}
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:underline hover:text-red-300"
+        className="hover:underline text-dclpal1-300"
       >
         here
       </a>
       , and github repository{" "}
       <a
-        href="https://bit.ly/2Pnh8A2"
+        href={props.repo}
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:underline hover:text-red-300"
+        className="hover:underline text-dclpal1-300"
       >
         here.
       </a>{" "}
       <br /> <br />
-      This app was the second project in the coding bootcamp, and I had the
+      {/* {props.description.forEach(() => {
+        <h1>Yes</h1>;
+      })} */}
+      <br />
+      <br />
+      {/* {props.collaborators ? props.collaborators.forEach(collaborator => {
+        return (<h3>
+
+          collaborator.name
+          ""
+        </h3>
+          )
+      }) : {""}} */}
+      Collaborated with the following
+      {/* This app was the second project in the coding bootcamp, and I had the
       privilege of working with Zac Stowell (
       <a
         href="https://github.com/the-medium-place"
@@ -79,7 +92,7 @@ export default function PortfolioItem(props) {
       conditionally rendered with handlebars, and individual events are rendered
       on cards via handlebars partials. I was part of the front-end team,
       dealing with collecting information in the forms, handlebars rendering,
-      and other front-end javascript.
+      and other front-end javascript. */}
     </h1>
   );
 }
