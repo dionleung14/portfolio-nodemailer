@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import PortfolioNavBar from "../components/PortfolioNavBar";
-import PortfolioWelcome from "../components/PortfolioWelcome";
+import NoMatchNavBar from "../components/NoMatchNavBar";
+import NoMatchWelcome from "../components/NoMatchWelcome";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 
@@ -8,12 +8,11 @@ export default class NoMatch extends Component {
   render(props) {
     return (
       <div>
-        <PortfolioNavBar
+        <NoMatchNavBar
           darkModeApp={this.props.darkModeApp}
           toggle={this.props.toggle}
         />
-        <PortfolioWelcome darkModeApp={this.props.darkModeApp} />
-        No match, sorry
+        <NoMatchWelcome darkModeApp={this.props.darkModeApp} />
         <ContactForm darkModeApp={this.props.darkModeApp} />
         <Footer darkModeApp={this.props.darkModeApp} />
       </div>
