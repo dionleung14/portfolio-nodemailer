@@ -81,6 +81,8 @@ export default function PortfolioBootcamp(props) {
           headline={item.headline}
           deployed={item.deployed}
           repo={item.repo}
+          collaborators={item.collaborators}
+          description={item.description}
         />
       ))}
       {/* <div className="flex lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
