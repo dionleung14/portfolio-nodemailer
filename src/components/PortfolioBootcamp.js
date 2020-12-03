@@ -11,6 +11,7 @@ import portfolioArr from "../portfolio-items/portfolio-data";
 import PortfolioItem from "./PortfolioItem";
 import PortfolioDiv from "./PortfolioDiv";
 import PortfolioPhoto from "./PortfolioPhoto";
+import PortfolioPhotoFirst from "./PortfolioPhotoFirst";
 
 export default function PortfolioBootcamp(props) {
   const handlePortfolioToggle = event => {
@@ -34,6 +35,8 @@ export default function PortfolioBootcamp(props) {
   const [portfolioItem, setPortfolioItem] = useState({
     item: "",
   });
+
+  // const portfolioPhotoArr = [RocketList, ToGather];
   return (
     <ComponentContainer id="bootcamp" darkModeCont={props.darkModeApp.darkMode}>
       <Header
@@ -68,6 +71,18 @@ export default function PortfolioBootcamp(props) {
           charset="utf-8"
         ></script> */}
       </h1>
+      <div className="flex gobbledegook lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
+        {portfolioArr.slice(0, 1).map(photo => (
+          <PortfolioPhotoFirst photoSrc={photo.image} alt={photo.name} />
+        ))}
+        {portfolioArr.slice(1, 9).map(photo => (
+          <PortfolioPhoto
+            photoSrc={photo.image}
+            alt={photo.name}
+            // data-project={photo.headline}
+          />
+        ))}
+      </div>
       {portfolioArr.map(item => (
         <PortfolioDiv
           project={item.headline}

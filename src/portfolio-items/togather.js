@@ -1,4 +1,8 @@
+import ToGather from "../components/photos/portfolio-photos/ToGather.png";
+
 const togather = {
+  name: "To-Gather",
+  image: ToGather,
   headline: "welcome to togather, we have fun and games",
   repo: "https://bit.ly/2Pnh8A2",
   deployed: "http://awesome-group-planner.herokuapp.com/",

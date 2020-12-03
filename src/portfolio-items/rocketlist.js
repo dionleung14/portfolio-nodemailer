@@ -1,4 +1,8 @@
+import RocketList from "../components/photos/portfolio-photos/RocketList.png";
+
 const rocketlist = {
+  name: "RocketList",
+  image: RocketList,
   headline:
     "RocketList: an open-ended forum for quick answers, featuring live chat!",
   repo: "http://rocketlist.herokuapp.com/",
