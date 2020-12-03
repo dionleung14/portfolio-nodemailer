@@ -39,15 +39,15 @@ export default function PortfolioPersonal(props) {
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
         Here are some personal projects I have created just for fun, click each
-        one to learn more! I am constantly working on new apps and endeavors, so
-        expect this to update regularly. You can find my github{" "}
+        one to learn more! For these personal projects, the code repositories
+        will all be public on my{" "}
         <a
           href="https://github.com/dionleung14"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:underline text-dclpal1-300"
         >
-          here.
+          github.
         </a>{" "}
         {/* , and you can follow me on my coding journey on Twitter here:{" "}
         <a

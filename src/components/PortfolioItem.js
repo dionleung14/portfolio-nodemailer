@@ -24,11 +24,19 @@ export default function PortfolioItem(props) {
         className="hover:underline text-dclpal1-300"
       >
         here.
-      </a>{" "}
-      <br /> <br />
-      {/* {props.description.forEach(() => {
-        <h1>Yes</h1>;
-      })} */}
+      </a>
+      <br />
+      <br />
+      {props.description.map(section => {
+        return (
+          <div>
+            <h1>{section}</h1>
+            <br />
+            <br />
+          </div>
+        );
+      })}
+      {/* {props.description} */}
       <br />
       <br />
       {/* {props.collaborators ? props.collaborators.forEach(collaborator => {
@@ -39,7 +47,36 @@ export default function PortfolioItem(props) {
         </h3>
           )
       }) : {""}} */}
-      Collaborated with the following
+      Collaborated with the following people:{" "}
+      {props.collaborators
+        ? props.collaborators.map(person => {
+            return (
+              <div>
+                <h1>
+                  {person.name} (
+                  <a
+                    href={person.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline text-dclpal1-300"
+                  >
+                    Github
+                  </a>
+                  ,{" "}
+                  <a
+                    href={person.linkedIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline text-dclpal1-300"
+                  >
+                    LinkedIn
+                  </a>
+                  )
+                </h1>
+              </div>
+            );
+          })
+        : " hello "}
       {/* This app was the second project in the coding bootcamp, and I had the
       privilege of working with Zac Stowell (
       <a
