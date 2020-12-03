@@ -62,15 +62,21 @@ export default function PortfolioItem(props) {
                   >
                     Github
                   </a>
-                  ,{" "}
-                  <a
-                    href={person.linkedIn}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline text-dclpal1-300"
-                  >
-                    LinkedIn
-                  </a>
+                  {person.linkedIn ? (
+                    <span>
+                      ,{" "}
+                      <a
+                        href={person.linkedIn}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline text-dclpal1-300"
+                      >
+                        LinkedIn
+                      </a>
+                    </span>
+                  ) : (
+                    ""
+                  )}
                   )
                 </h1>
               </div>
