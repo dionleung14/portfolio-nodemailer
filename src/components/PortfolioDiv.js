@@ -1,5 +1,6 @@
 import React from "react";
 import PortfolioPhoto from "./PortfolioPhoto";
+import PortfolioItem from "./PortfolioItem";
 
 export default function PortfolioDiv(props) {
   return (
@@ -16,6 +17,13 @@ export default function PortfolioDiv(props) {
       <small className="italic" data-project={props.project}>
         {props.project}
       </small>
+      <PortfolioItem
+        headline={props.headline}
+        deployed={props.deployed}
+        repo={props.repo}
+        collaborators={props.collaborators}
+        description={props.description}
+      />
     </div>
   );
 }

@@ -6,40 +6,43 @@ import React from "react";
 
 export default function PortfolioItem(props) {
   return (
-    <h1 className="text-left top-0 my-8 w-3/4 mx-auto">
-      {props.headline} <br /> <br /> Deployed site{" "}
-      <a
-        href={props.deployed}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:underline text-dclpal1-300"
-      >
-        here
-      </a>
-      , and github repository{" "}
-      <a
-        href={props.repo}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:underline text-dclpal1-300"
-      >
-        here.
-      </a>
-      <br />
-      <br />
-      {props.description.map(section => {
-        return (
-          <div>
-            <h1>{section}</h1>
-            <br />
-            <br />
-          </div>
-        );
-      })}
-      {/* {props.description} */}
-      <br />
-      <br />
-      {/* {props.collaborators ? props.collaborators.forEach(collaborator => {
+    <div className="hidden lg:inline-block lg:flex lg:flex-row">
+      {/* <h1 className="text-left top-0 my-8 w-3/4 mx-auto"> */}
+      {/* <h1 className="text-left my-4 w-full mx-auto"> */}
+      <h1 className="text-left my-8 w-3/4 mx-auto">
+        {props.headline} <br /> <br /> Deployed site{" "}
+        <a
+          href={props.deployed}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline text-dclpal1-300"
+        >
+          here
+        </a>
+        , and github repository{" "}
+        <a
+          href={props.repo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline text-dclpal1-300"
+        >
+          here.
+        </a>
+        <br />
+        <br />
+        {props.description.map(section => {
+          return (
+            <div>
+              <h1>{section}</h1>
+              <br />
+              <br />
+            </div>
+          );
+        })}
+        {/* {props.description} */}
+        <br />
+        <br />
+        {/* {props.collaborators ? props.collaborators.forEach(collaborator => {
         return (<h3>
 
           collaborator.name
@@ -47,43 +50,43 @@ export default function PortfolioItem(props) {
         </h3>
           )
       }) : {""}} */}
-      Collaborated with the following people:{" "}
-      {props.collaborators
-        ? props.collaborators.map(person => {
-            return (
-              <div>
-                <h1>
-                  {person.name} (
-                  <a
-                    href={person.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline text-dclpal1-300"
-                  >
-                    Github
-                  </a>
-                  {person.linkedIn ? (
-                    <span>
-                      ,{" "}
-                      <a
-                        href={person.linkedIn}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline text-dclpal1-300"
-                      >
-                        LinkedIn
-                      </a>
-                    </span>
-                  ) : (
-                    ""
-                  )}
-                  )
-                </h1>
-              </div>
-            );
-          })
-        : " hello "}
-      {/* This app was the second project in the coding bootcamp, and I had the
+        Collaborated with the following people:{" "}
+        {props.collaborators
+          ? props.collaborators.map(person => {
+              return (
+                <div>
+                  <h1>
+                    {person.name} (
+                    <a
+                      href={person.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline text-dclpal1-300"
+                    >
+                      Github
+                    </a>
+                    {person.linkedIn ? (
+                      <span>
+                        ,{" "}
+                        <a
+                          href={person.linkedIn}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline text-dclpal1-300"
+                        >
+                          LinkedIn
+                        </a>
+                      </span>
+                    ) : (
+                      ""
+                    )}
+                    )
+                  </h1>
+                </div>
+              );
+            })
+          : " hello "}
+        {/* This app was the second project in the coding bootcamp, and I had the
       privilege of working with Zac Stowell (
       <a
         href="https://github.com/the-medium-place"
@@ -136,6 +139,7 @@ export default function PortfolioItem(props) {
       on cards via handlebars partials. I was part of the front-end team,
       dealing with collecting information in the forms, handlebars rendering,
       and other front-end javascript. */}
-    </h1>
+      </h1>
+    </div>
   );
 }

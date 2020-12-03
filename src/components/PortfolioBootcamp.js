@@ -74,10 +74,6 @@ export default function PortfolioBootcamp(props) {
           portfolioToggle={handlePortfolioToggle}
           // photoSrc={item.photoSrc}
           // photoSrc={item.alt}
-        />
-      ))}
-      {portfolioArr.map(item => (
-        <PortfolioItem
           headline={item.headline}
           deployed={item.deployed}
           repo={item.repo}
@@ -85,6 +81,15 @@ export default function PortfolioBootcamp(props) {
           description={item.description}
         />
       ))}
+      {/* {portfolioArr.map(item => (
+        <PortfolioItem
+          headline={item.headline}
+          deployed={item.deployed}
+          repo={item.repo}
+          collaborators={item.collaborators}
+          description={item.description}
+        />
+      ))} */}
       {/* <div className="flex lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
         <div
           className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
