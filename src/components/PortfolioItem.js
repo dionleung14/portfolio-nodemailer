@@ -35,54 +35,41 @@ export default function PortfolioItem(props) {
           <div>
             <h1>{section}</h1>
             <br />
-            <br />
           </div>
         );
       })}
-      {/* {props.description} */}
       <br />
-      <br />
-      {/* {props.collaborators ? props.collaborators.forEach(collaborator => {
-        return (<h3>
-
-          collaborator.name
-          ""
-        </h3>
-          )
-      }) : {""}} */}
       Collaborated with the following people:{" "}
       {props.collaborators
         ? props.collaborators.map(person => {
             return (
-              <div>
-                <h1>
-                  {person.name} (
-                  <a
-                    href={person.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline text-dclpal1-300"
-                  >
-                    Github
-                  </a>
-                  {person.linkedIn ? (
-                    <span>
-                      ,{" "}
-                      <a
-                        href={person.linkedIn}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline text-dclpal1-300"
-                      >
-                        LinkedIn
-                      </a>
-                    </span>
-                  ) : (
-                    ""
-                  )}
-                  )
-                </h1>
-              </div>
+              <h1>
+                {person.name} (
+                <a
+                  href={person.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline text-dclpal1-300"
+                >
+                  Github
+                </a>
+                {person.linkedIn ? (
+                  <span>
+                    ,{" "}
+                    <a
+                      href={person.linkedIn}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline text-dclpal1-300"
+                    >
+                      LinkedIn
+                    </a>
+                  </span>
+                ) : (
+                  ""
+                )}
+                )
+              </h1>
             );
           })
         : " hello "}

@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 import Header from "./Header.js";
-import RocketList from "./photos/portfolio-photos/RocketList.png";
-import ToGather from "./photos/portfolio-photos/ToGather.png";
-import ToGatherHover from "./photos/portfolio-photos/ToGather-hover.png";
-import PokeGoDex from "./photos/portfolio-photos/PokeGoDex.png";
 import CollapseBtn from "./CollapseBtn";
 import ComponentContainer from "./ComponentContainer";
 import { Link } from "react-router-dom";
@@ -15,6 +11,7 @@ import PortfolioPhotoFirst from "./PortfolioPhotoFirst";
 
 export default function PortfolioBootcamp(props) {
   const handlePortfolioToggle = event => {
+    console.log("yes indeed");
     if (portfolioItem.item === event.target.dataset.project) {
       setPortfolioItem({
         item: "",
@@ -73,12 +70,17 @@ export default function PortfolioBootcamp(props) {
       </h1>
       <div className="flex gobbledegook lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
         {portfolioArr.slice(0, 1).map(photo => (
-          <PortfolioPhotoFirst photoSrc={photo.image} alt={photo.name} />
+          <PortfolioPhotoFirst
+            photoSrc={photo.image}
+            alt={photo.name}
+            handlePortfolioToggle={handlePortfolioToggle}
+          />
         ))}
         {portfolioArr.slice(1, 9).map(photo => (
           <PortfolioPhoto
             photoSrc={photo.image}
             alt={photo.name}
+            handlePortfolioToggle={handlePortfolioToggle}
             // data-project={photo.headline}
           />
         ))}

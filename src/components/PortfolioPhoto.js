@@ -8,6 +8,7 @@ export default class PortfolioPhoto extends Component {
           className="bg-white border-white border-2 w-full"
           src={this.props.photoSrc}
           alt={this.props.alt}
+          onClick={this.props.handlePortfolioToggle}
           // data-project={props.name}
         />
         <small className="italic lg:absolute bottom-0">{this.props.alt}</small>
