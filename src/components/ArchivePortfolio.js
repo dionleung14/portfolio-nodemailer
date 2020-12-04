@@ -79,7 +79,7 @@ export default function ArchivePortfolio(props) {
             project={photo.dataProject}
           />
         ))}
-        {archiveArr.slice(1, 9).map(photo => (
+        {archiveArr.slice(1, archiveArr.length).map(photo => (
           <PortfolioPhoto
             photoSrc={photo.image}
             alt={photo.name}

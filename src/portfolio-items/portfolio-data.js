@@ -1,13 +1,13 @@
-import togather from "./togather";
 import rocketlist from "./rocketlist";
+import togather from "./togather";
 import pokegodex from "./pokegodex";
+import reactionTest from "./reactiontest";
 
 const selectedArr = [rocketlist, pokegodex, togather];
-const freelanceArr = [rocketlist, pokegodex, togather];
-const personalArr = [rocketlist, pokegodex, togather];
-const bootcampArr = [togather, pokegodex, rocketlist];
+const freelanceArr = [rocketlist];
+const personalArr = [reactionTest, pokegodex];
+const bootcampArr = [togather, pokegodex];
 const archiveArr = [rocketlist, pokegodex, togather];
-const portfolioArr = [rocketlist, pokegodex, togather];
 
 export const allArrays = {
   selectedArr,
@@ -15,5 +15,4 @@ export const allArrays = {
   personalArr,
   bootcampArr,
   archiveArr,
-  portfolioArr,
 };
