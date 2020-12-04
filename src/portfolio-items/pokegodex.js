@@ -2,6 +2,7 @@ import PokeGoDex from "../components/photos/portfolio-photos/PokeGoDex.png";
 
 const pokegodex = {
   name: "PokeGoDex",
+  dataProject: "pokegodex",
   image: PokeGoDex,
   headline: `PokéGoDex: a one-stop application to figure out if your
     favorite Pokémon from the main games is available in the hit

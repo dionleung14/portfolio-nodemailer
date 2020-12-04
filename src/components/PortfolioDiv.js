@@ -6,10 +6,13 @@ import CollapseBtn from "./CollapseBtn";
 export default function PortfolioDiv(props) {
   return (
     <div
-      // className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
-      className="hidden lg:inline-block lg:flex lg:flex-row"
+      className={
+        props.display === props.project
+          ? `lg:inline-block lg:flex lg:flex-row`
+          : `hidden`
+      }
       data-project={props.project}
-      onClick={props.portfolioToggle}
+      // onClick={props.portfolioToggle}
     >
       <PortfolioItem
         headline={props.headline}

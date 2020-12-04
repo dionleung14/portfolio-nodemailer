@@ -2,6 +2,7 @@ import ToGather from "../components/photos/portfolio-photos/ToGather.png";
 
 const togather = {
   name: "To-Gather",
+  dataProject: "togather",
   image: ToGather,
   headline:
     "To-Gather, where you can plan events with friends, family, and get together!",
