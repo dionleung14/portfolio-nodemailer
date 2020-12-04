@@ -1,11 +1,10 @@
 import RocketList from "../components/photos/portfolio-photos/RocketList.png";
 
-const rocketlist = {
-  name: "RocketList",
-  dataProject: "rocketlist",
+const reactionTest = {
+  name: "Reaction Test",
+  dataProject: "reactiontest",
   image: RocketList,
-  headline:
-    "RocketList: an open-ended forum for quick answers, featuring live chat!",
+  headline: "A fun way to test your reaction",
   repo: "http://rocketlist.herokuapp.com/",
   deployed: "https://bit.ly/39S9vL7",
   description: [
@@ -36,4 +35,4 @@ const rocketlist = {
   ],
 };
 
-export default rocketlist;
+export default reactionTest;

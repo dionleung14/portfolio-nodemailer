@@ -85,7 +85,7 @@ export default function Portfolio(props) {
           charset="utf-8"
         ></script> */}
       </h1>
-      <div className="flex lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
+      <div className="flex gobbledegook lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
         <div
           className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
           data-project="rocketlist"
@@ -436,7 +436,7 @@ export default function Portfolio(props) {
         </div>
       </div>
       {portfolioItem.item === "rocketlist" ? (
-        <div className="hidden lg:inline-block lg:flex lg:flex-row">
+        <div className="hidden drinkinggame lg:inline-block lg:flex lg:flex-row">
           <h1 className="text-left my-8 w-3/4 mx-auto">
             RocketList: an open-ended forum for quick answers, featuring live
             chat!

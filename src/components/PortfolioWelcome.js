@@ -12,7 +12,6 @@ import { Link } from "react-router-dom";
 
 export default function PortfolioWelcome(props) {
   return (
-    // <div id="top">
     <ComponentContainer id="top" darkModeCont={props.darkModeApp.darkMode}>
       <FirstHeader
         text="Project Collection"
@@ -29,11 +28,6 @@ export default function PortfolioWelcome(props) {
         </Link>
         , and really track the evolution of my work.
       </h1>
-      <h1>headline: {portfolioArr[0].headline}</h1>
-      <h1>repo: {portfolioArr[0].repo}</h1>
-      <h1>deployed: {portfolioArr[0].deployed}</h1>
-      {/* </ComponentContainer> */}
-      {/* </div> */}
     </ComponentContainer>
   );
 }
