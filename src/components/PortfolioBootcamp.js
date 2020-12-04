@@ -96,6 +96,8 @@ export default function PortfolioBootcamp(props) {
           repo={item.repo}
           collaborators={item.collaborators}
           description={item.description}
+          darkModeDiv={props.darkModeApp.darkMode}
+          // collapseFunction={}
         />
       ))}
       {/* {portfolioArr.map(item => (

@@ -1,6 +1,7 @@
 import React from "react";
 import PortfolioPhoto from "./PortfolioPhoto";
 import PortfolioItem from "./PortfolioItem";
+import CollapseBtn from "./CollapseBtn";
 
 export default function PortfolioDiv(props) {
   return (
@@ -16,6 +17,10 @@ export default function PortfolioDiv(props) {
         repo={props.repo}
         collaborators={props.collaborators}
         description={props.description}
+      />
+      <CollapseBtn
+        darkModeBtn={props.darkModeDiv}
+        // collapseFunction={collapsePortfolioItem}
       />
     </div>
   );
