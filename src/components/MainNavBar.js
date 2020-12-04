@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-// import { BrowserRouter as Link } from "react-router-dom";
-// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import icon8 from "./photos/icons8-menu-64.png";
+// import dcl_logo192 from "./photos/logo_dcl_192.png";
+// import dcl_logo512 from "./photos/logo_dcl_512.png";
+// import dcl_logoApple from "./photos/logo_dcl_apple_touch.png";
+import dcl_logoFav from "./photos/logo_dcl_favicon.png";
 
 export default function Navbar(props) {
   const [burger, setBurger] = useState({
@@ -30,13 +32,13 @@ export default function Navbar(props) {
       >
         <AnchorLink
           href="#top"
-          className={`lg:text-4xl text-2xl border border-transparent px-2 rounded ${
+          className={`lg:text-4xl text-2xl border border-transparent p-2 rounded ${
             props.darkModeApp.darkMode
               ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
-          Dion
+          <img src={dcl_logoFav} alt="logo" />
         </AnchorLink>
         <AnchorLink
           href="#about-me"
