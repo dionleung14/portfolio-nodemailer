@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "./Header.js";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import CollapseBtn from "./CollapseBtn";
 import ComponentContainer from "./ComponentContainer";
 import { allArrays } from "../portfolio-items/portfolio-data";
@@ -43,17 +44,21 @@ export default function PortfolioPortfolio(props) {
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
         Below you'll find a series of freelance projects I have been contracted
-        for. Click each one to learn more! I am constantly working on new apps
-        and endeavors, so expect this to update regularly. You can find my
-        github{" "}
-        <a
-          href="https://github.com/dionleung14"
-          target="_blank"
-          rel="noopener noreferrer"
+        for. Click on each thumbnail to learn more!
+      </h1>{" "}
+      <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
+        {" "}
+        If you like what you see and would like to find out more information
+        about my rates and current discounts, please send me a message with the
+        form below (located{" "}
+        <AnchorLink
           className="hover:underline text-dclpal1-300"
+          href="#contact"
         >
-          here.
-        </a>{" "}
+          here
+        </AnchorLink>{" "}
+        for convenience) with the subject line 'Inquiry' and I'll get back to
+        you as soon as I can!
       </h1>
       <div className="flex lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
         {freelanceArr.slice(0, 1).map(photo => (

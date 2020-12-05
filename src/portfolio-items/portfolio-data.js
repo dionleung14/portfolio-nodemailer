@@ -6,7 +6,7 @@ import portfolio from "./portfolio";
 
 const selectedArr = [rocketlist, pokegodex, togather];
 const freelanceArr = [rocketlist];
-const personalArr = [reactionTest, portfolio];
+const personalArr = [portfolio, reactionTest];
 const bootcampArr = [togather, pokegodex];
 const archiveArr = [rocketlist, pokegodex, togather];
 

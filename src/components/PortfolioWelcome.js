@@ -19,14 +19,14 @@ export default function PortfolioWelcome(props) {
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <h1>
-        Here you can find a more in-depth collection of my best works. Depending
-        on what I'm seeking at the moment, they'll be arranged in a certain
-        manner. If you're really interested in my journey, you can find my
-        archive{" "}
+        Currently a work in progress, but feel free to poke around! Here you can
+        find a more in-depth collection of my best works. Depending on what I'm
+        seeking at the moment, they'll be arranged in a certain manner. If
+        you're really interested in my journey, you can find my archive{" "}
         <Link to="/archive">
           <span className="hover:underline text-dclpal1-300">here</span>
-        </Link>
-        , and really track the evolution of my work.
+        </Link>{" "}
+        (or above in the navbar) and really track the evolution of my work.
       </h1>
     </ComponentContainer>
   );
