@@ -38,7 +38,7 @@ export default function Navbar(props) {
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
-          <img src={dcl_logoFav} alt="logo" />
+          <img src={dcl_logoFav} alt="logo, link to home page" />
         </AnchorLink>
         <AnchorLink
           href="#about-me"

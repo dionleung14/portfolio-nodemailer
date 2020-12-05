@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import icon8 from "./photos/icons8-menu-64.png";
+import dcl_logoFav from "./photos/logo_dcl_favicon.png";
 
 export default function ArchiveNavBar(props) {
   const [burger, setBurger] = useState({
@@ -29,13 +30,15 @@ export default function ArchiveNavBar(props) {
         }`}
       >
         <div
-          className={`lg:text-4xl text-2xl border border-transparent px-2 rounded ${
+          className={`lg:text-4xl text-2xl border border-transparent p-2 rounded ${
             props.darkModeApp.darkMode
               ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
-          <Link to="/">home</Link>
+          <Link to="/">
+            <img src={dcl_logoFav} alt="logo, link to home page" />
+          </Link>
         </div>
         <div
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${

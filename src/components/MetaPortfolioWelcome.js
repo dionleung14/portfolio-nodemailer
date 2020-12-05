@@ -10,23 +10,31 @@ import twitter from "./photos/twitter-icon.png";
 import portfolioArr from "../portfolio-items/portfolio-data";
 import { Link } from "react-router-dom";
 
-export default function PortfolioWelcome(props) {
+export default function MetaPortfolioWelcome(props) {
   return (
     <ComponentContainer id="top" darkModeCont={props.darkModeApp.darkMode}>
       <FirstHeader
-        text="Project Collection"
-        subtext="Welcome to my expanded portfolio!"
+        text="Easter Egg Alert!"
+        subtext="You found a hidden page!"
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <h1>
-        Currently a work in progress, but feel free to poke around! Here you can
-        find a more in-depth collection of my best works. Depending on what I'm
-        seeking at the moment, they'll be arranged in a certain manner. If
-        you're really interested in my journey, you can find my archive{" "}
+        Congratulations! You managed to find this hidden page, either by
+        clicking on the "deployed" link for my portfolio or typing the url
+        directly in the url bar. Realistically, there isn't a need to click on
+        the deployed link for the portfolio project, since that's where you
+        already were, but I'm glad you're here regardless.{" "}
+      </h1>
+      <br />
+      <br />
+      <h1>
+        I would love to hear from you with the contact form below. There's
+        actually ANOTHER easter egg within the contact form if you feel up to
+        the challenge (or maybe you've already found that one too)! archive{" "}
         <Link to="/archive">
           <span className="hover:underline text-dclpal1-300">here</span>
-        </Link>{" "}
-        (or above in the navbar) and really track the evolution of my work.
+        </Link>
+        , and really track the evolution of my work.
       </h1>
     </ComponentContainer>
   );

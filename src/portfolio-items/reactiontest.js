@@ -1,38 +1,18 @@
-import RocketList from "../components/photos/portfolio-photos/RocketList.png";
+import ReactionTestIMG from "../components/photos/portfolio-photos/reactiontest.JPG";
 
 const reactionTest = {
   name: "Reaction Test",
   dataProject: "reactiontest",
-  image: RocketList,
-  headline: "A fun way to test your reaction",
-  repo: "http://rocketlist.herokuapp.com/",
-  deployed: "https://bit.ly/39S9vL7",
+  image: ReactionTestIMG,
+  headline: "A fun way to test your reaction... or scare your friends",
+  repo: "https://github.com/dionleung14/reaction-test",
+  deployed: "https://dcl-reaction-test.herokuapp.com/",
   description: [
-    "The final project of the bootcamp, RocketList combines a React frontend with a GraphQL and Apollo backend, with a live chat feature through Socket.io.This app won both the award for Best Functionality and the People's Choice Award.",
-    "Coined as a combination of the best parts of Reddit, Yahoo Answers, and Craigslist, registered users can create posts, respond to existing posts, and even join a live chatroom specific to the post at hand. This open-endedness connects people seeking services, advice, or general thoughts/reactions from the internet. A chat feature was introduced to decrease the likelihood of off-topic replies to a post, with users urged to summarize the happenings in a chat.",
-    "Styling was done primarily through Tailwind CSS, with loading animations coming from react-spinners as an npm package. Other features and packages used include popper.js, query-string, and react-emoji. I served as part of the frontend team, handling requests and focusing on mobile layout/optimization. I also was responsible for the custom rocket animation in the logo.",
+    "This mini-project is a quick exercise and demonstration of using Vue.js, as well as me practicing JavaScript timers. I was inspired by one of my friends sending me a link to a site that would test my reaction speed, useful for online gaming. However, I was (wrongfully) worried that it would be a jump scare. Once I determined it was legitimate, I thought it would be a fun idea to create a similar version that actually IS a jump scare.",
+    "Feel free to send the link to your friends (or enemies) to get their hearts racing for a little bit! If you enter 'charizard' as the password, you will bypass the jumpscare and be able to complete the reaction test without worrying about the jump scare.",
+    "I used scoped styling for each .vue component, which helped me practice my vanilla CSS.",
   ],
-  collaborators: [
-    {
-      name: "Louis Coleman",
-      github: "https://github.com/coleloui",
-      linkedIn: "https://www.linkedin.com/in/louis-coleman/",
-    },
-    {
-      name: "Rory Jacobs",
-      github: "https://github.com/meganjacobs97",
-      linkedIn: "https://www.linkedin.com/in/rory-kees-865342145/",
-    },
-    {
-      name: "Paul Lee",
-      github: "https://github.com/vb27",
-      linkedIn: "https://www.linkedin.com/in/paul-lee-1737821a2/",
-    },
-    {
-      name: "Marlon Jones",
-      github: "https://github.com/mjones-27",
-    },
-  ],
+  collaborators: [],
 };
 
 export default reactionTest;

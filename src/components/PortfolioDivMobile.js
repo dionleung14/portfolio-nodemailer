@@ -3,13 +3,11 @@ import PortfolioPhoto from "./PortfolioPhoto";
 import PortfolioItem from "./PortfolioItem";
 import CollapseBtn from "./CollapseBtn";
 
-export default function PortfolioDiv(props) {
+export default function PortfolioDivMobile(props) {
   return (
     <div
       className={
-        props.display === props.project
-          ? `hidden lg:inline-block lg:flex lg:flex-row`
-          : `hidden`
+        props.display === props.project ? `inline-block lg:hidden` : `hidden`
       }
       data-project={props.project}
     >

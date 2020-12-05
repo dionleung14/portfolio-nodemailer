@@ -4,6 +4,7 @@ import CollapseBtn from "./CollapseBtn";
 import ComponentContainer from "./ComponentContainer";
 import { allArrays } from "../portfolio-items/portfolio-data";
 import PortfolioDiv from "./PortfolioDiv";
+import PortfolioDivMobile from "./PortfolioDivMobile";
 import PortfolioPhoto from "./PortfolioPhoto";
 import PortfolioPhotoFirst from "./PortfolioPhotoFirst";
 
@@ -73,7 +74,7 @@ export default function PortfolioBootcamp(props) {
       </div>
       {bootcampArr.map(item => (
         <PortfolioDiv
-          project={item.headline}
+          project={item.dataProject}
           headline={item.headline}
           deployed={item.deployed}
           repo={item.repo}
@@ -81,10 +82,23 @@ export default function PortfolioBootcamp(props) {
           description={item.description}
           darkModeDiv={props.darkModeApp.darkMode}
           display={portfolioItem.item}
-          // collapseFunction={}
+          collapseFunction={collapsePortfolioItem}
         />
       ))}
-      {portfolioItem.item === "rocketlist" ? (
+      {bootcampArr.map(item => (
+        <PortfolioDivMobile
+          project={item.dataProject}
+          headline={item.headline}
+          deployed={item.deployed}
+          repo={item.repo}
+          collaborators={item.collaborators}
+          description={item.description}
+          darkModeDiv={props.darkModeApp.darkMode}
+          display={portfolioItem.item}
+          collapseFunction={collapsePortfolioItem}
+        />
+      ))}
+      {/* {portfolioItem.item === "rocketlist" ? (
         <div className="hidden lg:inline-block lg:flex lg:flex-row">
           <h1 className="text-left my-8 w-3/4 mx-auto">
             RocketList: an open-ended forum for quick answers, featuring live
@@ -377,7 +391,7 @@ export default function PortfolioBootcamp(props) {
         </div>
       ) : (
         " "
-      )}
+      )} */}
     </ComponentContainer>
   );
 }

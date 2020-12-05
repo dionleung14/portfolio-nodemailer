@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Main from "./pages/Main";
 import Archive from "./pages/Archive";
 import Portfolio from "./pages/Portfolio";
+import MetaPortfolio from "./pages/MetaPortfolio";
 import NoMatch from "./pages/NoMatch";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -57,6 +58,9 @@ function App() {
         </Route>
         <Route exact path="/archive">
           <Archive darkModeApp={darkMode} toggle={toggleSwitch} />
+        </Route>
+        <Route exact path="/meta-portfolio">
+          <MetaPortfolio darkModeApp={darkMode} toggle={toggleSwitch} />
         </Route>
         <Route exact path="/">
           <Main darkModeApp={darkMode} toggle={toggleSwitch} />
