@@ -74,7 +74,7 @@ export default function PortfolioPortfolio(props) {
       </div>
       {freelanceArr.map(item => (
         <PortfolioDiv
-          project={item.headline}
+          project={item.dataProject}
           headline={item.headline}
           deployed={item.deployed}
           repo={item.repo}
