@@ -47,7 +47,7 @@ export default function ArchiveNavBar(props) {
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}
         >
-          <Link to="/portfolio">portfolio</Link>
+          <Link to="/portfolio">project collection</Link>
         </div>
 
         <AnchorLink
