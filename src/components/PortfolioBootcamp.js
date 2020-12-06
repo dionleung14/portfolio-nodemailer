@@ -56,20 +56,48 @@ export default function PortfolioBootcamp(props) {
       </h1>
       <div className="flex gobbledegook lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
         {bootcampArr.slice(0, 1).map(photo => (
-          <PortfolioPhotoFirst
-            photoSrc={photo.image}
-            alt={photo.name}
-            handlePortfolioToggle={handlePortfolioToggle}
-            project={photo.dataProject}
-          />
+          <div className="flex flex-col lg:no-flex">
+            <PortfolioPhotoFirst
+              photoSrc={photo.image}
+              alt={photo.name}
+              handlePortfolioToggle={handlePortfolioToggle}
+              project={photo.dataProject}
+            />
+            <PortfolioDivMobile
+              state={portfolioItem.item}
+              project={photo.dataProject}
+              headline={photo.headline}
+              deployed={photo.deployed}
+              repo={photo.repo}
+              collaborators={photo.collaborators}
+              description={photo.description}
+              darkModeDiv={props.darkModeApp.darkMode}
+              display={portfolioItem.item}
+              collapseFunction={collapsePortfolioItem}
+            />
+          </div>
         ))}
         {bootcampArr.slice(1, 9).map(photo => (
-          <PortfolioPhoto
-            photoSrc={photo.image}
-            alt={photo.name}
-            handlePortfolioToggle={handlePortfolioToggle}
-            project={photo.dataProject}
-          />
+          <div className="flex flex-col lg:no-flex w-full">
+            <PortfolioPhoto
+              photoSrc={photo.image}
+              alt={photo.name}
+              handlePortfolioToggle={handlePortfolioToggle}
+              project={photo.dataProject}
+            />
+            <PortfolioDivMobile
+              state={portfolioItem.item}
+              project={photo.dataProject}
+              headline={photo.headline}
+              deployed={photo.deployed}
+              repo={photo.repo}
+              collaborators={photo.collaborators}
+              description={photo.description}
+              darkModeDiv={props.darkModeApp.darkMode}
+              display={portfolioItem.item}
+              collapseFunction={collapsePortfolioItem}
+            />
+          </div>
         ))}
       </div>
       {bootcampArr.map(item => (
