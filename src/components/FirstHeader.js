@@ -3,7 +3,7 @@ import React from "react";
 export default function FirstHeader(props) {
   return (
     <div
-      className={`text-center sticky top-0 lg:pt-24 pt-12 font-bold z-20 ${
+      className={`text-center sticky top-0 lg:pt-24 pt-20 font-bold z-20 ${
         props.darkModeHeader
           ? "bg-dclpal1-100 text-white"
           : "bg-white text-dclpal1-100 "
