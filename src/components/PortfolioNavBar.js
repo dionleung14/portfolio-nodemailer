@@ -111,18 +111,45 @@ export default function PortfolioNavBar(props) {
       <div
         className={`${
           burger.display ? "inline-block" : "hidden"
-        } pt-12 fixed right-0 w-auto h-auto bg-dclpal1-500 z-30 flex text-white border border-black flex-col pr-2`}
+        } pt-16 fixed right-0 w-auto h-auto bg-dclpal1-500 z-30 flex text-white border border-black flex-col pr-2`}
       >
-        <div onClick={handleHide}>
+        <div
+          className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
+          onClick={handleHide}
+        >
           <Link to="/">home</Link>
         </div>
         <div onClick={handleHide}>
           <AnchorLink
-            href="#portfolio"
+            href="#freelance"
             className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
           >
-            portfolio
+            freelance
           </AnchorLink>
+        </div>
+        <div onClick={handleHide}>
+          <AnchorLink
+            href="#personal"
+            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
+          >
+            personal
+          </AnchorLink>
+        </div>
+        <div onClick={handleHide}>
+          <AnchorLink
+            href="#bootcamp"
+            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
+          >
+            bootcamp
+          </AnchorLink>
+        </div>
+        <div onClick={handleHide}>
+          <Link
+            to="/archive"
+            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
+          >
+            archive
+          </Link>
         </div>
         <div onClick={handleHide}>
           <AnchorLink
@@ -130,6 +157,14 @@ export default function PortfolioNavBar(props) {
             className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
           >
             contact
+          </AnchorLink>
+        </div>
+        <div onClick={handleHide}>
+          <AnchorLink
+            href="#top"
+            className="inline-block self-start border border-transparent hover:border-red-700 px-2 rounded text-lg"
+          >
+            back to top
           </AnchorLink>
         </div>
       </div>
