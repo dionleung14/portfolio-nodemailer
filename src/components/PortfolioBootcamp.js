@@ -56,7 +56,8 @@ export default function PortfolioBootcamp(props) {
       </h1>
       <div className="flex gobbledegook lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
         {bootcampArr.slice(0, 1).map(photo => (
-          <div className="flex flex-col lg:no-flex">
+          <div className="flex flex-col lg:w-1/3 w-full ">
+            {/* <div className="flex-none"> */}
             <PortfolioPhotoFirst
               photoSrc={photo.image}
               alt={photo.name}
@@ -78,7 +79,7 @@ export default function PortfolioBootcamp(props) {
           </div>
         ))}
         {bootcampArr.slice(1, 9).map(photo => (
-          <div className="flex flex-col lg:no-flex w-full">
+          <div className="flex flex-col lg:w-1/3 w-full">
             <PortfolioPhoto
               photoSrc={photo.image}
               alt={photo.name}

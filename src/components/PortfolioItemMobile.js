@@ -6,7 +6,6 @@ import React from "react";
 
 export default function PortfolioItemMobile(props) {
   return (
-    // <div className="hidden lg:inline-block lg:flex lg:flex-row">
     // {/* <h1 className="text-left top-0 my-8 w-3/4 mx-auto"> */}
     // {/* <h1 className="text-left my-4 w-full mx-auto"> */}
     <h1 className="lg:hidden text-left my-4 w-full mx-auto">

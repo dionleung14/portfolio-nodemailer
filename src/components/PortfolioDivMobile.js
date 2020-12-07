@@ -6,7 +6,7 @@ import CollapseBtn from "./CollapseBtn";
 export default function PortfolioDivMobile(props) {
   return (
     <div
-      className={props.state === props.project ? `lg:hidden` : `invisible`}
+      className={props.state === props.project ? `lg:invisible` : `hidden `}
       data-project={props.project}
     >
       <PortfolioItemMobile
