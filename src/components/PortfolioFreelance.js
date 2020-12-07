@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Header from "./Header.js";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import CollapseBtn from "./CollapseBtn";
 import ComponentContainer from "./ComponentContainer";
 import { allArrays } from "../portfolio-items/portfolio-data";
 import PortfolioDiv from "./PortfolioDiv";
@@ -33,6 +32,7 @@ export default function PortfolioPortfolio(props) {
   });
 
   const { freelanceArr } = allArrays;
+
   return (
     <ComponentContainer
       id="freelance"
@@ -43,8 +43,8 @@ export default function PortfolioPortfolio(props) {
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
-        Below you'll find a series of freelance projects I have been contracted
-        for. Click on each thumbnail to learn more!
+        Below you'll find freelance projects I have been contracted for. Click
+        on each thumbnail to learn more!
       </h1>{" "}
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
         {" "}
@@ -57,42 +57,35 @@ export default function PortfolioPortfolio(props) {
         >
           here
         </AnchorLink>{" "}
-        for convenience) with the subject line 'Inquiry' and I'll get back to
+        for convenience) with the subject line 'Freelance' and I'll get back to
         you as soon as I can!
       </h1>
       <div className="flex lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
-        {freelanceArr.slice(0, 1).map(photo => (
-          <PortfolioPhotoFirst
-            photoSrc={photo.image}
-            alt={photo.name}
-            handlePortfolioToggle={handlePortfolioToggle}
-            project={photo.dataProject}
-          />
-        ))}
-        {freelanceArr.slice(1, 9).map(photo => (
-          <PortfolioPhoto
-            photoSrc={photo.image}
-            alt={photo.name}
-            handlePortfolioToggle={handlePortfolioToggle}
-            project={photo.dataProject}
-          />
+        {freelanceArr.slice(0, freelanceArr.length).map(photo => (
+          <div className="flex flex-col lg:w-1/3 w-full">
+            <PortfolioPhoto
+              photoSrc={photo.image}
+              alt={photo.name}
+              handlePortfolioToggle={handlePortfolioToggle}
+              project={photo.dataProject}
+            />
+            <PortfolioDivMobile
+              state={portfolioItem.item}
+              project={photo.dataProject}
+              headline={photo.headline}
+              deployed={photo.deployed}
+              repo={photo.repo}
+              collaborators={photo.collaborators}
+              description={photo.description}
+              darkModeDiv={props.darkModeApp.darkMode}
+              display={portfolioItem.item}
+              collapseFunction={collapsePortfolioItem}
+            />
+          </div>
         ))}
       </div>
       {freelanceArr.map(item => (
         <PortfolioDiv
-          project={item.dataProject}
-          headline={item.headline}
-          deployed={item.deployed}
-          repo={item.repo}
-          collaborators={item.collaborators}
-          description={item.description}
-          darkModeDiv={props.darkModeApp.darkMode}
-          display={portfolioItem.item}
-          collapseFunction={collapsePortfolioItem}
-        />
-      ))}
-      {freelanceArr.map(item => (
-        <PortfolioDivMobile
           project={item.dataProject}
           headline={item.headline}
           deployed={item.deployed}
