@@ -335,6 +335,7 @@ export default function ContactForm(props) {
                   </option>
                   <option value="Inquiry">Inquiry</option>
                   <option value="Collaboration">Collaboration</option>
+                  <option value="Freelance">Freelance</option>
                   <option value="Other">Other (specify in message)</option>
                 </select>
               </div>

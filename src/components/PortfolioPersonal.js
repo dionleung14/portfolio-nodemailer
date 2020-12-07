@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Header from "./Header.js";
-import CollapseBtn from "./CollapseBtn";
 import ComponentContainer from "./ComponentContainer";
 import { allArrays } from "../portfolio-items/portfolio-data";
 import PortfolioDiv from "./PortfolioDiv";
 import PortfolioDivMobile from "./PortfolioDivMobile";
 import PortfolioPhoto from "./PortfolioPhoto";
 import PortfolioPhotoFirst from "./PortfolioPhotoFirst";
+import PortfolioPhotoCaption from "./PortfolioPhotoCaption";
+import PortfolioPhotoCaptionFirst from "./PortfolioPhotoCaptionFirst";
 
 export default function PortfolioPersonal(props) {
   const handlePortfolioToggle = event => {
@@ -68,37 +69,70 @@ export default function PortfolioPersonal(props) {
       </h1>
       <div className="flex lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
         {personalArr.slice(0, 1).map(photo => (
-          <PortfolioPhotoFirst
-            photoSrc={photo.image}
-            alt={photo.name}
-            handlePortfolioToggle={handlePortfolioToggle}
-            project={photo.dataProject}
-          />
+          <div
+            className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
+            data-project={photo.dataProject}
+            onClick={handlePortfolioToggle}
+          >
+            <PortfolioPhotoFirst
+              photoSrc={photo.image}
+              alt={photo.name}
+              // handlePortfolioToggle={handlePortfolioToggle}
+              project={photo.dataProject}
+            />
+            <PortfolioPhotoCaptionFirst
+              alt={photo.name}
+              // handlePortfolioToggle={handlePortfolioToggle}
+              project={photo.dataProject}
+            />
+            <PortfolioDivMobile
+              state={portfolioItem.item}
+              project={photo.dataProject}
+              headline={photo.headline}
+              deployed={photo.deployed}
+              repo={photo.repo}
+              collaborators={photo.collaborators}
+              description={photo.description}
+              darkModeDiv={props.darkModeApp.darkMode}
+              display={portfolioItem.item}
+              collapseFunction={collapsePortfolioItem}
+            />
+          </div>
         ))}
-        {personalArr.slice(1, 9).map(photo => (
-          <PortfolioPhoto
-            photoSrc={photo.image}
-            alt={photo.name}
-            handlePortfolioToggle={handlePortfolioToggle}
-            project={photo.dataProject}
-          />
+        {personalArr.slice(1, personalArr.length).map(photo => (
+          <div
+            className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
+            data-project={photo.dataProject}
+            onClick={handlePortfolioToggle}
+          >
+            <PortfolioPhoto
+              photoSrc={photo.image}
+              alt={photo.name}
+              // handlePortfolioToggle={handlePortfolioToggle}
+              project={photo.dataProject}
+            />
+            <PortfolioPhotoCaption
+              alt={photo.name}
+              // handlePortfolioToggle={handlePortfolioToggle}
+              project={photo.dataProject}
+            />
+            <PortfolioDivMobile
+              state={portfolioItem.item}
+              project={photo.dataProject}
+              headline={photo.headline}
+              deployed={photo.deployed}
+              repo={photo.repo}
+              collaborators={photo.collaborators}
+              description={photo.description}
+              darkModeDiv={props.darkModeApp.darkMode}
+              display={portfolioItem.item}
+              collapseFunction={collapsePortfolioItem}
+            />
+          </div>
         ))}
       </div>
       {personalArr.map(item => (
         <PortfolioDiv
-          project={item.dataProject}
-          headline={item.headline}
-          deployed={item.deployed}
-          repo={item.repo}
-          collaborators={item.collaborators}
-          description={item.description}
-          darkModeDiv={props.darkModeApp.darkMode}
-          display={portfolioItem.item}
-          collapseFunction={collapsePortfolioItem}
-        />
-      ))}
-      {personalArr.map(item => (
-        <PortfolioDivMobile
           project={item.dataProject}
           headline={item.headline}
           deployed={item.deployed}
