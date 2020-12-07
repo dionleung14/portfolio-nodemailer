@@ -67,7 +67,7 @@ export default function PortfolioPersonal(props) {
       </h1>
       <div className="flex lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
         {personalArr.slice(0, personalArr.length).map(photo => (
-          <div className="flex flex-col lg:w-1/3 w-full">
+          <div className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer">
             <PortfolioPhoto
               photoSrc={photo.image}
               alt={photo.name}
