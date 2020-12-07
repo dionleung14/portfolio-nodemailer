@@ -27,6 +27,18 @@ export default function PortfolioBootcamp(props) {
     });
   };
 
+  // const portfolioMobileRendering = () => {
+  //   let keys = [];
+  //   props.bootcampArr.forEach(portfoItem => {
+  //     keys.push(portfoItem.dataProject);
+  //   });
+  //   return keys
+  //   let identifier = [];
+  //   console.log("YESSSSSSSSSIRRRRRRRR");
+  // };
+
+  const { bootcampArr } = allArrays;
+
   const [portfolioItem, setPortfolioItem] = useState({
     item: "",
   });
@@ -77,6 +89,7 @@ export default function PortfolioBootcamp(props) {
           </div>
         ))}
       </div>
+      {/* {portfolioMobileRendering()} */}
       {bootcampArr.map(item => (
         <PortfolioDiv
           project={item.dataProject}

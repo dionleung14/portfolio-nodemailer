@@ -39,22 +39,23 @@ export default function PortfolioItem(props) {
         );
       })}
       <br />
-      Collaborated with the following people:{" "}
-      {props.collaborators
-        ? props.collaborators.map(person => {
+      {props.collaborators.length > 0 && (
+        <h1>
+          Collaborated with the following people:{" "}
+          {props.collaborators.map(person => {
             return (
               <h1>
                 {person.name} (
-                <a
-                  href={person.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
-                >
-                  Github
-                </a>
-                {person.linkedIn ? (
+                {person.github && person.linkedIn ? (
                   <span>
+                    <a
+                      href={person.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline text-dclpal1-300"
+                    >
+                      Github
+                    </a>
                     ,{" "}
                     <a
                       href={person.linkedIn}
@@ -65,15 +66,31 @@ export default function PortfolioItem(props) {
                       LinkedIn
                     </a>
                   </span>
+                ) : person.github && !person.linkedIn ? (
+                  <a
+                    href={person.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline text-dclpal1-300"
+                  >
+                    Github
+                  </a>
                 ) : (
-                  ""
+                  <a
+                    href={person.linkedIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline text-dclpal1-300"
+                  >
+                    LinkedIn
+                  </a>
                 )}
                 )
               </h1>
             );
-          })
-        : " hello "}
+          })}
+        </h1>
+      )}
     </h1>
-    // </div>
   );
 }
