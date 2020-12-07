@@ -5,9 +5,9 @@ import { allArrays } from "../portfolio-items/portfolio-data";
 import PortfolioDiv from "./PortfolioDiv";
 import PortfolioDivMobile from "./PortfolioDivMobile";
 import PortfolioPhoto from "./PortfolioPhoto";
+import PortfolioPhotoFirst from "./PortfolioPhotoFirst";
 import PortfolioPhotoCaption from "./PortfolioPhotoCaption";
 import PortfolioPhotoCaptionFirst from "./PortfolioPhotoCaptionFirst";
-import PortfolioPhotoFirst from "./PortfolioPhotoFirst";
 
 export default function PortfolioBootcamp(props) {
   const handlePortfolioToggle = event => {

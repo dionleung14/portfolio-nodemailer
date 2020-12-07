@@ -13,6 +13,8 @@ export default class PortfolioPhoto extends Component {
         className="bg-white border-white border-2 w-full"
         src={this.props.photoSrc}
         alt={this.props.alt}
+        // width="33%"
+        // height="33"
         // onClick={this.props.handlePortfolioToggle}
         data-project={this.props.project}
       />
