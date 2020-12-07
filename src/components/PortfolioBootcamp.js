@@ -37,8 +37,6 @@ export default function PortfolioBootcamp(props) {
   //   console.log("YESSSSSSSSSIRRRRRRRR");
   // };
 
-  const { bootcampArr } = allArrays;
-
   const [portfolioItem, setPortfolioItem] = useState({
     item: "",
   });
