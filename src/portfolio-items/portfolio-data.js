@@ -4,10 +4,10 @@ import pokegodex from "./pokegodex";
 import reactionTest from "./reactiontest";
 import portfolio from "./portfolio";
 
-const selectedArr = [rocketlist, pokegodex, togather];
+const selectedArr = [rocketlist, togather, pokegodex];
 const freelanceArr = [rocketlist];
 const personalArr = [portfolio, reactionTest];
-const bootcampArr = [togather, pokegodex, rocketlist, portfolio];
+const bootcampArr = [rocketlist, togather, pokegodex];
 const archiveArr = [rocketlist, pokegodex, togather];
 
 export const allArrays = {

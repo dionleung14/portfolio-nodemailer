@@ -1,14 +1,10 @@
 import React from "react";
 
-/* <PortfolioItem intro="To-Gather, where you can plan events with friends, family, and get
-      together!" repoLink="https://bit.ly/2Pnh8A2" deployedLink="http://awesome-group-planner.herokuapp.com/" projectDescription/>
-      */
-
 export default function PortfolioItemMobile(props) {
   return (
     // {/* <h1 className="text-left top-0 my-8 w-3/4 mx-auto"> */}
     // {/* <h1 className="text-left my-4 w-full mx-auto"> */}
-    <h1 className="lg:hidden text-left my-4 w-full mx-auto">
+    <h1 className="text-left my-4 w-full mx-auto">
       {props.headline} <br /> <br /> Deployed site{" "}
       <a
         href={props.deployed}
@@ -38,22 +34,23 @@ export default function PortfolioItemMobile(props) {
         );
       })}
       <br />
-      Collaborated with the following people:{" "}
-      {props.collaborators
-        ? props.collaborators.map(person => {
+      {props.collaborators.length > 0 && (
+        <h1>
+          Collaborated with the following people:{" "}
+          {props.collaborators.map(person => {
             return (
               <h1>
                 {person.name} (
-                <a
-                  href={person.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
-                >
-                  Github
-                </a>
-                {person.linkedIn ? (
+                {person.github && person.linkedIn ? (
                   <span>
+                    <a
+                      href={person.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline text-dclpal1-300"
+                    >
+                      Github
+                    </a>
                     ,{" "}
                     <a
                       href={person.linkedIn}
@@ -64,15 +61,31 @@ export default function PortfolioItemMobile(props) {
                       LinkedIn
                     </a>
                   </span>
+                ) : person.github && !person.linkedIn ? (
+                  <a
+                    href={person.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline text-dclpal1-300"
+                  >
+                    Github
+                  </a>
                 ) : (
-                  ""
+                  <a
+                    href={person.linkedIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline text-dclpal1-300"
+                  >
+                    LinkedIn
+                  </a>
                 )}
-                )
+                ){" "}
               </h1>
             );
-          })
-        : " hello "}
+          })}
+        </h1>
+      )}
     </h1>
-    // </div>
   );
 }

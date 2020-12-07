@@ -11,7 +11,6 @@ export default class PortfolioPhotoFirst extends Component {
           onClick={this.props.handlePortfolioToggle}
           data-project={this.props.project}
         />
-        <small className="italic">{this.props.alt}</small>
       </div>
     );
   }
