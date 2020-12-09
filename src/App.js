@@ -23,16 +23,16 @@ function App() {
     // console.log(favicon);
     if (darkMode.darkMode) {
       console.log(favicon.href);
-      // favicon.href = "/favicon_dcl_light.ico";
-      favicon.href = "%PUBLIC_URL%/favicon_dcl_light.ico";
+      favicon.href = "/favicon_dcl_light.ico";
+      // favicon.href = "%PUBLIC_URL%/favicon_dcl_light.ico";
       // favicon.href = "../public/favicon_dcl_light.ico";
       // favicon.href = "../%PUBLIC_URL%/favicon_dcl_light.ico";
       console.log(favicon.href);
       console.log("Should be light");
     } else {
       console.log(favicon.href);
-      // favicon.href = "/favicon_dcl_dark.ico";
-      favicon.href = "%PUBLIC_URL%/favicon_dcl_dark.ico";
+      favicon.href = "/favicon_dcl_dark.ico";
+      // favicon.href = "%PUBLIC_URL%/favicon_dcl_dark.ico";
       // favicon.href = "../public/favicon_dcl_dark.ico";
       // favicon.href = "../%PUBLIC_URL%/favicon_dcl_dark.ico";
       console.log(favicon.href);
