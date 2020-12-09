@@ -20,15 +20,22 @@ function App() {
   const faviconToggle = () => {
     console.log("favicon toggle?");
     let favicon = document.getElementById("favicon");
-    console.log(favicon);
-    console.log(favicon.href);
+    // console.log(favicon);
     if (darkMode.darkMode) {
-      // favicon.href = "%PUBLIC_URL%/favicon_dcl_light.ico";
-      favicon.href = "../public/favicon_dcl_light.ico";
+      console.log(favicon.href);
+      // favicon.href = "/favicon_dcl_light.ico";
+      favicon.href = "%PUBLIC_URL%/favicon_dcl_light.ico";
+      // favicon.href = "../public/favicon_dcl_light.ico";
+      // favicon.href = "../%PUBLIC_URL%/favicon_dcl_light.ico";
+      console.log(favicon.href);
       console.log("Should be light");
     } else {
-      // favicon.href = "%PUBLIC_URL%/favicon_dcl_dark.ico";
-      favicon.href = "../public/favicon_dcl_dark.ico";
+      console.log(favicon.href);
+      // favicon.href = "/favicon_dcl_dark.ico";
+      favicon.href = "%PUBLIC_URL%/favicon_dcl_dark.ico";
+      // favicon.href = "../public/favicon_dcl_dark.ico";
+      // favicon.href = "../%PUBLIC_URL%/favicon_dcl_dark.ico";
+      console.log(favicon.href);
       console.log("Should be dark");
     }
     console.log("fin");
