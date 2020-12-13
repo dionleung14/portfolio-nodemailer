@@ -21,6 +21,7 @@ export default function Welcome(props) {
       <FirstHeader
         text="Dion Leung, E.I.T"
         subtext="Fullstack Web Developer"
+        color="1"
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <div>

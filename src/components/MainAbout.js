@@ -9,10 +9,12 @@ export default class About extends Component {
     return (
       <ComponentContainer
         id="about-me"
+        color="0"
         darkModeCont={this.props.darkModeApp.darkMode}
       >
         <Header
           text="About Me"
+          color={0}
           darkModeHeader={this.props.darkModeApp.darkMode}
         />
         <div className="flex md:flex-row flex-col items-center justify-around px-6">

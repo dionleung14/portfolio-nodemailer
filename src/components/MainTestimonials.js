@@ -53,7 +53,11 @@ export default function Testimonials(props) {
       id="testimonials"
       darkModeCont={props.darkModeApp.darkMode}
     >
-      <Header text="Testimonials" darkModeHeader={props.darkModeApp.darkMode} />
+      <Header
+        text="Testimonials"
+        color="1"
+        darkModeHeader={props.darkModeApp.darkMode}
+      />
       <div className="h-dionBrowser flex items-center">
         <div className="flex items-center justify-around lg:px-6 my-4">
           <button

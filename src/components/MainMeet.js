@@ -36,8 +36,16 @@ export default function Meet(props) {
   };
 
   return (
-    <ComponentContainer id="meet-me" darkModeCont={props.darkModeApp.darkMode}>
-      <Header text="Meet me" darkModeHeader={props.darkModeApp.darkMode} />
+    <ComponentContainer
+      id="meet-me"
+      color="2"
+      darkModeCont={props.darkModeApp.darkMode}
+    >
+      <Header
+        text="Meet me"
+        color="2"
+        darkModeHeader={props.darkModeApp.darkMode}
+      />
       <div className="flex flex-col lg:flex-row items-center mt-4">
         <div className="text-left lg:py-8 lg:pl-6 lg:pr-4 lg:w-1/2 p-2">
           <p>
