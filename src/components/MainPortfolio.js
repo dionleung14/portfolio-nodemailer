@@ -45,10 +45,12 @@ export default function Portfolio(props) {
   return (
     <ComponentContainer
       id="portfolio"
+      color="4"
       darkModeCont={props.darkModeApp.darkMode}
     >
       <Header
         text="Portfolio, selected works"
+        color="4"
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">

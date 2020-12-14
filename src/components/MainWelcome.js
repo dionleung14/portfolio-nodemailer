@@ -13,10 +13,15 @@ import { Link } from "react-router-dom";
 export default function Welcome(props) {
   return (
     // <div id="top">
-    <ComponentContainer id="top" darkModeCont={props.darkModeApp.darkMode}>
+    <ComponentContainer
+      id="top"
+      color="1"
+      darkModeCont={props.darkModeApp.darkMode}
+    >
       <FirstHeader
         text="Dion Leung, E.I.T"
         subtext="Fullstack Web Developer"
+        color="1"
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <div>

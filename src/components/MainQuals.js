@@ -7,10 +7,12 @@ export default function Quals(props) {
   return (
     <ComponentContainer
       id="qualifications"
+      color="3"
       darkModeCont={props.darkModeApp.darkMode}
     >
       <Header
         text="Qualifications"
+        color="3"
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <div className="flex lg:flex-row flex-col-reverse items-center justify-around lg:py-6 p-2">
