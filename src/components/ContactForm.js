@@ -165,12 +165,20 @@ export default function ContactForm(props) {
     setContactMethodState(s => ({ ...s, [target.name]: !s[target.name] }));
 
   return (
-    <ComponentContainer id="contact" darkModeCont={props.darkModeApp.darkMode}>
-      <Header text="Contact me!" darkModeHeader={props.darkModeApp.darkMode} />
+    <ComponentContainer
+      id="contact"
+      color="6"
+      darkModeCont={props.darkModeApp.darkMode}
+    >
+      <Header
+        text="Contact me!"
+        color="6"
+        darkModeHeader={props.darkModeApp.darkMode}
+      />
       <div className="flex justify-around flex-col w-full lg:mt-8 lg:mb-2 my-2 lg:px-6 p-2">
         <h3 className="lg:w-4/5 my-2 lg:pl-20">
-          Have any questions? Want to collaborate together? Secretly dying to
-          know my favorite song? Hit me up! Send me an email (or use the nifty
+          Hit me up! Have any questions? Want to collaborate together? Secretly
+          dying to know my favorite song? Send me an email (or use the nifty
           little form below!) and I'll get back to you as soon as I can!
         </h3>
         <h3 className="lg:w-4/5 my-2 lg:pl-20">
@@ -199,7 +207,8 @@ export default function ContactForm(props) {
           // formName="Contact form"
           // formValues={completedForm}
           className={`lg:w-5/6 w-full lg:mx-auto p-2 py-8 my-2 border border-dclpal1-300 ${
-            props.darkModeApp.darkMode ? "shadow-dcl" : "shadow-2xl"
+            props.darkModeApp.darkMode ? "shadow-dcl" : ""
+            // "shadow-2xl"
           }`}
           id="contact-form"
           // data-netlify="true"

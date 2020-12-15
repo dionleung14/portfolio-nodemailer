@@ -8,6 +8,7 @@ export default function ComponentContainer(props) {
     "dclpal1-200",
     "dclpal1-300",
     "dclpal1-400",
+    "white",
   ];
   const colorArrD = [
     "dclevergreen-100",
@@ -15,6 +16,7 @@ export default function ComponentContainer(props) {
     "dclnavy-100",
     "dclnavy-200",
     "dclnavy-300",
+    "dclpal1-100",
     "dclpal1-100",
   ];
 
