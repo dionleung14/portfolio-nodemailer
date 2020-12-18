@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
-import TestimonialsContainer from "./TestimonialsContainer";
+import ComponentContainer from "./ComponentContainer";
 require("dotenv").config();
 
 export default function Testimonials(props) {
@@ -49,13 +49,14 @@ export default function Testimonials(props) {
   let currentTest = testimonials[Math.abs(tracker) % testimonials.length];
 
   return (
-    <TestimonialsContainer
+    <ComponentContainer
       id="testimonials"
+      color="5"
       darkModeCont={props.darkModeApp.darkMode}
     >
       <Header
         text="Testimonials"
-        color="1"
+        color="5"
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <div className="h-dionBrowser flex items-center">
@@ -95,6 +96,6 @@ export default function Testimonials(props) {
         </div>
       </div>
       {/* <div>{tracker}</div> */}
-    </TestimonialsContainer>
+    </ComponentContainer>
   );
 }
