@@ -1,22 +1,7 @@
 import React from "react";
-
+import colorsObj from "./colors";
 export default function TestimonialsContainer(props) {
-  const colorArrL = [
-    "dclbeige-100",
-    "dclbeige-200",
-    "dclbeige-300",
-    "dclpal1-200",
-    "dclpal1-300",
-    "dclpal1-400",
-  ];
-  const colorArrD = [
-    "dclevergreen-100",
-    "dclevergreen-200",
-    "dclnavy-100",
-    "dclnavy-200",
-    "dclnavy-300",
-    "dclpal1-100",
-  ];
+  const { colorArrL, colorArrD } = colorsObj;
 
   let colorL = colorArrL[parseInt(props.color)];
   let colorD = colorArrD[parseInt(props.color)];
