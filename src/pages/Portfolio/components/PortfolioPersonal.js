@@ -1,23 +1,15 @@
 import React, { useState } from "react";
-import Header from "./Header.js";
-import ToGatherHover from "./photos/portfolio-photos/ToGather-hover.png";
-import ComponentContainer from "./ComponentContainer";
-import { Link } from "react-router-dom";
-import { allArrays } from "../portfolio-items/portfolio-data";
+import Header from "../../../components/Header.js";
+import ComponentContainer from "../../../components/ComponentContainer";
+import { allArrays } from "../../../portfolio-items/portfolio-data";
 import PortfolioDiv from "./PortfolioDiv";
 import PortfolioDivMobile from "./PortfolioDivMobile";
 import PortfolioPhoto from "./PortfolioPhoto";
-import PortfolioPhotoCaption from "./PortfolioPhotoCaption";
 import PortfolioPhotoFirst from "./PortfolioPhotoFirst";
+import PortfolioPhotoCaption from "./PortfolioPhotoCaption";
 import PortfolioPhotoCaptionFirst from "./PortfolioPhotoCaptionFirst";
 
-export default function Portfolio(props) {
-  // const handlePortfolioClick = event => {
-  //   setPortfolioItem({
-  //     item: event.target.dataset.project,
-  //   });
-  // };
-
+export default function PortfolioPersonal(props) {
   const handlePortfolioToggle = event => {
     if (portfolioItem.item === event.target.dataset.project) {
       setPortfolioItem({
@@ -40,46 +32,25 @@ export default function Portfolio(props) {
     item: "",
   });
 
-  const { selectedArr } = allArrays;
+  const { personalArr } = allArrays;
 
   return (
-    <ComponentContainer
-      id="portfolio"
-      color="4"
-      darkModeCont={props.darkModeApp.darkMode}
-    >
+    <ComponentContainer id="personal" darkModeCont={props.darkModeApp.darkMode}>
       <Header
-        text="Portfolio, selected works"
-        color="4"
+        text="Personal Projects"
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
-        I have highlighted several key projects below. Click each one to learn
-        more! I am constantly working on new apps and endeavors, so expect this
-        to update regularly. My code repositories are hosted on github{" "}
+        Here are some personal projects I have created just for fun, click each
+        one to learn more! For these personal projects, the code repositories
+        will all be public on my{" "}
         <a
           href="https://github.com/dionleung14"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline text-dclpal1-300"
-        >
-          here.
-        </a>
-      </h1>
-      <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
-        If you want to see a more comprehensive overview of my projects, you can
-        find that{" "}
-        <Link to="/portfolio">
-          <span className="hover:underline text-dclpal1-300">here.</span>
-        </Link>{" "}
-        Also, here's a link to my project{" "}
-        <Link to="/archive">
-          <span className="hover:underline text-dclpal1-300">archive</span>
-        </Link>
-        , which includes past projects which may no longer be relevant to my
-        most recent experience or perhaps I'm no longer proud of them. In any
-        case, they're important to me to keep as a reminder of how I've improved
-        or for future inspiration.
+          className="hover:underline text-dclpal1-300">
+          github.
+        </a>{" "}
         {/* , and you can follow me on my coding journey on Twitter here:{" "}
         <a
           href="https://twitter.com/DionTheDev?ref_src=twsrc%5Etfw"
@@ -96,19 +67,20 @@ export default function Portfolio(props) {
         ></script> */}
       </h1>
       <div className="flex lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
-        {selectedArr.slice(0, 1).map(photo => (
+        {personalArr.slice(0, 1).map(photo => (
           <div
             className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
             data-project={photo.dataProject}
-            onClick={handlePortfolioToggle}
-          >
+            onClick={handlePortfolioToggle}>
             <PortfolioPhotoFirst
               photoSrc={photo.image}
               alt={photo.name}
+              // handlePortfolioToggle={handlePortfolioToggle}
               project={photo.dataProject}
             />
             <PortfolioPhotoCaptionFirst
               alt={photo.name}
+              // handlePortfolioToggle={handlePortfolioToggle}
               project={photo.dataProject}
             />
             <PortfolioDivMobile
@@ -125,19 +97,20 @@ export default function Portfolio(props) {
             />
           </div>
         ))}
-        {selectedArr.slice(1, selectedArr.length).map(photo => (
+        {personalArr.slice(1, personalArr.length).map(photo => (
           <div
             className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
             data-project={photo.dataProject}
-            onClick={handlePortfolioToggle}
-          >
+            onClick={handlePortfolioToggle}>
             <PortfolioPhoto
               photoSrc={photo.image}
               alt={photo.name}
+              // handlePortfolioToggle={handlePortfolioToggle}
               project={photo.dataProject}
             />
             <PortfolioPhotoCaption
               alt={photo.name}
+              // handlePortfolioToggle={handlePortfolioToggle}
               project={photo.dataProject}
             />
             <PortfolioDivMobile
@@ -155,7 +128,7 @@ export default function Portfolio(props) {
           </div>
         ))}
       </div>
-      {selectedArr.map(item => (
+      {personalArr.map(item => (
         <PortfolioDiv
           project={item.dataProject}
           headline={item.headline}

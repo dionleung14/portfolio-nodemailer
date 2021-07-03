@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Header from "./Header.js";
-import ComponentContainer from "./ComponentContainer";
-import { allArrays } from "../portfolio-items/portfolio-data";
+import Header from "../../../components/Header";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import ComponentContainer from "../../../components/ComponentContainer";
+import { allArrays } from "../../../portfolio-items/portfolio-data";
 import PortfolioDiv from "./PortfolioDiv";
 import PortfolioDivMobile from "./PortfolioDivMobile";
 import PortfolioPhoto from "./PortfolioPhoto";
@@ -9,7 +10,7 @@ import PortfolioPhotoFirst from "./PortfolioPhotoFirst";
 import PortfolioPhotoCaption from "./PortfolioPhotoCaption";
 import PortfolioPhotoCaptionFirst from "./PortfolioPhotoCaptionFirst";
 
-export default function PortfolioPersonal(props) {
+export default function PortfolioPortfolio(props) {
   const handlePortfolioToggle = event => {
     if (portfolioItem.item === event.target.dataset.project) {
       setPortfolioItem({
@@ -32,48 +33,39 @@ export default function PortfolioPersonal(props) {
     item: "",
   });
 
-  const { personalArr } = allArrays;
+  const { freelanceArr } = allArrays;
 
   return (
-    <ComponentContainer id="personal" darkModeCont={props.darkModeApp.darkMode}>
+    <ComponentContainer
+      id="freelance"
+      darkModeCont={props.darkModeApp.darkMode}>
       <Header
-        text="Personal Projects"
+        text="Freelance Projects"
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
-        Here are some personal projects I have created just for fun, click each
-        one to learn more! For these personal projects, the code repositories
-        will all be public on my{" "}
-        <a
-          href="https://github.com/dionleung14"
-          target="_blank"
-          rel="noopener noreferrer"
+        Below you'll find freelance projects I have been contracted for. Click
+        on each thumbnail to learn more!
+      </h1>{" "}
+      <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
+        {" "}
+        If you like what you see and would like to find out more information
+        about my rates and current discounts, please send me a message with the
+        form below (located{" "}
+        <AnchorLink
           className="hover:underline text-dclpal1-300"
-        >
-          github.
-        </a>{" "}
-        {/* , and you can follow me on my coding journey on Twitter here:{" "}
-        <a
-          href="https://twitter.com/DionTheDev?ref_src=twsrc%5Etfw"
-          className="twitter-follow-button border border-2 border-blue-300 px-2 py-1 rounded"
-          data-size="large"
-          data-show-count="false"
-        >
-          Follow @DionTheDev
-        </a>
-        <script
-          async
-          src="https://platform.twitter.com/widgets.js"
-          charset="utf-8"
-        ></script> */}
+          href="#contact">
+          here
+        </AnchorLink>{" "}
+        for convenience) with the subject line 'Freelance' and I'll get back to
+        you as soon as I can!
       </h1>
       <div className="flex lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
-        {personalArr.slice(0, 1).map(photo => (
+        {freelanceArr.slice(0, 1).map(photo => (
           <div
             className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
             data-project={photo.dataProject}
-            onClick={handlePortfolioToggle}
-          >
+            onClick={handlePortfolioToggle}>
             <PortfolioPhotoFirst
               photoSrc={photo.image}
               alt={photo.name}
@@ -99,12 +91,11 @@ export default function PortfolioPersonal(props) {
             />
           </div>
         ))}
-        {personalArr.slice(1, personalArr.length).map(photo => (
+        {freelanceArr.slice(1, freelanceArr.length).map(photo => (
           <div
             className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
             data-project={photo.dataProject}
-            onClick={handlePortfolioToggle}
-          >
+            onClick={handlePortfolioToggle}>
             <PortfolioPhoto
               photoSrc={photo.image}
               alt={photo.name}
@@ -131,7 +122,7 @@ export default function PortfolioPersonal(props) {
           </div>
         ))}
       </div>
-      {personalArr.map(item => (
+      {freelanceArr.map(item => (
         <PortfolioDiv
           project={item.dataProject}
           headline={item.headline}

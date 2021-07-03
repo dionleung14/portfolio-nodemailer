@@ -1,17 +1,24 @@
 import React, { useState } from "react";
-import Header from "./Header.js";
-import ComponentContainer from "./ComponentContainer";
-import { allArrays } from "../portfolio-items/portfolio-data";
-import PortfolioDiv from "./PortfolioDiv";
-import PortfolioDivMobile from "./PortfolioDivMobile";
-import PortfolioPhoto from "./PortfolioPhoto";
-import PortfolioPhotoFirst from "./PortfolioPhotoFirst";
-import PortfolioPhotoCaption from "./PortfolioPhotoCaption";
-import PortfolioPhotoCaptionFirst from "./PortfolioPhotoCaptionFirst";
+import Header from "../../../components/Header.js";
+// import ToGatherHover from "../../../components/photos/portfolio-photos/ToGather-hover.png";
+import ComponentContainer from "../../../components/ComponentContainer";
+import { Link } from "react-router-dom";
+import { allArrays } from "../../../portfolio-items/portfolio-data";
+import PortfolioDiv from "../../../pages/Portfolio/components/PortfolioDiv";
+import PortfolioDivMobile from "../../../pages/Portfolio/components/PortfolioDivMobile";
+import PortfolioPhoto from "../../../pages/Portfolio/components/PortfolioPhoto";
+import PortfolioPhotoCaption from "../../../pages/Portfolio/components/PortfolioPhotoCaption";
+import PortfolioPhotoFirst from "../../../pages/Portfolio/components/PortfolioPhotoFirst";
+import PortfolioPhotoCaptionFirst from "../../../pages/Portfolio/components/PortfolioPhotoCaptionFirst";
 
-export default function PortfolioBootcamp(props) {
+export default function Portfolio(props) {
+  // const handlePortfolioClick = event => {
+  //   setPortfolioItem({
+  //     item: event.target.dataset.project,
+  //   });
+  // };
+
   const handlePortfolioToggle = event => {
-    console.log(event.target.dataset.project);
     if (portfolioItem.item === event.target.dataset.project) {
       setPortfolioItem({
         item: "",
@@ -29,58 +36,76 @@ export default function PortfolioBootcamp(props) {
     });
   };
 
-  // const portfolioMobileRendering = () => {
-  //   let keys = [];
-  //   props.bootcampArr.forEach(portfoItem => {
-  //     keys.push(portfoItem.dataProject);
-  //   });
-  //   return keys
-  //   let identifier = [];
-  //   console.log("YESSSSSSSSSIRRRRRRRR");
-  // };
-
   const [portfolioItem, setPortfolioItem] = useState({
     item: "",
   });
 
-  const { bootcampArr } = allArrays;
+  const { selectedArr } = allArrays;
 
   return (
-    <ComponentContainer id="bootcamp" darkModeCont={props.darkModeApp.darkMode}>
+    <ComponentContainer
+      id="portfolio"
+      color="4"
+      darkModeCont={props.darkModeApp.darkMode}>
       <Header
-        text="Bootcamp Projects"
+        text="Portfolio, selected works"
+        color="4"
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
-        Here is a collection of my best projects from the coding bootcamp. I
-        personally find it super exciting to track my progress, from my first
-        assignment to my final project. Click each one to learn more! You can
-        find my github{" "}
+        I have highlighted several key projects below. Click each one to learn
+        more! I am constantly working on new apps and endeavors, so expect this
+        to update regularly. My code repositories are hosted on github{" "}
         <a
           href="https://github.com/dionleung14"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline text-dclpal1-300"
-        >
+          className="hover:underline text-dclpal1-300">
           here.
-        </a>{" "}
+        </a>
+      </h1>
+      <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
+        If you want to see a more comprehensive overview of my projects, you can
+        find that{" "}
+        <Link to="/portfolio">
+          <span className="hover:underline text-dclpal1-300">here.</span>
+        </Link>{" "}
+        Also, here's a link to my project{" "}
+        <Link to="/archive">
+          <span className="hover:underline text-dclpal1-300">archive</span>
+        </Link>
+        , which includes past projects which may no longer be relevant to my
+        most recent experience or perhaps I'm no longer proud of them. In any
+        case, they're important to me to keep as a reminder of how I've improved
+        or for future inspiration.
+        {/* , and you can follow me on my coding journey on Twitter here:{" "}
+        <a
+          href="https://twitter.com/DionTheDev?ref_src=twsrc%5Etfw"
+          className="twitter-follow-button border border-2 border-blue-300 px-2 py-1 rounded"
+          data-size="large"
+          data-show-count="false"
+        >
+          Follow @DionTheDev
+        </a>
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script> */}
       </h1>
       <div className="flex lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
-        {bootcampArr.slice(0, 1).map(photo => (
+        {selectedArr.slice(0, 1).map(photo => (
           <div
             className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
             data-project={photo.dataProject}
-            onClick={handlePortfolioToggle}
-          >
+            onClick={handlePortfolioToggle}>
             <PortfolioPhotoFirst
               photoSrc={photo.image}
               alt={photo.name}
-              // handlePortfolioToggle={handlePortfolioToggle}
               project={photo.dataProject}
             />
             <PortfolioPhotoCaptionFirst
               alt={photo.name}
-              // handlePortfolioToggle={handlePortfolioToggle}
               project={photo.dataProject}
             />
             <PortfolioDivMobile
@@ -97,21 +122,18 @@ export default function PortfolioBootcamp(props) {
             />
           </div>
         ))}
-        {bootcampArr.slice(1, bootcampArr.length).map(photo => (
+        {selectedArr.slice(1, selectedArr.length).map(photo => (
           <div
             className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
             data-project={photo.dataProject}
-            onClick={handlePortfolioToggle}
-          >
+            onClick={handlePortfolioToggle}>
             <PortfolioPhoto
               photoSrc={photo.image}
               alt={photo.name}
-              // handlePortfolioToggle={handlePortfolioToggle}
               project={photo.dataProject}
             />
             <PortfolioPhotoCaption
               alt={photo.name}
-              // handlePortfolioToggle={handlePortfolioToggle}
               project={photo.dataProject}
             />
             <PortfolioDivMobile
@@ -129,8 +151,7 @@ export default function PortfolioBootcamp(props) {
           </div>
         ))}
       </div>
-      {/* {portfolioMobileRendering()} */}
-      {bootcampArr.map(item => (
+      {selectedArr.map(item => (
         <PortfolioDiv
           project={item.dataProject}
           headline={item.headline}
