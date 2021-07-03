@@ -38,10 +38,12 @@ export default function PortfolioPortfolio(props) {
   return (
     <ComponentContainer
       id="freelance"
-      darkModeCont={props.darkModeApp.darkMode}>
+      darkModeCont={props.darkModeApp.darkMode}
+      color="1">
       <Header
         text="Freelance Projects"
         darkModeHeader={props.darkModeApp.darkMode}
+        color="1"
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
         Below you'll find freelance projects I have been contracted for. Click

@@ -12,11 +12,15 @@ import { Link } from "react-router-dom";
 
 export default function PortfolioWelcome(props) {
   return (
-    <ComponentContainer id="top" darkModeCont={props.darkModeApp.darkMode}>
+    <ComponentContainer
+      id="top"
+      darkModeCont={props.darkModeApp.darkMode}
+      color="1">
       <FirstHeader
         text="Project Collection"
         subtext="Welcome to my expanded portfolio!"
         darkModeHeader={props.darkModeApp.darkMode}
+        color="1"
       />
       <h1>
         Currently a work in progress, but feel free to poke around! Here you can

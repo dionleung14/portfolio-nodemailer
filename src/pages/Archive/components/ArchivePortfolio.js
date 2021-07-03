@@ -35,10 +35,14 @@ export default function ArchivePortfolio(props) {
     item: "",
   });
   return (
-    <ComponentContainer id="archive" darkModeCont={props.darkModeApp.darkMode}>
+    <ComponentContainer
+      id="archive"
+      darkModeCont={props.darkModeApp.darkMode}
+      color="1">
       <Header
         text="Archive of all projects"
         darkModeHeader={props.darkModeApp.darkMode}
+        color="1"
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
         Equipped with the knowledge from the curriculum of the coding bootcamp,

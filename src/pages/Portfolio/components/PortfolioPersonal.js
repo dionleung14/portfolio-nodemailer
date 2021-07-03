@@ -35,10 +35,14 @@ export default function PortfolioPersonal(props) {
   const { personalArr } = allArrays;
 
   return (
-    <ComponentContainer id="personal" darkModeCont={props.darkModeApp.darkMode}>
+    <ComponentContainer
+      id="personal"
+      darkModeCont={props.darkModeApp.darkMode}
+      color="1">
       <Header
         text="Personal Projects"
         darkModeHeader={props.darkModeApp.darkMode}
+        color="1"
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
         Here are some personal projects I have created just for fun, click each

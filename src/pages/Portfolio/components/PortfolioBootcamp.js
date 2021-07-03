@@ -46,10 +46,14 @@ export default function PortfolioBootcamp(props) {
   const { bootcampArr } = allArrays;
 
   return (
-    <ComponentContainer id="bootcamp" darkModeCont={props.darkModeApp.darkMode}>
+    <ComponentContainer
+      id="bootcamp"
+      darkModeCont={props.darkModeApp.darkMode}
+      color="1">
       <Header
         text="Bootcamp Projects"
         darkModeHeader={props.darkModeApp.darkMode}
+        color="1"
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
         Here is a collection of my best projects from the coding bootcamp. I
