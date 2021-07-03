@@ -77,14 +77,8 @@ export default function ContactForm(props) {
         alert("Please enter either an email or phone number");
       } else {
         let { call, email, text } = contactMethodState;
-        let {
-          firstName,
-          lastName,
-          emailAddress,
-          phNum,
-          subject,
-          message,
-        } = formState;
+        let { firstName, lastName, emailAddress, phNum, subject, message } =
+          formState;
         let contactFormFilled = {
           firstName,
           lastName,
@@ -168,8 +162,7 @@ export default function ContactForm(props) {
     <ComponentContainer
       id="contact"
       color="6"
-      darkModeCont={props.darkModeApp.darkMode}
-    >
+      darkModeCont={props.darkModeApp.darkMode}>
       <Header
         text="Contact me!"
         color="6"
@@ -177,8 +170,8 @@ export default function ContactForm(props) {
       />
       <div className="flex justify-around flex-col w-full lg:mt-8 lg:mb-2 my-2 lg:px-6 p-2">
         <h3 className="lg:w-4/5 my-2 lg:pl-20">
-          Hit me up! Have any questions? Want to collaborate together? Secretly
-          dying to know my favorite song? Send me an email (or use the nifty
+          Have any questions? Want to collaborate together? Secretly dying to
+          know my favorite song? Hit me up! Send me an email (or use the nifty
           little form below!) and I'll get back to you as soon as I can!
         </h3>
         <h3 className="lg:w-4/5 my-2 lg:pl-20">
@@ -187,8 +180,7 @@ export default function ContactForm(props) {
             className="hover:underline text-dclpal1-300"
             href="https://www.linkedin.com/in/leungdion/"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             here
           </a>
           , and my email is{" "}
@@ -212,8 +204,7 @@ export default function ContactForm(props) {
           }`}
           id="contact-form"
           // data-netlify="true"
-          onSubmit={handleNodeMailerSubmit}
-        >
+          onSubmit={handleNodeMailerSubmit}>
           {/* <!-- First and Last Name --> */}
           <div className="lg:pl-6">
             <input
@@ -337,8 +328,7 @@ export default function ContactForm(props) {
                   value={formState.subject}
                   name="subject"
                   onChange={handleInput}
-                  required
-                >
+                  required>
                   <option className="focus:bg-white" value="Networking">
                     Networking
                   </option>
@@ -381,8 +371,7 @@ export default function ContactForm(props) {
                       props.darkModeApp.darkMode
                         ? "text-dclpal1-100"
                         : "text-white"
-                    }
-                  >
+                    }>
                     I'm a hidden message!
                   </small>
                 )}
@@ -422,8 +411,7 @@ export default function ContactForm(props) {
                 props.darkModeApp.darkMode
                   ? "bg-dclpal1-100 text-white hover:bg-dclpal1-500"
                   : "text-black hover:bg-dclpal1-400"
-              }`}
-            >
+              }`}>
               Send!
             </button>
             {formSuccessState.formSuccess ? (
