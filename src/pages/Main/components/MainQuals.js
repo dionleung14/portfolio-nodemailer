@@ -1,15 +1,14 @@
 import React from "react";
-import Header from "./Header.js";
-import alaskaSurvey from "./photos/alaskaSurvey.JPG";
-import ComponentContainer from "./ComponentContainer.js";
+import Header from "../../../components/Header.js";
+import alaskaSurvey from "../../../components/photos/alaskaSurvey.JPG";
+import ComponentContainer from "../../../components/ComponentContainer.js";
 
 export default function Quals(props) {
   return (
     <ComponentContainer
       id="qualifications"
       color="3"
-      darkModeCont={props.darkModeApp.darkMode}
-    >
+      darkModeCont={props.darkModeApp.darkMode}>
       <Header
         text="Qualifications"
         color="3"
@@ -39,8 +38,7 @@ export default function Quals(props) {
               className="hover:underline text-dclpal1-300"
               href="https://bootcamp.uw.edu/"
               target="_blank"
-              rel="noreferrer noopener"
-            >
+              rel="noreferrer noopener">
               Web Development/Coding Bootcamp
             </a>{" "}
             through the University of Washington.

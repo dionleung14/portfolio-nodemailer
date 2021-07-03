@@ -1,15 +1,15 @@
 import React from "react";
-import ComponentContainer from "./ComponentContainer";
-import linkedInSeattle from "./photos/linkedin-Seattle.jpg";
-import seattleDay from "./photos/seattle-day-hi-res.jpg";
-import FirstHeader from "./FirstHeader";
-import github from "./photos/github-icon.png";
-import linkedin from "./photos/linkedin-icon.png";
-import emailIcon from "./photos/email-icon.png";
-import twitter from "./photos/twitter-icon.png";
-import Emoji from "./Emoji";
-import portfolioArr from "../portfolio-items/portfolio-data";
-import { Link } from "react-router-dom";
+import ComponentContainer from "../../../components/ComponentContainer";
+// import linkedInSeattle from "./photos/linkedin-Seattle.jpg";
+// import seattleDay from "./photos/seattle-day-hi-res.jpg";
+import FirstHeader from "../../../components/FirstHeader";
+// import github from "./photos/github-icon.png";
+// import linkedin from "./photos/linkedin-icon.png";
+// import emailIcon from "./photos/email-icon.png";
+// import twitter from "./photos/twitter-icon.png";
+import Emoji from "../../../components/Emoji";
+// import portfolioArr from "../portfolio-items/portfolio-data";
+// import { Link } from "react-router-dom";
 
 export default function NoMatchWelcome(props) {
   return (

@@ -1,13 +1,12 @@
 import React from "react";
-import PortfolioItemMobile from "./PortfolioItemMobile";
-import CollapseBtn from "./CollapseBtn";
+import PortfolioItemMobile from "../../../components/PortfolioItemMobile";
+import CollapseBtn from "../../../components/CollapseBtn";
 
 export default function PortfolioDivMobile(props) {
   return (
     <div
       className={props.state === props.project ? `lg:hidden` : `hidden`}
-      data-project={props.project}
-    >
+      data-project={props.project}>
       <PortfolioItemMobile
         headline={props.headline}
         deployed={props.deployed}

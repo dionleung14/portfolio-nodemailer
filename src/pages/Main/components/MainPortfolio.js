@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import Header from "./Header.js";
-import ToGatherHover from "./photos/portfolio-photos/ToGather-hover.png";
-import ComponentContainer from "./ComponentContainer";
+import Header from "../../../components/Header.js";
+// import ToGatherHover from "../../../components/photos/portfolio-photos/ToGather-hover.png";
+import ComponentContainer from "../../../components/ComponentContainer";
 import { Link } from "react-router-dom";
-import { allArrays } from "../portfolio-items/portfolio-data";
-import PortfolioDiv from "./PortfolioDiv";
-import PortfolioDivMobile from "./PortfolioDivMobile";
-import PortfolioPhoto from "./PortfolioPhoto";
-import PortfolioPhotoCaption from "./PortfolioPhotoCaption";
-import PortfolioPhotoFirst from "./PortfolioPhotoFirst";
-import PortfolioPhotoCaptionFirst from "./PortfolioPhotoCaptionFirst";
+import { allArrays } from "../../../portfolio-items/portfolio-data";
+import PortfolioDiv from "../../../pages/Portfolio/components/PortfolioDiv";
+import PortfolioDivMobile from "../../../pages/Portfolio/components/PortfolioDivMobile";
+import PortfolioPhoto from "../../../pages/Portfolio/components/PortfolioPhoto";
+import PortfolioPhotoCaption from "../../../pages/Portfolio/components/PortfolioPhotoCaption";
+import PortfolioPhotoFirst from "../../../pages/Portfolio/components/PortfolioPhotoFirst";
+import PortfolioPhotoCaptionFirst from "../../../pages/Portfolio/components/PortfolioPhotoCaptionFirst";
 
 export default function Portfolio(props) {
   // const handlePortfolioClick = event => {
@@ -46,8 +46,7 @@ export default function Portfolio(props) {
     <ComponentContainer
       id="portfolio"
       color="4"
-      darkModeCont={props.darkModeApp.darkMode}
-    >
+      darkModeCont={props.darkModeApp.darkMode}>
       <Header
         text="Portfolio, selected works"
         color="4"
@@ -61,8 +60,7 @@ export default function Portfolio(props) {
           href="https://github.com/dionleung14"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline text-dclpal1-300"
-        >
+          className="hover:underline text-dclpal1-300">
           here.
         </a>
       </h1>
@@ -100,8 +98,7 @@ export default function Portfolio(props) {
           <div
             className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
             data-project={photo.dataProject}
-            onClick={handlePortfolioToggle}
-          >
+            onClick={handlePortfolioToggle}>
             <PortfolioPhotoFirst
               photoSrc={photo.image}
               alt={photo.name}
@@ -129,8 +126,7 @@ export default function Portfolio(props) {
           <div
             className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
             data-project={photo.dataProject}
-            onClick={handlePortfolioToggle}
-          >
+            onClick={handlePortfolioToggle}>
             <PortfolioPhoto
               photoSrc={photo.image}
               alt={photo.name}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import ComponentContainer from "./ComponentContainer.js";
-import Header from "./Header";
-import headshot from "./photos/headshot1.jpg";
+import ComponentContainer from "../../../components/ComponentContainer.js";
+import Header from "../../../components/Header";
+import headshot from "../../../components/photos//headshot1.jpg";
 // import Emoji from "./Emoji";
 
 export default class About extends Component {
@@ -10,8 +10,7 @@ export default class About extends Component {
       <ComponentContainer
         id="about-me"
         color="0"
-        darkModeCont={this.props.darkModeApp.darkMode}
-      >
+        darkModeCont={this.props.darkModeApp.darkMode}>
         <Header
           text="About Me"
           color={0}
@@ -30,8 +29,7 @@ export default class About extends Component {
                 href="https://www.dalenanguyen.net/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline text-dclpal1-300"
-              >
+                className="hover:underline text-dclpal1-300">
                 Dalena Nguyen
               </a>
             </p>

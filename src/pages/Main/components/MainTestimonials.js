@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
-import ComponentContainer from "./ComponentContainer";
+import Header from "../../../components/Header";
+import ComponentContainer from "../../../components/ComponentContainer";
 require("dotenv").config();
 
 export default function Testimonials(props) {
@@ -52,8 +52,7 @@ export default function Testimonials(props) {
     <ComponentContainer
       id="testimonials"
       color="5"
-      darkModeCont={props.darkModeApp.darkMode}
-    >
+      darkModeCont={props.darkModeApp.darkMode}>
       <Header
         text="Testimonials"
         color="5"
@@ -67,8 +66,7 @@ export default function Testimonials(props) {
                 ? "border-white border-2 bg-dclpal1-100 text-white hover:bg-dclpal1-500 hover:text-white"
                 : "border-dclpal1-100 border-2 bg-white text-black hover:bg-dclpal1-400 hover:text-white"
             }`}
-            onClick={decrement}
-          >
+            onClick={decrement}>
             {`<`}
           </button>
           {/* {testimonialAuto} */}
@@ -89,8 +87,7 @@ export default function Testimonials(props) {
             }`}
             onClick={() => {
               increment();
-            }}
-          >
+            }}>
             {`>`}
           </button>
         </div>

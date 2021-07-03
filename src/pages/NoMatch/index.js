@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import NoMatchNavBar from "../components/NoMatchNavBar";
-import NoMatchWelcome from "../components/NoMatchWelcome";
-import ContactForm from "../components/ContactForm";
-import Footer from "../components/Footer";
+import NoMatchNavBar from "./components/NoMatchNavBar";
+import NoMatchWelcome from "./components/NoMatchWelcome";
+import ContactForm from "../../components/ContactForm";
+import Footer from "../../components/Footer";
 
 export default class NoMatch extends Component {
   render(props) {

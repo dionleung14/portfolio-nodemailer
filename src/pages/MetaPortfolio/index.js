@@ -1,8 +1,8 @@
 import React from "react";
-import Footer from "../components/Footer";
-import PortfolioNavBar from "../components/PortfolioNavBar";
-import ContactForm from "../components/ContactForm";
-import MetaPortfolioWelcome from "../components/MetaPortfolioWelcome";
+import Footer from "../../components/Footer";
+import ContactForm from "../../components/ContactForm";
+import PortfolioNavBar from "../Portfolio/components/PortfolioNavBar";
+import MetaPortfolioWelcome from "./components/MetaPortfolioWelcome";
 
 export default function MetaPortfolio(props) {
   return (

@@ -1,46 +1,45 @@
 import React from "react";
-import Header from "./Header.js";
-import placeholder from "./photos/linkedin-Seattle.jpg";
-import dubs from "./photos/dubs.JPG";
-import flowtest from "./photos/flowtest.JPG";
-import NiehausStatue from "./photos/NiehausStatue.JPG";
-import softball from "./photos/softball.JPG";
-import Carousel from "./Carousel";
-import ComponentContainer from "./ComponentContainer.js";
+import Header from "../../../components/Header.js";
+// import placeholder from "./photos/linkedin-Seattle.jpg";
+// import dubs from "./photos/dubs.JPG";
+import flowtest from "../../../components/photos/flowtest.JPG";
+// import NiehausStatue from "./photos/NiehausStatue.JPG";
+// import softball from "./photos/softball.JPG";
+// import Carousel from "./Carousel";
+import ComponentContainer from "../../../components/ComponentContainer.js";
 
 export default function Meet(props) {
-  const photosArr = [dubs, flowtest, NiehausStatue, softball];
+  // const photosArr = [dubs, flowtest, NiehausStatue, softball];
 
-  const photosObj = {
-    photo1: {
-      photoImage: dubs,
-      alt: "OP with husky mascot at UW",
-      caption: "Hanging out with Dubs, the UW husky mascot!",
-    },
-    photo2: {
-      photoImage: flowtest,
-      alt: "OP performing civil engineering tests",
-      caption:
-        "Performing high pressure flowtests on fire hydrants... on Halloween",
-    },
-    photo3: {
-      photoImage: NiehausStatue,
-      alt: "OP posing with statue",
-      caption: "Celebrating a rare Seattle Mariners win!",
-    },
-    photo4: {
-      photoImage: softball,
-      alt: "OP swinging baseball bat",
-      caption: "Defending our championship trophy with a leadoff single",
-    },
-  };
+  // const photosObj = {
+  //   photo1: {
+  //     photoImage: dubs,
+  //     alt: "OP with husky mascot at UW",
+  //     caption: "Hanging out with Dubs, the UW husky mascot!",
+  //   },
+  //   photo2: {
+  //     photoImage: flowtest,
+  //     alt: "OP performing civil engineering tests",
+  //     caption:
+  //       "Performing high pressure flowtests on fire hydrants... on Halloween",
+  //   },
+  //   photo3: {
+  //     photoImage: NiehausStatue,
+  //     alt: "OP posing with statue",
+  //     caption: "Celebrating a rare Seattle Mariners win!",
+  //   },
+  //   photo4: {
+  //     photoImage: softball,
+  //     alt: "OP swinging baseball bat",
+  //     caption: "Defending our championship trophy with a leadoff single",
+  //   },
+  // };
 
   return (
     <ComponentContainer
       id="meet-me"
       color="2"
-      darkModeCont={props.darkModeApp.darkMode}
-    >
+      darkModeCont={props.darkModeApp.darkMode}>
       <Header
         text="Meet me"
         color="2"
