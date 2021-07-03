@@ -1,23 +1,8 @@
 import React from "react";
+import colorsObj from "./colors.js";
 
 export default function FirstHeader(props) {
-  const colorArrL = [
-    "dclbeige-100",
-    "dclbeige-200",
-    "dclbeige-300",
-    "dclpal1-200",
-    "dclpal1-300",
-    "dclpal1-400",
-  ];
-  const colorArrD = [
-    "dclevergreen-100",
-    "dclevergreen-200",
-    "dclnavy-100",
-    "dclnavy-200",
-    "dclnavy-300",
-    "dclpal1-100",
-  ];
-
+  const { colorArrL, colorArrD } = colorsObj;
   let colorL = colorArrL[parseInt(props.color)];
   let colorD = colorArrD[parseInt(props.color)];
 
@@ -30,8 +15,7 @@ export default function FirstHeader(props) {
         props.darkModeHeader
           ? `bg-${colorD} text-white`
           : `bg-${colorL} text-dclpal1-100`
-      }`}
-    >
+      }`}>
       <h1 className="lg:text-5xl text-2xl">{props.text}</h1>
       <h3 className="lg:text-2xl text-lg">{props.subtext}</h3>
     </div>
