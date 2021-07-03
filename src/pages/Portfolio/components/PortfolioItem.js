@@ -10,24 +10,40 @@ export default function PortfolioItem(props) {
     // {/* <h1 className="text-left top-0 my-8 w-3/4 mx-auto"> */}
     // {/* <h1 className="text-left my-4 w-full mx-auto"> */}
     <h1 className="text-left my-8 w-3/4 mx-auto">
-      {props.headline} <br /> <br /> Deployed site{" "}
-      <a
-        href={props.deployed}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:underline text-dclpal1-300"
-      >
-        here
-      </a>
-      , and github repository{" "}
-      <a
-        href={props.repo}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:underline text-dclpal1-300"
-      >
-        here.
-      </a>
+      {props.headline} <br /> <br />{" "}
+      {props.repo ? (
+        <h1>
+          Deployed site{" "}
+          <a
+            href={props.deployed}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline text-dclpal1-300">
+            here
+          </a>{" "}
+          and github repository{" "}
+          <a
+            href={props.repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline text-dclpal1-300">
+            here.
+          </a>
+        </h1>
+      ) : (
+        <h1>
+          Deployed site{" "}
+          <a
+            href={props.deployed}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline text-dclpal1-300">
+            here.{" "}
+          </a>
+          Unfortunately, this github repository is private. Please contact me if
+          you have any questions regarding the codebase
+        </h1>
+      )}
       <br />
       <br />
       {props.description.map(section => {
@@ -52,8 +68,7 @@ export default function PortfolioItem(props) {
                       href={person.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:underline text-dclpal1-300"
-                    >
+                      className="hover:underline text-dclpal1-300">
                       Github
                     </a>
                     ,{" "}
@@ -61,8 +76,7 @@ export default function PortfolioItem(props) {
                       href={person.linkedIn}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:underline text-dclpal1-300"
-                    >
+                      className="hover:underline text-dclpal1-300">
                       LinkedIn
                     </a>
                   </span>
@@ -71,19 +85,22 @@ export default function PortfolioItem(props) {
                     href={person.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline text-dclpal1-300"
-                  >
+                    className="hover:underline text-dclpal1-300">
                     Github
                   </a>
-                ) : (
+                ) : !person.github && person.linkedIn ? (
                   <a
                     href={person.linkedIn}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline text-dclpal1-300"
-                  >
+                    className="hover:underline text-dclpal1-300">
                     LinkedIn
                   </a>
+                ) : (
+                  <span>
+                    Unfortunately I have neither the github nor the LinkedIn for{" "}
+                    {person.name.split(" ")[0]}
+                  </span>
                 )}
                 )
               </h1>
