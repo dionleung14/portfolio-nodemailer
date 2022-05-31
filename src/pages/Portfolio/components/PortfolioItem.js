@@ -19,18 +19,24 @@ export default function PortfolioItem(props) {
       >
         here
       </a>
-      , and github repository{" "}
-      <a
-        href={props.repo}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:underline text-dclpal1-300"
-      >
-        here.
-      </a>
+      {props.repo ? (
+        <>
+          , and github repository{" "}
+          <a
+            href={props.repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline text-dclpal1-300"
+          >
+            here.
+          </a>
+        </>
+      ) : (
+        ". Unfortunately, the repository cannot be shared at this time."
+      )}
       <br />
       <br />
-      {props.description.map(section => {
+      {props.description.map((section) => {
         return (
           <div>
             <h1>{section}</h1>
@@ -42,7 +48,7 @@ export default function PortfolioItem(props) {
       {props.collaborators.length > 0 && (
         <h1>
           Collaborated with the following people:{" "}
-          {props.collaborators.map(person => {
+          {props.collaborators.map((person) => {
             return (
               <h1>
                 {person.name} (
