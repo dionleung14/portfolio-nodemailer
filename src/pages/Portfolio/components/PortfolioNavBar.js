@@ -54,7 +54,7 @@ export default function PortfolioNavBar(props) {
               ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}>
-          freelance
+          freelance & contract
         </AnchorLink>
         <AnchorLink
           href="#personal"

@@ -8,7 +8,7 @@ import avid from "./avidpl";
 
 // const selectedArr = [ epicPT, rocketlist];
 const selectedArr = [avid, epicPT, rocketlist];
-const freelanceArr = [epicPT];
+const freelanceArr = [avid, epicPT];
 const personalArr = [portfolio, reactionTest];
 const bootcampArr = [rocketlist, togather, pokegodex];
 const archiveArr = [pokegodex, togather];

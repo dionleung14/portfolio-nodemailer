@@ -41,12 +41,12 @@ export default function PortfolioPortfolio(props) {
       darkModeCont={props.darkModeApp.darkMode}
       color="1">
       <Header
-        text="Freelance Projects"
+        text="Freelance & Contractor Projects"
         darkModeHeader={props.darkModeApp.darkMode}
         color="1"
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
-        Below you'll find freelance projects I have been contracted for. Click
+        Below you'll find freelance or contract projects I have contributed to. Click
         on each thumbnail to learn more!
       </h1>{" "}
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
