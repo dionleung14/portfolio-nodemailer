@@ -1,7 +1,7 @@
 import React from "react";
 import ComponentContainer from "../../../components/ComponentContainer";
 import linkedInSeattle from "../../../components/photos/linkedin-Seattle.jpg";
-import seattleDay from "../../../components/photos/seattle-day-hi-res.jpg";
+// import seattleDay from "../../../components/photos/seattle-day-hi-res.jpg";
 import FirstHeader from "../../../components/FirstHeader";
 import github from "../../../components/photos/github-icon.png";
 import linkedin from "../../../components/photos/linkedin-icon.png";

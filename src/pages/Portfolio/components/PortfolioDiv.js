@@ -1,5 +1,5 @@
 import React from "react";
-import PortfolioPhoto from "./PortfolioPhoto";
+// import PortfolioPhoto from "./PortfolioPhoto";
 import PortfolioItem from "./PortfolioItem";
 import CollapseBtn from "../../../components/CollapseBtn";
 

@@ -3,7 +3,7 @@ import Header from "./Header";
 import API from "../utils/API";
 import ComponentContainer from "./ComponentContainer";
 import Loading from "./Loading";
-import NetlifyForm from "react-ssg-netlify-forms";
+// import NetlifyForm from "react-ssg-netlify-forms";
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default function ContactForm(props) {
@@ -40,17 +40,17 @@ export default function ContactForm(props) {
     failure: false,
   });
 
-  const completedForm = {
-    fName: formState.firstName,
-    lName: formState.lastName,
-    emailAddy: formState.emailAddress,
-    phone: formState.phNum,
-    subj: formState.subject,
-    text: formState.message,
-    contEmail: contactMethodState.email,
-    contCall: contactMethodState.call,
-    contText: contactMethodState.text,
-  };
+  // const completedForm = {
+  //   fName: formState.firstName,
+  //   lName: formState.lastName,
+  //   emailAddy: formState.emailAddress,
+  //   phone: formState.phNum,
+  //   subj: formState.subject,
+  //   text: formState.message,
+  //   contEmail: contactMethodState.email,
+  //   contCall: contactMethodState.call,
+  //   contText: contactMethodState.text,
+  // };
 
   const handleNodeMailerSubmit = event => {
     event.preventDefault();
