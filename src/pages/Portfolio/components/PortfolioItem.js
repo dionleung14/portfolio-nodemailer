@@ -45,7 +45,7 @@ export default function PortfolioItem(props) {
         );
       })}
       <br />
-      {props.collaborators.length > 0 && (
+      {props.collaborators.length > 0 ? (
         <h1>
           Collaborated with the following people:{" "}
           {props.collaborators.map((person) => {
@@ -96,7 +96,7 @@ export default function PortfolioItem(props) {
             );
           })}
         </h1>
-      )}
+      ) : "Collaborators for this project cannot be shared at this time."}
     </h1>
   );
 }

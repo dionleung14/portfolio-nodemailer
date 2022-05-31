@@ -13,11 +13,11 @@ const avidObj = {
     "The back-end API was created and maintained using C# and .NET, as well as utilizing Azure tables. Data was consumed on the front-end through JSON and simple querying.",
   ],
   collaborators: [
-    {
-      name: "Louis Coleman",
-      github: "https://github.com/coleloui",
-      linkedIn: "https://www.linkedin.com/in/louis-coleman/",
-    },
+    // {
+    //   name: "Louis Coleman",
+    //   github: "https://github.com/coleloui",
+    //   linkedIn: "https://www.linkedin.com/in/louis-coleman/",
+    // },
   ],
 };
 
