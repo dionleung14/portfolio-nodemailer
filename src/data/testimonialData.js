@@ -29,6 +29,16 @@ const testimonialData = [
     message: `I have been learning full stack web development from December 2020 and June 2021, and it has been a great experience having Dion as an instructor. His teaching methods are great. Very clear and concise. I learned something from every class.`,
     relationship: "former student",
   },
+  {
+    from: "Eddie Reed",
+    message: `I think you have shown me better than most of my other tutors have how things are working “under the hood” as they say , and I really just want to tell you that your help means a lot. I really do appreciate it and I think you have a real talent for teaching this.`,
+    relationship: "former student",
+  },
+  {
+    from: "\"C. T.\"",
+    message: `Hey, I just wanted to say thank you for helping me as a tutor. I know it is not easy helping someone like me. It just takes me longer to understand or "get" things, more than most. So thanks for hanging in with me. You are really helping so much to learn this! Just a shout out and thank you!`,
+    relationship: "former student",
+  },
 ];
 
 export default testimonialData;
