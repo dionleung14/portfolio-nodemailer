@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Header from "../../../components/Header.js";
-// import ToGatherHover from "../../../components/photos/portfolio-photos/ToGather-hover.png";
 import ComponentContainer from "../../../components/ComponentContainer";
 import { Link } from "react-router-dom";
 import { allArrays } from "../../../portfolio-items/portfolio-data";
@@ -53,7 +52,8 @@ export default function Portfolio(props) {
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
-        I have highlighted several key projects below. Click each one to learn
+        {/* I have highlighted several key projects below.  */}
+        Click each project icon to learn
         more! I am constantly working on new apps and endeavors, so expect this
         to update regularly. My code repositories are hosted on github{" "}
         <a
@@ -64,8 +64,8 @@ export default function Portfolio(props) {
           here.
         </a>
       </h1>
-      <h1 className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto">
-        If you want to see a more comprehensive overview of my projects, you can
+      <div className="text-left top-0 lg:my-6 lg:w-3/4 w-full p-2 lg:mx-auto justify-center">
+        {/* If you want to see a more comprehensive overview of my projects, you can
         find that{" "}
         <Link to="/portfolio">
           <span className="hover:underline text-dclpal1-300">here.</span>
@@ -77,7 +77,26 @@ export default function Portfolio(props) {
         , which includes past projects which may no longer be relevant to my
         most recent experience or perhaps I'm no longer proud of them. In any
         case, they're important to me to keep as a reminder of how I've improved
-        or for future inspiration.
+        or for future inspiration. */}
+
+        <Link to="/portfolio"
+        className={`px-2 self-center rounded border cursor-pointer ${
+          props.darkModeApp.darkMode
+            ? "border-white hover:bg-dclpal1-500"
+            : "border-dclpal1-100 hover:bg-dclpal1-100 hover:text-white"
+        }`}
+      >
+        extended collection
+      </Link>
+        <Link to="/archive"
+        className={`px-2 self-center rounded border cursor-pointer ${
+          props.darkModeApp.darkMode
+            ? "border-white hover:bg-dclpal1-500"
+            : "border-dclpal1-100 hover:bg-dclpal1-100 hover:text-white"
+        }`}
+      >
+        project archive
+      </Link>
         {/* , and you can follow me on my coding journey on Twitter here:{" "}
         <a
           href="https://twitter.com/DionTheDev?ref_src=twsrc%5Etfw"
@@ -92,12 +111,14 @@ export default function Portfolio(props) {
           src="https://platform.twitter.com/widgets.js"
           charset="utf-8"
         ></script> */}
-      </h1>
+      </div>
       <div className="flex lg:flex-row flex-col items-center justify-around lg:mb-6 mx-2 lg:px-6 relative z-10">
         {selectedArr.slice(0, 1).map(photo => (
           <div
             className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
             data-project={photo.dataProject}
+            onMouseEnter={() => console.log('enter')}
+            onMouseLeave={() => console.log('leave')}
             onClick={handlePortfolioToggle}>
             <PortfolioPhotoFirst
               photoSrc={photo.image}
@@ -126,7 +147,10 @@ export default function Portfolio(props) {
           <div
             className="flex flex-col items-center lg:w-1/3 w-full lg:mx-2 lg:my-2 my-4 cursor-pointer"
             data-project={photo.dataProject}
-            onClick={handlePortfolioToggle}>
+            onClick={handlePortfolioToggle}
+            onMouseEnter={() => console.log('enter')}
+            onMouseLeave={() => console.log('leave')}
+            >
             <PortfolioPhoto
               photoSrc={photo.image}
               alt={photo.name}
