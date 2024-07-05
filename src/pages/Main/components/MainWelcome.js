@@ -1,37 +1,61 @@
 import React from "react";
-import ComponentContainer from "./ComponentContainer";
-import linkedInSeattle from "./photos/linkedin-Seattle.jpg";
-import seattleDay from "./photos/seattle-day-hi-res.jpg";
-import FirstHeader from "./FirstHeader";
-import github from "./photos/github-icon.png";
-import linkedin from "./photos/linkedin-icon.png";
-import emailIcon from "./photos/email-icon.png";
-import twitter from "./photos/twitter-icon.png";
+import ComponentContainer from "../../../components/ComponentContainer";
+import linkedInSeattle from "../../../components/photos/linkedin-Seattle.jpg";
+// import seattleDay from "../../../components/photos/seattle-day-hi-res.jpg";
+import FirstHeader from "../../../components/FirstHeader";
+import github from "../../../components/photos/github-icon.png";
+import linkedin from "../../../components/photos/linkedin-icon.png";
+import emailIcon from "../../../components/photos/email-icon.png";
+import twitter from "../../../components/photos/twitter-icon.png";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link } from "react-router-dom";
 
 export default function Welcome(props) {
   return (
     // <div id="top">
-    <ComponentContainer id="top" darkModeCont={props.darkModeApp.darkMode}>
+    <ComponentContainer
+      id="top"
+      color="1"
+      darkModeCont={props.darkModeApp.darkMode}>
       <FirstHeader
-        text="Dion Leung, E.I.T, Fullstack Web Developer"
+        text="Dion Leung, E.I.T"
+        subtext="Fullstack Web Developer"
+        color="1"
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <div>
         {/* <h1 className="text-center text-4xl top-0 pt-10">Text with photo</h1> */}
         <img
           src={linkedInSeattle}
-          className="top-0 pt-4 mb-6 z-10 w-full"
+          className="top-0 pt-4 mb-4 z-10 w-full"
           alt="Seattle-skyline"
         />
       </div>
-      {/* <ComponentContainer> */}
+      <h1 className="text-center mb-4">
+        Quicklinks to{" "}
+        <AnchorLink href="#portfolio">
+          <span className="text-dclpal1-300 hover:underline">
+            selected works,
+          </span>
+        </AnchorLink>{" "}
+        <Link to="/portfolio">
+          <span className="hover:underline text-dclpal1-300">
+            expanded portfolio,
+          </span>
+        </Link>{" "}
+        and{" "}
+        <Link to="/archive">
+          <span className="hover:underline text-dclpal1-300">
+            project archive.
+          </span>
+        </Link>
+      </h1>
       <div className="flex flex-row justify-around pb-4">
         <a
           href="https://github.com/dionleung14"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center"
-        >
+          className="flex flex-col items-center">
           <img
             src={github}
             alt="github"
@@ -46,8 +70,7 @@ export default function Welcome(props) {
           href="https://www.linkedin.com/in/leungdion/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center"
-        >
+          className="flex flex-col items-center">
           <img
             src={linkedin}
             alt="linkedin"
@@ -61,8 +84,7 @@ export default function Welcome(props) {
           href="mailto:dioncleung@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center"
-        >
+          className="flex flex-col items-center">
           <img
             src={emailIcon}
             alt="linkedin"
@@ -76,8 +98,7 @@ export default function Welcome(props) {
           href="https://www.twitter.com/DionTheDev"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center"
-        >
+          className="flex flex-col items-center">
           <img
             src={twitter}
             alt="linkedin"
@@ -88,7 +109,6 @@ export default function Welcome(props) {
           </small>
         </a>
       </div>
-      {/* </ComponentContainer> */}
       {/* </div> */}
     </ComponentContainer>
   );

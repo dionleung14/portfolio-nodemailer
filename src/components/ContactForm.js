@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import FirstHeader from "./FirstHeader";
+import Header from "./Header";
 import API from "../utils/API";
 import ComponentContainer from "./ComponentContainer";
+import Loading from "./Loading";
+// import NetlifyForm from "react-ssg-netlify-forms";
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default function ContactForm(props) {
@@ -13,6 +15,18 @@ export default function ContactForm(props) {
     subject: "Networking",
     message: "",
   });
+
+  const [subjectLine, setSubjectLine] = useState({
+    subjectLine: "",
+  });
+
+  const handleSubjectLine = event => {
+    event.preventDefault();
+    setSubjectLine({
+      ...subjectLine,
+      [event.target.name]: event.target.value,
+    });
+  };
 
   const [contactMethodState, setContactMethodState] = useState({
     email: false,
@@ -26,95 +40,106 @@ export default function ContactForm(props) {
     failure: false,
   });
 
-  const handleNodeMailerSubmit = (event) => {
+  // const completedForm = {
+  //   fName: formState.firstName,
+  //   lName: formState.lastName,
+  //   emailAddy: formState.emailAddress,
+  //   phone: formState.phNum,
+  //   subj: formState.subject,
+  //   text: formState.message,
+  //   contEmail: contactMethodState.email,
+  //   contCall: contactMethodState.call,
+  //   contText: contactMethodState.text,
+  // };
+
+  const handleNodeMailerSubmit = event => {
     event.preventDefault();
-    setFormSuccessState({
-      ...formSuccessState,
-      sendingState: true,
-    });
-    let failureCountdown = setTimeout(() => {
-      console.log("failure");
+    // if there's input in the "subject line", reload
+    if (subjectLine.subjectLine) {
+      window.location.reload();
+    } else {
       setFormSuccessState({
         ...formSuccessState,
-        sendingState: false,
-        failure: true,
+        sendingState: true,
       });
-    }, 12000);
-    let contactMethodCheck = Object.values(contactMethodState);
-    if (!contactMethodCheck.includes(true)) {
-      alert("Please select a method for me to reach you");
-    } else if (!(formState.emailAddress || formState.phNum)) {
-      alert("Please enter either an email or phone number");
-    } else {
-      let { call, email, text } = contactMethodState;
-      let {
-        firstName,
-        lastName,
-        emailAddress,
-        phNum,
-        subject,
-        message,
-      } = formState;
-      let contactFormFilled = {
-        firstName,
-        lastName,
-        emailAddress,
-        phNum,
-        subject,
-        message,
-        call,
-        email,
-        text,
-      };
-      API.submitEmail(contactFormFilled).then((res) => {
-        if (res.status === 200) {
-          // stop the failure countdown
-          clearTimeout(failureCountdown);
-          // reset the form
-          setFormState({
-            firstName: "",
-            lastName: "",
-            emailAddress: "",
-            phNum: "",
-            subject: "Networking",
-            message: "",
-          });
-          setContactMethodState({
-            email: false,
-            call: false,
-            text: false,
-          });
-          // alter the success state to show success message
-          setFormSuccessState({
-            formSuccess: true,
-            sendingState: false,
-          });
-          // after 2 seconds, erase the success message
-          setTimeout(() => {
+      let failureCountdown = setTimeout(() => {
+        console.log("failure");
+        setFormSuccessState({
+          ...formSuccessState,
+          sendingState: false,
+          failure: true,
+        });
+      }, 12000);
+      let contactMethodCheck = Object.values(contactMethodState);
+      if (!contactMethodCheck.includes(true)) {
+        alert("Please select a method for me to reach you");
+      } else if (!(formState.emailAddress || formState.phNum)) {
+        alert("Please enter either an email or phone number");
+      } else {
+        let { call, email, text } = contactMethodState;
+        let { firstName, lastName, emailAddress, phNum, subject, message } =
+          formState;
+        let contactFormFilled = {
+          firstName,
+          lastName,
+          emailAddress,
+          phNum,
+          subject,
+          message,
+          call,
+          email,
+          text,
+        };
+        API.submitEmail(contactFormFilled).then(res => {
+          if (res.status === 200) {
+            // stop the failure countdown
+            clearTimeout(failureCountdown);
+            // reset the form
+            setFormState({
+              firstName: "",
+              lastName: "",
+              emailAddress: "",
+              phNum: "",
+              subject: "Networking",
+              message: "",
+            });
+            setContactMethodState({
+              email: false,
+              call: false,
+              text: false,
+            });
+            // alter the success state to show success message
+            setFormSuccessState({
+              formSuccess: true,
+              sendingState: false,
+            });
+            // after 2 seconds, erase the success message
+            setTimeout(() => {
+              setFormSuccessState({
+                ...formSuccessState,
+                formSuccess: false,
+              });
+            }, 2000);
+          } else {
+            // change the sending state, erasing progress messsage, and display error message
             setFormSuccessState({
               ...formSuccessState,
-              formSuccess: false,
+              sendingState: false,
+              failure: true,
             });
-          }, 2000);
-        } else {
-          // change the sending state, erasing progress messsage, and display error message
-          setFormSuccessState({
-            ...formSuccessState,
-            sendingState: false,
-            failure: true,
-          });
-        }
-      });
-      // .catch((err) => console.log(err))
-      // );
-      // console.log(contactFormFilled);
+          }
+        });
+        // .catch((err) => console.log(err))
+        // );
+        // console.log(contactFormFilled);
+      }
     }
     // else {
     //   alert("Please select a method for me to reach you");
     // }
   };
 
-  const handleInput = (event) => {
+  const handleInput = event => {
     event.preventDefault();
     setFormState({
       ...formState,
@@ -122,7 +147,7 @@ export default function ContactForm(props) {
     });
   };
 
-  const contactMethodStr = (string) => {
+  const contactMethodStr = string => {
     let firstLet = string.slice(0, 1);
     let rest = string.slice(1);
     let combined = firstLet.toUpperCase().concat(rest);
@@ -131,12 +156,16 @@ export default function ContactForm(props) {
   };
 
   const handleToggle = ({ target }) =>
-    setContactMethodState((s) => ({ ...s, [target.name]: !s[target.name] }));
+    setContactMethodState(s => ({ ...s, [target.name]: !s[target.name] }));
 
   return (
-    <ComponentContainer id="contact" darkModeCont={props.darkModeApp.darkMode}>
-      <FirstHeader
+    <ComponentContainer
+      id="contact"
+      color="6"
+      darkModeCont={props.darkModeApp.darkMode}>
+      <Header
         text="Contact me!"
+        color="6"
         darkModeHeader={props.darkModeApp.darkMode}
       />
       <div className="flex justify-around flex-col w-full lg:mt-8 lg:mb-2 my-2 lg:px-6 p-2">
@@ -151,8 +180,7 @@ export default function ContactForm(props) {
             className="hover:underline text-dclpal1-300"
             href="https://www.linkedin.com/in/leungdion/"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             here
           </a>
           , and my email is{" "}
@@ -161,15 +189,36 @@ export default function ContactForm(props) {
           </span>
           .
         </h3>
-
-        <form
-          className={`lg:w-5/6 w-full lg:mx-auto p-2 border border-dclpal1-300 ${
+        {/* <div
+          className={`lg:w-5/6 w-full lg:mx-auto p-2 py-8 my-2 border border-dclpal1-300 ${
             props.darkModeApp.darkMode ? "shadow-dcl" : "shadow-2xl"
           }`}
+        > */}
+        {/* <NetlifyForm */}
+        <form
+          // formName="Contact form"
+          // formValues={completedForm}
+          className={`lg:w-5/6 w-full lg:mx-auto p-2 py-8 my-2 border border-dclpal1-300 ${
+            props.darkModeApp.darkMode ? "shadow-dcl" : ""
+            // "shadow-2xl"
+          }`}
           id="contact-form"
-          onSubmit={handleNodeMailerSubmit}
-        >
+          // data-netlify="true"
+          onSubmit={handleNodeMailerSubmit}>
           {/* <!-- First and Last Name --> */}
+          <div className="lg:pl-6">
+            <input
+              type="hidden"
+              // type="text"
+              // name={getRandomString()}
+              name="subjectLine"
+              placeholder="Enter your subject here"
+              // autoComplete={getRandomString()}
+              value={subjectLine.subjectLine}
+              onChange={handleSubjectLine}
+              style={{ display: "none" }}
+            />
+          </div>
           <div className="lg:pl-6">
             {/* <!-- First Name --> */}
             <div className="flex flex-col items-start lg:w-4/5">
@@ -214,7 +263,7 @@ export default function ContactForm(props) {
               <label className="mb-1 mt-4" htmlFor="inputEmail">
                 Email address:
               </label>
-              <div className="flex lg:flex-row flex-col items-center">
+              <div className="flex lg:flex-row flex-col items-start">
                 <input
                   type="email"
                   className={`px-2 mr-2 rounded border border-dclpal1-300 ${
@@ -239,7 +288,7 @@ export default function ContactForm(props) {
               <label className="mb-1 mt-4" htmlFor="phoneNumber">
                 Phone number:
               </label>
-              <div className="flex lg:flex-row flex-col items-center">
+              <div className="flex lg:flex-row flex-col items-start">
                 <input
                   type="phonenumber"
                   className={`px-2 mr-2 rounded border border-dclpal1-300 ${
@@ -279,13 +328,13 @@ export default function ContactForm(props) {
                   value={formState.subject}
                   name="subject"
                   onChange={handleInput}
-                  required
-                >
+                  required>
                   <option className="focus:bg-white" value="Networking">
                     Networking
                   </option>
                   <option value="Inquiry">Inquiry</option>
                   <option value="Collaboration">Collaboration</option>
+                  <option value="Freelance">Freelance</option>
                   <option value="Other">Other (specify in message)</option>
                 </select>
               </div>
@@ -322,8 +371,7 @@ export default function ContactForm(props) {
                       props.darkModeApp.darkMode
                         ? "text-dclpal1-100"
                         : "text-white"
-                    }
-                  >
+                    }>
                     I'm a hidden message!
                   </small>
                 )}
@@ -340,7 +388,7 @@ export default function ContactForm(props) {
               How would you like me to respond? Check all that apply:
             </h1>
             <div>
-              {Object.keys(contactMethodState).map((key) => (
+              {Object.keys(contactMethodState).map(key => (
                 <div className="lg:pl-6 pl-4 checkbox-options" key={key}>
                   <input
                     className="mr-2"
@@ -356,15 +404,14 @@ export default function ContactForm(props) {
           </div>
 
           {/* <!-- Submit button --> */}
-          <div className="lg:pl-6">
+          <div className="lg:pl-6 flex flex-row items-center">
             <button
               type="submit"
               className={`rounded py-2 px-6 border border-dclpal1-300 text-xl ${
                 props.darkModeApp.darkMode
                   ? "bg-dclpal1-100 text-white hover:bg-dclpal1-500"
                   : "text-black hover:bg-dclpal1-400"
-              }`}
-            >
+              }`}>
               Send!
             </button>
             {formSuccessState.formSuccess ? (
@@ -375,7 +422,17 @@ export default function ContactForm(props) {
               " "
             )}
             {formSuccessState.sendingState ? (
-              <span className="ml-2">Sending... please wait</span>
+              props.darkModeApp.darkMode ? (
+                <div>
+                  Sending...
+                  <Loading color="#FFF" />
+                </div>
+              ) : (
+                <div>
+                  Sending...
+                  <Loading color="#7ea16b" />
+                </div>
+              )
             ) : (
               " "
             )}
@@ -390,6 +447,8 @@ export default function ContactForm(props) {
             <br />
           </div>
         </form>
+        {/* </NetlifyForm> */}
+        {/* </div> */}
       </div>
 
       {/* Copied from tailwind docs */}

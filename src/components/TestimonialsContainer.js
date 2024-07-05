@@ -1,6 +1,11 @@
 import React from "react";
-
+import colorsObj from "./colors";
 export default function TestimonialsContainer(props) {
+  const { colorArrL, colorArrD } = colorsObj;
+
+  let colorL = colorArrL[parseInt(props.color)];
+  let colorD = colorArrD[parseInt(props.color)];
+
   return (
     <div className="flex flex-row">
       <div
