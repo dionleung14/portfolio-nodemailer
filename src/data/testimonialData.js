@@ -35,8 +35,13 @@ const testimonialData = [
     relationship: "former student",
   },
   {
-    from: "\"C. T.\"",
+    from: '"C. T."',
     message: `Hey, I just wanted to say thank you for helping me as a tutor. I know it is not easy helping someone like me. It just takes me longer to understand or "get" things, more than most. So thanks for hanging in with me. You are really helping so much to learn this! Just a shout out and thank you!`,
+    relationship: "former student",
+  },
+  {
+    from: "Lauren Slaybaugh",
+    message: `Dion taught me complex problems in hydrodynamics. He helped me understand the content I was learning and broke everything down for me. If he didn't immediately know the answer to my question, he made sure to help me find the answer online. I also really appreciate how he regularly checks in with me to see how my studying is going. Great tutoring experience!`,
     relationship: "former student",
   },
 ];
