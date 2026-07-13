@@ -13,3 +13,120 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@keyframes testimonial-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.35rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.testimonial-slide {
+  animation: testimonial-fade-in 280ms ease-out;
+}
+
+.testimonial-carousel {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+}
+
+.testimonial-carousel__content {
+  flex: 1 1 auto;
+}
+
+.testimonial-carousel__controls {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+@keyframes testimonial-timer-fill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.testimonial-timer {
+  display: block;
+  width: 75%;
+  max-width: 24rem;
+  height: 0.2rem;
+  margin: 0 auto 0.75rem;
+  padding: 0.65rem 0;
+  box-sizing: content-box;
+  overflow: hidden;
+  border: none;
+  border-radius: 9999px;
+  background-color: transparent;
+  background-clip: content-box;
+  background-image: linear-gradient(
+    rgba(28, 49, 68, 0.2),
+    rgba(28, 49, 68, 0.2)
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 0.2rem;
+  background-position: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.testimonial-timer--dark {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.25)
+  );
+}
+
+.testimonial-timer--paused {
+  outline: 1px dashed rgba(28, 49, 68, 0.45);
+  outline-offset: 2px;
+}
+
+.testimonial-timer--dark.testimonial-timer--paused {
+  outline-color: rgba(255, 255, 255, 0.55);
+}
+
+.testimonial-timer__fill {
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  margin: auto 0;
+  transform-origin: left center;
+  transform: scaleX(0);
+  border-radius: inherit;
+  background-color: #1c3144;
+  animation-name: testimonial-timer-fill;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+
+.testimonial-timer__fill--paused {
+  animation-play-state: paused;
+}
+
+.testimonial-timer--dark .testimonial-timer__fill {
+  background-color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-slide {
+    animation: none;
+  }
+
+  .testimonial-timer__fill {
+    animation: none;
+    transform: scaleX(1);
+  }
+}
