@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../../components/Header";
 import ComponentContainer from "../../../components/ComponentContainer";
 import Testimonial from "../../../models/Testimonial";
+
+const AUTO_ADVANCE_MS = 5000;
 
 export default function Testimonials(props) {
   const testimonials = Testimonial.all();
@@ -12,6 +14,18 @@ export default function Testimonials(props) {
       ? ((tracker % testimonials.length) + testimonials.length) %
         testimonials.length
       : 0;
+
+  useEffect(() => {
+    if (testimonials.length < 2) {
+      return undefined;
+    }
+
+    const timerId = setInterval(() => {
+      setTracker((current) => current + 1);
+    }, AUTO_ADVANCE_MS);
+
+    return () => clearInterval(timerId);
+  }, [tracker, testimonials.length]);
 
   const decrement = () => {
     setTracker((current) => current - 1);
