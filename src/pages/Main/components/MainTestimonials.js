@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../../../components/Header";
 import ComponentContainer from "../../../components/ComponentContainer";
 import Testimonial from "../../../models/Testimonial";
@@ -6,6 +6,9 @@ import Testimonial from "../../../models/Testimonial";
 export default function Testimonials(props) {
   const testimonials = Testimonial.all();
   const [tracker, setTracker] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const remainingMsRef = useRef(Testimonial.defaultDurationMs);
+  const startedAtRef = useRef(Date.now());
 
   const activeIndex =
     testimonials.length > 0
@@ -18,16 +21,27 @@ export default function Testimonials(props) {
     currentTest?.durationMs ?? Testimonial.defaultDurationMs;
 
   useEffect(() => {
-    if (testimonials.length < 2 || !currentTest) {
+    remainingMsRef.current = durationMs;
+    startedAtRef.current = Date.now();
+    setIsPaused(false);
+  }, [tracker, durationMs]);
+
+  useEffect(() => {
+    if (testimonials.length < 2 || !currentTest || isPaused) {
       return undefined;
     }
 
+    startedAtRef.current = Date.now();
     const timerId = setTimeout(() => {
       setTracker((current) => current + 1);
-    }, durationMs);
+    }, remainingMsRef.current);
 
-    return () => clearTimeout(timerId);
-  }, [tracker, testimonials.length, currentTest, durationMs]);
+    return () => {
+      const elapsed = Date.now() - startedAtRef.current;
+      remainingMsRef.current = Math.max(0, remainingMsRef.current - elapsed);
+      clearTimeout(timerId);
+    };
+  }, [tracker, testimonials.length, currentTest, durationMs, isPaused]);
 
   const decrement = () => {
     setTracker((current) => current - 1);
@@ -39,6 +53,10 @@ export default function Testimonials(props) {
 
   const goTo = (index) => {
     setTracker(index);
+  };
+
+  const togglePause = () => {
+    setIsPaused((paused) => !paused);
   };
 
   const darkMode = props.darkModeApp.darkMode;
@@ -90,23 +108,35 @@ export default function Testimonials(props) {
         </div>
         <div className="testimonial-carousel__controls">
           {testimonials.length > 1 && (
-            <div
+            <button
+              type="button"
               className={`testimonial-timer ${
                 darkMode ? "testimonial-timer--dark" : ""
-              }`}
-              role="progressbar"
-              aria-label="Time until next testimonial"
-              aria-valuemin={0}
-              aria-valuemax={Math.round(durationMs / 1000)}
-              aria-valuetext={`${Math.round(
-                durationMs / 1000
-              )} second countdown`}>
+              } ${isPaused ? "testimonial-timer--paused" : ""}`}
+              onClick={togglePause}
+              aria-pressed={isPaused}
+              aria-label={
+                isPaused
+                  ? "Resume automatic testimonial advance"
+                  : "Pause automatic testimonial advance"
+              }
+              title={isPaused ? "Click to resume" : "Click to pause"}>
               <span
                 key={`${tracker}-${durationMs}`}
-                className="testimonial-timer__fill"
+                className={`testimonial-timer__fill ${
+                  isPaused ? "testimonial-timer__fill--paused" : ""
+                }`}
                 style={{ animationDuration: `${durationMs}ms` }}
+                role="progressbar"
+                aria-valuemin={0}
+                aria-valuemax={Math.round(durationMs / 1000)}
+                aria-valuetext={
+                  isPaused
+                    ? "Paused"
+                    : `${Math.round(durationMs / 1000)} second countdown`
+                }
               />
-            </div>
+            </button>
           )}
           <div
             className="flex items-center justify-center flex-wrap"
