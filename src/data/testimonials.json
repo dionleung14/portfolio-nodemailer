@@ -2,12 +2,14 @@
   {
     "from": "Rory Kees",
     "message": "Dion was a fantastic and skilled teammate to work with on our fullstack application. He remained calm and clear-headed through difficulties and was always willing to lend a hand to those who needed it. From start to finish, he showed an admirable amount of competence and flexibility. I would love to work with him on future projects.",
-    "relationship": "co-collaborator"
+    "relationship": "co-collaborator",
+    "durationMs": 6000
   },
   {
     "from": "Louis Coleman",
     "message": "Dion and I worked together on a few projects while taking a Full Stack Web Development course through the University of Washington. It was apparent from the start that Dion is extremely passionate and driven about coding. He was always early to class with questions and wanting to learn more and push himself. As a member of two projects he showed many times about how driven he is to put out the best work and often times in my opinion would go above and beyond the goals set, and would drive others to do the same.\n\nHe is also someone that is also compassionate and willing to work with others on their issues and to strengthen their understanding.\n\nAll in all Dion is someone that I hope to work with in the future and would be a fantastic addition and huge asset to any team that is lucky enough to have him.",
-    "relationship": "co-collaborator"
+    "relationship": "co-collaborator",
+    "durationMs": 12000
   },
   {
     "from": "Clint Brodar",
@@ -36,7 +38,8 @@
   },
   {
     "from": "Rob M",
-    "message": "​Dion has been working with my 14-year-old son for the past three months, primarily focusing on reading comprehension and math, alongside general academic support. Finding someone who can genuinely connect with a teenager while maintaining a structured, results-driven approach isn't easy, but Dion established real rapport and trust right out of the gate. ​What truly sets him apart is his execution. His level of preparation before each session and the detailed follow-up he provides afterward are exceptional. Rather than just helping patch over daily homework, Dion focuses on identifying the root causes of academic challenges and works patiently to build the foundational skills necessary for long-term success. We are incredibly grateful for his impact and look forward to continuing to work with him.",
-    "relationship": "parent of student"
+    "message": "Dion has been working with my 14-year-old son for the past three months, primarily focusing on reading comprehension and math, alongside general academic support. Finding someone who can genuinely connect with a teenager while maintaining a structured, results-driven approach isn't easy, but Dion established real rapport and trust right out of the gate. What truly sets him apart is his execution. His level of preparation before each session and the detailed follow-up he provides afterward are exceptional. Rather than just helping patch over daily homework, Dion focuses on identifying the root causes of academic challenges and works patiently to build the foundational skills necessary for long-term success. We are incredibly grateful for his impact and look forward to continuing to work with him.",
+    "relationship": "parent of student",
+    "durationMs": 14000
   }
 ]
