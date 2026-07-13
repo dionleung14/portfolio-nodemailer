@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Header from "../../../components/Header";
 import ComponentContainer from "../../../components/ComponentContainer";
-import testimonialData from '../../../data/testimonialData'
-require("dotenv").config();
+import testimonialData from "../../../data/testimonialData";
+// require("dotenv").config();
 
 export default function Testimonials(props) {
   let [tracker, setTracker] = useState(0);
