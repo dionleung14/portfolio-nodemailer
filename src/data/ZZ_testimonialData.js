@@ -1,3 +1,4 @@
+// Deprecated: use src/models/Testimonial.js with src/data/testimonials.json
 const testimonialData = [
   {
     from: "Rory Kees",

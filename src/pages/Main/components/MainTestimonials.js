@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Header from "../../../components/Header";
 import ComponentContainer from "../../../components/ComponentContainer";
-import testimonialData from "../../../data/testimonialData";
-// require("dotenv").config();
+import Testimonial from "../../../models/Testimonial";
 
 export default function Testimonials(props) {
   let [tracker, setTracker] = useState(0);
@@ -19,9 +18,7 @@ export default function Testimonials(props) {
     setTracker(tracker + 1);
   };
 
-  const testimonials = testimonialData;
-
-  let currentTest = testimonials[Math.abs(tracker) % testimonials.length];
+  const currentTest = Testimonial.at(tracker);
 
   return (
     <ComponentContainer
