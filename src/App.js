@@ -5,6 +5,7 @@ import Archive from "./pages/Archive";
 import Portfolio from "./pages/Portfolio";
 import MetaPortfolio from "./pages/MetaPortfolio";
 import NoMatch from "./pages/NoMatch";
+import AnalyticsTracker from "./components/AnalyticsTracker";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // console.log(process.env.REACT_APP_POKEMON);
@@ -59,6 +60,7 @@ function App() {
 
   return (
     <Router>
+      <AnalyticsTracker />
       <Switch>
         <Route exact path="/portfolio">
           <Portfolio darkModeApp={darkMode} toggle={toggleSwitch} />
