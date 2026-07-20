@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import logo from "./logo.svg";
 import Main from "./pages/Main";
 import Archive from "./pages/Archive";
@@ -13,6 +13,12 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [darkMode, setDarkMode] = useState({ darkMode: true });
+
+  useEffect(() => {
+    const theme = darkMode.darkMode ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [darkMode.darkMode]);
+
   const handleToggle = () => {
     setDarkMode(state => ({ ...state, darkMode: !darkMode.darkMode }));
     faviconToggle();
@@ -48,8 +54,8 @@ function App() {
         name="darkMode"
         className={`px-2 py-1 self-center rounded border cursor-pointer text-sm lg:text-base whitespace-nowrap ${
           darkMode.darkMode
-            ? "border-white hover:bg-dclpal1-500"
-            : "border-dclpal1-100 hover:bg-dclpal1-100 hover:text-white"
+            ? "border-white hover:border-dclpal1-400 hover:bg-dclpal1-100"
+            : "border-dclpal1-100 hover:bg-dclpal1-400 hover:text-dclpal1-100"
         }`}
         onClick={handleToggle}
       >

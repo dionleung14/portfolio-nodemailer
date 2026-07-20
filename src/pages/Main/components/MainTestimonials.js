@@ -152,7 +152,7 @@ export default function Testimonials(props) {
                   aria-selected={isActive}
                   aria-label={`Show testimonial from ${testimonial.from}`}
                   title={testimonial.from}
-                  className={`testimonial-marker mx-1 my-1 rounded-full border-2 transition-colors duration-200 focus:outline-none ${
+                  className={`testimonial-marker mx-1 my-1 rounded-full border-2 transition-colors duration-200 ${
                     isActive
                       ? darkMode
                         ? "bg-white border-white"

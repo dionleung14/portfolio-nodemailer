@@ -54,7 +54,7 @@ export default function Footer(props) {
       : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
   }`;
 
-  const creditClass = "hover:underline hover:text-dclpal1-300";
+  const creditClass = "text-link";
 
   return (
     <div

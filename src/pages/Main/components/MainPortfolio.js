@@ -60,7 +60,7 @@ export default function Portfolio(props) {
           href="https://github.com/dionleung14"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline text-dclpal1-300">
+          className="text-link">
           here.
         </a>
       </h1>
@@ -68,11 +68,11 @@ export default function Portfolio(props) {
         If you want to see a more comprehensive overview of my projects, you can
         find that{" "}
         <Link to="/portfolio">
-          <span className="hover:underline text-dclpal1-300">here.</span>
+          <span className="text-link">here.</span>
         </Link>{" "}
         Also, here's a link to my project{" "}
         <Link to="/archive">
-          <span className="hover:underline text-dclpal1-300">archive</span>
+          <span className="text-link">archive</span>
         </Link>
         , which includes past projects which may no longer be relevant to my
         most recent experience or perhaps I'm no longer proud of them. In any

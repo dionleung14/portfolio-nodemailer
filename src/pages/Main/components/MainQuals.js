@@ -38,7 +38,7 @@ export default function Quals(props) {
             analytic approach to the table. Dipping my feet into coding inspired
             me to pursue it further, and I enrolled in and completed a{" "}
             <a
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
               href="https://bootcamp.uw.edu/"
               target="_blank"
               rel="noreferrer noopener">

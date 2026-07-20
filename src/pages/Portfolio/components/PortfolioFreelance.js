@@ -55,7 +55,7 @@ export default function PortfolioPortfolio(props) {
         about my rates and current discounts, please send me a message with the
         form below (located{" "}
         <AnchorLink
-          className="hover:underline text-dclpal1-300"
+          className="text-link"
           href="#contact">
           here
         </AnchorLink>{" "}

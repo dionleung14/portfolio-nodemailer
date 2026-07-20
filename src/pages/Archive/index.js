@@ -6,8 +6,9 @@ import ArchiveNavBar from "./components/ArchiveNavBar";
 import ArchiveWelcome from "./components/ArchiveWelcome";
 
 export default function Archive(props) {
+  const dark = props.darkModeApp.darkMode;
   return (
-    <div>
+    <div className={`site-shell ${dark ? "site-shell--dark" : "site-shell--light"}`}>
       <ArchiveNavBar darkModeApp={props.darkModeApp} toggle={props.toggle} />
       <ArchiveWelcome darkModeApp={props.darkModeApp} />
       <ArchivePortfolio darkModeApp={props.darkModeApp} />

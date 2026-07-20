@@ -1,13 +1,71 @@
 :root {
+  /* Brand primitives */
   --brand-ink: #1c3144;
   --brand-moss: #596f62;
   --brand-leaf: #7ea16b;
   --brand-mist: #c3d898;
   --brand-ember: #70161e;
+  --brand-link-light: #456636; /* ≥6.5:1 on white — use for light-theme links */
   --surface-dark: #0f1c28;
   --surface-mid: #1c3144;
   --text-on-dark: #f4f7f2;
   --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /*
+   * Contrast cookbook (WCAG 2.1):
+   * - Body on dark: white/#f4f7f2 on #1c3144 → AAA
+   * - Body on light: #1c3144 on white/beige → AAA
+   * - Links light: #456636 on white → AA+ (~6.5:1)
+   * - Links dark: #c3d898 on #1c3144 → AAA (~8.7:1)
+   * - Never use #7ea16b or #c3d898 as text on white
+   * - Never use #596f62 as text on #1c3144
+   * - Ember (#70161e) = danger / destructive only (not focus)
+   * - Primary CTA: #1c3144 on #c3d898 → AAA
+   */
+
+  /* Semantic tokens (default = light) */
+  --color-text: var(--brand-ink);
+  --color-text-muted: rgba(28, 49, 68, 0.78);
+  --color-bg: #f7faf7;
+  --color-link: var(--brand-link-light);
+  --color-link-hover: #2f4f28;
+  --color-focus: var(--brand-ink);
+  --color-focus-ring: #456636;
+  --color-danger: var(--brand-ember);
+  --color-border-accent: var(--brand-leaf);
+  --color-field-bg: #ffffff;
+  --color-field-text: var(--brand-ink);
+  --color-field-focus-bg: #eef5e6;
+}
+
+html[data-theme="dark"] {
+  --color-text: var(--text-on-dark);
+  --color-text-muted: rgba(244, 247, 242, 0.78);
+  --color-bg: var(--surface-dark);
+  --color-link: var(--brand-mist);
+  --color-link-hover: #d7e6b0;
+  --color-focus: var(--brand-mist);
+  --color-focus-ring: var(--brand-mist);
+  --color-danger: var(--brand-ember);
+  --color-border-accent: var(--brand-leaf);
+  --color-field-bg: var(--brand-ink);
+  --color-field-text: var(--text-on-dark);
+  --color-field-focus-bg: #243d52;
+}
+
+html[data-theme="light"] {
+  --color-text: var(--brand-ink);
+  --color-text-muted: rgba(28, 49, 68, 0.78);
+  --color-bg: #f7faf7;
+  --color-link: var(--brand-link-light);
+  --color-link-hover: #2f4f28;
+  --color-focus: var(--brand-ink);
+  --color-focus-ring: #456636;
+  --color-danger: var(--brand-ember);
+  --color-border-accent: var(--brand-leaf);
+  --color-field-bg: #ffffff;
+  --color-field-text: var(--brand-ink);
+  --color-field-focus-bg: #eef5e6;
 }
 
 body {
@@ -15,8 +73,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Nunito", sans-serif;
-  background-color: var(--surface-dark);
-  color: var(--text-on-dark);
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 code {
@@ -29,17 +87,91 @@ code {
   letter-spacing: -0.01em;
 }
 
+/* —— Accessible text links (1.4.1 + contrast) —— */
+.text-link {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: from-font;
+  font-weight: 600;
+  transition: color 160ms ease;
+}
+
+.text-link:hover {
+  color: var(--color-link-hover);
+}
+
+.text-link:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* —— Shared focus ring (2.4.7) —— */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
+.form-field {
+  border: 1px solid var(--color-border-accent);
+  border-radius: 2px;
+  background-color: var(--color-field-bg);
+  color: var(--color-field-text);
+  transition: background-color 160ms ease, border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.form-field:focus,
+.form-field:focus-visible {
+  background-color: var(--color-field-focus-bg);
+  border-color: var(--color-focus-ring);
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
 /* —— Site shell —— */
 .site-shell {
   overflow-x: hidden;
+  min-height: 100vh;
+  color: var(--color-text);
+  background-color: var(--color-bg);
 }
 
 .site-shell--light {
+  --color-text: var(--brand-ink);
+  --color-text-muted: rgba(28, 49, 68, 0.78);
+  --color-bg: #f7faf7;
+  --color-link: var(--brand-link-light);
+  --color-link-hover: #2f4f28;
+  --color-focus: var(--brand-ink);
+  --color-focus-ring: #456636;
+  --color-danger: var(--brand-ember);
+  --color-border-accent: var(--brand-leaf);
+  --color-field-bg: #ffffff;
+  --color-field-text: var(--brand-ink);
+  --color-field-focus-bg: #eef5e6;
   background: linear-gradient(180deg, #f7faf7 0%, #eef3eb 100%);
-  color: var(--brand-ink);
+  color: var(--color-text);
 }
 
 .site-shell--dark {
+  --color-text: var(--text-on-dark);
+  --color-text-muted: rgba(244, 247, 242, 0.78);
+  --color-bg: var(--surface-dark);
+  --color-link: var(--brand-mist);
+  --color-link-hover: #d7e6b0;
+  --color-focus: var(--brand-mist);
+  --color-focus-ring: var(--brand-mist);
+  --color-danger: var(--brand-ember);
+  --color-border-accent: var(--brand-leaf);
+  --color-field-bg: var(--brand-ink);
+  --color-field-text: var(--text-on-dark);
+  --color-field-focus-bg: #243d52;
   background:
     radial-gradient(
       ellipse 80% 50% at 10% -10%,
@@ -52,6 +184,7 @@ code {
       transparent 50%
     ),
     linear-gradient(180deg, var(--surface-dark) 0%, var(--surface-mid) 45%, #152636 100%);
+  color: var(--color-text);
 }
 
 /* —— Nav —— */
@@ -64,15 +197,15 @@ code {
 }
 
 .site-nav--dark {
-  background-color: rgba(15, 28, 40, 0.72) !important;
-  border-bottom: 1px solid rgba(195, 216, 152, 0.12);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  background-color: rgba(15, 28, 40, 0.92) !important;
+  border-bottom: 1px solid rgba(195, 216, 152, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
 }
 
 .site-nav--light {
-  background-color: rgba(255, 255, 255, 0.82) !important;
-  border-bottom: 1px solid rgba(28, 49, 68, 0.08);
-  box-shadow: 0 8px 24px rgba(28, 49, 68, 0.06);
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  border-bottom: 1px solid rgba(28, 49, 68, 0.12);
+  box-shadow: 0 8px 24px rgba(28, 49, 68, 0.08);
 }
 
 .site-nav__link {
@@ -571,11 +704,12 @@ code {
 }
 
 .typed-section__target {
-  color: #7ea16b;
+  color: var(--color-link);
+  font-weight: 600;
 }
 
 .typed-section__target--dark {
-  color: #c3d898;
+  color: var(--color-link);
 }
 
 .typed-section .typed-cursor {
@@ -665,6 +799,11 @@ code {
   height: 0.85rem;
   min-width: 0.85rem;
   min-height: 0.85rem;
+}
+
+.testimonial-marker[aria-selected="true"] {
+  transform: scale(1.25);
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
 }
 
 .testimonial-carousel__controls {

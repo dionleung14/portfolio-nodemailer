@@ -53,7 +53,7 @@ export default function ArchivePortfolio(props) {
           href="https://github.com/dionleung14"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline text-dclpal1-300">
+          className="text-link">
           here.
         </a>{" "}
         {/* , and you can follow me on my coding journey on Twitter here:{" "}
@@ -155,7 +155,7 @@ export default function ArchivePortfolio(props) {
               href="http://rocketlist.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               here
             </a>
             , and github repository{" "}
@@ -163,7 +163,7 @@ export default function ArchivePortfolio(props) {
               href="https://bit.ly/39S9vL7"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               here.
             </a>{" "}
             <br /> <br />
@@ -175,7 +175,7 @@ export default function ArchivePortfolio(props) {
               href="https://github.com/coleloui"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               Github
             </a>
             ,{" "}
@@ -183,7 +183,7 @@ export default function ArchivePortfolio(props) {
               href="https://www.linkedin.com/in/louis-coleman/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               LinkedIn
             </a>
             ), Rory Jacobs (
@@ -191,7 +191,7 @@ export default function ArchivePortfolio(props) {
               href="https://github.com/meganjacobs97"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               Github
             </a>
             ,{" "}
@@ -199,7 +199,7 @@ export default function ArchivePortfolio(props) {
               href="https://www.linkedin.com/in/rory-kees-865342145/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               LinkedIn
             </a>
             ), Paul Lee (
@@ -207,7 +207,7 @@ export default function ArchivePortfolio(props) {
               href="https://github.com/vb27"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               Github
             </a>
             ,{" "}
@@ -215,7 +215,7 @@ export default function ArchivePortfolio(props) {
               href="https://www.linkedin.com/in/paul-lee-1737821a2/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               LinkedIn
             </a>
             ), and Marlon Jones (
@@ -223,7 +223,7 @@ export default function ArchivePortfolio(props) {
               href="https://github.com/mjones-27"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               Github
             </a>
             ), this app won both the award for Best Functionality and the
@@ -259,7 +259,7 @@ export default function ArchivePortfolio(props) {
               href="http://awesome-group-planner.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               here
             </a>
             , and github repository{" "}
@@ -267,7 +267,7 @@ export default function ArchivePortfolio(props) {
               href="https://bit.ly/2Pnh8A2"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               here.
             </a>{" "}
             <br /> <br />
@@ -277,7 +277,7 @@ export default function ArchivePortfolio(props) {
               href="https://github.com/the-medium-place"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               Github
             </a>
             ,{" "}
@@ -285,7 +285,7 @@ export default function ArchivePortfolio(props) {
               href="https://www.linkedin.com/in/zachary-stowell/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               LinkedIn
             </a>
             ), Yuri Oliveira (
@@ -293,7 +293,7 @@ export default function ArchivePortfolio(props) {
               href="https://github.com/yuriohliveira"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               Github
             </a>
             ), and Misha Gringauze (
@@ -301,7 +301,7 @@ export default function ArchivePortfolio(props) {
               href="https://github.com/mgrinx"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               Github
             </a>
             ) to create this full-stack application. It contains full CRUD
@@ -341,7 +341,7 @@ export default function ArchivePortfolio(props) {
               href="https://dionleung14.github.io/Pokemon-GO-Virtual-Dex/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               here
             </a>
             , and github repository{" "}
@@ -349,7 +349,7 @@ export default function ArchivePortfolio(props) {
               href="https://bit.ly/3fn6iUX"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               here.
             </a>{" "}
             <br /> <br />
@@ -361,7 +361,7 @@ export default function ArchivePortfolio(props) {
               href="https://github.com/coleloui"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               Github
             </a>
             ,{" "}
@@ -369,7 +369,7 @@ export default function ArchivePortfolio(props) {
               href="https://www.linkedin.com/in/louis-coleman/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               LinkedIn
             </a>
             ), Paul Lee (
@@ -377,7 +377,7 @@ export default function ArchivePortfolio(props) {
               href="https://github.com/vb27"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               Github
             </a>
             ,{" "}
@@ -385,7 +385,7 @@ export default function ArchivePortfolio(props) {
               href="https://www.linkedin.com/in/paul-lee-1737821a2/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               LinkedIn
             </a>
             ), and Marlon Jones (
@@ -393,7 +393,7 @@ export default function ArchivePortfolio(props) {
               href="https://github.com/mjones-27"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               Github
             </a>
             ), tested our creativity just a couple weeks into the bootcamp.

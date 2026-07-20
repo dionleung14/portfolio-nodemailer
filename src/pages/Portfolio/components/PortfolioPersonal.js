@@ -52,7 +52,7 @@ export default function PortfolioPersonal(props) {
           href="https://github.com/dionleung14"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline text-dclpal1-300">
+          className="text-link">
           github.
         </a>{" "}
         {/* , and you can follow me on my coding journey on Twitter here:{" "}

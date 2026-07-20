@@ -44,7 +44,7 @@ export default function About(props) {
               href="https://www.dalenanguyen.net/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300">
+              className="text-link">
               Dalena Nguyen
             </a>
           </p>
