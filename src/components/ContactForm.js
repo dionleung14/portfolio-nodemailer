@@ -333,6 +333,7 @@ export default function ContactForm(props) {
                     Networking
                   </option>
                   <option value="Inquiry">Inquiry</option>
+                  <option value="Tutoring">Tutoring</option>
                   <option value="Collaboration">Collaboration</option>
                   <option value="Freelance">Freelance</option>
                   <option value="Other">Other (specify in message)</option>

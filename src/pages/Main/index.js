@@ -21,8 +21,8 @@ function Main(props) {
       <MainTyped darkModeApp={props.darkModeApp} />
       <MainAbout darkModeApp={props.darkModeApp} />
       <MainMeet darkModeApp={props.darkModeApp} />
-      <MainQuals darkModeApp={props.darkModeApp} />
       <MainPortfolio darkModeApp={props.darkModeApp} />
+      <MainQuals darkModeApp={props.darkModeApp} />
       <MainTestimonials darkModeApp={props.darkModeApp} />
       <ContactForm darkModeApp={props.darkModeApp} />
       <Footer darkModeApp={props.darkModeApp} />
