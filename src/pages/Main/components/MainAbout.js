@@ -29,11 +29,11 @@ export default function About(props) {
       <Header text="About Me" color={0} darkModeHeader={dark} />
       <div
         ref={revealRef}
-        className="flex md:flex-row flex-col items-center justify-around px-6 pt-4">
+        className="flex md:flex-row flex-col items-center justify-around pt-4">
         <div className="reveal reveal-delay-1 lg:w-1/2 w-full lg:mx-4 my-2 lg:my-6">
-          <div className="media-frame">
+          <div className="media-frame about-headshot">
             <img
-              className="md:w-auto md:h-auto w-3/4 mx-auto"
+              className="w-full mx-auto"
               src={headshot}
               alt="headshot"
             />

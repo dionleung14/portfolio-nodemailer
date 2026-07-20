@@ -46,14 +46,19 @@ function App() {
     return (
       <div
         name="darkMode"
-        className={`px-2 self-center rounded border cursor-pointer ${
+        className={`px-2 py-1 self-center rounded border cursor-pointer text-sm lg:text-base whitespace-nowrap ${
           darkMode.darkMode
             ? "border-white hover:bg-dclpal1-500"
             : "border-dclpal1-100 hover:bg-dclpal1-100 hover:text-white"
         }`}
         onClick={handleToggle}
       >
-        {darkMode.darkMode ? "dark mode on!" : "dark mode?"}
+        <span className="theme-toggle__full">
+          {darkMode.darkMode ? "dark mode on!" : "dark mode?"}
+        </span>
+        <span className="theme-toggle__short" aria-hidden="true">
+          {darkMode.darkMode ? "dark" : "light"}
+        </span>
       </div>
     );
   };

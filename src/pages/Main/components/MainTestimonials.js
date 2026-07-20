@@ -61,7 +61,7 @@ export default function Testimonials(props) {
 
   const darkMode = props.darkModeApp.darkMode;
 
-  const navButtonClass = `lg:p-2 rounded-full w-8 h-8 flex-shrink-0 flex items-center justify-center border-2 ${
+  const navButtonClass = `testimonial-nav-btn rounded-full flex-shrink-0 flex items-center justify-center border-2 ${
     darkMode
       ? "border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500 hover:text-white"
       : "border-dclpal1-100 bg-white text-black hover:bg-dclpal1-400 hover:text-white"
@@ -82,26 +82,26 @@ export default function Testimonials(props) {
         darkModeHeader={darkMode}
       />
       <div className="testimonial-carousel">
-        <div className="testimonial-carousel__content flex items-stretch justify-around lg:px-6 my-4 w-full">
+        <div className="testimonial-carousel__content">
           <button
             type="button"
             aria-label="Previous testimonial"
-            className={`${navButtonClass} self-center`}
+            className={`${navButtonClass} testimonial-nav-btn`}
             onClick={decrement}>
             {`<`}
           </button>
           <div
             key={activeIndex}
-            className="w-3/4 flex flex-col justify-center testimonial-slide">
-            <h1 className="text-justify">{currentTest.message}</h1>
-            <h1 className="text-center italic mt-2">
-              - {currentTest.from}, {currentTest.relationship}
-            </h1>
+            className="testimonial-carousel__slide testimonial-slide">
+            <p className="testimonial-carousel__quote">{currentTest.message}</p>
+            <p className="testimonial-carousel__attribution">
+              — {currentTest.from}, {currentTest.relationship}
+            </p>
           </div>
           <button
             type="button"
             aria-label="Next testimonial"
-            className={`${navButtonClass} self-center`}
+            className={`${navButtonClass} testimonial-nav-btn`}
             onClick={increment}>
             {`>`}
           </button>
@@ -152,7 +152,7 @@ export default function Testimonials(props) {
                   aria-selected={isActive}
                   aria-label={`Show testimonial from ${testimonial.from}`}
                   title={testimonial.from}
-                  className={`mx-1 my-1 w-3 h-3 rounded-full border-2 transition-colors duration-200 focus:outline-none ${
+                  className={`testimonial-marker mx-1 my-1 rounded-full border-2 transition-colors duration-200 focus:outline-none ${
                     isActive
                       ? darkMode
                         ? "bg-white border-white"

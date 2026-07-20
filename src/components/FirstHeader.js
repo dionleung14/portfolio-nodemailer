@@ -8,13 +8,13 @@ export default function FirstHeader(props) {
 
   return (
     <div
-      className={`section-header text-center sticky top-0 lg:pt-24 pt-20 font-bold z-20 ${
+      className={`section-header text-center sticky top-0 pt-16 lg:pt-24 pb-2 font-bold z-20 ${
         props.darkModeHeader
           ? `bg-${colorD} text-white`
           : `bg-${colorL} text-dclpal1-100`
       }`}>
-      <h1 className="font-display lg:text-5xl text-2xl">{props.text}</h1>
-      <h3 className="lg:text-2xl text-lg font-normal opacity-80">
+      <h1 className="font-display text-3xl lg:text-5xl">{props.text}</h1>
+      <h3 className="text-base lg:text-2xl font-normal opacity-80">
         {props.subtext}
       </h3>
     </div>

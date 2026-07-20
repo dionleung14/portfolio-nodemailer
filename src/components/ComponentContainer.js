@@ -17,7 +17,7 @@ export default function ComponentContainer(props) {
           dark ? `bg-${colorD}` : `bg-${colorL}`
         }`}></div>
       <div
-        className={`lg:w-8/12 w-full lg:mx-auto lg:px-4 pb-8 ${
+        className={`lg:w-8/12 w-full lg:mx-auto px-4 lg:px-6 pb-8 ${
           dark
             ? `bg-${colorD} text-white`
             : `bg-${colorL} text-dclpal1-100`
