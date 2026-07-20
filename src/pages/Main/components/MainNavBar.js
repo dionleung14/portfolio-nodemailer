@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-// import dcl_logo192 from "./photos/logo_dcl_192.png";
-// import dcl_logo512 from "./photos/logo_dcl_512.png";
-// import dcl_logoApple from "./photos/logo_dcl_apple_touch.png";
 import icon8 from "../../../components/photos/icons8-menu-64.png";
 import dcl_logoFav from "../../../components/photos/logo_dcl_favicon.png";
 
@@ -12,7 +9,7 @@ export default function Navbar(props) {
   });
 
   const handleToggle = ({ target }) =>
-    setBurger(s => ({ ...s, [target.name]: !s[target.name] }));
+    setBurger((s) => ({ ...s, [target.name]: !s[target.name] }));
 
   const handleHide = () => {
     setBurger({
@@ -21,84 +18,53 @@ export default function Navbar(props) {
     });
   };
 
+  const dark = props.darkModeApp.darkMode;
+  const navLinkClass = `site-nav__link hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
+    dark
+      ? "hover:border-white text-white hover:bg-dclpal1-500"
+      : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100"
+  }`;
+
   return (
     <div>
       <div
-        className={`flex justify-around w-full lg:pt-4 lg:pb-4 fixed top-0 mb-10 z-40 ${
-          props.darkModeApp.darkMode
-            ? `bg-dclpal1-100 text-white`
-            : `bg-white text-dclpal1-100`
+        className={`site-nav flex justify-around w-full lg:pt-4 lg:pb-4 fixed top-0 mb-10 z-40 ${
+          dark ? "site-nav--dark text-white" : "site-nav--light text-dclpal1-100"
         }`}>
         <AnchorLink
           href="#top"
-          className={`lg:text-4xl text-2xl border border-transparent p-2 rounded ${
-            props.darkModeApp.darkMode
-              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
-              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
+          className={`site-nav__link lg:text-4xl text-2xl border border-transparent p-2 rounded ${
+            dark
+              ? "hover:border-white text-white hover:bg-dclpal1-500"
+              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100"
           }`}>
           <img src={dcl_logoFav} alt="logo, link to home page" />
         </AnchorLink>
-        <AnchorLink
-          href="#about-me"
-          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
-            props.darkModeApp.darkMode
-              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
-              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
-          }`}>
+        <AnchorLink href="#about-me" className={navLinkClass}>
           about me
         </AnchorLink>
-        <AnchorLink
-          href="#meet-me"
-          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
-            props.darkModeApp.darkMode
-              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
-              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
-          }`}>
+        <AnchorLink href="#meet-me" className={navLinkClass}>
           meet me
         </AnchorLink>
-        <AnchorLink
-          href="#qualifications"
-          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
-            props.darkModeApp.darkMode
-              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
-              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
-          }`}>
+        <AnchorLink href="#qualifications" className={navLinkClass}>
           qualifications
         </AnchorLink>
-        <AnchorLink
-          href="#portfolio"
-          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
-            props.darkModeApp.darkMode
-              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
-              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
-          }`}>
+        <AnchorLink href="#portfolio" className={navLinkClass}>
           portfolio
         </AnchorLink>
-        <AnchorLink
-          href="#testimonials"
-          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
-            props.darkModeApp.darkMode
-              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
-              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
-          }`}>
+        <AnchorLink href="#testimonials" className={navLinkClass}>
           testimonials
         </AnchorLink>
-        <AnchorLink
-          href="#contact"
-          className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
-            props.darkModeApp.darkMode
-              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
-              : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
-          }`}>
+        <AnchorLink href="#contact" className={navLinkClass}>
           contact
         </AnchorLink>
         {props.toggle()}
         <img
           src={icon8}
-          alt="mand icon"
+          alt="menu icon"
           name="display"
           onClick={handleToggle}
-          className="lg:hidden self-center inline-block w-6 z-50"
+          className="lg:hidden self-center inline-block w-6 z-50 cursor-pointer"
         />
       </div>
       <div

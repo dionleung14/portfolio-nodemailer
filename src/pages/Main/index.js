@@ -6,12 +6,15 @@ import MainMeet from "./components/MainMeet";
 import MainQuals from "./components/MainQuals";
 import MainPortfolio from "./components/MainPortfolio";
 import MainTestimonials from "./components/MainTestimonials";
+import MainTyped from "./components/MainTyped";
 import ContactForm from "../../components/ContactForm";
 import Footer from "../../components/Footer";
 
 function Main(props) {
+  const dark = props.darkModeApp.darkMode;
+
   return (
-    <div>
+    <div className={`site-shell ${dark ? "site-shell--dark" : "site-shell--light"}`}>
       <MainNavBar darkModeApp={props.darkModeApp} toggle={props.toggle} />
       <MainWelcome darkModeApp={props.darkModeApp} />
       <MainAbout darkModeApp={props.darkModeApp} />
@@ -19,6 +22,7 @@ function Main(props) {
       <MainQuals darkModeApp={props.darkModeApp} />
       <MainPortfolio darkModeApp={props.darkModeApp} />
       <MainTestimonials darkModeApp={props.darkModeApp} />
+      <MainTyped darkModeApp={props.darkModeApp} />
       <ContactForm darkModeApp={props.darkModeApp} />
       <Footer darkModeApp={props.darkModeApp} />
     </div>
