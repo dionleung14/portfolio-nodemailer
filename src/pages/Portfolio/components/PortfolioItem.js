@@ -15,7 +15,7 @@ export default function PortfolioItem(props) {
         href={props.deployed}
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:underline text-dclpal1-300"
+        className="text-link"
       >
         here
       </a>
@@ -26,7 +26,7 @@ export default function PortfolioItem(props) {
             href={props.repo}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline text-dclpal1-300"
+            className="text-link"
           >
             here.
           </a>
@@ -58,7 +58,7 @@ export default function PortfolioItem(props) {
                       href={person.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:underline text-dclpal1-300"
+                      className="text-link"
                     >
                       Github
                     </a>
@@ -67,7 +67,7 @@ export default function PortfolioItem(props) {
                       href={person.linkedIn}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:underline text-dclpal1-300"
+                      className="text-link"
                     >
                       LinkedIn
                     </a>
@@ -77,7 +77,7 @@ export default function PortfolioItem(props) {
                     href={person.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline text-dclpal1-300"
+                    className="text-link"
                   >
                     Github
                   </a>
@@ -86,7 +86,7 @@ export default function PortfolioItem(props) {
                     href={person.linkedIn}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline text-dclpal1-300"
+                    className="text-link"
                   >
                     LinkedIn
                   </a>

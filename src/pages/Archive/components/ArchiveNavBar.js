@@ -30,7 +30,7 @@ export default function ArchiveNavBar(props) {
         <div
           className={`lg:text-4xl text-2xl border border-transparent p-2 rounded ${
             props.darkModeApp.darkMode
-              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclevergreen-100"
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}>
           <Link to="/">
@@ -40,7 +40,7 @@ export default function ArchiveNavBar(props) {
         <div
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
             props.darkModeApp.darkMode
-              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclevergreen-100"
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}>
           <Link to="/portfolio">project collection</Link>
@@ -50,7 +50,7 @@ export default function ArchiveNavBar(props) {
           href="#archive"
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
             props.darkModeApp.darkMode
-              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclevergreen-100"
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}>
           archive
@@ -59,7 +59,7 @@ export default function ArchiveNavBar(props) {
           href="#contact"
           className={`hidden lg:inline-block self-center border border-transparent px-2 rounded text-lg ${
             props.darkModeApp.darkMode
-              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+              ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclevergreen-100"
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
           }`}>
           contact

@@ -7,12 +7,11 @@ export default function Header(props) {
   let colorD = colorArrD[parseInt(props.color)];
   return (
     <h1
-      className={`text-center lg:text-5xl text-2xl sticky top-0 lg:pt-24 pt-20 font-bold z-20 ${
+      className={`section-header font-display text-center text-3xl lg:text-5xl sticky top-0 pt-16 lg:pt-24 pb-2 font-bold z-20 ${
         props.darkModeHeader
           ? `bg-${colorD} text-white`
           : `bg-${colorL} text-dclpal1-100`
-      }`}
-    >
+      }`}>
       {props.text}
     </h1>
   );

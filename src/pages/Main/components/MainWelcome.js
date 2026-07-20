@@ -1,8 +1,5 @@
 import React from "react";
-import ComponentContainer from "../../../components/ComponentContainer";
 import linkedInSeattle from "../../../components/photos/linkedin-Seattle.jpg";
-// import seattleDay from "../../../components/photos/seattle-day-hi-res.jpg";
-import FirstHeader from "../../../components/FirstHeader";
 import github from "../../../components/photos/github-icon.png";
 import linkedin from "../../../components/photos/linkedin-icon.png";
 import emailIcon from "../../../components/photos/email-icon.png";
@@ -11,105 +8,77 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Link } from "react-router-dom";
 
 export default function Welcome(props) {
-  return (
-    // <div id="top">
-    <ComponentContainer
-      id="top"
-      color="1"
-      darkModeCont={props.darkModeApp.darkMode}>
-      <FirstHeader
-        text="Dion Leung, E.I.T"
-        subtext="Fullstack Web Developer"
-        color="1"
-        darkModeHeader={props.darkModeApp.darkMode}
-      />
-      <div>
-        {/* <h1 className="text-center text-4xl top-0 pt-10">Text with photo</h1> */}
-        <img
-          src={linkedInSeattle}
-          className="top-0 pt-4 mb-4 z-10 w-full"
-          alt="Seattle-skyline"
-        />
-      </div>
-      <h1 className="text-center mb-4">
-        Quicklinks to{" "}
-        <AnchorLink href="#portfolio">
-          <span className="text-dclpal1-300 hover:underline">
-            selected works,
-          </span>
-        </AnchorLink>{" "}
-        <Link to="/portfolio">
-          <span className="hover:underline text-dclpal1-300">
-            expanded portfolio,
-          </span>
-        </Link>{" "}
-        and{" "}
-        <Link to="/archive">
-          <span className="hover:underline text-dclpal1-300">
-            project archive.
-          </span>
-        </Link>
-      </h1>
-      <div className="flex flex-row justify-around pb-4">
-        <a
-          href="https://github.com/dionleung14"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center">
-          <img
-            src={github}
-            alt="github"
-            className="lg:w-16 w-8 rounded border border-white"
-          />
-          <small className="italic text-dclpal1-300 hover:underline">
-            Github
-          </small>
-        </a>
+  const socialLinks = [
+    {
+      href: "https://github.com/dionleung14",
+      src: github,
+      alt: "GitHub",
+      label: "Github",
+    },
+    {
+      href: "https://www.linkedin.com/in/leungdion/",
+      src: linkedin,
+      alt: "LinkedIn",
+      label: "LinkedIn",
+    },
+    {
+      href: "mailto:dioncleung@gmail.com",
+      src: emailIcon,
+      alt: "Email",
+      label: "Email",
+    },
+    {
+      href: "https://www.twitter.com/DionTheDev",
+      src: twitter,
+      alt: "Twitter",
+      label: "Twitter",
+    },
+  ];
 
-        <a
-          href="https://www.linkedin.com/in/leungdion/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center">
-          <img
-            src={linkedin}
-            alt="linkedin"
-            className="lg:w-16 w-8 rounded border border-white"
-          />
-          <small className="italic text-dclpal1-300 hover:underline">
-            LinkedIn
-          </small>
-        </a>
-        <a
-          href="mailto:dioncleung@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center">
-          <img
-            src={emailIcon}
-            alt="linkedin"
-            className="lg:w-16 w-8 rounded border border-white"
-          />
-          <small className="italic text-dclpal1-300 hover:underline">
-            Email
-          </small>
-        </a>
-        <a
-          href="https://www.twitter.com/DionTheDev"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center">
-          <img
-            src={twitter}
-            alt="linkedin"
-            className="lg:w-16 w-8 rounded border border-white"
-          />
-          <small className="italic text-dclpal1-300 hover:underline">
-            Twitter
-          </small>
-        </a>
+  return (
+    <section id="top" className="hero-cinematic" aria-label="Introduction">
+      <div className="hero-cinematic__media" aria-hidden="true">
+        <img src={linkedInSeattle} alt="" />
       </div>
-      {/* </div> */}
-    </ComponentContainer>
+      <div className="hero-cinematic__veil" aria-hidden="true" />
+      <div className="hero-cinematic__content">
+        <h1 className="hero-cinematic__brand font-display">Dion Leung</h1>
+        <p className="hero-cinematic__role">
+          Full-Stack Web Developer · E.I.T
+        </p>
+        <p className="hero-cinematic__lede">
+          Seattle-based engineer building thoughtful web experiences—bridging
+          civil engineering rigor with modern product craft.
+        </p>
+        <div className="hero-cinematic__actions">
+          <AnchorLink href="#portfolio" className="hero-cta hero-cta--primary">
+            Selected works
+          </AnchorLink>
+          <Link to="/portfolio" className="hero-cta hero-cta--ghost">
+            Full portfolio
+          </Link>
+          <AnchorLink href="#contact" className="hero-cta hero-cta--ghost">
+            Contact
+          </AnchorLink>
+        </div>
+        <div className="hero-cinematic__social">
+          {socialLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-social-link">
+              <img src={link.src} alt={link.alt} />
+              <small>{link.label}</small>
+            </a>
+          ))}
+        </div>
+      </div>
+      <div className="hero-cinematic__scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <span className="hero-cinematic__scroll-line" />
+      </div>
+    </section>
   );
 }

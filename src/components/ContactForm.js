@@ -177,14 +177,14 @@ export default function ContactForm(props) {
         <h3 className="lg:w-4/5 my-2 lg:pl-20">
           You can find also find me on LinkedIn{" "}
           <a
-            className="hover:underline text-dclpal1-300"
+            className="text-link"
             href="https://www.linkedin.com/in/leungdion/"
             target="_blank"
             rel="noopener noreferrer">
             here
           </a>
           , and my email is{" "}
-          <span className="hover:underline text-dclpal1-300">
+          <span className="text-link">
             dioncleung@gmail.com
           </span>
           .
@@ -227,11 +227,7 @@ export default function ContactForm(props) {
               </label>
               <div className="flex flex-row">
                 <input
-                  className={`w-1/2 px-2 mr-2 rounded border border-dclpal1-300 ${
-                    props.darkModeApp.darkMode
-                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
-                      : "focus:bg-dclpal1-400 text-black"
-                  }`}
+                  className="form-field w-1/2 px-2 mr-2 rounded border border-dclpal1-300"
                   type="text"
                   value={formState.firstName}
                   onChange={handleInput}
@@ -242,11 +238,7 @@ export default function ContactForm(props) {
                 {/* <!-- Last Name --> */}
                 <input
                   type="text"
-                  className={`w-1/2 px-2 mr-2 rounded border border-dclpal1-300 ${
-                    props.darkModeApp.darkMode
-                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
-                      : "focus:bg-dclpal1-400 text-black"
-                  }`}
+                  className="form-field w-1/2 px-2 mr-2 rounded border border-dclpal1-300"
                   id="last-name"
                   onChange={handleInput}
                   placeholder="Last name"
@@ -266,11 +258,7 @@ export default function ContactForm(props) {
               <div className="flex lg:flex-row flex-col items-start">
                 <input
                   type="email"
-                  className={`px-2 mr-2 rounded border border-dclpal1-300 ${
-                    props.darkModeApp.darkMode
-                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
-                      : "focus:bg-dclpal1-400 text-black"
-                  }`}
+                  className="form-field px-2 mr-2 rounded border border-dclpal1-300"
                   id="inputEmail"
                   value={formState.emailAddress}
                   placeholder="example@email.com"
@@ -291,11 +279,7 @@ export default function ContactForm(props) {
               <div className="flex lg:flex-row flex-col items-start">
                 <input
                   type="phonenumber"
-                  className={`px-2 mr-2 rounded border border-dclpal1-300 ${
-                    props.darkModeApp.darkMode
-                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
-                      : "focus:bg-dclpal1-400 text-black"
-                  }`}
+                  className="form-field px-2 mr-2 rounded border border-dclpal1-300"
                   id="phoneNumber"
                   placeholder="555-123-4567"
                   value={formState.phNum}
@@ -319,11 +303,7 @@ export default function ContactForm(props) {
                 </label>
                 <select
                   type="name"
-                  className={`px-2 py-1 rounded border border-dclpal1-300 ${
-                    props.darkModeApp.darkMode
-                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
-                      : "focus:bg-dclpal1-400 text-black"
-                  }`}
+                  className="form-field px-2 py-1 rounded border border-dclpal1-300"
                   id="subject"
                   value={formState.subject}
                   name="subject"
@@ -333,6 +313,7 @@ export default function ContactForm(props) {
                     Networking
                   </option>
                   <option value="Inquiry">Inquiry</option>
+                  <option value="Tutoring">Tutoring</option>
                   <option value="Collaboration">Collaboration</option>
                   <option value="Freelance">Freelance</option>
                   <option value="Other">Other (specify in message)</option>
@@ -348,11 +329,7 @@ export default function ContactForm(props) {
                 </label>
                 <textarea
                   type="message"
-                  className={`p-2 lg:w-64 lg:min-w-full lg:max-w-full lg:min-h-0 lg:resize rounded border border-dclpal1-300 ${
-                    props.darkModeApp.darkMode
-                      ? "focus:bg-dclpal1-500 text-white bg-dclpal1-100"
-                      : "focus:bg-dclpal1-400 text-black"
-                  }`}
+                  className="form-field p-2 lg:w-64 lg:min-w-full lg:max-w-full lg:min-h-0 lg:resize rounded border border-dclpal1-300"
                   id="message"
                   maxLength="500"
                   value={formState.message}
@@ -409,7 +386,7 @@ export default function ContactForm(props) {
               type="submit"
               className={`rounded py-2 px-6 border border-dclpal1-300 text-xl ${
                 props.darkModeApp.darkMode
-                  ? "bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+                  ? "bg-dclpal1-100 text-white hover:bg-dclpal1-200 border-dclpal1-400"
                   : "text-black hover:bg-dclpal1-400"
               }`}>
               Send!

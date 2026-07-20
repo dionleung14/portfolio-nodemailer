@@ -76,7 +76,7 @@ export default function Testimonials(props) {
           <button
             className={`lg:p-2 rounded-full w-8 h-8 flex items-center border ${
               props.darkModeApp.darkMode
-                ? "border-white border-2 bg-dclpal1-100 text-white hover:bg-dclpal1-500 hover:text-white"
+                ? "border-white border-2 bg-dclpal1-100 text-white hover:bg-dclevergreen-100 hover:text-white"
                 : "border-dclpal1-100 border-2 bg-white text-black hover:bg-dclpal1-400 hover:text-white"
             }`}
             onClick={decrement}
@@ -95,7 +95,7 @@ export default function Testimonials(props) {
           <button
             className={`lg:p-2 rounded-full w-8 h-8 flex items-center rounded border ${
               props.darkModeApp.darkMode
-                ? "border-white border-2 bg-dclpal1-100 text-white hover:bg-dclpal1-500 hover:text-white"
+                ? "border-white border-2 bg-dclpal1-100 text-white hover:bg-dclevergreen-100 hover:text-white"
                 : "border-dclpal1-100 border-2 bg-white text-black hover:bg-dclpal1-400 hover:text-white"
             }`}
             onClick={() => {

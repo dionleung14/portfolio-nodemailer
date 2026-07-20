@@ -8,8 +8,9 @@ import PortfolioNavBar from "./components/PortfolioNavBar";
 import PortfolioWelcome from "./components/PortfolioWelcome";
 
 export default function Archive(props) {
+  const dark = props.darkModeApp.darkMode;
   return (
-    <div>
+    <div className={`site-shell ${dark ? "site-shell--dark" : "site-shell--light"}`}>
       <PortfolioNavBar darkModeApp={props.darkModeApp} toggle={props.toggle} />
       <PortfolioWelcome darkModeApp={props.darkModeApp} />
       <PortfolioFreelance darkModeApp={props.darkModeApp} />

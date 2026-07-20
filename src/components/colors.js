@@ -1,37 +1,25 @@
-// const colorArrL = [
-//   "dclbeige-100",
-//   "dclbeige-200",
-//   "dclbeige-300",
-//   "dclpal1-200",
-//   "dclpal1-300",
-//   "dclpal1-400",
-//   "white",
-// ];
+/*
+ * Section backgrounds — contrast-safe with ComponentContainer text colors:
+ * light sections use ink text (#1c3144); dark sections use white text.
+ * Avoid dclpal1-200/300 as light fills (fail or borderline with ink).
+ */
 const colorArrL = [
   "white",
+  "dclbeige-200",
   "white",
+  "dclbeige-300",
   "white",
-  "white",
-  "white",
-  "white",
+  "dclbeige-200",
   "white",
 ];
-// const colorArrD = [
-//   "dclevergreen-100",
-//   "dclevergreen-200",
-//   "dclnavy-100",
-//   "dclnavy-200",
-//   "dclnavy-300",
-//   "dclpal1-100",
-//   "dclpal1-100",
-// ];
+
 const colorArrD = [
   "dclpal1-100",
+  "dclevergreen-100",
   "dclpal1-100",
+  "dclnavy-300",
   "dclpal1-100",
-  "dclpal1-100",
-  "dclpal1-100",
-  "dclpal1-100",
+  "dclevergreen-100",
   "dclpal1-100",
 ];
 

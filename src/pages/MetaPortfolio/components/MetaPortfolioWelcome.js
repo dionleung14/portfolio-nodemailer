@@ -32,7 +32,7 @@ export default function MetaPortfolioWelcome(props) {
         actually ANOTHER easter egg within the contact form if you feel up to
         the challenge (or maybe you've already found that one too)! archive{" "}
         <Link to="/archive">
-          <span className="hover:underline text-dclpal1-300">here</span>
+          <span className="text-link">here</span>
         </Link>
         , and really track the evolution of my work.
       </h1>

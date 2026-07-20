@@ -64,7 +64,7 @@ export default function PortfolioBootcamp(props) {
           href="https://github.com/dionleung14"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline text-dclpal1-300">
+          className="text-link">
           here.
         </a>{" "}
       </h1>

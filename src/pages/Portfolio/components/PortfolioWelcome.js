@@ -28,7 +28,7 @@ export default function PortfolioWelcome(props) {
         seeking at the moment, they'll be arranged in a certain manner. If
         you're really interested in my journey, you can find my archive{" "}
         <Link to="/archive">
-          <span className="hover:underline text-dclpal1-300">here</span>
+          <span className="text-link">here</span>
         </Link>{" "}
         (or above in the navbar) and really track the evolution of my work.
       </h1>
