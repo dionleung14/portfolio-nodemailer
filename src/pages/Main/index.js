@@ -14,15 +14,16 @@ function Main(props) {
   const dark = props.darkModeApp.darkMode;
 
   return (
-    <div className={`site-shell ${dark ? "site-shell--dark" : "site-shell--light"}`}>
+    <div
+      className={`site-shell ${dark ? "site-shell--dark" : "site-shell--light"}`}>
       <MainNavBar darkModeApp={props.darkModeApp} toggle={props.toggle} />
       <MainWelcome darkModeApp={props.darkModeApp} />
+      <MainTyped darkModeApp={props.darkModeApp} />
       <MainAbout darkModeApp={props.darkModeApp} />
       <MainMeet darkModeApp={props.darkModeApp} />
       <MainQuals darkModeApp={props.darkModeApp} />
       <MainPortfolio darkModeApp={props.darkModeApp} />
       <MainTestimonials darkModeApp={props.darkModeApp} />
-      <MainTyped darkModeApp={props.darkModeApp} />
       <ContactForm darkModeApp={props.darkModeApp} />
       <Footer darkModeApp={props.darkModeApp} />
     </div>

@@ -5,10 +5,10 @@ import ComponentContainer from "../../../components/ComponentContainer";
 
 const TYPED_STRINGS = [
   "Full-Stack Web Developer",
-  "React.js enthusiast",
   "Civil &amp; Environmental E.I.T",
-  "Seattle native",
-  "Builder of thoughtful web experiences",
+  "Private Tutor",
+  "Football and Soccer Coach",
+  // "Builder of thoughtful web experiences",
 ];
 
 export default function MainTyped(props) {
@@ -23,8 +23,8 @@ export default function MainTyped(props) {
 
     typedInstance.current = new Typed(typedEl.current, {
       strings: TYPED_STRINGS,
-      typeSpeed: 55,
-      backSpeed: 32,
+      typeSpeed: 35,
+      backSpeed: 20,
       backDelay: 1400,
       startDelay: 400,
       loop: true,
@@ -42,15 +42,9 @@ export default function MainTyped(props) {
   }, []);
 
   return (
-    <ComponentContainer
-      id="typed"
-      color="5"
-      darkModeCont={dark}>
-      <Header text="In a few words" color="5" darkModeHeader={dark} />
+    <ComponentContainer id="typed" color="5" darkModeCont={dark}>
+      <Header text="Who am I?" color="5" darkModeHeader={dark} />
       <div className="typed-section">
-        <p className="typed-section__lead section-copy">
-          A quick pulse of who I am and what I build:
-        </p>
         <p className="typed-section__line">
           I am a{" "}
           <span

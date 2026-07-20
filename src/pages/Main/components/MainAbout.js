@@ -5,12 +5,16 @@ import headshot from "../../../components/photos//headshot1.jpg";
 import useRevealOnScroll from "../../../hooks/useRevealOnScroll";
 
 const skills = [
-  "Full-Stack Web Developer",
+  "Full-Stack Software Engineer",
   "React.js",
   "Express.js",
   "Node.js",
   "MongoDB",
   "MySQL",
+  "Java",
+  "Spring Boot",
+  "AutoCAD",
+  "Mount Rainier High School Football Coach - Special Teams",
   "B.S. Civil & Environmental Engineering, University of Washington",
   "Civil & Environmental Engineer-In-Training (EIT)",
   "Seattle native",
@@ -21,10 +25,7 @@ export default function About(props) {
   const dark = props.darkModeApp.darkMode;
 
   return (
-    <ComponentContainer
-      id="about-me"
-      color="0"
-      darkModeCont={dark}>
+    <ComponentContainer id="about-me" color="0" darkModeCont={dark}>
       <Header text="About Me" color={0} darkModeHeader={dark} />
       <div
         ref={revealRef}
@@ -49,9 +50,8 @@ export default function About(props) {
           </p>
         </div>
         <div className="reveal reveal-delay-2 md:w-1/2 w-full py-4">
-          <ul
-            className={`skill-rail ${dark ? "" : "skill-rail--light"}`}>
-            {skills.map((skill) => (
+          <ul className={`skill-rail ${dark ? "" : "skill-rail--light"}`}>
+            {skills.map(skill => (
               <li key={skill}>{skill}</li>
             ))}
           </ul>
