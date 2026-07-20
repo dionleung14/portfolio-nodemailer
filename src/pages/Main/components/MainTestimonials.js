@@ -63,7 +63,7 @@ export default function Testimonials(props) {
 
   const navButtonClass = `testimonial-nav-btn rounded-full flex-shrink-0 flex items-center justify-center border-2 ${
     darkMode
-      ? "border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500 hover:text-white"
+      ? "border-white bg-dclpal1-100 text-white hover:bg-dclevergreen-100 hover:text-white"
       : "border-dclpal1-100 bg-white text-black hover:bg-dclpal1-400 hover:text-white"
   }`;
 

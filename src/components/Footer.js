@@ -50,7 +50,7 @@ export default function Footer(props) {
 
   const linkClass = `border border-transparent px-2 rounded ${
     dark
-      ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclpal1-500"
+      ? "hover:border-white bg-dclpal1-100 text-white hover:bg-dclevergreen-100"
       : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100 hover:bg-dclpal1-100"
   }`;
 

@@ -208,6 +208,18 @@ code {
   box-shadow: 0 8px 24px rgba(28, 49, 68, 0.08);
 }
 
+.site-nav--solid.site-nav--dark {
+  background-color: #0f1c28 !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.site-nav--solid.site-nav--light {
+  background-color: #ffffff !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
 .site-nav__link {
   position: relative;
   transition: color 200ms ease, background-color 200ms ease,

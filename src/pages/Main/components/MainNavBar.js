@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import icon8 from "../../../components/photos/icons8-menu-64.png";
 import dcl_logoFav from "../../../components/photos/logo_dcl_favicon.png";
+import useSolidNavOnScroll from "../../../hooks/useSolidNavOnScroll";
 
 export default function Navbar(props) {
   const [burger, setBurger] = useState({
     display: false,
   });
+  const isSolid = useSolidNavOnScroll(40);
 
   const handleToggle = () =>
     setBurger((s) => ({ ...s, display: !s.display }));
@@ -21,7 +23,7 @@ export default function Navbar(props) {
   const dark = props.darkModeApp.darkMode;
   const navLinkClass = `site-nav__link self-center border border-transparent px-2 rounded text-lg ${
     dark
-      ? "hover:border-white text-white hover:bg-dclpal1-500"
+      ? "hover:border-white text-white hover:bg-dclevergreen-100"
       : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100"
   }`;
 
@@ -30,12 +32,12 @@ export default function Navbar(props) {
       <div
         className={`site-nav flex items-center justify-between w-full px-3 lg:px-6 py-2 lg:py-4 fixed top-0 z-40 ${
           dark ? "site-nav--dark text-white" : "site-nav--light text-dclpal1-100"
-        }`}>
+        } ${isSolid ? "site-nav--solid" : ""}`}>
         <AnchorLink
           href="#top"
           className={`site-nav__link border border-transparent p-1 rounded flex-shrink-0 ${
             dark
-              ? "hover:border-white text-white hover:bg-dclpal1-500"
+              ? "hover:border-white text-white hover:bg-dclevergreen-100"
               : "text-black hover:bg-dclpal1-400 hover:border-dclpal1-100"
           }`}>
           <img

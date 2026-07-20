@@ -1,3 +1,4 @@
+// Deprecated: superseded by pages/Main/components/MainPortfolio.js
 import React, { useState } from "react";
 import Header from "./Header.js";
 import RocketList from "./photos/portfolio-photos/RocketList.png";
@@ -56,7 +57,7 @@ export default function Portfolio(props) {
           href="https://github.com/dionleung14"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline text-dclpal1-300"
+          className="text-link"
         >
           here.
         </a>
@@ -65,11 +66,11 @@ export default function Portfolio(props) {
         If you want to see a more comprehensive overview of my projects, you can
         find that{" "}
         <Link to="/portfolio">
-          <span className="hover:underline text-dclpal1-300">here.</span>
+          <span className="text-link">here.</span>
         </Link>{" "}
         Also, here's a link to my project{" "}
         <Link to="/archive">
-          <span className="hover:underline text-dclpal1-300">archive</span>
+          <span className="text-link">archive</span>
         </Link>
         , which includes past projects which may no longer be relevant to my
         most recent experience or perhaps I'm no longer proud of them. In any
@@ -115,7 +116,7 @@ export default function Portfolio(props) {
                   href="http://rocketlist.herokuapp.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   here
                 </a>
@@ -124,7 +125,7 @@ export default function Portfolio(props) {
                   href="https://bit.ly/39S9vL7"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   here.
                 </a>{" "}
@@ -137,7 +138,7 @@ export default function Portfolio(props) {
                   href="https://github.com/coleloui"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   Github
                 </a>
@@ -146,7 +147,7 @@ export default function Portfolio(props) {
                   href="https://www.linkedin.com/in/louis-coleman/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   LinkedIn
                 </a>
@@ -155,7 +156,7 @@ export default function Portfolio(props) {
                   href="https://github.com/meganjacobs97"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   Github
                 </a>
@@ -164,7 +165,7 @@ export default function Portfolio(props) {
                   href="https://www.linkedin.com/in/rory-kees-865342145/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   LinkedIn
                 </a>
@@ -173,7 +174,7 @@ export default function Portfolio(props) {
                   href="https://github.com/vb27"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   Github
                 </a>
@@ -182,7 +183,7 @@ export default function Portfolio(props) {
                   href="https://www.linkedin.com/in/paul-lee-1737821a2/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   LinkedIn
                 </a>
@@ -191,7 +192,7 @@ export default function Portfolio(props) {
                   href="https://github.com/mjones-27"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   Github
                 </a>
@@ -248,7 +249,7 @@ export default function Portfolio(props) {
                   href="http://awesome-group-planner.herokuapp.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   here
                 </a>
@@ -257,7 +258,7 @@ export default function Portfolio(props) {
                   href="https://bit.ly/2Pnh8A2"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   here.
                 </a>{" "}
@@ -268,7 +269,7 @@ export default function Portfolio(props) {
                   href="https://github.com/the-medium-place"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   Github
                 </a>
@@ -277,7 +278,7 @@ export default function Portfolio(props) {
                   href="https://www.linkedin.com/in/zachary-stowell/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   LinkedIn
                 </a>
@@ -286,7 +287,7 @@ export default function Portfolio(props) {
                   href="https://github.com/yuriohliveira"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   Github
                 </a>
@@ -295,7 +296,7 @@ export default function Portfolio(props) {
                   href="https://github.com/mgrinx"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   Github
                 </a>
@@ -355,7 +356,7 @@ export default function Portfolio(props) {
                   href="https://dionleung14.github.io/Pokemon-GO-Virtual-Dex/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   here
                 </a>
@@ -364,7 +365,7 @@ export default function Portfolio(props) {
                   href="https://bit.ly/3fn6iUX"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   here.
                 </a>{" "}
@@ -377,7 +378,7 @@ export default function Portfolio(props) {
                   href="https://github.com/coleloui"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   Github
                 </a>
@@ -386,7 +387,7 @@ export default function Portfolio(props) {
                   href="https://www.linkedin.com/in/louis-coleman/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   LinkedIn
                 </a>
@@ -395,7 +396,7 @@ export default function Portfolio(props) {
                   href="https://github.com/vb27"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   Github
                 </a>
@@ -404,7 +405,7 @@ export default function Portfolio(props) {
                   href="https://www.linkedin.com/in/paul-lee-1737821a2/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   LinkedIn
                 </a>
@@ -413,7 +414,7 @@ export default function Portfolio(props) {
                   href="https://github.com/mjones-27"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-dclpal1-300"
+                  className="text-link"
                 >
                   Github
                 </a>
@@ -450,7 +451,7 @@ export default function Portfolio(props) {
               href="http://rocketlist.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               here
             </a>
@@ -459,7 +460,7 @@ export default function Portfolio(props) {
               href="https://bit.ly/39S9vL7"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               here.
             </a>{" "}
@@ -472,7 +473,7 @@ export default function Portfolio(props) {
               href="https://github.com/coleloui"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               Github
             </a>
@@ -481,7 +482,7 @@ export default function Portfolio(props) {
               href="https://www.linkedin.com/in/louis-coleman/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               LinkedIn
             </a>
@@ -490,7 +491,7 @@ export default function Portfolio(props) {
               href="https://github.com/meganjacobs97"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               Github
             </a>
@@ -499,7 +500,7 @@ export default function Portfolio(props) {
               href="https://www.linkedin.com/in/rory-kees-865342145/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               LinkedIn
             </a>
@@ -508,7 +509,7 @@ export default function Portfolio(props) {
               href="https://github.com/vb27"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               Github
             </a>
@@ -517,7 +518,7 @@ export default function Portfolio(props) {
               href="https://www.linkedin.com/in/paul-lee-1737821a2/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               LinkedIn
             </a>
@@ -526,7 +527,7 @@ export default function Portfolio(props) {
               href="https://github.com/mjones-27"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               Github
             </a>
@@ -563,7 +564,7 @@ export default function Portfolio(props) {
               href="http://awesome-group-planner.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               here
             </a>
@@ -572,7 +573,7 @@ export default function Portfolio(props) {
               href="https://bit.ly/2Pnh8A2"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               here.
             </a>{" "}
@@ -583,7 +584,7 @@ export default function Portfolio(props) {
               href="https://github.com/the-medium-place"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               Github
             </a>
@@ -592,7 +593,7 @@ export default function Portfolio(props) {
               href="https://www.linkedin.com/in/zachary-stowell/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               LinkedIn
             </a>
@@ -601,7 +602,7 @@ export default function Portfolio(props) {
               href="https://github.com/yuriohliveira"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               Github
             </a>
@@ -610,7 +611,7 @@ export default function Portfolio(props) {
               href="https://github.com/mgrinx"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               Github
             </a>
@@ -651,7 +652,7 @@ export default function Portfolio(props) {
               href="https://dionleung14.github.io/Pokemon-GO-Virtual-Dex/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               here
             </a>
@@ -660,7 +661,7 @@ export default function Portfolio(props) {
               href="https://bit.ly/3fn6iUX"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               here.
             </a>{" "}
@@ -673,7 +674,7 @@ export default function Portfolio(props) {
               href="https://github.com/coleloui"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               Github
             </a>
@@ -682,7 +683,7 @@ export default function Portfolio(props) {
               href="https://www.linkedin.com/in/louis-coleman/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               LinkedIn
             </a>
@@ -691,7 +692,7 @@ export default function Portfolio(props) {
               href="https://github.com/vb27"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               Github
             </a>
@@ -700,7 +701,7 @@ export default function Portfolio(props) {
               href="https://www.linkedin.com/in/paul-lee-1737821a2/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               LinkedIn
             </a>
@@ -709,7 +710,7 @@ export default function Portfolio(props) {
               href="https://github.com/mjones-27"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-dclpal1-300"
+              className="text-link"
             >
               Github
             </a>
