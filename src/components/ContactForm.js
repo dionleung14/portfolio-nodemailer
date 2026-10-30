@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Header from "./Header";
 import API from "../utils/API";
 import ComponentContainer from "./ComponentContainer";
@@ -16,17 +16,8 @@ export default function ContactForm(props) {
     message: "",
   });
 
-  const [subjectLine, setSubjectLine] = useState({
-    subjectLine: "",
-  });
-
-  const handleSubjectLine = event => {
-    event.preventDefault();
-    setSubjectLine({
-      ...subjectLine,
-      [event.target.name]: event.target.value,
-    });
-  };
+  // Uncontrolled so a script can fill it without React onChange.
+  const companyRef = useRef(null);
 
   const [contactMethodState, setContactMethodState] = useState({
     email: false,
@@ -54,43 +45,47 @@ export default function ContactForm(props) {
 
   const handleNodeMailerSubmit = event => {
     event.preventDefault();
-    // if there's input in the "subject line", reload
-    if (subjectLine.subjectLine) {
+    // Same DOM string for the abort check and the JSON field. Whitespace
+    // counts as filled: the handler only sends mail when company is "".
+    const company = companyRef.current ? companyRef.current.value : "";
+    if (company !== "") {
       window.location.reload();
-    } else {
+      return;
+    }
+    setFormSuccessState({
+      ...formSuccessState,
+      sendingState: true,
+    });
+    let failureCountdown = setTimeout(() => {
+      console.log("failure");
       setFormSuccessState({
         ...formSuccessState,
-        sendingState: true,
+        sendingState: false,
+        failure: true,
       });
-      let failureCountdown = setTimeout(() => {
-        console.log("failure");
-        setFormSuccessState({
-          ...formSuccessState,
-          sendingState: false,
-          failure: true,
-        });
-      }, 12000);
-      let contactMethodCheck = Object.values(contactMethodState);
-      if (!contactMethodCheck.includes(true)) {
-        alert("Please select a method for me to reach you");
-      } else if (!(formState.emailAddress || formState.phNum)) {
-        alert("Please enter either an email or phone number");
-      } else {
-        let { call, email, text } = contactMethodState;
-        let { firstName, lastName, emailAddress, phNum, subject, message } =
-          formState;
-        let contactFormFilled = {
-          firstName,
-          lastName,
-          emailAddress,
-          phNum,
-          subject,
-          message,
-          call,
-          email,
-          text,
-        };
-        API.submitEmail(contactFormFilled).then(res => {
+    }, 12000);
+    let contactMethodCheck = Object.values(contactMethodState);
+    if (!contactMethodCheck.includes(true)) {
+      alert("Please select a method for me to reach you");
+    } else if (!(formState.emailAddress || formState.phNum)) {
+      alert("Please enter either an email or phone number");
+    } else {
+      let { call, email, text } = contactMethodState;
+      let { firstName, lastName, emailAddress, phNum, subject, message } =
+        formState;
+      let contactFormFilled = {
+        firstName,
+        lastName,
+        emailAddress,
+        phNum,
+        subject,
+        message,
+        call,
+        email,
+        text,
+        company,
+      };
+      API.submitEmail(contactFormFilled).then(res => {
           if (res.status === 200) {
             // stop the failure countdown
             clearTimeout(failureCountdown);
@@ -129,10 +124,9 @@ export default function ContactForm(props) {
             });
           }
         });
-        // .catch((err) => console.log(err))
-        // );
-        // console.log(contactFormFilled);
-      }
+      // .catch((err) => console.log(err))
+      // );
+      // console.log(contactFormFilled);
     }
     // else {
     //   alert("Please select a method for me to reach you");
@@ -206,17 +200,15 @@ export default function ContactForm(props) {
           // data-netlify="true"
           onSubmit={handleNodeMailerSubmit}>
           {/* <!-- First and Last Name --> */}
-          <div className="lg:pl-6">
+          <div
+            aria-hidden="true"
+            style={{ position: "absolute", left: "-10000px" }}>
             <input
-              type="hidden"
-              // type="text"
-              // name={getRandomString()}
-              name="subjectLine"
-              placeholder="Enter your subject here"
-              // autoComplete={getRandomString()}
-              value={subjectLine.subjectLine}
-              onChange={handleSubjectLine}
-              style={{ display: "none" }}
+              type="text"
+              name="company"
+              tabIndex={-1}
+              autoComplete="off"
+              ref={companyRef}
             />
           </div>
           <div className="lg:pl-6">
